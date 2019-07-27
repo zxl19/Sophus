@@ -71,10 +71,6 @@ class Tests {
         Matrix2<Scalar> sR = scale * R;
         SOPHUS_TEST(passed, isScaledOrthogonalAndPositive(sR),
                     "isScaledOrthogonalAndPositive(sR): % *\n%", scale, R);
-        Matrix2<Scalar> sR_cols_swapped;
-        sR_cols_swapped << sR.col(1), sR.col(0);
-        SOPHUS_TEST(passed, !isScaledOrthogonalAndPositive(sR_cols_swapped),
-                    "isScaledOrthogonalAndPositive(-sR): % *\n%", scale, R);
       }
     }
     return passed;
@@ -131,13 +127,10 @@ class Tests {
     SOPHUS_TEST_APPROX(passed, map_of_rxso2.complex().eval(), raw2,
                        Constants<Scalar>::epsilon());
     SOPHUS_TEST_EQUAL(passed, map_of_rxso2.complex().data(), raw2.data());
-    Eigen::Map<RxSO2Type> shallow_copy = map_of_rxso2;
-    SOPHUS_TEST_EQUAL(passed, shallow_copy.complex().eval(),
-                      map_of_rxso2.complex().eval());
 
-    RxSO2Type const const_so2(raw2);
+    RxSO2Type const const_rxso2(raw2);
     for (int i = 0; i < 2; ++i) {
-      SOPHUS_TEST_EQUAL(passed, const_so2.data()[i], raw2.data()[i]);
+      SOPHUS_TEST_EQUAL(passed, const_rxso2.data()[i], raw2.data()[i]);
     }
 
     RxSO2Type so2(raw2);
@@ -148,6 +141,15 @@ class Tests {
     for (int i = 0; i < 2; ++i) {
       SOPHUS_TEST_EQUAL(passed, so2.data()[i], raw.data()[i]);
     }
+    auto is_set = map_of_rxso2.trySetComplex(raw2);
+    SOPHUS_TEST(passed, is_set);
+    SOPHUS_TEST_APPROX(passed, map_of_rxso2.complex().eval(), raw2,
+                       Constants<Scalar>::epsilon());
+
+    auto is_set2 = map_of_rxso2.trySetComplex(Vector2<Scalar>(0.0, 0.0));
+    SOPHUS_TEST(passed, !is_set2);
+    SOPHUS_TEST(passed, is_set2.error() == RxSO2FromComplexError::kCloseToZero);
+
     return passed;
   }
 
@@ -188,6 +190,34 @@ class Tests {
                        Constants<Scalar>::epsilon(), "setRotationMatrix");
     SOPHUS_TEST_APPROX(passed, scale, rxso2.scale(),
                        Constants<Scalar>::epsilon(), "setScale");
+
+    auto rxso2_from_mat = RxSO2Type::tryFromMatrix(R);
+    SOPHUS_TEST(passed, rxso2_from_mat);
+    SOPHUS_TEST_APPROX(passed, R, rxso2_from_mat->matrix(),
+                       Constants<Scalar>::epsilon());
+    Matrix2<Scalar> RR = R;
+    RR.col(0) = R.col(1);
+    RR.col(1) = R.col(0);
+    rxso2_from_mat = RxSO2Type::tryFromMatrix(RR);
+    SOPHUS_TEST(passed, !rxso2_from_mat);
+    SOPHUS_TEST(passed, rxso2_from_mat.error() ==
+                            ScaledRotationMatrixError::kNegativeDeterminant);
+    R(0, 0) = Scalar(2);
+    rxso2_from_mat = RxSO2Type::tryFromMatrix(R);
+    SOPHUS_TEST(passed, !rxso2_from_mat);
+    SOPHUS_TEST(passed, rxso2_from_mat.error() ==
+                            ScaledRotationMatrixError::
+                                kPositiveDeterminantButNotScaledOrthogonal);
+
+    auto so2_from_complex =
+        RxSO2Type::tryFromComplex({Scalar(0.0), Scalar(0.0)});
+    SOPHUS_TEST(passed, !so2_from_complex);
+    SOPHUS_TEST(passed, so2_from_complex.error() ==
+                            RxSO2FromComplexError::kCloseToZero);
+
+    so2_from_complex = RxSO2Type::tryFromComplex(so2.matrix().col(0));
+    SOPHUS_TEST(passed, so2_from_complex);
+    SOPHUS_TEST_EQUAL(passed, so2_from_complex->matrix(), so2.matrix());
 
     return passed;
   }
