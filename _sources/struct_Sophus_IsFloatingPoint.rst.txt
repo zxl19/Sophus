@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::IsFloatingPoint
+.. _doxid-struct_sophus_1_1_is_floating_point:
+
+template struct Sophus::IsFloatingPoint
+=======================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <types.hpp>
+	
+	template <class Scalar>
+	struct IsFloatingPoint {
+		// fields
+	
+		static const bool :target:`value<doxid-struct_sophus_1_1_is_floating_point_1a898f8f9975d30ca1f4975a06164d17a9>` = std::is_floating_point<Scalar>::value;
+	};

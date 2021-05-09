@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::GetScalar<Matrix<Scalar_, M, N>>
+.. _doxid-struct_sophus_1_1_get_scalar_3_01_matrix_3_01_scalar___00_01_m_00_01_n_01_4_01_4:
+
+template struct Sophus::GetScalar<Matrix<Scalar_, M, N>>
+========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <types.hpp>
+	
+	template <class Scalar_, int M, int N>
+	struct GetScalar<Matrix<Scalar_, M, N>> {
+		// typedefs
+	
+		using :target:`Scalar<doxid-struct_sophus_1_1_get_scalar_3_01_matrix_3_01_scalar___00_01_m_00_01_n_01_4_01_4_1a71c992c48778e72954591c6c3b6eb8f8>` = Scalar_ ;
+	};

@@ -1,0 +1,46 @@
+.. index:: pair: class; Sophus::optional
+.. _doxid-class_sophus_1_1optional:
+
+template class Sophus::optional
+===============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Lightweight optional implementation which requires ``T`` to have a default constructor. :ref:`More...<details-class_sophus_1_1optional>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <common.hpp>
+	
+	template <class T>
+	class optional {
+	public:
+		// construction
+	
+		:target:`optional<doxid-class_sophus_1_1optional_1a12c6f80c0834a7cd9172525d4443ab2d>`();
+		:target:`optional<doxid-class_sophus_1_1optional_1abd006f5cee5b122171249a112d5a0a12>`(:ref:`nullopt_t<doxid-struct_sophus_1_1nullopt__t>`);
+		:target:`optional<doxid-class_sophus_1_1optional_1ad77945d55b24580cba53f456dce0d9a8>`(T const& type);
+
+		// methods
+	
+		:target:`operator bool<doxid-class_sophus_1_1optional_1afad8e2983ea7d9365df8a2e1c1ce75ee>`() const;
+		T const* :target:`operator-><doxid-class_sophus_1_1optional_1aa67c3a90024a9fd26073fde7e52223bc>`() const;
+		T* :target:`operator-><doxid-class_sophus_1_1optional_1ae3b22188d54c1472e8f7e6a6f4e37fe3>`();
+		T const& :target:`operator*<doxid-class_sophus_1_1optional_1aff5611b86e6c68f326d0ffb32eaf0174>`() const;
+		T& :target:`operator*<doxid-class_sophus_1_1optional_1af0a4e098d54c7da2dfcf9e56c56e5cb0>`();
+	};
+.. _details-class_sophus_1_1optional:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Lightweight optional implementation which requires ``T`` to have a default constructor.
+
+TODO: Replace with std::optional once :ref:`Sophus <doxid-namespace_sophus>` moves to c++17.
+

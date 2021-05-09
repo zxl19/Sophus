@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::GetScalar
+.. _doxid-struct_sophus_1_1_get_scalar:
+
+template struct Sophus::GetScalar
+=================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <types.hpp>
+	
+	template <class Scalar_>
+	struct GetScalar {
+		// typedefs
+	
+		using :target:`Scalar<doxid-struct_sophus_1_1_get_scalar_1a69e12367620dae13d79250f9b7baf91f>` = Scalar_ ;
+	};

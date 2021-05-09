@@ -1,0 +1,462 @@
+.. index:: pair: class; Sophus::Sim2Base
+.. _doxid-class_sophus_1_1_sim2_base:
+
+template class Sophus::Sim2Base
+===============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`Sim2 <doxid-class_sophus_1_1_sim2>` base type - implements :ref:`Sim2 <doxid-class_sophus_1_1_sim2>` class but is storage agnostic. :ref:`More...<details-class_sophus_1_1_sim2_base>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <sim2.hpp>
+	
+	template <class Derived>
+	class Sim2Base {
+	public:
+		// typedefs
+	
+		using :target:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` = typename Eigen::internal::traits<Derived>:::ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` ;
+		using :target:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>` = typename Eigen::internal::traits<Derived>:::ref:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>` ;
+		using :target:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>` = typename Eigen::internal::traits<Derived>:::ref:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>` ;
+		using :target:`Transformation<doxid-class_sophus_1_1_sim2_base_1af926cec8149ae479dfa3d4cd91d30b48>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`N<doxid-class_sophus_1_1_sim2_base_1a374f7910a34703cfd0955f5fb79593c5>`, :ref:`N<doxid-class_sophus_1_1_sim2_base_1a374f7910a34703cfd0955f5fb79593c5>`> ;
+		using :target:`Point<doxid-class_sophus_1_1_sim2_base_1a99a2f39cb0be8043eefe033827cf5a53>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> ;
+		using :target:`HomogeneousPoint<doxid-class_sophus_1_1_sim2_base_1a9783c8d64ac3911352548295676e77f9>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> ;
+		using :target:`Line<doxid-class_sophus_1_1_sim2_base_1a16966d00c5d8cf037ea293d90b623d31>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> ;
+		using :target:`Tangent<doxid-class_sophus_1_1_sim2_base_1a01a42a09d8e589d059241955e8f209f8>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>`> ;
+		using :target:`Adjoint<doxid-class_sophus_1_1_sim2_base_1a80aa2bbaa3f970ce79a569c6d8b479c1>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>`, :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>`> ;
+		using :ref:`ReturnScalar<doxid-class_sophus_1_1_sim2_base_1ac5041840044f8bc41cdca5f6f77f8785>` = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, typename OtherDerived::Scalar>::ReturnType ;
+		using :target:`Sim2Product<doxid-class_sophus_1_1_sim2_base_1a31cbf2d2a911c5385ed9af1e04696ee7>` = :ref:`Sim2<doxid-class_sophus_1_1_sim2>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_sim2_base_1ac5041840044f8bc41cdca5f6f77f8785>`<OtherDerived>> ;
+		using :target:`PointProduct<doxid-class_sophus_1_1_sim2_base_1a1ae29fefb27c387131033925456c81da>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_sim2_base_1ac5041840044f8bc41cdca5f6f77f8785>`<PointDerived>> ;
+		using :target:`HomogeneousPointProduct<doxid-class_sophus_1_1_sim2_base_1a5c22e475f03695b9166733279fe2d9e2>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_sim2_base_1ac5041840044f8bc41cdca5f6f77f8785>`<HPointDerived>> ;
+
+		// fields
+	
+		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>` = 4;
+		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28>` = 4;
+		static constexpr int :ref:`N<doxid-class_sophus_1_1_sim2_base_1a374f7910a34703cfd0955f5fb79593c5>` = 3;
+
+		// methods
+	
+		:ref:`Adjoint<doxid-class_sophus_1_1_sim2_base_1a80aa2bbaa3f970ce79a569c6d8b479c1>` :ref:`Adj<doxid-class_sophus_1_1_sim2_base_1a060403d5f0ebd81cad714eab8d608393>`() const;
+	
+		template <class NewScalarType>
+		:ref:`Sim2<doxid-class_sophus_1_1_sim2>`<NewScalarType> :ref:`cast<doxid-class_sophus_1_1_sim2_base_1af28cfc61c6eadde63fefc518dbffae58>`() const;
+	
+		:ref:`Sim2<doxid-class_sophus_1_1_sim2>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> :ref:`inverse<doxid-class_sophus_1_1_sim2_base_1ace89c96e3cd2230cdf97e233f3715086>`() const;
+		:ref:`Tangent<doxid-class_sophus_1_1_sim2_base_1a01a42a09d8e589d059241955e8f209f8>` :ref:`log<doxid-class_sophus_1_1_sim2_base_1a8dff637c619db9642394a5de56cc4617>`() const;
+		:ref:`Transformation<doxid-class_sophus_1_1_sim2_base_1af926cec8149ae479dfa3d4cd91d30b48>` :ref:`matrix<doxid-class_sophus_1_1_sim2_base_1a842abb7dea3cfcec48735b6293bdf5ea>`() const;
+		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, 2, 3> :ref:`matrix2x3<doxid-class_sophus_1_1_sim2_base_1a410940e67ab88d51851e2fb2510059da>`() const;
+	
+		template <class OtherDerived>
+		Sim2Base<Derived>& :ref:`operator=<doxid-class_sophus_1_1_sim2_base_1ae09905675bba4c1db5dced847fefee26>`(Sim2Base<OtherDerived> const& other);
+	
+		template <typename OtherDerived>
+		:ref:`Sim2Product<doxid-class_sophus_1_1_sim2_base_1a31cbf2d2a911c5385ed9af1e04696ee7>`<OtherDerived> :ref:`operator*<doxid-class_sophus_1_1_sim2_base_1a06a5f5c2bfa5242b34f2b50310ad372c>`(Sim2Base<OtherDerived> const& other) const;
+	
+		template <
+			typename PointDerived,
+			typename = typename std::enable_if<IsFixedSizeVector<PointDerived, 2>::value>::type
+			>
+		:ref:`PointProduct<doxid-class_sophus_1_1_sim2_base_1a1ae29fefb27c387131033925456c81da>`<PointDerived> :ref:`operator*<doxid-class_sophus_1_1_sim2_base_1a75508de000aac505e5687df57cb8654a>`(Eigen::MatrixBase<PointDerived> const& p) const;
+	
+		template <
+			typename HPointDerived,
+			typename = typename std::enable_if<IsFixedSizeVector<HPointDerived, 3>::value>::type
+			>
+		:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_sim2_base_1a5c22e475f03695b9166733279fe2d9e2>`<HPointDerived> :ref:`operator*<doxid-class_sophus_1_1_sim2_base_1afa8b6653db673fb1c24713b3ef9614de>`(Eigen::MatrixBase<HPointDerived> const& p) const;
+	
+		:ref:`Line<doxid-class_sophus_1_1_sim2_base_1a16966d00c5d8cf037ea293d90b623d31>` :ref:`operator*<doxid-class_sophus_1_1_sim2_base_1a4b277adb89ef45170659140511e45612>`(:ref:`Line<doxid-class_sophus_1_1_sim2_base_1a16966d00c5d8cf037ea293d90b623d31>` const& l) const;
+		:ref:`Sophus::Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`num_parameters<doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28>`> :ref:`params<doxid-class_sophus_1_1_sim2_base_1a7ac9d74b766993ba923d83062f38690a>`() const;
+	
+		template <
+			typename OtherDerived,
+			typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerived>>::value>::type
+			>
+		Sim2Base<Derived>& :ref:`operator*=<doxid-class_sophus_1_1_sim2_base_1a7deb869b168f066f92d0c6a82777adc8>`(Sim2Base<OtherDerived> const& other);
+	
+		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`num_parameters<doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28>`, :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>`> :ref:`Dx_this_mul_exp_x_at_0<doxid-class_sophus_1_1_sim2_base_1a68e1902b7a894070422a01e34a215760>`() const;
+		void :ref:`setComplex<doxid-class_sophus_1_1_sim2_base_1a6a05baa97f17e767b74f9f44d47411cc>`(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> const& z);
+		Eigen::internal::traits<Derived>::RxSO2Type::ComplexType const& :ref:`complex<doxid-class_sophus_1_1_sim2_base_1aa0b70f82a24ecca822c3555a9b825839>`() const;
+		:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> :ref:`rotationMatrix<doxid-class_sophus_1_1_sim2_base_1a064bd95f2ba7b16335f50a0a980743c7>`() const;
+		:ref:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>`& :ref:`rxso2<doxid-class_sophus_1_1_sim2_base_1a32aedf61f0caac70d688743b1f476d6e>`();
+		:ref:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>` const& :ref:`rxso2<doxid-class_sophus_1_1_sim2_base_1aa19e4cdc74030007f882ec544dab4434>`() const;
+		:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` :ref:`scale<doxid-class_sophus_1_1_sim2_base_1a766084e1f0c059d113f6df265353bd67>`() const;
+		void :ref:`setRotationMatrix<doxid-class_sophus_1_1_sim2_base_1a06a2073dea6c431a4e45009037dfb389>`(:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`>& R);
+		void :ref:`setScale<doxid-class_sophus_1_1_sim2_base_1a57f83842c9da9e1e401eb184c02ede3e>`(:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` const& scale);
+		void :ref:`setScaledRotationMatrix<doxid-class_sophus_1_1_sim2_base_1a63d8412ad205cd251214bb398360e2c8>`(:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> const& sR);
+		:ref:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>`& :ref:`translation<doxid-class_sophus_1_1_sim2_base_1a5657e8d73c89999a7cc1953fb5083c71>`();
+		:ref:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>` const& :ref:`translation<doxid-class_sophus_1_1_sim2_base_1a33030c4b56ec6066804462ee5a9cbc13>`() const;
+	};
+
+	// direct descendants
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::Sim2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::Sim2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim2_3_01_scalar___01_4_00_01_options_01_4>`;
+.. _details-class_sophus_1_1_sim2_base:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`Sim2 <doxid-class_sophus_1_1_sim2>` base type - implements :ref:`Sim2 <doxid-class_sophus_1_1_sim2>` class but is storage agnostic.
+
+Sim(2) is the group of rotations and translation and scaling in 2d. It is the semi-direct product of R+xSO(2) and the 2d Euclidean vector space. The class is represented using a composition of :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` for scaling plus rotation and a 2-vector for translation.
+
+Sim(2) is neither compact, nor a commutative group.
+
+See :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` for more details of the scaling + rotation representation in 2d.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; ReturnScalar
+.. _doxid-class_sophus_1_1_sim2_base_1ac5041840044f8bc41cdca5f6f77f8785:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using ReturnScalar = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, typename OtherDerived::Scalar>::ReturnType 
+
+For binary operations the return type is determined with the ScalarBinaryOpTraits feature of :ref:`Eigen <doxid-namespace_eigen>`. This allows mixing concrete and Map types, as well as other compatible scalar types such as Ceres::Jet and double scalars with SIM2 operations.
+
+Fields
+------
+
+.. index:: pair: variable; DoF
+.. _doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int DoF = 4
+
+Degrees of freedom of manifold, number of dimensions in tangent space (two for translation, one for rotation and one for scaling).
+
+.. index:: pair: variable; num_parameters
+.. _doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int num_parameters = 4
+
+Number of internal parameters used (2-tuple for complex number, two for translation).
+
+.. index:: pair: variable; N
+.. _doxid-class_sophus_1_1_sim2_base_1a374f7910a34703cfd0955f5fb79593c5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int N = 3
+
+Group transformations are 3x3 matrices.
+
+Methods
+-------
+
+.. index:: pair: function; Adj
+.. _doxid-class_sophus_1_1_sim2_base_1a060403d5f0ebd81cad714eab8d608393:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Adjoint<doxid-class_sophus_1_1_sim2_base_1a80aa2bbaa3f970ce79a569c6d8b479c1>` Adj() const
+
+Adjoint transformation.
+
+This function return the adjoint transformation ``Ad`` of the group element ``A`` such that for all ``x`` it holds that ``hat(Ad_A * x) = A * hat(x) A^{-1}``. See hat-operator below.
+
+.. index:: pair: function; cast
+.. _doxid-class_sophus_1_1_sim2_base_1af28cfc61c6eadde63fefc518dbffae58:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class NewScalarType>
+	:ref:`Sim2<doxid-class_sophus_1_1_sim2>`<NewScalarType> cast() const
+
+Returns copy of instance casted to NewScalarType.
+
+.. index:: pair: function; inverse
+.. _doxid-class_sophus_1_1_sim2_base_1ace89c96e3cd2230cdf97e233f3715086:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Sim2<doxid-class_sophus_1_1_sim2>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> inverse() const
+
+Returns group inverse.
+
+.. index:: pair: function; log
+.. _doxid-class_sophus_1_1_sim2_base_1a8dff637c619db9642394a5de56cc4617:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Tangent<doxid-class_sophus_1_1_sim2_base_1a01a42a09d8e589d059241955e8f209f8>` log() const
+
+Logarithmic map.
+
+Computes the logarithm, the inverse of the group exponential which maps element of the group (rigid body transformations) to elements of the tangent space (twist).
+
+To be specific, this function computes ``vee(logmat(.))`` with ``logmat(.)`` being the matrix logarithm and ``vee(.)`` the vee-operator of Sim(2).
+
+.. index:: pair: function; matrix
+.. _doxid-class_sophus_1_1_sim2_base_1a842abb7dea3cfcec48735b6293bdf5ea:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Transformation<doxid-class_sophus_1_1_sim2_base_1af926cec8149ae479dfa3d4cd91d30b48>` matrix() const
+
+Returns 3x3 matrix representation of the instance.
+
+It has the following form:
+
+\| s\*R t \| \| o 1 \|
+
+where ``R`` is a 2x2 rotation matrix, ``s`` a scale factor, ``t`` a translation 2-vector and ``o`` a 2-column vector of zeros.
+
+.. index:: pair: function; matrix2x3
+.. _doxid-class_sophus_1_1_sim2_base_1a410940e67ab88d51851e2fb2510059da:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, 2, 3> matrix2x3() const
+
+Returns the significant first two rows of the matrix above.
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_sim2_base_1ae09905675bba4c1db5dced847fefee26:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherDerived>
+	Sim2Base<Derived>& operator=(Sim2Base<OtherDerived> const& other)
+
+Assignment-like operator from OtherDerived.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_sim2_base_1a06a5f5c2bfa5242b34f2b50310ad372c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename OtherDerived>
+	:ref:`Sim2Product<doxid-class_sophus_1_1_sim2_base_1a31cbf2d2a911c5385ed9af1e04696ee7>`<OtherDerived> operator*(Sim2Base<OtherDerived> const& other) const
+
+Group multiplication, which is rotation plus scaling concatenation.
+
+Note: That scaling is calculated with saturation. See :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` for details.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_sim2_base_1a75508de000aac505e5687df57cb8654a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename PointDerived,
+		typename = typename std::enable_if<IsFixedSizeVector<PointDerived, 2>::value>::type
+		>
+	:ref:`PointProduct<doxid-class_sophus_1_1_sim2_base_1a1ae29fefb27c387131033925456c81da>`<PointDerived> operator*(Eigen::MatrixBase<PointDerived> const& p) const
+
+Group action on 2-points.
+
+This function rotates, scales and translates a two dimensional point ``p`` by the Sim(2) element ``(bar_sR_foo, t_bar)`` (= similarity transformation):
+
+``p_bar = bar_sR_foo * p_foo + t_bar``.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_sim2_base_1afa8b6653db673fb1c24713b3ef9614de:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename HPointDerived,
+		typename = typename std::enable_if<IsFixedSizeVector<HPointDerived, 3>::value>::type
+		>
+	:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_sim2_base_1a5c22e475f03695b9166733279fe2d9e2>`<HPointDerived> operator*(Eigen::MatrixBase<HPointDerived> const& p) const
+
+Group action on homogeneous 2-points. See above for more details.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_sim2_base_1a4b277adb89ef45170659140511e45612:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Line<doxid-class_sophus_1_1_sim2_base_1a16966d00c5d8cf037ea293d90b623d31>` operator*(:ref:`Line<doxid-class_sophus_1_1_sim2_base_1a16966d00c5d8cf037ea293d90b623d31>` const& l) const
+
+Group action on lines.
+
+This function rotates, scales and translates a parametrized line ``l(t) = o + t * d`` by the Sim(2) element:
+
+Origin ``o`` is rotated, scaled and translated Direction ``d`` is rotated
+
+.. index:: pair: function; params
+.. _doxid-class_sophus_1_1_sim2_base_1a7ac9d74b766993ba923d83062f38690a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Sophus::Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`num_parameters<doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28>`> params() const
+
+Returns internal parameters of Sim(2).
+
+It returns (c[0], c[1], t[0], t[1]), with c being the complex number, t the translation 3-vector.
+
+.. index:: pair: function; operator*=
+.. _doxid-class_sophus_1_1_sim2_base_1a7deb869b168f066f92d0c6a82777adc8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename OtherDerived,
+		typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerived>>::value>::type
+		>
+	Sim2Base<Derived>& operator*=(Sim2Base<OtherDerived> const& other)
+
+In-place group multiplication. This method is only valid if the return type of the multiplication is compatible with this :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` 's Scalar type.
+
+.. index:: pair: function; Dx_this_mul_exp_x_at_0
+.. _doxid-class_sophus_1_1_sim2_base_1a68e1902b7a894070422a01e34a215760:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`, :ref:`num_parameters<doxid-class_sophus_1_1_sim2_base_1a0284f0e4b3e7fa521fabf5ce7fc12f28>`, :ref:`DoF<doxid-class_sophus_1_1_sim2_base_1a95d7cd577a7bfd96fb83adb8f8457a81>`> Dx_this_mul_exp_x_at_0() const
+
+Returns derivative of this \* Sim2::exp(x) wrt. x at x=0.
+
+.. index:: pair: function; setComplex
+.. _doxid-class_sophus_1_1_sim2_base_1a6a05baa97f17e767b74f9f44d47411cc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setComplex(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> const& z)
+
+Setter of non-zero complex number.
+
+Precondition: ``z`` must not be close to zero.
+
+.. index:: pair: function; complex
+.. _doxid-class_sophus_1_1_sim2_base_1aa0b70f82a24ecca822c3555a9b825839:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::internal::traits<Derived>::RxSO2Type::ComplexType const& complex() const
+
+Accessor of complex number.
+
+.. index:: pair: function; rotationMatrix
+.. _doxid-class_sophus_1_1_sim2_base_1a064bd95f2ba7b16335f50a0a980743c7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> rotationMatrix() const
+
+Returns Rotation matrix.
+
+.. index:: pair: function; rxso2
+.. _doxid-class_sophus_1_1_sim2_base_1a32aedf61f0caac70d688743b1f476d6e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>`& rxso2()
+
+Mutator of :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` group.
+
+.. index:: pair: function; rxso2
+.. _doxid-class_sophus_1_1_sim2_base_1aa19e4cdc74030007f882ec544dab4434:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`RxSO2Type<doxid-class_sophus_1_1_sim2_base_1a58eccb0bd8c691ba6252050825ec8cae>` const& rxso2() const
+
+Accessor of :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` group.
+
+.. index:: pair: function; scale
+.. _doxid-class_sophus_1_1_sim2_base_1a766084e1f0c059d113f6df265353bd67:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` scale() const
+
+Returns scale.
+
+.. index:: pair: function; setRotationMatrix
+.. _doxid-class_sophus_1_1_sim2_base_1a06a2073dea6c431a4e45009037dfb389:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setRotationMatrix(:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`>& R)
+
+Setter of complex number using rotation matrix ``R``, leaves scale as is.
+
+.. index:: pair: function; setScale
+.. _doxid-class_sophus_1_1_sim2_base_1a57f83842c9da9e1e401eb184c02ede3e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setScale(:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>` const& scale)
+
+Sets scale and leaves rotation as is.
+
+Note: This function as a significant computational cost, since it has to call the square root twice.
+
+.. index:: pair: function; setScaledRotationMatrix
+.. _doxid-class_sophus_1_1_sim2_base_1a63d8412ad205cd251214bb398360e2c8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setScaledRotationMatrix(:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> const& sR)
+
+Setter of complexnumber using scaled rotation matrix ``sR``.
+
+Precondition: The 2x2 matrix must be "scaled orthogonal" and have a positive determinant.
+
+.. index:: pair: function; translation
+.. _doxid-class_sophus_1_1_sim2_base_1a5657e8d73c89999a7cc1953fb5083c71:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>`& translation()
+
+Mutator of translation vector.
+
+.. index:: pair: function; translation
+.. _doxid-class_sophus_1_1_sim2_base_1a33030c4b56ec6066804462ee5a9cbc13:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`TranslationType<doxid-class_sophus_1_1_sim2_base_1ab8d89afe8f7ed692f786185aa0ba739d>` const& translation() const
+
+Accessor of translation vector.
+

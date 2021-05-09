@@ -1,0 +1,685 @@
+.. index:: pair: namespace; Sophus
+.. _doxid-namespace_sophus:
+
+namespace Sophus
+================
+
+.. toctree::
+	:hidden:
+
+	struct_Sophus_Constants.rst
+	struct_Sophus_Constants-2.rst
+	struct_Sophus_GetScalar.rst
+	struct_Sophus_GetScalar-2.rst
+	struct_Sophus_IsFixedSizeVector.rst
+	struct_Sophus_IsFloatingPoint.rst
+	struct_Sophus_IsFloatingPoint-2.rst
+	struct_Sophus_IsUniformRandomBitGenerator.rst
+	struct_Sophus_nullopt_t.rst
+	class_Sophus_RxSO2.rst
+	class_Sophus_RxSO2Base.rst
+	class_Sophus_RxSO3.rst
+	class_Sophus_RxSO3Base.rst
+	class_Sophus_SE2.rst
+	class_Sophus_SE2Base.rst
+	class_Sophus_SE3.rst
+	class_Sophus_SE3Base.rst
+	class_Sophus_SO2.rst
+	class_Sophus_SO2Base.rst
+	class_Sophus_SO3.rst
+	class_Sophus_SO3Base.rst
+	class_Sophus_Sim2.rst
+	class_Sophus_Sim2Base.rst
+	class_Sophus_Sim3.rst
+	class_Sophus_Sim3Base.rst
+	class_Sophus_optional.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace Sophus {
+
+	// typedefs
+
+	using :target:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>` = typename std::enable_if<B, T>::type ;
+	using :target:`RxSO2d<doxid-namespace_sophus_1ae4bf3c8ddc1dc4f6f5f0cf2ad42f4bd8>` = :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`<double> ;
+	using :target:`RxSO2f<doxid-namespace_sophus_1a4d34b5159d3eecc374f623f9b41f6558>` = :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`<float> ;
+	using :target:`RxSO3d<doxid-namespace_sophus_1aabf0e02329e9fa069b496eecefb1db45>` = :ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3>`<double> ;
+	using :target:`RxSO3f<doxid-namespace_sophus_1a62103e946c876eba9f7a5cff6ce0a021>` = :ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3>`<float> ;
+	using :target:`SE2d<doxid-namespace_sophus_1a5780ad092ba3fc30da51034be9f2b823>` = :ref:`SE2<doxid-class_sophus_1_1_s_e2>`<double> ;
+	using :target:`SE2f<doxid-namespace_sophus_1a343feaa852b4b77b71720c88bbfef6fb>` = :ref:`SE2<doxid-class_sophus_1_1_s_e2>`<float> ;
+	using :target:`SE3d<doxid-namespace_sophus_1a050c091bcf57261df3365462b3d01ffd>` = :ref:`SE3<doxid-class_sophus_1_1_s_e3>`<double> ;
+	using :target:`SE3f<doxid-namespace_sophus_1a8f271fa7a6a43bf18b01cb730b4b6c43>` = :ref:`SE3<doxid-class_sophus_1_1_s_e3>`<float> ;
+	using :target:`Sim2d<doxid-namespace_sophus_1ad7cd01ee6467c976dae7ee7acaac192a>` = :ref:`Sim2<doxid-class_sophus_1_1_sim2>`<double> ;
+	using :target:`Sim2f<doxid-namespace_sophus_1a7114dd0701cfd7a109385eaf2c9f90b5>` = :ref:`Sim2<doxid-class_sophus_1_1_sim2>`<float> ;
+	using :target:`Sim3d<doxid-namespace_sophus_1aba0aeef02b4e3b75d92a02474d841542>` = :ref:`Sim3<doxid-class_sophus_1_1_sim3>`<double> ;
+	using :target:`Sim3f<doxid-namespace_sophus_1acdeb607ece91d46cc9b43177d068d967>` = :ref:`Sim3<doxid-class_sophus_1_1_sim3>`<float> ;
+	using :target:`SO2d<doxid-namespace_sophus_1a6f4d8b25c9fb1e19b89465d5aeb01867>` = :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<double> ;
+	using :target:`SO2f<doxid-namespace_sophus_1a33280a4612bd168a0af4de8e20ae06f4>` = :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<float> ;
+	using :target:`SO3d<doxid-namespace_sophus_1a72da343db3982b92fc93e8246bccd96c>` = :ref:`SO3<doxid-class_sophus_1_1_s_o3>`<double> ;
+	using :target:`SO3f<doxid-namespace_sophus_1ac6cb3128afa52b44fc475a8a887b6d47>` = :ref:`SO3<doxid-class_sophus_1_1_s_o3>`<float> ;
+	using :target:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>` = Eigen::Matrix<Scalar, M, 1, Options> ;
+	using :target:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<Scalar, 2, Options> ;
+	using :target:`Vector2f<doxid-namespace_sophus_1a79c6701164b8e6e47a48756620164cb8>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<float> ;
+	using :target:`Vector2d<doxid-namespace_sophus_1ae1a6adc41db676d13b0f7c7037aac737>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<double> ;
+	using :target:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<Scalar, 3, Options> ;
+	using :target:`Vector3f<doxid-namespace_sophus_1a7f6205d3e1e8a2a502aecfe18be2998f>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<float> ;
+	using :target:`Vector3d<doxid-namespace_sophus_1a19a6c529d65dcd5a99bf78e47e606123>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<double> ;
+	using :target:`Vector4<doxid-namespace_sophus_1a2f54b15372bfd1bb0c34464ad61a77c6>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<Scalar, 4> ;
+	using :target:`Vector4f<doxid-namespace_sophus_1ab4fe7b5a00724362989df6e3bbfcf00d>` = :ref:`Vector4<doxid-namespace_sophus_1a2f54b15372bfd1bb0c34464ad61a77c6>`<float> ;
+	using :target:`Vector4d<doxid-namespace_sophus_1a0737a758726ede609370375bd13ffb10>` = :ref:`Vector4<doxid-namespace_sophus_1a2f54b15372bfd1bb0c34464ad61a77c6>`<double> ;
+	using :target:`Vector6<doxid-namespace_sophus_1a1a96246dc90b04e1e0762793d8c4ea6e>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<Scalar, 6> ;
+	using :target:`Vector6f<doxid-namespace_sophus_1a20246e4aaee565260b77bd5167e5183b>` = :ref:`Vector6<doxid-namespace_sophus_1a1a96246dc90b04e1e0762793d8c4ea6e>`<float> ;
+	using :target:`Vector6d<doxid-namespace_sophus_1ac3146d9065cde09cc4d0ce11aca47a3d>` = :ref:`Vector6<doxid-namespace_sophus_1a1a96246dc90b04e1e0762793d8c4ea6e>`<double> ;
+	using :target:`Vector7<doxid-namespace_sophus_1aa17d271c642ba3b3e9fe28c8aab180fd>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<Scalar, 7> ;
+	using :target:`Vector7f<doxid-namespace_sophus_1ad6cb1409feb2556caafde97fa1909c47>` = :ref:`Vector7<doxid-namespace_sophus_1aa17d271c642ba3b3e9fe28c8aab180fd>`<float> ;
+	using :target:`Vector7d<doxid-namespace_sophus_1ab4661fa049fbfbb108f96e015038af2c>` = :ref:`Vector7<doxid-namespace_sophus_1aa17d271c642ba3b3e9fe28c8aab180fd>`<double> ;
+	using :target:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>` = Eigen::Matrix<Scalar, M, N> ;
+	using :target:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<Scalar, 2, 2> ;
+	using :target:`Matrix2f<doxid-namespace_sophus_1a49bc6b089109bd8755b570de97d4d07e>` = :ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<float> ;
+	using :target:`Matrix2d<doxid-namespace_sophus_1a59ba6152575f95bca0bf7a1368434b82>` = :ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<double> ;
+	using :target:`Matrix3<doxid-namespace_sophus_1a480d3dfd742f398b9e6244acd2591b39>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<Scalar, 3, 3> ;
+	using :target:`Matrix3f<doxid-namespace_sophus_1a8b5ef2e42b8002c9cf2a50bb3564d99b>` = :ref:`Matrix3<doxid-namespace_sophus_1a480d3dfd742f398b9e6244acd2591b39>`<float> ;
+	using :target:`Matrix3d<doxid-namespace_sophus_1a69d0533e78ca2554d52c1e890a0902d1>` = :ref:`Matrix3<doxid-namespace_sophus_1a480d3dfd742f398b9e6244acd2591b39>`<double> ;
+	using :target:`Matrix4<doxid-namespace_sophus_1ac203d11abd626d6a31b3870a7b1dce56>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<Scalar, 4, 4> ;
+	using :target:`Matrix4f<doxid-namespace_sophus_1a04ca7e5f193fc9be8c9fa4dc25bceec8>` = :ref:`Matrix4<doxid-namespace_sophus_1ac203d11abd626d6a31b3870a7b1dce56>`<float> ;
+	using :target:`Matrix4d<doxid-namespace_sophus_1ae26fefa18fa6dcc1dc97bacf3f076c3c>` = :ref:`Matrix4<doxid-namespace_sophus_1ac203d11abd626d6a31b3870a7b1dce56>`<double> ;
+	using :target:`Matrix6<doxid-namespace_sophus_1a46292ec33cf8eb5903577f637928ef86>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<Scalar, 6, 6> ;
+	using :target:`Matrix6f<doxid-namespace_sophus_1aaad0de4527958834366a619e10d8aee7>` = :ref:`Matrix6<doxid-namespace_sophus_1a46292ec33cf8eb5903577f637928ef86>`<float> ;
+	using :target:`Matrix6d<doxid-namespace_sophus_1aea62d644bb019156874bddeaec4087e3>` = :ref:`Matrix6<doxid-namespace_sophus_1a46292ec33cf8eb5903577f637928ef86>`<double> ;
+	using :target:`Matrix7<doxid-namespace_sophus_1a1ec62c6c5b5fce006ceb89e9668c500b>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<Scalar, 7, 7> ;
+	using :target:`Matrix7f<doxid-namespace_sophus_1aafeb2fcab6c39195136759b5b0b3aef0>` = :ref:`Matrix7<doxid-namespace_sophus_1a1ec62c6c5b5fce006ceb89e9668c500b>`<float> ;
+	using :target:`Matrix7d<doxid-namespace_sophus_1abcc8c3a0849bd1079257ee02ac8e3b91>` = :ref:`Matrix7<doxid-namespace_sophus_1a1ec62c6c5b5fce006ceb89e9668c500b>`<double> ;
+	using :target:`ParametrizedLine<doxid-namespace_sophus_1a56f6d172f020acba18689bd742b41392>` = Eigen::ParametrizedLine<Scalar, N, Options> ;
+	using :target:`ParametrizedLine3<doxid-namespace_sophus_1a24633b90a69ca83ad90d833e11e59dd9>` = :ref:`ParametrizedLine<doxid-namespace_sophus_1a56f6d172f020acba18689bd742b41392>`<Scalar, 3, Options> ;
+	using :target:`ParametrizedLine3f<doxid-namespace_sophus_1aa27956c87b20115072e9d98f18decf81>` = :ref:`ParametrizedLine3<doxid-namespace_sophus_1a24633b90a69ca83ad90d833e11e59dd9>`<float> ;
+	using :target:`ParametrizedLine3d<doxid-namespace_sophus_1a0a39bbda982af0c7595f2b9a67bbd2ad>` = :ref:`ParametrizedLine3<doxid-namespace_sophus_1a24633b90a69ca83ad90d833e11e59dd9>`<double> ;
+	using :target:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>` = :ref:`ParametrizedLine<doxid-namespace_sophus_1a56f6d172f020acba18689bd742b41392>`<Scalar, 2, Options> ;
+	using :target:`ParametrizedLine2f<doxid-namespace_sophus_1ad695facefd86c03a63c5ec236007a91b>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<float> ;
+	using :target:`ParametrizedLine2d<doxid-namespace_sophus_1a89bbe4d64222679306277ad668d6346f>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<double> ;
+	using :ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>` = Eigen::Hyperplane<T, 3> ;
+	using :target:`Plane3d<doxid-namespace_sophus_1a6088b7a2c712c85c1dfd4f6cb8c29d12>` = :ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<double> ;
+	using :target:`Plane3f<doxid-namespace_sophus_1a472051f1e311a56e83ee60fac7e4ea1a>` = :ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<float> ;
+	using :ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>` = Eigen::Hyperplane<T, 2> ;
+	using :target:`Line2d<doxid-namespace_sophus_1adc9ec06d50ffb2518147a017b4f748f2>` = :ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<double> ;
+	using :target:`Line2f<doxid-namespace_sophus_1ae28ef27852fa968ec29bd8e07243f50f>` = :ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<float> ;
+
+	// structs
+
+	template <class Scalar>
+	struct :ref:`Constants<doxid-struct_sophus_1_1_constants>`;
+
+	template <>
+	struct :ref:`Constants<float><doxid-struct_sophus_1_1_constants_3_01float_01_4>`;
+
+	template <class Scalar_>
+	struct :ref:`GetScalar<doxid-struct_sophus_1_1_get_scalar>`;
+
+	template <class Scalar_, int M, int N>
+	struct :ref:`GetScalar<Matrix<Scalar_, M, N>><doxid-struct_sophus_1_1_get_scalar_3_01_matrix_3_01_scalar___00_01_m_00_01_n_01_4_01_4>`;
+
+	template <
+		typename Vector,
+		int NumDimensions,
+		typename = typename std::enable_if<Vector::RowsAtCompileTime == NumDimensions&&              Vector::ColsAtCompileTime == 1>::type
+		>
+	struct :ref:`IsFixedSizeVector<doxid-struct_sophus_1_1_is_fixed_size_vector>`;
+
+	template <class Scalar>
+	struct :ref:`IsFloatingPoint<doxid-struct_sophus_1_1_is_floating_point>`;
+
+	template <class Scalar, int M, int N>
+	struct :ref:`IsFloatingPoint<Matrix<Scalar, M, N>><doxid-struct_sophus_1_1_is_floating_point_3_01_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4>`;
+
+	template <class G>
+	struct :ref:`IsUniformRandomBitGenerator<doxid-struct_sophus_1_1_is_uniform_random_bit_generator>`;
+
+	struct :ref:`nullopt_t<doxid-struct_sophus_1_1nullopt__t>`;
+
+	// classes
+
+	template <class Scalar_, int Options>
+	class :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`;
+
+	template <class Derived>
+	class :ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3>`;
+
+	template <class Derived>
+	class :ref:`RxSO3Base<doxid-class_sophus_1_1_rx_s_o3_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`SE2<doxid-class_sophus_1_1_s_e2>`;
+
+	template <class Derived>
+	class :ref:`SE2Base<doxid-class_sophus_1_1_s_e2_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`SE3<doxid-class_sophus_1_1_s_e3>`;
+
+	template <class Derived>
+	class :ref:`SE3Base<doxid-class_sophus_1_1_s_e3_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`SO2<doxid-class_sophus_1_1_s_o2>`;
+
+	template <class Derived>
+	class :ref:`SO2Base<doxid-class_sophus_1_1_s_o2_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`SO3<doxid-class_sophus_1_1_s_o3>`;
+
+	template <class Derived>
+	class :ref:`SO3Base<doxid-class_sophus_1_1_s_o3_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Sim2<doxid-class_sophus_1_1_sim2>`;
+
+	template <class Derived>
+	class :ref:`Sim2Base<doxid-class_sophus_1_1_sim2_base>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Sim3<doxid-class_sophus_1_1_sim3>`;
+
+	template <class Derived>
+	class :ref:`Sim3Base<doxid-class_sophus_1_1_sim3_base>`;
+
+	template <class T>
+	class :ref:`optional<doxid-class_sophus_1_1optional>`;
+
+	// global variables
+
+	constexpr :ref:`nullopt_t<doxid-struct_sophus_1_1nullopt__t>` :target:`nullopt<doxid-namespace_sophus_1a51967df3b1702e291aac70303ce49089>` {};
+
+	// global functions
+
+	template <class SequenceContainer>
+	:ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type> :ref:`iterativeMean<doxid-namespace_sophus_1a5e3bead69bdf62c766fccff19fd644d4>`(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations
+		);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1acca5d6837e98031631bb8cc47b00ff9d>`(SequenceContainer const& foo_Ts_bar);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1af79360901129e7c404ea987aafe2b324>`(SequenceContainer const& foo_Ts_bar);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`SO3<doxid-class_sophus_1_1_s_o3>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a8ee37f614eecc083e6017fc1259a66da>`(SequenceContainer const& foo_Ts_bar);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a6a8cc5671f8fb2f81fe2238b7474e711>`(SequenceContainer const& foo_Ts_bar);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`SE2<doxid-class_sophus_1_1_s_e2>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a48649e899aefc964e7041612944fa986>`(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`Sim2<doxid-class_sophus_1_1_sim2>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a511b8f74b8a2fa1d30d1fc1bd40ef218>`(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`SE3<doxid-class_sophus_1_1_s_e3>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a5b6dc98cb2694b62b6e0549171348f62>`(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainer,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`Sim3<doxid-class_sophus_1_1_sim3>`<Scalar>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1a081b858b21027cfd6261d34868071c33>`(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations = 20
+		);
+
+	void :target:`ensureFailed<doxid-namespace_sophus_1aded83f70a4863a7918951da8ce53d841>`(
+		char const* function,
+		char const* file,
+		int line,
+		char const* description
+		);
+
+	template <class T>
+	:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<T> :ref:`normalFromSO2<doxid-namespace_sophus_1afecff79dc6dde03e54653cfb62d23182>`(:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<T> const& R_foo_line);
+
+	template <class T>
+	:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<T> :ref:`SO2FromNormal<doxid-namespace_sophus_1aa7fe579281c3891139562ebadb16932f>`(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<T> normal_foo);
+
+	template <class T>
+	:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> :ref:`normalFromSO3<doxid-namespace_sophus_1a7e5a5de775ccbe13793d54c5c7d3e799>`(:ref:`SO3<doxid-class_sophus_1_1_s_o3>`<T> const& R_foo_plane);
+
+	template <class T>
+	:ref:`Matrix3<doxid-namespace_sophus_1a480d3dfd742f398b9e6244acd2591b39>`<T> :ref:`rotationFromNormal<doxid-namespace_sophus_1a19374f547b0e01dfeae883569c7554a3>`(
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> const& normal_foo,
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> xDirHint_foo = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T>(T(1), T(0), T(0)),
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> yDirHint_foo = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T>(T(0), T(1), T(0))
+		);
+
+	template <class T>
+	:ref:`SO3<doxid-class_sophus_1_1_s_o3>`<T> :ref:`SO3FromNormal<doxid-namespace_sophus_1a39dc3b6d90e1a68bdcea22876d544a08>`(:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> const& normal_foo);
+
+	template <class T>
+	:ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<T> :ref:`lineFromSE2<doxid-namespace_sophus_1afdd797edf8027c2c4bfdad79e805114d>`(:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<T> const& T_foo_line);
+
+	template <class T>
+	:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<T> :ref:`SE2FromLine<doxid-namespace_sophus_1a6a8440772e2169575316a800e13a5bd2>`(:ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<T> const& line_foo);
+
+	template <class T>
+	:ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<T> :ref:`planeFromSE3<doxid-namespace_sophus_1af149072afe7a98b21f5d399a4bdd93f6>`(:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<T> const& T_foo_plane);
+
+	template <class T>
+	:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<T> :ref:`SE3FromPlane<doxid-namespace_sophus_1ae8a7f2e39c70b49fe0978d07ae450279>`(:ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<T> const& plane_foo);
+
+	template <class T, int N>
+	Eigen::Hyperplane<T, N> :ref:`makeHyperplaneUnique<doxid-namespace_sophus_1ae8cb8d1ffa995f277e77fb7b47171a6d>`(Eigen::Hyperplane<T, N> const& plane);
+
+	template <class G, class Scalar2 = typename G::Scalar>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<interp_details::Traits<G>::supported, G> :ref:`interpolate<doxid-namespace_sophus_1a62fcd52df44df127cc8ff0f5330d8a4d>`(
+		G const& foo_T_bar,
+		G const& foo_T_baz,
+		Scalar2 p = Scalar2(0.5f)
+		);
+
+	template <class Scalar, class Fn>
+	auto :ref:`curveNumDiff<doxid-namespace_sophus_1adf38f381fe6b936c568e1c310b322727>`(
+		Fn curve,
+		Scalar t,
+		Scalar h = :ref:`Constants<doxid-struct_sophus_1_1_constants>`<Scalar>::epsilonSqrt()
+		);
+
+	template <class Scalar, int N, int M, class ScalarOrVector, class Fn>
+	Eigen::Matrix<Scalar, N, M> :ref:`vectorFieldNumDiff<doxid-namespace_sophus_1a8cbaee849ddf9e5371f76a95a489b48e>`(
+		Fn vector_field,
+		ScalarOrVector const& a,
+		Scalar eps = :ref:`Constants<doxid-struct_sophus_1_1_constants>`<Scalar>::epsilonSqrt()
+		);
+
+	template <class D>
+	bool :ref:`isOrthogonal<doxid-namespace_sophus_1ad3c58a9cb01fc75f04973e8b066cb7f5>`(Eigen::MatrixBase<D> const& R);
+
+	template <class D>
+	bool :ref:`isScaledOrthogonalAndPositive<doxid-namespace_sophus_1aa2847cbf379ebd9dbe9369ee9f705109>`(Eigen::MatrixBase<D> const& sR);
+
+	template <class D>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_floating_point<typename D::Scalar>::value, :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<typename D::Scalar, D::RowsAtCompileTime, D::RowsAtCompileTime>> :ref:`makeRotationMatrix<doxid-namespace_sophus_1a684b4cfe84556e35a7414d251e3473a8>`(Eigen::MatrixBase<D> const& R);
+
+	void :target:`processTestResult<doxid-namespace_sophus_1a74c9c12f18b11ba5debc7a26b99c604b>`(bool passed);
+
+	template <class T>
+	auto :ref:`maxMetric<doxid-namespace_sophus_1ad188360252a4702f247fd07ded09d3e6>`(T const& p0, T const& p1);
+
+	template <class T>
+	void :ref:`setToZero<doxid-namespace_sophus_1a692db65154c0e61cfdd743fb97ce806d>`(T& p);
+
+	template <class T, class Scalar>
+	void :ref:`setElementAt<doxid-namespace_sophus_1ad4d5fb60b5096d00db3baaf3668a41bb>`(T& p, Scalar value, int i);
+
+	template <class T>
+	auto :ref:`squaredNorm<doxid-namespace_sophus_1aceb4e371d61285afa207cdbd705242f1>`(T const& p);
+
+	template <class T>
+	auto :ref:`transpose<doxid-namespace_sophus_1a95e921e1445e921da56ef633d15158f2>`(T const& p);
+
+	} // namespace Sophus
+.. _details-namespace_sophus:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Typedefs
+--------
+
+.. index:: pair: typedef; Plane3
+.. _doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using Plane3 = Eigen::Hyperplane<T, 3> 
+
+Planes in 3d are hyperplanes.
+
+.. index:: pair: typedef; Line2
+.. _doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using Line2 = Eigen::Hyperplane<T, 2> 
+
+Lines in 2d are hyperplanes.
+
+Global Functions
+----------------
+
+.. index:: pair: function; iterativeMean
+.. _doxid-namespace_sophus_1a5e3bead69bdf62c766fccff19fd644d4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class SequenceContainer>
+	:ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type> iterativeMean(
+		SequenceContainer const& foo_Ts_bar,
+		int max_num_iterations
+		)
+
+Calculates mean iteratively.
+
+Returns ``nullopt`` if it does not converge.
+
+.. index:: pair: function; normalFromSO2
+.. _doxid-namespace_sophus_1afecff79dc6dde03e54653cfb62d23182:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<T> normalFromSO2(:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<T> const& R_foo_line)
+
+Takes in a rotation ``R_foo_plane`` and returns the corresponding line normal along the y-axis (in reference frame ``foo``).
+
+.. index:: pair: function; SO2FromNormal
+.. _doxid-namespace_sophus_1aa7fe579281c3891139562ebadb16932f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<T> SO2FromNormal(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<T> normal_foo)
+
+Takes in line normal in reference frame foo and constructs a corresponding rotation matrix ``R_foo_line``.
+
+Precondition: ``normal_foo`` must not be close to zero.
+
+.. index:: pair: function; normalFromSO3
+.. _doxid-namespace_sophus_1a7e5a5de775ccbe13793d54c5c7d3e799:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> normalFromSO3(:ref:`SO3<doxid-class_sophus_1_1_s_o3>`<T> const& R_foo_plane)
+
+Takes in a rotation ``R_foo_plane`` and returns the corresponding plane normal along the z-axis (in reference frame ``foo``).
+
+.. index:: pair: function; rotationFromNormal
+.. _doxid-namespace_sophus_1a19374f547b0e01dfeae883569c7554a3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`Matrix3<doxid-namespace_sophus_1a480d3dfd742f398b9e6244acd2591b39>`<T> rotationFromNormal(
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> const& normal_foo,
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> xDirHint_foo = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T>(T(1), T(0), T(0)),
+		:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> yDirHint_foo = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T>(T(0), T(1), T(0))
+		)
+
+Takes in plane normal in reference frame foo and constructs a corresponding rotation matrix ``R_foo_plane``.
+
+Note: The ``plane`` frame is defined as such that the normal points along the positive z-axis. One can specify hints for the x-axis and y-axis of the ``plane`` frame.
+
+Preconditions:
+
+* ``normal_foo``, ``xDirHint_foo``, ``yDirHint_foo`` must not be close to zero.
+
+* ``xDirHint_foo`` and ``yDirHint_foo`` must be approx. perpendicular.
+
+.. index:: pair: function; SO3FromNormal
+.. _doxid-namespace_sophus_1a39dc3b6d90e1a68bdcea22876d544a08:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`SO3<doxid-class_sophus_1_1_s_o3>`<T> SO3FromNormal(:ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<T> const& normal_foo)
+
+Takes in plane normal in reference frame foo and constructs a corresponding rotation matrix ``R_foo_plane``.
+
+See ``rotationFromNormal`` for details.
+
+.. index:: pair: function; lineFromSE2
+.. _doxid-namespace_sophus_1afdd797edf8027c2c4bfdad79e805114d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<T> lineFromSE2(:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<T> const& T_foo_line)
+
+Returns a line (wrt. to frame ``foo``), given a pose of the ``line`` in reference frame ``foo``.
+
+Note: The plane is defined by X-axis of the ``line`` frame.
+
+.. index:: pair: function; SE2FromLine
+.. _doxid-namespace_sophus_1a6a8440772e2169575316a800e13a5bd2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<T> SE2FromLine(:ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<T> const& line_foo)
+
+Returns the pose ``T_foo_line``, given a line in reference frame ``foo``.
+
+Note: The line is defined by X-axis of the frame ``line``.
+
+.. index:: pair: function; planeFromSE3
+.. _doxid-namespace_sophus_1af149072afe7a98b21f5d399a4bdd93f6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<T> planeFromSE3(:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<T> const& T_foo_plane)
+
+Returns a plane (wrt. to frame ``foo``), given a pose of the ``plane`` in reference frame ``foo``.
+
+Note: The plane is defined by XY-plane of the frame ``plane``.
+
+.. index:: pair: function; SE3FromPlane
+.. _doxid-namespace_sophus_1ae8a7f2e39c70b49fe0978d07ae450279:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<T> SE3FromPlane(:ref:`Plane3<doxid-namespace_sophus_1a107d7344523ab41ca14c9ff2086e24e9>`<T> const& plane_foo)
+
+Returns the pose ``T_foo_plane``, given a plane in reference frame ``foo``.
+
+Note: The plane is defined by XY-plane of the frame ``plane``.
+
+.. index:: pair: function; makeHyperplaneUnique
+.. _doxid-namespace_sophus_1ae8cb8d1ffa995f277e77fb7b47171a6d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T, int N>
+	Eigen::Hyperplane<T, N> makeHyperplaneUnique(Eigen::Hyperplane<T, N> const& plane)
+
+Takes in a hyperplane and returns unique representation by ensuring that the ``offset`` is not negative.
+
+.. index:: pair: function; interpolate
+.. _doxid-namespace_sophus_1a62fcd52df44df127cc8ff0f5330d8a4d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class G, class Scalar2 = typename G::Scalar>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<interp_details::Traits<G>::supported, G> interpolate(
+		G const& foo_T_bar,
+		G const& foo_T_baz,
+		Scalar2 p = Scalar2(0.5f)
+		)
+
+This function interpolates between two Lie group elements ``foo_T_bar`` and ``foo_T_baz`` with an interpolation factor of ``alpha`` in [0, 1].
+
+It returns a pose ``foo_T_quiz`` with ``quiz`` being a frame between ``bar`` and ``baz``. If ``alpha=0`` it returns ``foo_T_bar``. If it is 1, it returns ``foo_T_baz``.
+
+(Since interpolation on Lie groups is inverse-invariant, we can equivalently think of the input arguments as being ``bar_T_foo``, ``baz_T_foo`` and the return value being ``quiz_T_foo``.)
+
+Precondition: ``p`` must be in [0, 1].
+
+.. index:: pair: function; curveNumDiff
+.. _doxid-namespace_sophus_1adf38f381fe6b936c568e1c310b322727:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class Scalar, class Fn>
+	auto curveNumDiff(
+		Fn curve,
+		Scalar t,
+		Scalar h = :ref:`Constants<doxid-struct_sophus_1_1_constants>`<Scalar>::epsilonSqrt()
+		)
+
+Calculates the derivative of a curve at a point ``t``.
+
+Here, a curve is a function from a Scalar to a Euclidean space. Thus, it returns either a Scalar, a vector or a matrix.
+
+.. index:: pair: function; vectorFieldNumDiff
+.. _doxid-namespace_sophus_1a8cbaee849ddf9e5371f76a95a489b48e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class Scalar, int N, int M, class ScalarOrVector, class Fn>
+	Eigen::Matrix<Scalar, N, M> vectorFieldNumDiff(
+		Fn vector_field,
+		ScalarOrVector const& a,
+		Scalar eps = :ref:`Constants<doxid-struct_sophus_1_1_constants>`<Scalar>::epsilonSqrt()
+		)
+
+Calculates the derivative of a vector field at a point ``a``.
+
+Here, a vector field is a function from a vector space to another vector space.
+
+.. index:: pair: function; isOrthogonal
+.. _doxid-namespace_sophus_1ad3c58a9cb01fc75f04973e8b066cb7f5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class D>
+	bool isOrthogonal(Eigen::MatrixBase<D> const& R)
+
+Takes in arbitrary square matrix and returns true if it is orthogonal.
+
+.. index:: pair: function; isScaledOrthogonalAndPositive
+.. _doxid-namespace_sophus_1aa2847cbf379ebd9dbe9369ee9f705109:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class D>
+	bool isScaledOrthogonalAndPositive(Eigen::MatrixBase<D> const& sR)
+
+Takes in arbitrary square matrix and returns true if it is "scaled-orthogonal" with positive determinant.
+
+.. index:: pair: function; makeRotationMatrix
+.. _doxid-namespace_sophus_1a684b4cfe84556e35a7414d251e3473a8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class D>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_floating_point<typename D::Scalar>::value, :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<typename D::Scalar, D::RowsAtCompileTime, D::RowsAtCompileTime>> makeRotationMatrix(Eigen::MatrixBase<D> const& R)
+
+Takes in arbitrary square matrix (2x2 or larger) and returns closest orthogonal matrix with positive determinant.
+
+.. index:: pair: function; maxMetric
+.. _doxid-namespace_sophus_1ad188360252a4702f247fd07ded09d3e6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	auto maxMetric(T const& p0, T const& p1)
+
+Returns maximum metric between two points ``p0`` and ``p1``, with ``p0, p1`` being matrices or a scalars.
+
+.. index:: pair: function; setToZero
+.. _doxid-namespace_sophus_1a692db65154c0e61cfdd743fb97ce806d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	void setToZero(T& p)
+
+Sets point ``p`` to zero, with ``p`` being a matrix or a scalar.
+
+.. index:: pair: function; setElementAt
+.. _doxid-namespace_sophus_1ad4d5fb60b5096d00db3baaf3668a41bb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T, class Scalar>
+	void setElementAt(T& p, Scalar value, int i)
+
+Sets ``i`` th component of ``p`` to ``value``, with ``p`` being a matrix or a scalar. If ``p`` is a scalar, ``i`` must be ``0``.
+
+.. index:: pair: function; squaredNorm
+.. _doxid-namespace_sophus_1aceb4e371d61285afa207cdbd705242f1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	auto squaredNorm(T const& p)
+
+Returns the squared 2-norm of ``p``, with ``p`` being a vector or a scalar.
+
+.. index:: pair: function; transpose
+.. _doxid-namespace_sophus_1a95e921e1445e921da56ef633d15158f2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	auto transpose(T const& p)
+
+Returns ``:ref:`p.transpose() <doxid-namespace_sophus_1a95e921e1445e921da56ef633d15158f2>``` if ``p`` is a matrix, and simply ``p`` if m is a scalar.
+

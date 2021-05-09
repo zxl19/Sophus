@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::RxSO3Base::TangentAndTheta
+.. _doxid-struct_sophus_1_1_rx_s_o3_base_1_1_tangent_and_theta:
+
+struct Sophus::RxSO3Base::TangentAndTheta
+=========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <rxso3.hpp>
+	
+	struct TangentAndTheta {
+		// fields
+	
+		EIGEN_MAKE_ALIGNED_OPERATOR_NEW :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o3_base_1aca5a75b2238ad6d68ae9b7a3a7e82afe>` :target:`tangent<doxid-struct_sophus_1_1_rx_s_o3_base_1_1_tangent_and_theta_1a8a5e4996b815b185d733ff960806610c>`;
+		:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>` :target:`theta<doxid-struct_sophus_1_1_rx_s_o3_base_1_1_tangent_and_theta_1a097f2c8089ebcff69714ddde66841449>`;
+	};

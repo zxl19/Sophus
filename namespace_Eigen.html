@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>namespace Eigen &mdash; Sophus  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class Eigen::Map&lt;Sophus::RxSO2&lt;Scalar_&gt; const, Options&gt;" href="class_Eigen_Map.html" />
+    <link rel="prev" title="Global Namespace" href="global.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sophus
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pysophus.html">Python API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace Eigen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map.html">template class Eigen::Map&lt;Sophus::RxSO2&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-2.html">template class Eigen::Map&lt;Sophus::Sim3&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-3.html">template class Eigen::Map&lt;Sophus::Sim2&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-4.html">template class Eigen::Map&lt;Sophus::Sim2&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-5.html">template class Eigen::Map&lt;Sophus::Sim3&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-6.html">template class Eigen::Map&lt;Sophus::SO2&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-7.html">template class Eigen::Map&lt;Sophus::SO2&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-8.html">template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-9.html">template class Eigen::Map&lt;Sophus::SE3&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-10.html">template class Eigen::Map&lt;Sophus::SE2&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-11.html">template class Eigen::Map&lt;Sophus::RxSO2&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-12.html">template class Eigen::Map&lt;Sophus::SE3&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-13.html">template class Eigen::Map&lt;Sophus::RxSO3&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-14.html">template class Eigen::Map&lt;Sophus::SE2&lt;Scalar_&gt; const, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-15.html">template class Eigen::Map&lt;Sophus::RxSO3&lt;Scalar_&gt;, Options&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-16.html">template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Sophus.html">namespace Sophus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+      <li>namespace Eigen</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/namespace_Eigen.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="namespace-eigen">
+<span id="doxid-namespace-eigen"></span><span id="index-0"></span><h1>namespace Eigen<a class="headerlink" href="#namespace-eigen" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">Eigen</span> <span class="p">{</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-rx-s-o2-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::RxSO2&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-2.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-sim3-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::Sim3&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-3.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-sim2-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::Sim2&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-4.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-sim2-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::Sim2&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-5.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-sim3-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::Sim3&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-6.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-o2-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SO2&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-7.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-o2-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SO2&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-8.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-o3-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SO3&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-9.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-e3-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SE3&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-10.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-e2-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SE2&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-11.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-rx-s-o2-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::RxSO2&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-12.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-e3-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SE3&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-13.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-rx-s-o3-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::RxSO3&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-14.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-e2-3-01-scalar-01-4-01const-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SE2&lt;Scalar_&gt; const, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-15.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-rx-s-o3-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::RxSO3&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Eigen_Map-16.html#doxid-class-eigen-1-1-map-3-01-sophus-1-1-s-o3-3-01-scalar-01-4-00-01-options-01-4"><span class="std std-ref">Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="p">}</span> <span class="c1">// namespace Eigen</span></pre>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="class_Eigen_Map.html" class="btn btn-neutral float-right" title="template class Eigen::Map&lt;Sophus::RxSO2&lt;Scalar_&gt; const, Options&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="global.html" class="btn btn-neutral float-left" title="Global Namespace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Hauke Strasdat.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

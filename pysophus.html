@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Python API &mdash; Sophus  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Global Namespace" href="global.html" />
+    <link rel="prev" title="Sophus - Lie groups for 2d/3d Geometry" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sophus
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Python API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/pysophus.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sophus.matrix">
+<span id="python-api"></span><h1>Python API<a class="headerlink" href="#module-sophus.matrix" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-sophus.complex"></span><dl class="class">
+<dt id="sophus.complex.Complex">
+<em class="property">class </em><code class="descclassname">sophus.complex.</code><code class="descname">Complex</code><span class="sig-paren">(</span><em>real</em>, <em>imag</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complex class</p>
+<dl class="staticmethod">
+<dt id="sophus.complex.Complex.Da_a_mul_b">
+<em class="property">static </em><code class="descname">Da_a_mul_b</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex.Da_a_mul_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>derivatice of complex muliplication wrt left multiplier a</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sophus.complex.Complex.Db_a_mul_b">
+<em class="property">static </em><code class="descname">Db_a_mul_b</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex.Db_a_mul_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>derivatice of complex muliplication wrt right multiplicand b</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.complex.Complex.conj">
+<code class="descname">conj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex.conj" title="Permalink to this definition">¶</a></dt>
+<dd><p>complex conjugate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.complex.Complex.inv">
+<code class="descname">inv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex.inv" title="Permalink to this definition">¶</a></dt>
+<dd><p>complex inverse</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.complex.Complex.squared_norm">
+<code class="descname">squared_norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.Complex.squared_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>squared norm when considering the complex number as tuple</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.complex.TestComplex">
+<em class="property">class </em><code class="descclassname">sophus.complex.</code><code class="descname">TestComplex</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.TestComplex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.complex.TestComplex.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.complex.TestComplex.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sophus.quaternion"></span><p>run with: python3 -m sophus.quaternion</p>
+<dl class="class">
+<dt id="sophus.quaternion.Quaternion">
+<em class="property">class </em><code class="descclassname">sophus.quaternion.</code><code class="descname">Quaternion</code><span class="sig-paren">(</span><em>real</em>, <em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quaternion class</p>
+<dl class="staticmethod">
+<dt id="sophus.quaternion.Quaternion.Da_a_mul_b">
+<em class="property">static </em><code class="descname">Da_a_mul_b</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion.Da_a_mul_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>derivatice of quaternion muliplication wrt left multiplier a</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sophus.quaternion.Quaternion.Db_a_mul_b">
+<em class="property">static </em><code class="descname">Db_a_mul_b</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion.Db_a_mul_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>derivatice of quaternion muliplication wrt right multiplicand b</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.quaternion.Quaternion.conj">
+<code class="descname">conj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion.conj" title="Permalink to this definition">¶</a></dt>
+<dd><p>quaternion conjugate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.quaternion.Quaternion.inv">
+<code class="descname">inv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion.inv" title="Permalink to this definition">¶</a></dt>
+<dd><p>quaternion inverse</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.quaternion.Quaternion.squared_norm">
+<code class="descname">squared_norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.Quaternion.squared_norm" title="Permalink to this definition">¶</a></dt>
+<dd><p>squared norm when considering the quaternion as 4-tuple</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.quaternion.TestQuaternion">
+<em class="property">class </em><code class="descclassname">sophus.quaternion.</code><code class="descname">TestQuaternion</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.TestQuaternion" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.quaternion.TestQuaternion.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.quaternion.TestQuaternion.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sophus.so2"></span><dl class="class">
+<dt id="sophus.so2.So2">
+<em class="property">class </em><code class="descclassname">sophus.so2.</code><code class="descname">So2</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.So2" title="Permalink to this definition">¶</a></dt>
+<dd><p>2 dimensional group of orthogonal matrices with determinant 1</p>
+<dl class="staticmethod">
+<dt id="sophus.so2.So2.exp">
+<em class="property">static </em><code class="descname">exp</code><span class="sig-paren">(</span><em>theta</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.So2.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.so2.So2.log">
+<code class="descname">log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.So2.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>logarithmic map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.so2.So2.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.So2.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns matrix representation</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.so2.TestSo2">
+<em class="property">class </em><code class="descclassname">sophus.so2.</code><code class="descname">TestSo2</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.TestSo2" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.so2.TestSo2.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so2.TestSo2.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sophus.so3"></span><dl class="class">
+<dt id="sophus.so3.So3">
+<em class="property">class </em><code class="descclassname">sophus.so3.</code><code class="descname">So3</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.So3" title="Permalink to this definition">¶</a></dt>
+<dd><p>3 dimensional group of orthogonal matrices with determinant 1</p>
+<dl class="staticmethod">
+<dt id="sophus.so3.So3.exp">
+<em class="property">static </em><code class="descname">exp</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.So3.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.so3.So3.log">
+<code class="descname">log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.So3.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>logarithmic map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.so3.So3.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.So3.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns matrix representation</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.so3.TestSo3">
+<em class="property">class </em><code class="descclassname">sophus.so3.</code><code class="descname">TestSo3</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.TestSo3" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.so3.TestSo3.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.so3.TestSo3.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sophus.se2"></span><dl class="class">
+<dt id="sophus.se2.Se2">
+<em class="property">class </em><code class="descclassname">sophus.se2.</code><code class="descname">Se2</code><span class="sig-paren">(</span><em>so2</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se2.Se2" title="Permalink to this definition">¶</a></dt>
+<dd><p>2 dimensional group of rigid body transformations</p>
+<dl class="staticmethod">
+<dt id="sophus.se2.Se2.exp">
+<em class="property">static </em><code class="descname">exp</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se2.Se2.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.se2.Se2.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se2.Se2.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns matrix representation</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.se2.TestSe2">
+<em class="property">class </em><code class="descclassname">sophus.se2.</code><code class="descname">TestSe2</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se2.TestSe2" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.se2.TestSe2.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se2.TestSe2.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sophus.se3"></span><dl class="class">
+<dt id="sophus.se3.Se3">
+<em class="property">class </em><code class="descclassname">sophus.se3.</code><code class="descname">Se3</code><span class="sig-paren">(</span><em>so3</em>, <em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.Se3" title="Permalink to this definition">¶</a></dt>
+<dd><p>3 dimensional group of rigid body transformations</p>
+<dl class="staticmethod">
+<dt id="sophus.se3.Se3.exp">
+<em class="property">static </em><code class="descname">exp</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.Se3.exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sophus.se3.Se3.hat">
+<em class="property">static </em><code class="descname">hat</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.Se3.hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>R^6 =&gt; R^4x4</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sophus.se3.Se3.matrix">
+<code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.Se3.matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns matrix representation</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sophus.se3.Se3.vee">
+<em class="property">static </em><code class="descname">vee</code><span class="sig-paren">(</span><em>Omega</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.Se3.vee" title="Permalink to this definition">¶</a></dt>
+<dd><p>R^4x4 =&gt; R^6</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sophus.se3.TestSe3">
+<em class="property">class </em><code class="descclassname">sophus.se3.</code><code class="descname">TestSe3</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.TestSe3" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sophus.se3.TestSe3.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sophus.se3.TestSe3.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="global.html" class="btn btn-neutral float-right" title="Global Namespace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Sophus - Lie groups for 2d/3d Geometry" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, Hauke Strasdat.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

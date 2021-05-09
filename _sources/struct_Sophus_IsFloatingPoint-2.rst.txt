@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::IsFloatingPoint<Matrix<Scalar, M, N>>
+.. _doxid-struct_sophus_1_1_is_floating_point_3_01_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4:
+
+template struct Sophus::IsFloatingPoint<Matrix<Scalar, M, N>>
+=============================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <types.hpp>
+	
+	template <class Scalar, int M, int N>
+	struct IsFloatingPoint<Matrix<Scalar, M, N>> {
+		// fields
+	
+		static const bool :target:`value<doxid-struct_sophus_1_1_is_floating_point_3_01_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4_1ae398caa38e25682821653cb24f6f481e>` = std::is_floating_point<Scalar>::value;
+	};

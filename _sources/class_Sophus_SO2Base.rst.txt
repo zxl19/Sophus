@@ -1,0 +1,389 @@
+.. index:: pair: class; Sophus::SO2Base
+.. _doxid-class_sophus_1_1_s_o2_base:
+
+template class Sophus::SO2Base
+==============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`SO2 <doxid-class_sophus_1_1_s_o2>` base type - implements :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` class but is storage agnostic. :ref:`More...<details-class_sophus_1_1_s_o2_base>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <so2.hpp>
+	
+	template <class Derived>
+	class SO2Base {
+	public:
+		// typedefs
+	
+		using :target:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` = typename Eigen::internal::traits<Derived>:::ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` ;
+		using :target:`ComplexT<doxid-class_sophus_1_1_s_o2_base_1add410a88163e7a20ca8e0e12350b45b4>` = typename Eigen::internal::traits<Derived>::ComplexType ;
+		using :target:`ComplexTemporaryType<doxid-class_sophus_1_1_s_o2_base_1aa20eb37827ec5d860624e702ca737615>` = :ref:`Sophus::Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`Options<doxid-class_sophus_1_1_s_o2_base_1af8c836b1dd22b14a657eea0354e99e86>`> ;
+		using :target:`Transformation<doxid-class_sophus_1_1_s_o2_base_1adc369a4eeb5b4b7c965ef7ddb3fc0cfb>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`N<doxid-class_sophus_1_1_s_o2_base_1acd6e4bbe7ce1cb571e8051599dcd5127>`, :ref:`N<doxid-class_sophus_1_1_s_o2_base_1acd6e4bbe7ce1cb571e8051599dcd5127>`> ;
+		using :target:`Point<doxid-class_sophus_1_1_s_o2_base_1adcdd252320cb4acbf9a42196ded44a1d>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
+		using :target:`HomogeneousPoint<doxid-class_sophus_1_1_s_o2_base_1ae6db15881a449fc1cdd04e9b5420d972>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
+		using :target:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
+		using :target:`Tangent<doxid-class_sophus_1_1_s_o2_base_1a76ca4f08371c16becd872c8e9160e65f>` = :ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` ;
+		using :target:`Adjoint<doxid-class_sophus_1_1_s_o2_base_1ad1fa286289a99adcc81053f226a5a217>` = :ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` ;
+		using :ref:`ReturnScalar<doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1>` = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, typename OtherDerived::Scalar>::ReturnType ;
+		using :target:`SO2Product<doxid-class_sophus_1_1_s_o2_base_1ac522b3b5f9a09f602af465f5b6583a58>` = :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1>`<OtherDerived>> ;
+		using :target:`PointProduct<doxid-class_sophus_1_1_s_o2_base_1ab4ac281667aaeed649ef8da79ac17549>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1>`<PointDerived>> ;
+		using :target:`HomogeneousPointProduct<doxid-class_sophus_1_1_s_o2_base_1a02b47819d0305e6c7de862a5d7b8f8e3>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`ReturnScalar<doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1>`<HPointDerived>> ;
+
+		// fields
+	
+		static constexpr int :target:`Options<doxid-class_sophus_1_1_s_o2_base_1af8c836b1dd22b14a657eea0354e99e86>` = Eigen::internal::traits<Derived>::Options;
+		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_s_o2_base_1aab01f7cdacdebf9caabd6e6ca8f8ec88>` = 1;
+		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9>` = 2;
+		static constexpr int :ref:`N<doxid-class_sophus_1_1_s_o2_base_1acd6e4bbe7ce1cb571e8051599dcd5127>` = 2;
+
+		// methods
+	
+		:ref:`Adjoint<doxid-class_sophus_1_1_s_o2_base_1ad1fa286289a99adcc81053f226a5a217>` :ref:`Adj<doxid-class_sophus_1_1_s_o2_base_1a9ef9df8dffcf257b2037c0e39ba2da1c>`() const;
+	
+		template <class NewScalarType>
+		:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<NewScalarType> :ref:`cast<doxid-class_sophus_1_1_s_o2_base_1a79b05069dfe390b6812be6ccf73c020f>`() const;
+	
+		:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`* :ref:`data<doxid-class_sophus_1_1_s_o2_base_1ac581b14d63b8a05cc05f1b44b20111eb>`();
+		:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` const* :ref:`data<doxid-class_sophus_1_1_s_o2_base_1a3cba6a983d9fb9df02342b7822966fee>`() const;
+		:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> :ref:`inverse<doxid-class_sophus_1_1_s_o2_base_1ac7f6f6ea90873d0c32a488c1729f09ab>`() const;
+		:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` :ref:`log<doxid-class_sophus_1_1_s_o2_base_1a01a758c04e2e7a23ef92f73156940fa7>`() const;
+		void :ref:`normalize<doxid-class_sophus_1_1_s_o2_base_1a450dddc7c86e354eeb3a9d24436bae05>`();
+		:ref:`Transformation<doxid-class_sophus_1_1_s_o2_base_1adc369a4eeb5b4b7c965ef7ddb3fc0cfb>` :ref:`matrix<doxid-class_sophus_1_1_s_o2_base_1a0de60ff63e6b49d43cc8feb585c55c27>`() const;
+	
+		template <class OtherDerived>
+		SO2Base<Derived>& :ref:`operator=<doxid-class_sophus_1_1_s_o2_base_1a575657f24a66301128aa9cd708dd3a35>`(SO2Base<OtherDerived> const& other);
+	
+		template <typename OtherDerived>
+		:ref:`SO2Product<doxid-class_sophus_1_1_s_o2_base_1ac522b3b5f9a09f602af465f5b6583a58>`<OtherDerived> :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1aaa7c430f2e909695fadc4a4a152be10f>`(SO2Base<OtherDerived> const& other) const;
+	
+		template <
+			typename PointDerived,
+			typename = typename std::enable_if<IsFixedSizeVector<PointDerived, 2>::value>::type
+			>
+		:ref:`PointProduct<doxid-class_sophus_1_1_s_o2_base_1ab4ac281667aaeed649ef8da79ac17549>`<PointDerived> :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1a1de10618c5eb5866ea41a9f10f69d6fd>`(Eigen::MatrixBase<PointDerived> const& p) const;
+	
+		template <
+			typename HPointDerived,
+			typename = typename std::enable_if<IsFixedSizeVector<HPointDerived, 3>::value>::type
+			>
+		:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_s_o2_base_1a02b47819d0305e6c7de862a5d7b8f8e3>`<HPointDerived> :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1a81249b45dd156ec59797575bf354c271>`(Eigen::MatrixBase<HPointDerived> const& p) const;
+	
+		:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1a16820965fd4bea3c077205b7ca4ad991>`(:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` const& l) const;
+	
+		template <
+			typename OtherDerived,
+			typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerived>>::value>::type
+			>
+		SO2Base<Derived> :ref:`operator*=<doxid-class_sophus_1_1_s_o2_base_1a4d5159929dcf8078600f948e13f71535>`(SO2Base<OtherDerived> const& other);
+	
+		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9>`, :ref:`DoF<doxid-class_sophus_1_1_s_o2_base_1aab01f7cdacdebf9caabd6e6ca8f8ec88>`> :ref:`Dx_this_mul_exp_x_at_0<doxid-class_sophus_1_1_s_o2_base_1a636158534bd4d8e97aa5688a19c557c3>`() const;
+		:ref:`Sophus::Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9>`> :ref:`params<doxid-class_sophus_1_1_s_o2_base_1a9a58bca80f93ee2540716798ce18e150>`() const;
+		void :ref:`setComplex<doxid-class_sophus_1_1_s_o2_base_1a4ddbd904a46b3a13405506043ac99fbb>`(:ref:`Point<doxid-class_sophus_1_1_s_o2_base_1adcdd252320cb4acbf9a42196ded44a1d>` const& complex);
+		:ref:`ComplexT<doxid-class_sophus_1_1_s_o2_base_1add410a88163e7a20ca8e0e12350b45b4>` const& :ref:`unit_complex<doxid-class_sophus_1_1_s_o2_base_1a91925d6588baafd647bcfe15ed82e868>`() const;
+	};
+
+	// direct descendants
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::SO2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::SO2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o2_3_01_scalar___01_4_00_01_options_01_4>`;
+.. _details-class_sophus_1_1_s_o2_base:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`SO2 <doxid-class_sophus_1_1_s_o2>` base type - implements :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` class but is storage agnostic.
+
+SO(2) is the group of rotations in 2d. As a matrix group, it is the set of matrices which are orthogonal such that ``R * R' = I`` (with ``R'`` being the transpose of ``R``) and have a positive determinant. In particular, the determinant is 1. Let ``theta`` be the rotation angle, the rotation matrix can be written in close form:
+
+.. code-block:: cpp
+
+	| cos(theta) -sin(theta) |
+	| sin(theta)  cos(theta) |
+
+As a matter of fact, the first column of those matrices is isomorph to the set of unit complex numbers U(1). Thus, internally, :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` is represented as complex number with length 1.
+
+SO(2) is a compact and commutative group. First it is compact since the set of rotation matrices is a closed and bounded set. Second it is commutative since ``R(alpha) * R(beta) = R(beta) * R(alpha)``, simply because ``alpha + beta = beta + alpha`` with ``alpha`` and ``beta`` being rotation angles (about the same axis).
+
+Class invariant: The 2-norm of ``unit_complex`` must be close to 1. Technically speaking, it must hold that:
+
+``|unit_complex().:ref:`squaredNorm() <doxid-namespace_sophus_1aceb4e371d61285afa207cdbd705242f1>` - 1| <= :ref:`Constants::epsilon() <doxid-struct_sophus_1_1_constants_1ac5316f138cd8a1ecead291582717d9e1>```.
+
+Typedefs
+--------
+
+.. index:: pair: typedef; ReturnScalar
+.. _doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using ReturnScalar = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, typename OtherDerived::Scalar>::ReturnType 
+
+For binary operations the return type is determined with the ScalarBinaryOpTraits feature of :ref:`Eigen <doxid-namespace_eigen>`. This allows mixing concrete and Map types, as well as other compatible scalar types such as Ceres::Jet and double scalars with :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` operations.
+
+Fields
+------
+
+.. index:: pair: variable; DoF
+.. _doxid-class_sophus_1_1_s_o2_base_1aab01f7cdacdebf9caabd6e6ca8f8ec88:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int DoF = 1
+
+Degrees of freedom of manifold, number of dimensions in tangent space (one since we only have in-plane rotations).
+
+.. index:: pair: variable; num_parameters
+.. _doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int num_parameters = 2
+
+Number of internal parameters used (complex numbers are a tuples).
+
+.. index:: pair: variable; N
+.. _doxid-class_sophus_1_1_s_o2_base_1acd6e4bbe7ce1cb571e8051599dcd5127:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int N = 2
+
+Group transformations are 2x2 matrices.
+
+Methods
+-------
+
+.. index:: pair: function; Adj
+.. _doxid-class_sophus_1_1_s_o2_base_1a9ef9df8dffcf257b2037c0e39ba2da1c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Adjoint<doxid-class_sophus_1_1_s_o2_base_1ad1fa286289a99adcc81053f226a5a217>` Adj() const
+
+Adjoint transformation.
+
+This function return the adjoint transformation ``Ad`` of the group element ``A`` such that for all ``x`` it holds that ``hat(Ad_A * x) = A * hat(x) A^{-1}``. See hat-operator below.
+
+It simply ``1``, since ``SO(2)`` is a commutative group.
+
+.. index:: pair: function; cast
+.. _doxid-class_sophus_1_1_s_o2_base_1a79b05069dfe390b6812be6ccf73c020f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class NewScalarType>
+	:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<NewScalarType> cast() const
+
+Returns copy of instance casted to NewScalarType.
+
+.. index:: pair: function; data
+.. _doxid-class_sophus_1_1_s_o2_base_1ac581b14d63b8a05cc05f1b44b20111eb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`* data()
+
+This provides unsafe read/write access to internal data. SO(2) is represented by a unit complex number (two parameters). When using direct write access, the user needs to take care of that the complex number stays normalized.
+
+.. index:: pair: function; data
+.. _doxid-class_sophus_1_1_s_o2_base_1a3cba6a983d9fb9df02342b7822966fee:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` const* data() const
+
+Const version of :ref:`data() <doxid-class_sophus_1_1_s_o2_base_1ac581b14d63b8a05cc05f1b44b20111eb>` above.
+
+.. index:: pair: function; inverse
+.. _doxid-class_sophus_1_1_s_o2_base_1ac7f6f6ea90873d0c32a488c1729f09ab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`SO2<doxid-class_sophus_1_1_s_o2>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> inverse() const
+
+Returns group inverse.
+
+.. index:: pair: function; log
+.. _doxid-class_sophus_1_1_s_o2_base_1a01a758c04e2e7a23ef92f73156940fa7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` log() const
+
+Logarithmic map.
+
+Computes the logarithm, the inverse of the group exponential which maps element of the group (rotation matrices) to elements of the tangent space (rotation angles).
+
+To be specific, this function computes ``vee(logmat(.))`` with ``logmat(.)`` being the matrix logarithm and ``vee(.)`` the vee-operator of SO(2).
+
+.. index:: pair: function; normalize
+.. _doxid-class_sophus_1_1_s_o2_base_1a450dddc7c86e354eeb3a9d24436bae05:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void normalize()
+
+It re-normalizes ``unit_complex`` to unit length.
+
+Note: Because of the class invariant, there is typically no need to call this function directly.
+
+.. index:: pair: function; matrix
+.. _doxid-class_sophus_1_1_s_o2_base_1a0de60ff63e6b49d43cc8feb585c55c27:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Transformation<doxid-class_sophus_1_1_s_o2_base_1adc369a4eeb5b4b7c965ef7ddb3fc0cfb>` matrix() const
+
+Returns 2x2 matrix representation of the instance.
+
+For SO(2), the matrix representation is an orthogonal matrix ``R`` with ``det(R)=1``, thus the so-called "rotation matrix".
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_s_o2_base_1a575657f24a66301128aa9cd708dd3a35:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherDerived>
+	SO2Base<Derived>& operator=(SO2Base<OtherDerived> const& other)
+
+Assignment-like operator from OtherDerived.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_s_o2_base_1aaa7c430f2e909695fadc4a4a152be10f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename OtherDerived>
+	:ref:`SO2Product<doxid-class_sophus_1_1_s_o2_base_1ac522b3b5f9a09f602af465f5b6583a58>`<OtherDerived> operator*(SO2Base<OtherDerived> const& other) const
+
+Group multiplication, which is rotation concatenation.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_s_o2_base_1a1de10618c5eb5866ea41a9f10f69d6fd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename PointDerived,
+		typename = typename std::enable_if<IsFixedSizeVector<PointDerived, 2>::value>::type
+		>
+	:ref:`PointProduct<doxid-class_sophus_1_1_s_o2_base_1ab4ac281667aaeed649ef8da79ac17549>`<PointDerived> operator*(Eigen::MatrixBase<PointDerived> const& p) const
+
+Group action on 2-points.
+
+This function rotates a 2 dimensional point ``p`` by the :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` element ``bar_R_foo`` (= rotation matrix): ``p_bar = bar_R_foo * p_foo``.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_s_o2_base_1a81249b45dd156ec59797575bf354c271:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename HPointDerived,
+		typename = typename std::enable_if<IsFixedSizeVector<HPointDerived, 3>::value>::type
+		>
+	:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_s_o2_base_1a02b47819d0305e6c7de862a5d7b8f8e3>`<HPointDerived> operator*(Eigen::MatrixBase<HPointDerived> const& p) const
+
+Group action on homogeneous 2-points.
+
+This function rotates a homogeneous 2 dimensional point ``p`` by the :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` element ``bar_R_foo`` (= rotation matrix): ``p_bar = bar_R_foo * p_foo``.
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_s_o2_base_1a16820965fd4bea3c077205b7ca4ad991:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` operator*(:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` const& l) const
+
+Group action on lines.
+
+This function rotates a parametrized line ``l(t) = o + t * d`` by the :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` element:
+
+Both direction ``d`` and origin ``o`` are rotated as a 2 dimensional point
+
+.. index:: pair: function; operator*=
+.. _doxid-class_sophus_1_1_s_o2_base_1a4d5159929dcf8078600f948e13f71535:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename OtherDerived,
+		typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerived>>::value>::type
+		>
+	SO2Base<Derived> operator*=(SO2Base<OtherDerived> const& other)
+
+In-place group multiplication. This method is only valid if the return type of the multiplication is compatible with this :ref:`SO2 <doxid-class_sophus_1_1_s_o2>` 's Scalar type.
+
+.. index:: pair: function; Dx_this_mul_exp_x_at_0
+.. _doxid-class_sophus_1_1_s_o2_base_1a636158534bd4d8e97aa5688a19c557c3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9>`, :ref:`DoF<doxid-class_sophus_1_1_s_o2_base_1aab01f7cdacdebf9caabd6e6ca8f8ec88>`> Dx_this_mul_exp_x_at_0() const
+
+Returns derivative of this \* SO2::exp(x) wrt. x at x=0.
+
+.. index:: pair: function; params
+.. _doxid-class_sophus_1_1_s_o2_base_1a9a58bca80f93ee2540716798ce18e150:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Sophus::Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_base_1ad593dfacfe534dedcbfd039f8aa926a9>`> params() const
+
+Returns internal parameters of SO(2).
+
+It returns (c[0], c[1]), with c being the unit complex number.
+
+.. index:: pair: function; setComplex
+.. _doxid-class_sophus_1_1_s_o2_base_1a4ddbd904a46b3a13405506043ac99fbb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setComplex(:ref:`Point<doxid-class_sophus_1_1_s_o2_base_1adcdd252320cb4acbf9a42196ded44a1d>` const& complex)
+
+Takes in complex number / tuple and normalizes it.
+
+Precondition: The complex number must not be close to zero.
+
+.. index:: pair: function; unit_complex
+.. _doxid-class_sophus_1_1_s_o2_base_1a91925d6588baafd647bcfe15ed82e868:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`ComplexT<doxid-class_sophus_1_1_s_o2_base_1add410a88163e7a20ca8e0e12350b45b4>` const& unit_complex() const
+
+Accessor of unit quaternion.
+

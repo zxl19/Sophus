@@ -1,0 +1,26 @@
+.. index:: pair: struct; Sophus::Constants
+.. _doxid-struct_sophus_1_1_constants:
+
+template struct Sophus::Constants
+=================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <common.hpp>
+	
+	template <class Scalar>
+	struct Constants {
+		// methods
+	
+		static Scalar :target:`epsilon<doxid-struct_sophus_1_1_constants_1ac5316f138cd8a1ecead291582717d9e1>`();
+		static Scalar :target:`epsilonPlus<doxid-struct_sophus_1_1_constants_1a405223777717afb3ba29aa424ca90a53>`();
+		static Scalar :target:`epsilonSqrt<doxid-struct_sophus_1_1_constants_1abdddb2ba56f5cb4fd7d6d78170894efd>`();
+		static Scalar :target:`pi<doxid-struct_sophus_1_1_constants_1ad6508b74fc3f9dd8b5bd72a1672f99bc>`();
+	};

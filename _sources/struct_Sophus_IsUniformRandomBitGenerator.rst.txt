@@ -1,0 +1,23 @@
+.. index:: pair: struct; Sophus::IsUniformRandomBitGenerator
+.. _doxid-struct_sophus_1_1_is_uniform_random_bit_generator:
+
+template struct Sophus::IsUniformRandomBitGenerator
+===================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <common.hpp>
+	
+	template <class G>
+	struct IsUniformRandomBitGenerator {
+		// fields
+	
+		static const bool :target:`value<doxid-struct_sophus_1_1_is_uniform_random_bit_generator_1a080cf4306234ad0b2cbc615f24d79f59>` = std::is_unsigned<typename G::result_type>::value&&                             std::is_unsigned<decltype(G::min())>::value&&                             std::is_unsigned<decltype(G::max())>::value;
+	};

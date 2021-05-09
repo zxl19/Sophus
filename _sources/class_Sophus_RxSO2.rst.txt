@@ -1,0 +1,343 @@
+.. index:: pair: class; Sophus::RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2:
+
+template class Sophus::RxSO2
+============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+:ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` using storage; derived from :ref:`RxSO2Base <doxid-class_sophus_1_1_rx_s_o2_base>`. :ref:`More...<details-class_sophus_1_1_rx_s_o2>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <rxso2.hpp>
+	
+	template <class Scalar_, int Options>
+	class RxSO2 {
+	public:
+		// typedefs
+	
+		using :target:`Base<doxid-class_sophus_1_1_rx_s_o2_1a92743ac24aca6272497cd07b1e175eff>` = :ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<RxSO2<Scalar_, Options>> ;
+		using :target:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` = Scalar_ ;
+		using :target:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` = typename :ref:`Base::Transformation<doxid-class_sophus_1_1_rx_s_o2_base_1a0bff931fe85659491395508ef1317a53>` ;
+		using :target:`Point<doxid-class_sophus_1_1_rx_s_o2_1ab5bbc7d13b2393c9b2e58de406ccb5d2>` = typename :ref:`Base::Point<doxid-class_sophus_1_1_rx_s_o2_base_1a2b1617d8a3d0fb349ab2564b9ec9a179>` ;
+		using :target:`HomogeneousPoint<doxid-class_sophus_1_1_rx_s_o2_1a13e6e88a333eec69e4d5ede73cc8643c>` = typename :ref:`Base::HomogeneousPoint<doxid-class_sophus_1_1_rx_s_o2_base_1a5fdb1dea7af1c903228ee287db45c923>` ;
+		using :target:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` = typename :ref:`Base::Tangent<doxid-class_sophus_1_1_rx_s_o2_base_1a39f175916fac8ba5b75805cae7a504cf>` ;
+		using :target:`Adjoint<doxid-class_sophus_1_1_rx_s_o2_1a3b1257225f18c25678aa3407dc5b7e7b>` = typename :ref:`Base::Adjoint<doxid-class_sophus_1_1_rx_s_o2_base_1a07822c1d71d603e7f397d9a04feeb02f>` ;
+		using :target:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>` = Eigen::Matrix<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`, 2, 1, Options> ;
+
+		// fields
+	
+		static constexpr int :target:`DoF<doxid-class_sophus_1_1_rx_s_o2_1ad416484988617a221169628ef7b2232f>` = Base::DoF;
+		static constexpr int :target:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_1a0b5fa959bfd53d0914b224186ac1571a>` = Base::num_parameters;
+
+		// construction
+	
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1a9ff40b5d656269f03a51e880b023ff59>`();
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1adc1387bc20a31321334cc3ab236bd14a>`(RxSO2 const& other);
+	
+		template <class OtherDerived>
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1a428188bfd7ae60f596f743821a6da4c6>`(:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<OtherDerived> const& other);
+	
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1acd860dcd7cd6161dad6a06132f24e1a0>`(:ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& sR);
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1a4ebb4580bb782d511c8cbaad757da4b9>`(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& scale, :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& R);
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1a14d212457856a7cbfd2cda10c55d9a7b>`(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& scale, :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> const& so2);
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1a2600c23bfc16324517ad997f1df230bc>`(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> const& z);
+		:ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2_1afca9a4303c5b00f57b896d430dc28fa4>`(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& real, :ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& imag);
+
+		// methods
+	
+		:ref:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>` const& :ref:`complex<doxid-class_sophus_1_1_rx_s_o2_1a5a4104c85732e0f104f37b5bbdad09d2>`() const;
+	
+		template <class OtherDerived>
+		:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<Derived>& :ref:`operator=<doxid-class_sophus_1_1_rx_s_o2_1a3c9a6c9a9a03c91772ee78489d8437f5>`(:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<OtherDerived> const& other);
+	
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`, :ref:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_1a0b5fa959bfd53d0914b224186ac1571a>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_1ad416484988617a221169628ef7b2232f>`> :ref:`Dx_exp_x<doxid-class_sophus_1_1_rx_s_o2_1ab4949238e5100df4a4e673b550e90b33>`(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a);
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`, :ref:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_1a0b5fa959bfd53d0914b224186ac1571a>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_1ad416484988617a221169628ef7b2232f>`> :ref:`Dx_exp_x_at_0<doxid-class_sophus_1_1_rx_s_o2_1aafeca1ffee22539885e083c4422e28ff>`();
+		static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` :ref:`Dxi_exp_x_matrix_at_0<doxid-class_sophus_1_1_rx_s_o2_1abfdf148be89755afcd6cf729c9959122>`(int i);
+		static RxSO2<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> :ref:`exp<doxid-class_sophus_1_1_rx_s_o2_1a2e6343f61345a2fecedd75002bc4cda7>`(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a);
+		static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` :ref:`generator<doxid-class_sophus_1_1_rx_s_o2_1ab99b888897af145d8dfd17323dc32b2c>`(int i);
+		static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` :ref:`hat<doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574>`(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a);
+		static :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` :ref:`lieBracket<doxid-class_sophus_1_1_rx_s_o2_1a8abbfb14075fb3de094b6bce9553a8ba>`(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const&, :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const&);
+	
+		template <class UniformRandomBitGenerator>
+		static RxSO2 :ref:`sampleUniform<doxid-class_sophus_1_1_rx_s_o2_1a991ca8b83bea4059fea153e489c2509b>`(UniformRandomBitGenerator& generator);
+	
+		static :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` :ref:`vee<doxid-class_sophus_1_1_rx_s_o2_1ac07da6e0f4fad63fb460158e8760d9c3>`(:ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& Omega);
+
+	protected:
+		// fields
+	
+		:ref:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>` :target:`complex_<doxid-class_sophus_1_1_rx_s_o2_1a2b3365def54509ae7c0cb187cb39937a>`;
+
+		// methods
+	
+		:ref:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>`& :target:`complex_nonconst<doxid-class_sophus_1_1_rx_s_o2_1a5c3c68720209a8b8221032711bbca8f5>`();
+	};
+.. _details-class_sophus_1_1_rx_s_o2:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+:ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` using storage; derived from :ref:`RxSO2Base <doxid-class_sophus_1_1_rx_s_o2_base>`.
+
+Construction
+------------
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1a9ff40b5d656269f03a51e880b023ff59:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2()
+
+Default constructor initializes complex number to identity rotation and scale to 1.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1adc1387bc20a31321334cc3ab236bd14a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(RxSO2 const& other)
+
+Copy constructor.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1a428188bfd7ae60f596f743821a6da4c6:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherDerived>
+	RxSO2(:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<OtherDerived> const& other)
+
+Copy-like constructor from OtherDerived.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1acd860dcd7cd6161dad6a06132f24e1a0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(:ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& sR)
+
+Constructor from scaled rotation matrix.
+
+Precondition: rotation matrix need to be scaled orthogonal with determinant of ``s^2``.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1a4ebb4580bb782d511c8cbaad757da4b9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& scale, :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& R)
+
+Constructor from scale factor and rotation matrix ``R``.
+
+Precondition: Rotation matrix ``R`` must to be orthogonal with determinant of 1 and ``scale`` must not to be close to either zero or infinity.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1a14d212457856a7cbfd2cda10c55d9a7b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& scale, :ref:`SO2<doxid-class_sophus_1_1_s_o2>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> const& so2)
+
+Constructor from scale factor and :ref:`SO2 <doxid-class_sophus_1_1_s_o2>`.
+
+Precondition: ``scale`` must not be close to either zero or infinity.
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1a2600c23bfc16324517ad997f1df230bc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(:ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> const& z)
+
+Constructor from complex number.
+
+Precondition: complex number must not be close to either zero or infinity
+
+.. index:: pair: function; RxSO2
+.. _doxid-class_sophus_1_1_rx_s_o2_1afca9a4303c5b00f57b896d430dc28fa4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& real, :ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>` const& imag)
+
+Constructor from complex number.
+
+Precondition: complex number must not be close to either zero or inifnity.
+
+Methods
+-------
+
+.. index:: pair: function; complex
+.. _doxid-class_sophus_1_1_rx_s_o2_1a5a4104c85732e0f104f37b5bbdad09d2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>` const& complex() const
+
+Accessor of complex.
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_rx_s_o2_1a3c9a6c9a9a03c91772ee78489d8437f5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherDerived>
+	:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<Derived>& operator=(:ref:`RxSO2Base<doxid-class_sophus_1_1_rx_s_o2_base>`<OtherDerived> const& other)
+
+Assignment-like operator from OtherDerived.
+
+.. index:: pair: function; Dx_exp_x
+.. _doxid-class_sophus_1_1_rx_s_o2_1ab4949238e5100df4a4e673b550e90b33:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`, :ref:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_1a0b5fa959bfd53d0914b224186ac1571a>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_1ad416484988617a221169628ef7b2232f>`> Dx_exp_x(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a)
+
+Returns derivative of exp(x) wrt. ``x``
+
+.. index:: pair: function; Dx_exp_x_at_0
+.. _doxid-class_sophus_1_1_rx_s_o2_1aafeca1ffee22539885e083c4422e28ff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`, :ref:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_1a0b5fa959bfd53d0914b224186ac1571a>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_1ad416484988617a221169628ef7b2232f>`> Dx_exp_x_at_0()
+
+Returns derivative of exp(x) wrt. x_i at x=0.
+
+.. index:: pair: function; Dxi_exp_x_matrix_at_0
+.. _doxid-class_sophus_1_1_rx_s_o2_1abfdf148be89755afcd6cf729c9959122:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` Dxi_exp_x_matrix_at_0(int i)
+
+Returns derivative of exp(x).matrix() wrt. ``x_i at x=0``.
+
+.. index:: pair: function; exp
+.. _doxid-class_sophus_1_1_rx_s_o2_1a2e6343f61345a2fecedd75002bc4cda7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static RxSO2<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_1a2bbf36f56dc96edd70e44a887f64e651>`> exp(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a)
+
+Group exponential.
+
+This functions takes in an element of tangent space (= rotation angle plus logarithm of scale) and returns the corresponding element of the group :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>`.
+
+To be more specific, this function computes ``expmat(hat(theta))`` with ``expmat(.)`` being the matrix exponential and ``hat(.)`` being the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574>` -operator of RSO2.
+
+.. index:: pair: function; generator
+.. _doxid-class_sophus_1_1_rx_s_o2_1ab99b888897af145d8dfd17323dc32b2c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` generator(int i)
+
+Returns the ith infinitesimal generators of ``R+ x SO(2)``.
+
+The infinitesimal generators of :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` are:
+
+.. ref-code-block:: cpp
+
+	      |  0 -1 |
+	G_0 = |  1  0 |
+	
+	      |  1  0 |
+	G_1 = |  0  1 |
+
+Precondition: ``i`` must be 0, or 1.
+
+.. index:: pair: function; hat
+.. _doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` hat(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const& a)
+
+hat-operator
+
+It takes in the 2-vector representation ``a`` (= rotation angle plus logarithm of scale) and returns the corresponding matrix representation of Lie algebra element.
+
+Formally, the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574>` -operator of :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>` is defined as
+
+``hat(.): R^2 -> R^{2x2}, hat(a) = sum_i a_i * G_i`` (for i=0,1,2)
+
+with ``G_i`` being the ith infinitesimal generator of :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>`.
+
+The corresponding inverse is the :ref:`vee() <doxid-class_sophus_1_1_rx_s_o2_1ac07da6e0f4fad63fb460158e8760d9c3>` -operator, see below.
+
+.. index:: pair: function; lieBracket
+.. _doxid-class_sophus_1_1_rx_s_o2_1a8abbfb14075fb3de094b6bce9553a8ba:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` lieBracket(:ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const&, :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` const&)
+
+Lie bracket.
+
+It computes the Lie bracket of RxSO(2). To be more specific, it computes
+
+``[omega_1, omega_2]_rxso2 := vee([hat(omega_1), hat(omega_2)])``
+
+with ``[A,B] := AB-BA`` being the matrix commutator, ``hat(.)`` the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574>` -operator and ``vee(.)`` the :ref:`vee() <doxid-class_sophus_1_1_rx_s_o2_1ac07da6e0f4fad63fb460158e8760d9c3>` -operator of :ref:`RxSO2 <doxid-class_sophus_1_1_rx_s_o2>`.
+
+.. index:: pair: function; sampleUniform
+.. _doxid-class_sophus_1_1_rx_s_o2_1a991ca8b83bea4059fea153e489c2509b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class UniformRandomBitGenerator>
+	static RxSO2 sampleUniform(UniformRandomBitGenerator& generator)
+
+Draw uniform sample from RxSO(2) manifold.
+
+The scale factor is drawn uniformly in log2-space from [-1, 1], hence the scale is in [0.5, 2)].
+
+.. index:: pair: function; vee
+.. _doxid-class_sophus_1_1_rx_s_o2_1ac07da6e0f4fad63fb460158e8760d9c3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_1ac47f8c66228ef8a3138aec3e9fa3f3c7>` vee(:ref:`Transformation<doxid-class_sophus_1_1_rx_s_o2_1a49e2f23bce49e6d458457c58847df0ce>` const& Omega)
+
+vee-operator
+
+It takes the 2x2-matrix representation ``Omega`` and maps it to the corresponding vector representation of Lie algebra.
+
+This is the inverse of the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o2_1a2f19fefd9d78fc745fa996287eece574>` -operator, see above.
+
+Precondition: ``Omega`` must have the following structure:
+
+.. code-block:: cpp
+
+	|  d -x |
+	|  x  d |
+
