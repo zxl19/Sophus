@@ -55,6 +55,7 @@ Overview
 		... \
 		)
 
+	#define :target:`SOPHUS_FMT_STRING<doxid-common_8hpp_1a73809981949ad3833605b4ec235f6889>`(x)
 	#define :target:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>`
 	#define :target:`SOPHUS_FUNCTION<doxid-common_8hpp_1adc97d3e69cc46d5aff5132e1fa2d9688>`
 	#define :target:`SOPHUS_STRINGIFY<doxid-test__macros_8hpp_1a9a763d03e0d8daa3c7cb92eb1db5220d>`(x)
