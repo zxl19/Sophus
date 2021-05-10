@@ -197,44 +197,63 @@
     <span class="p">...</span> \
     <span class="p">)</span>
 
-<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1ac8d565eb827c0f28940e0f06682d738b">SOPHUS_FMT</span><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1a59e943a3141922f5ae212a2d446a3c66">SOPHUS_FMT_CSTR</span><span></span><span class="p">(</span> \
+    <span class="n">description</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1adf30afb1c6e5d23f0b5c23a275710873">SOPHUS_FMT_PRINT</span><span></span><span class="p">(</span> \
+    <span class="n">description</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1a6986bc018b27fc727232d86bc2916e52">SOPHUS_FMT_STR</span><span></span><span class="p">(</span> \
+    <span class="n">description</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
 <span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1a719070c34a48abcdf2f623e4160b4c28">SOPHUS_FUNC</span><span></span>
 <span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8hpp-1adc97d3e69cc46d5aff5132e1fa2d9688">SOPHUS_FUNCTION</span><span></span>
 <span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-test-macros-8hpp-1a9a763d03e0d8daa3c7cb92eb1db5220d">SOPHUS_STRINGIFY</span><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1abefa29644afc3289d88cbcd3304d1626"><span class="std std-ref">SOPHUS_TEST</span></a><span></span><span class="p">(</span> \
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a094dfcb125cce443541e6614df9ff704"><span class="std std-ref">SOPHUS_TEST</span></a><span></span><span class="p">(</span> \
     <span class="n">passed</span><span class="p">,</span> \
     <span class="n">condition</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
     <span class="p">...</span> \
     <span class="p">)</span>
 
-<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a8deb4a418efb93fa3ed1ed694517f6b2"><span class="std std-ref">SOPHUS_TEST_APPROX</span></a><span></span><span class="p">(</span> \
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1adceb75d7f4ac8872a96560097b91f090"><span class="std std-ref">SOPHUS_TEST_APPROX</span></a><span></span><span class="p">(</span> \
     <span class="n">passed</span><span class="p">,</span> \
     <span class="n">left</span><span class="p">,</span> \
     <span class="n">right</span><span class="p">,</span> \
     <span class="n">thr</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
     <span class="p">...</span> \
     <span class="p">)</span>
 
-<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a9bc0ca5ac5f8bd396eea3bcf11b385f0"><span class="std std-ref">SOPHUS_TEST_EQUAL</span></a><span></span><span class="p">(</span> \
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1afa1fcfecdacca873ea54874272d05e90"><span class="std std-ref">SOPHUS_TEST_EQUAL</span></a><span></span><span class="p">(</span> \
     <span class="n">passed</span><span class="p">,</span> \
     <span class="n">left</span><span class="p">,</span> \
     <span class="n">right</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
     <span class="p">...</span> \
     <span class="p">)</span>
 
-<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a5f5a258a332217361ac63424916effb5"><span class="std std-ref">SOPHUS_TEST_NEQ</span></a><span></span><span class="p">(</span> \
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a47cf0311fff8d84d7044a599dc452b6a"><span class="std std-ref">SOPHUS_TEST_NEQ</span></a><span></span><span class="p">(</span> \
     <span class="n">passed</span><span class="p">,</span> \
     <span class="n">left</span><span class="p">,</span> \
     <span class="n">right</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
     <span class="p">...</span> \
     <span class="p">)</span>
 
-<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a098c8818cd6af365972b217eeb871fdf"><span class="std std-ref">SOPHUS_TEST_NOT_APPROX</span></a><span></span><span class="p">(</span> \
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8hpp-1a2cf21393818b417fb877bd6198d1b140"><span class="std std-ref">SOPHUS_TEST_NOT_APPROX</span></a><span></span><span class="p">(</span> \
     <span class="n">passed</span><span class="p">,</span> \
     <span class="n">left</span><span class="p">,</span> \
     <span class="n">right</span><span class="p">,</span> \
     <span class="n">thr</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
     <span class="p">...</span> \
     <span class="p">)</span></pre>
 </div>
@@ -242,15 +261,15 @@
 <span id="details-global"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="macros">
 <h3>Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1abefa29644afc3289d88cbcd3304d1626"><span id="index-1"></span><span></span><span class="cp">#define SOPHUS_TEST(passed, condition, ...)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a094dfcb125cce443541e6614df9ff704"><span id="index-1"></span><span></span><span class="cp">#define SOPHUS_TEST(passed, condition, descr, ...)</span></pre>
 <p>Tests whether condition is true. The in-out parameter passed will be set to false if test fails.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a8deb4a418efb93fa3ed1ed694517f6b2"><span id="index-2"></span><span></span><span class="cp">#define SOPHUS_TEST_APPROX(passed, left, right, thr, ...)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1adceb75d7f4ac8872a96560097b91f090"><span id="index-2"></span><span></span><span class="cp">#define SOPHUS_TEST_APPROX(passed, left, right, thr, descr, ...)</span></pre>
 <p>Tests whether left is approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a9bc0ca5ac5f8bd396eea3bcf11b385f0"><span id="index-3"></span><span></span><span class="cp">#define SOPHUS_TEST_EQUAL(passed, left, right, ...)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1afa1fcfecdacca873ea54874272d05e90"><span id="index-3"></span><span></span><span class="cp">#define SOPHUS_TEST_EQUAL(passed, left, right, descr, ...)</span></pre>
 <p>Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a5f5a258a332217361ac63424916effb5"><span id="index-4"></span><span></span><span class="cp">#define SOPHUS_TEST_NEQ(passed, left, right, ...)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a47cf0311fff8d84d7044a599dc452b6a"><span id="index-4"></span><span></span><span class="cp">#define SOPHUS_TEST_NEQ(passed, left, right, descr, ...)</span></pre>
 <p>Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a098c8818cd6af365972b217eeb871fdf"><span id="index-5"></span><span></span><span class="cp">#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, ...)</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8hpp-1a2cf21393818b417fb877bd6198d1b140"><span id="index-5"></span><span></span><span class="cp">#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, descr, ...)</span></pre>
 <p>Tests whether left is NOT approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
 </div>
 </div>

@@ -40,44 +40,63 @@ Overview
 		... \
 		)
 
-	#define :target:`SOPHUS_FMT<doxid-common_8hpp_1ac8d565eb827c0f28940e0f06682d738b>`(x)
+	#define :target:`SOPHUS_FMT_CSTR<doxid-common_8hpp_1a59e943a3141922f5ae212a2d446a3c66>`( \
+		description, \
+		... \
+		)
+
+	#define :target:`SOPHUS_FMT_PRINT<doxid-common_8hpp_1adf30afb1c6e5d23f0b5c23a275710873>`( \
+		description, \
+		... \
+		)
+
+	#define :target:`SOPHUS_FMT_STR<doxid-common_8hpp_1a6986bc018b27fc727232d86bc2916e52>`( \
+		description, \
+		... \
+		)
+
 	#define :target:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>`
 	#define :target:`SOPHUS_FUNCTION<doxid-common_8hpp_1adc97d3e69cc46d5aff5132e1fa2d9688>`
 	#define :target:`SOPHUS_STRINGIFY<doxid-test__macros_8hpp_1a9a763d03e0d8daa3c7cb92eb1db5220d>`(x)
 
-	#define :ref:`SOPHUS_TEST<doxid-test__macros_8hpp_1abefa29644afc3289d88cbcd3304d1626>`( \
+	#define :ref:`SOPHUS_TEST<doxid-test__macros_8hpp_1a094dfcb125cce443541e6614df9ff704>`( \
 		passed, \
 		condition, \
+		descr, \
 		... \
 		)
 
-	#define :ref:`SOPHUS_TEST_APPROX<doxid-test__macros_8hpp_1a8deb4a418efb93fa3ed1ed694517f6b2>`( \
+	#define :ref:`SOPHUS_TEST_APPROX<doxid-test__macros_8hpp_1adceb75d7f4ac8872a96560097b91f090>`( \
 		passed, \
 		left, \
 		right, \
 		thr, \
+		descr, \
 		... \
 		)
 
-	#define :ref:`SOPHUS_TEST_EQUAL<doxid-test__macros_8hpp_1a9bc0ca5ac5f8bd396eea3bcf11b385f0>`( \
+	#define :ref:`SOPHUS_TEST_EQUAL<doxid-test__macros_8hpp_1afa1fcfecdacca873ea54874272d05e90>`( \
 		passed, \
 		left, \
 		right, \
+		descr, \
 		... \
 		)
 
-	#define :ref:`SOPHUS_TEST_NEQ<doxid-test__macros_8hpp_1a5f5a258a332217361ac63424916effb5>`( \
+	#define :ref:`SOPHUS_TEST_NEQ<doxid-test__macros_8hpp_1a47cf0311fff8d84d7044a599dc452b6a>`( \
 		passed, \
 		left, \
 		right, \
+		descr, \
 		... \
 		)
 
-	#define :ref:`SOPHUS_TEST_NOT_APPROX<doxid-test__macros_8hpp_1a098c8818cd6af365972b217eeb871fdf>`( \
+	#define :ref:`SOPHUS_TEST_NOT_APPROX<doxid-test__macros_8hpp_1a2cf21393818b417fb877bd6198d1b140>`( \
 		passed, \
 		left, \
 		right, \
 		thr, \
+		descr, \
 		... \
 		)
 
@@ -92,52 +111,52 @@ Macros
 ------
 
 .. index:: pair: define; SOPHUS_TEST
-.. _doxid-test__macros_8hpp_1abefa29644afc3289d88cbcd3304d1626:
+.. _doxid-test__macros_8hpp_1a094dfcb125cce443541e6614df9ff704:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
 
-	#define SOPHUS_TEST(passed, condition, ...)
+	#define SOPHUS_TEST(passed, condition, descr, ...)
 
 Tests whether condition is true. The in-out parameter passed will be set to false if test fails.
 
 .. index:: pair: define; SOPHUS_TEST_APPROX
-.. _doxid-test__macros_8hpp_1a8deb4a418efb93fa3ed1ed694517f6b2:
+.. _doxid-test__macros_8hpp_1adceb75d7f4ac8872a96560097b91f090:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
 
-	#define SOPHUS_TEST_APPROX(passed, left, right, thr, ...)
+	#define SOPHUS_TEST_APPROX(passed, left, right, thr, descr, ...)
 
 Tests whether left is approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
 
 .. index:: pair: define; SOPHUS_TEST_EQUAL
-.. _doxid-test__macros_8hpp_1a9bc0ca5ac5f8bd396eea3bcf11b385f0:
+.. _doxid-test__macros_8hpp_1afa1fcfecdacca873ea54874272d05e90:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
 
-	#define SOPHUS_TEST_EQUAL(passed, left, right, ...)
+	#define SOPHUS_TEST_EQUAL(passed, left, right, descr, ...)
 
 Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
 
 .. index:: pair: define; SOPHUS_TEST_NEQ
-.. _doxid-test__macros_8hpp_1a5f5a258a332217361ac63424916effb5:
+.. _doxid-test__macros_8hpp_1a47cf0311fff8d84d7044a599dc452b6a:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
 
-	#define SOPHUS_TEST_NEQ(passed, left, right, ...)
+	#define SOPHUS_TEST_NEQ(passed, left, right, descr, ...)
 
 Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
 
 .. index:: pair: define; SOPHUS_TEST_NOT_APPROX
-.. _doxid-test__macros_8hpp_1a098c8818cd6af365972b217eeb871fdf:
+.. _doxid-test__macros_8hpp_1a2cf21393818b417fb877bd6198d1b140:
 
 .. ref-code-block:: cpp
 	:class: doxyrest-title-code-block
 
-	#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, ...)
+	#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, descr, ...)
 
 Tests whether left is NOT approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
 
