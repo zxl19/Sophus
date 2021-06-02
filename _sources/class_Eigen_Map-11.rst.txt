@@ -64,6 +64,7 @@ Inherited Members
 		using :ref:`Point<doxid-class_sophus_1_1_rx_s_o2_base_1a2b1617d8a3d0fb349ab2564b9ec9a179>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`> ;
 		using :ref:`HomogeneousPoint<doxid-class_sophus_1_1_rx_s_o2_base_1a5fdb1dea7af1c903228ee287db45c923>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`> ;
 		using :ref:`Line<doxid-class_sophus_1_1_rx_s_o2_base_1a0e76a006e490cbe972de1be845eded45>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`> ;
+		using :ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o2_base_1a89e2030c26986bb839f68c698875457e>` = :ref:`Hyperplane2<doxid-namespace_sophus_1ac81be7a8549f8288c09a142c5c206faa>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`> ;
 		using :ref:`Tangent<doxid-class_sophus_1_1_rx_s_o2_base_1a39f175916fac8ba5b75805cae7a504cf>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_base_1a4160a7d353c7b1769d399fa17baa0e57>`> ;
 		using :ref:`Adjoint<doxid-class_sophus_1_1_rx_s_o2_base_1a07822c1d71d603e7f397d9a04feeb02f>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_base_1a4160a7d353c7b1769d399fa17baa0e57>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_base_1a4160a7d353c7b1769d399fa17baa0e57>`> ;
 		using :ref:`ReturnScalar<doxid-class_sophus_1_1_rx_s_o2_base_1ae0b0c5b25617870c8d12ac71f9895cbb>` = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o2_base_1a5782d21c1c79fecb930ea78b07be1dc3>`, typename OtherDerived::Scalar>::ReturnType ;
@@ -111,6 +112,7 @@ Inherited Members
 		:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_rx_s_o2_base_1ade1429b27d1908535e4b79bcb6c59f3e>`<HPointDerived> :ref:`operator*<doxid-class_sophus_1_1_rx_s_o2_base_1ac08e1c0ea4ed9c856e7dd4cbad5ce1fe>`(Eigen::MatrixBase<HPointDerived> const& p) const;
 	
 		:ref:`Line<doxid-class_sophus_1_1_rx_s_o2_base_1a0e76a006e490cbe972de1be845eded45>` :ref:`operator*<doxid-class_sophus_1_1_rx_s_o2_base_1a4597efe64e22afd09fa9cb62288562dd>`(:ref:`Line<doxid-class_sophus_1_1_rx_s_o2_base_1a0e76a006e490cbe972de1be845eded45>` const& l) const;
+		:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o2_base_1a89e2030c26986bb839f68c698875457e>` :ref:`operator*<doxid-class_sophus_1_1_rx_s_o2_base_1af2a9aedeb81c32b3b26654a794075318>`(:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o2_base_1a89e2030c26986bb839f68c698875457e>` const& p) const;
 	
 		template <
 			typename OtherDerived,

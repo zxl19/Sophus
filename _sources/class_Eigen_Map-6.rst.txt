@@ -65,6 +65,7 @@ Inherited Members
 		using :ref:`Point<doxid-class_sophus_1_1_s_o2_base_1adcdd252320cb4acbf9a42196ded44a1d>` = :ref:`Vector2<doxid-namespace_sophus_1a7001ffa27892dccbccf195cf679631de>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
 		using :ref:`HomogeneousPoint<doxid-class_sophus_1_1_s_o2_base_1ae6db15881a449fc1cdd04e9b5420d972>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
 		using :ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` = :ref:`ParametrizedLine2<doxid-namespace_sophus_1aa20aa616d9b174374faa3eafc34a5d29>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
+		using :ref:`Hyperplane<doxid-class_sophus_1_1_s_o2_base_1a52dc8f9d3b4f04386cf6ddb32738afbe>` = :ref:`Hyperplane2<doxid-namespace_sophus_1ac81be7a8549f8288c09a142c5c206faa>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`> ;
 		using :ref:`Tangent<doxid-class_sophus_1_1_s_o2_base_1a76ca4f08371c16becd872c8e9160e65f>` = :ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` ;
 		using :ref:`Adjoint<doxid-class_sophus_1_1_s_o2_base_1ad1fa286289a99adcc81053f226a5a217>` = :ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>` ;
 		using :ref:`ReturnScalar<doxid-class_sophus_1_1_s_o2_base_1a9445456d1d0db6073a6fdd3f76db8fe1>` = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_base_1ab8aacd7d6fc6ddb21524bfde77da617a>`, typename OtherDerived::Scalar>::ReturnType ;
@@ -112,6 +113,7 @@ Inherited Members
 		:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_s_o2_base_1a02b47819d0305e6c7de862a5d7b8f8e3>`<HPointDerived> :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1a81249b45dd156ec59797575bf354c271>`(Eigen::MatrixBase<HPointDerived> const& p) const;
 	
 		:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1a16820965fd4bea3c077205b7ca4ad991>`(:ref:`Line<doxid-class_sophus_1_1_s_o2_base_1a65dab2d02cad51ef2aa6aa298f340064>` const& l) const;
+		:ref:`Hyperplane<doxid-class_sophus_1_1_s_o2_base_1a52dc8f9d3b4f04386cf6ddb32738afbe>` :ref:`operator*<doxid-class_sophus_1_1_s_o2_base_1aaeed6c7fad7840b1f97ee6ad79215a0f>`(:ref:`Hyperplane<doxid-class_sophus_1_1_s_o2_base_1a52dc8f9d3b4f04386cf6ddb32738afbe>` const& p) const;
 	
 		template <
 			typename OtherDerived,

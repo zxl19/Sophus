@@ -32,6 +32,7 @@ Overview
 		using :target:`Point<doxid-class_sophus_1_1_rx_s_o3_base_1a1cb7406181b18451e9f7e63beb3db6e1>` = :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`> ;
 		using :target:`HomogeneousPoint<doxid-class_sophus_1_1_rx_s_o3_base_1ab945fe60e00270f94f298a1f26257801>` = :ref:`Vector4<doxid-namespace_sophus_1a2f54b15372bfd1bb0c34464ad61a77c6>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`> ;
 		using :target:`Line<doxid-class_sophus_1_1_rx_s_o3_base_1a4d02a657ad41e5296705fc2ca66aee67>` = :ref:`ParametrizedLine3<doxid-namespace_sophus_1a24633b90a69ca83ad90d833e11e59dd9>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`> ;
+		using :target:`Hyperplane<doxid-class_sophus_1_1_rx_s_o3_base_1a84928f92b75b311483dce0b45d97754e>` = :ref:`Hyperplane3<doxid-namespace_sophus_1ab084f0123710bbef2c90302d40497a74>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`> ;
 		using :target:`Tangent<doxid-class_sophus_1_1_rx_s_o3_base_1aca5a75b2238ad6d68ae9b7a3a7e82afe>` = :ref:`Vector<doxid-namespace_sophus_1abf9f6f1b37fa7bef4d2df65d63154cdf>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o3_base_1a44c2b9a5d1d908e7d334e41809856870>`> ;
 		using :target:`Adjoint<doxid-class_sophus_1_1_rx_s_o3_base_1a872a2a4fd9dc5e929c538c57f2f169a8>` = :ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o3_base_1a44c2b9a5d1d908e7d334e41809856870>`, :ref:`DoF<doxid-class_sophus_1_1_rx_s_o3_base_1a44c2b9a5d1d908e7d334e41809856870>`> ;
 		using :ref:`ReturnScalar<doxid-class_sophus_1_1_rx_s_o3_base_1a3995bc28a4ebcc336c22f51cc65f5d0b>` = typename Eigen::ScalarBinaryOpTraits<:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_base_1a84f85da7323c2fcec1a2ec91716544c1>`, typename OtherDerived::Scalar>::ReturnType ;
@@ -83,6 +84,7 @@ Overview
 		:ref:`HomogeneousPointProduct<doxid-class_sophus_1_1_rx_s_o3_base_1a182afc394b90fedb5b113302089bc826>`<HPointDerived> :ref:`operator*<doxid-class_sophus_1_1_rx_s_o3_base_1a9df512cf927e5748c542a3f8f46c07d1>`(Eigen::MatrixBase<HPointDerived> const& p) const;
 	
 		:ref:`Line<doxid-class_sophus_1_1_rx_s_o3_base_1a4d02a657ad41e5296705fc2ca66aee67>` :ref:`operator*<doxid-class_sophus_1_1_rx_s_o3_base_1ac8efcb15144128fe68994d8675dc4b51>`(:ref:`Line<doxid-class_sophus_1_1_rx_s_o3_base_1a4d02a657ad41e5296705fc2ca66aee67>` const& l) const;
+		:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o3_base_1a84928f92b75b311483dce0b45d97754e>` :ref:`operator*<doxid-class_sophus_1_1_rx_s_o3_base_1a60a6a330c1a937ab0415bb420f0a9609>`(:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o3_base_1a84928f92b75b311483dce0b45d97754e>` const& p) const;
 	
 		template <
 			typename OtherDerived,
@@ -335,6 +337,20 @@ Group action on lines.
 This function rotates a parametrized line ``l(t) = o + t * d`` by the :ref:`SO3 <doxid-class_sophus_1_1_s_o3>` element ans scales it by the scale factor:
 
 Origin ``o`` is rotated and scaled Direction ``d`` is rotated (preserving it's norm)
+
+.. index:: pair: function; operator*
+.. _doxid-class_sophus_1_1_rx_s_o3_base_1a60a6a330c1a937ab0415bb420f0a9609:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o3_base_1a84928f92b75b311483dce0b45d97754e>` operator*(:ref:`Hyperplane<doxid-class_sophus_1_1_rx_s_o3_base_1a84928f92b75b311483dce0b45d97754e>` const& p) const
+
+Group action on planes.
+
+This function rotates parametrized plane ``n.x + d = 0`` by the :ref:`SO3 <doxid-class_sophus_1_1_s_o3>` element and scales it by the scale factor:
+
+Normal vector ``n`` is rotated Offset ``d`` is scaled
 
 .. index:: pair: function; operator*=
 .. _doxid-class_sophus_1_1_rx_s_o3_base_1a105c2f189ba581ec646f5be7f425661f:
