@@ -48,4 +48,5 @@ template class Sophus::Spline
 		const std::vector<:ref:`LieGroup<doxid-class_sophus_1_1_spline_1a61686457c7664763fcc52053b40a22d3>`>& :target:`parent_Ts_control_point<doxid-class_sophus_1_1_spline_1a42f738288d84af03a34b34a4c5582b76>`() const;
 		std::vector<:ref:`LieGroup<doxid-class_sophus_1_1_spline_1a61686457c7664763fcc52053b40a22d3>`>& :target:`parent_Ts_control_point<doxid-class_sophus_1_1_spline_1a0b4b3707db458b2181499c63a922c878>`();
 		void :target:`recomputeControlTangentVectors<doxid-class_sophus_1_1_spline_1af22359b3088c2a1b7422d0d2604df05e>`();
+		int :target:`getNumSegments<doxid-class_sophus_1_1_spline_1a7b40791a64783faf740d84246f461cbc>`() const;
 	};
