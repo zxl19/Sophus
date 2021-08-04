@@ -16,6 +16,7 @@ namespace Sophus
 	struct_Sophus_IsFloatingPoint-2.rst
 	struct_Sophus_IsUniformRandomBitGenerator.rst
 	struct_Sophus_nullopt_t.rst
+	class_Sophus_BasisFunction.rst
 	class_Sophus_RxSO2.rst
 	class_Sophus_RxSO2Base.rst
 	class_Sophus_RxSO3.rst
@@ -32,6 +33,9 @@ namespace Sophus
 	class_Sophus_Sim2Base.rst
 	class_Sophus_Sim3.rst
 	class_Sophus_Sim3Base.rst
+	class_Sophus_Spline.rst
+	class_Sophus_SplineFn.rst
+	class_Sophus_SplineImpl.rst
 	class_Sophus_optional.rst
 
 Overview
@@ -152,6 +156,9 @@ Overview
 
 	// classes
 
+	template <class Scalar>
+	class :ref:`BasisFunction<doxid-class_sophus_1_1_basis_function>`;
+
 	template <class Scalar_, int Options>
 	class :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`;
 
@@ -199,6 +206,15 @@ Overview
 
 	template <class Derived>
 	class :ref:`Sim3Base<doxid-class_sophus_1_1_sim3_base>`;
+
+	template <class LieGroup_>
+	class :ref:`Spline<doxid-class_sophus_1_1_spline>`;
+
+	template <class LieGroup_>
+	class :ref:`SplineFn<doxid-class_sophus_1_1_spline_fn>`;
+
+	template <class LieGroup_>
+	class :ref:`SplineImpl<doxid-class_sophus_1_1_spline_impl>`;
 
 	template <class T>
 	class :ref:`optional<doxid-class_sophus_1_1optional>`;

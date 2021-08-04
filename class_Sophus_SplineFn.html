@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>struct Sophus::SO3Base::TangentAndTheta &mdash; Sophus  documentation</title>
+  <title>template class Sophus::SplineFn &mdash; Sophus  documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template class Sophus::Sim2" href="class_Sophus_Sim2.html" />
-    <link rel="prev" title="template class Sophus::SO3Base" href="class_Sophus_SO3Base.html" /> 
+    <link rel="next" title="template class Sophus::SplineImpl" href="class_Sophus_SplineImpl.html" />
+    <link rel="prev" title="struct Sophus::Spline::IndexAndU" href="struct_Sophus_Spline_IndexAndU.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -118,18 +118,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_SO2.html">template class Sophus::SO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_SO2Base.html">template class Sophus::SO2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_SO3.html">template class Sophus::SO3</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="class_Sophus_SO3Base.html">template class Sophus::SO3Base</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">struct Sophus::SO3Base::TangentAndTheta</a></li>
-<li class="toctree-l4"><a class="reference internal" href="class_Sophus_SO3Base.html#overview">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="class_Sophus_SO3Base.html#detailed-documentation">Detailed Documentation</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SO3Base.html">template class Sophus::SO3Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim2.html">template class Sophus::Sim2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim2Base.html">template class Sophus::Sim2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3.html">template class Sophus::Sim3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3Base.html">template class Sophus::Sim3Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Spline.html">template class Sophus::Spline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineFn.html">template class Sophus::SplineFn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::SplineFn</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineImpl.html">template class Sophus::SplineImpl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_optional.html">template class Sophus::optional</a></li>
 <li class="toctree-l3"><a class="reference internal" href="namespace_Sophus.html#overview">Overview</a></li>
@@ -192,15 +189,13 @@
         
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
         
-          <li><a href="class_Sophus_SO3Base.html">template class Sophus::SO3Base</a> &raquo;</li>
-        
-      <li>struct Sophus::SO3Base::TangentAndTheta</li>
+      <li>template class Sophus::SplineFn</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/struct_Sophus_SO3Base_TangentAndTheta.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/class_Sophus_SplineFn.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -213,17 +208,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="struct-sophus-so3base-tangentandtheta">
-<span id="doxid-struct-sophus-1-1-s-o3-base-1-1-tangent-and-theta"></span><span id="index-0"></span><h1>struct Sophus::SO3Base::TangentAndTheta<a class="headerlink" href="#struct-sophus-so3base-tangentandtheta" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="template-class-sophus-splinefn">
+<span id="doxid-class-sophus-1-1-spline-fn"></span><span id="index-0"></span><h1>template class Sophus::SplineFn<a class="headerlink" href="#template-class-sophus-splinefn" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;so3.hpp&gt;</span><span class="cp"></span>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;spline.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">struct</span> <span class="n">TangentAndTheta</span> <span class="p">{</span>
-    <span class="c1">// fields</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">SplineFn</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
 
-    <span class="n">EIGEN_MAKE_ALIGNED_OPERATOR_NEW</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1ab16109010b18d52c553fe0909f1a7530"><span class="std std-ref">Tangent</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-s-o3-base-1-1-tangent-and-theta-1ab105eebd28b62eaa5a2d9e3944f91126">tangent</span><span></span><span class="p">;</span>
-    <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a9278bd344193c917f5cbf3c91bea3d2c"><span class="std std-ref">Scalar</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-s-o3-base-1-1-tangent-and-theta-1a6fa4d463b7721ec86f792775f3b6d6f8">theta</span><span></span><span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a3ad7544a7be34a764dd488b2fae9748d">LieGroup</span><span></span> <span class="o">=</span> <span class="n">LieGroup_</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a124f16f0324c137988b14263a83992a4">Scalar</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Scalar</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a9e595b066712d53a38a94d6ca2cbc0dd">Transformation</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Transformation</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Tangent</span> <span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">static</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a3ad7544a7be34a764dd488b2fae9748d"><span class="std std-ref">LieGroup</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1adaa9a20fa1d0b835aa37a03d42a73864">parent_T_spline</span><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a3ad7544a7be34a764dd488b2fae9748d"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&amp;</span> <span class="n">parent_Ts_control_point</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">control_tagent_vectors</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="n">u</span>
+        <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a9e595b066712d53a38a94d6ca2cbc0dd"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a8003348d2962937112ad0c08b7d5bb50">Dt_parent_T_spline</span><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a3ad7544a7be34a764dd488b2fae9748d"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&amp;</span> <span class="n">parent_Ts_control_point</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">control_tagent_vectors</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="n">u</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="n">delta_t</span>
+        <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a9e595b066712d53a38a94d6ca2cbc0dd"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-fn-1a39ddd41145e3fa212cef6f54221e534d">Dt2_parent_T_spline</span><span></span><span class="p">(</span>
+        <span class="k">const</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a3ad7544a7be34a764dd488b2fae9748d"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&amp;</span> <span class="n">parent_Ts_control_point</span><span class="p">,</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="p">,</span> <a class="reference internal" href="#doxid-class-sophus-1-1-spline-fn-1a742fe28c94cf4b41786325ee2bbac123"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">control_tagent_vectors</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="n">u</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="n">delta_t</span>
+        <span class="p">);</span>
 <span class="p">};</span></pre>
 </div>
 
@@ -233,8 +254,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="class_Sophus_Sim2.html" class="btn btn-neutral float-right" title="template class Sophus::Sim2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="class_Sophus_SO3Base.html" class="btn btn-neutral float-left" title="template class Sophus::SO3Base" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Sophus_SplineImpl.html" class="btn btn-neutral float-right" title="template class Sophus::SplineImpl" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_Sophus_Spline_IndexAndU.html" class="btn btn-neutral float-left" title="struct Sophus::Spline::IndexAndU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
