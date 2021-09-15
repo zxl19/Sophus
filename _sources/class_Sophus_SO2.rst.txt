@@ -256,8 +256,8 @@ The infinitesimal generators of SO(2) is:
 
 .. code-block:: cpp
 
-	|  0  1 |
-	| -1  0 |
+	|  0 -1 |
+	|  1  0 |
 
 .. index:: pair: function; hat
 .. _doxid-class_sophus_1_1_s_o2_1a6edca804182226f10afeee4a218ef67b:
