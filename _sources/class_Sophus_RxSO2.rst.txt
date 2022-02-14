@@ -53,6 +53,7 @@ Overview
 
 		// methods
 	
+		RxSO2& :ref:`operator=<doxid-class_sophus_1_1_rx_s_o2_1aa739e1860faa878e326983b7f9603388>`(RxSO2 const& other);
 		:ref:`ComplexMember<doxid-class_sophus_1_1_rx_s_o2_1a05cb39b7f199ed115e58bcc8d8857274>` const& :ref:`complex<doxid-class_sophus_1_1_rx_s_o2_1a5a4104c85732e0f104f37b5bbdad09d2>`() const;
 	
 		template <class OtherDerived>
@@ -183,6 +184,16 @@ Precondition: complex number must not be close to either zero or inifnity.
 
 Methods
 -------
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_rx_s_o2_1aa739e1860faa878e326983b7f9603388:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO2& operator=(RxSO2 const& other)
+
+Define copy-assignment operator explicitly. The definition of implicit copy assignment operator is deprecated in presence of a user-declared copy constructor (-Wdeprecated-copy in clang >= 13).
 
 .. index:: pair: function; complex
 .. _doxid-class_sophus_1_1_rx_s_o2_1a5a4104c85732e0f104f37b5bbdad09d2:

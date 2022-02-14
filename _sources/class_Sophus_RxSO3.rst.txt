@@ -54,6 +54,7 @@ Overview
 
 		// methods
 	
+		RxSO3& :ref:`operator=<doxid-class_sophus_1_1_rx_s_o3_1a562a71aff2d54c3d5bea4c5b5b52f782>`(RxSO3 const& other);
 		:ref:`QuaternionMember<doxid-class_sophus_1_1_rx_s_o3_1a0da495446d89a49c872404a68c3930bf>` const& :ref:`quaternion<doxid-class_sophus_1_1_rx_s_o3_1a31d446fc3b60c03d03206ef95b65bf02>`() const;
 	
 		template <class OtherDerived>
@@ -174,6 +175,16 @@ Precondition: quaternion must not be close to either zero or infinity.
 
 Methods
 -------
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_rx_s_o3_1a562a71aff2d54c3d5bea4c5b5b52f782:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RxSO3& operator=(RxSO3 const& other)
+
+Define copy-assignment operator explicitly. The definition of implicit copy assignment operator is deprecated in presence of a user-declared copy constructor (-Wdeprecated-copy in clang >= 13).
 
 .. index:: pair: function; quaternion
 .. _doxid-class_sophus_1_1_rx_s_o3_1a31d446fc3b60c03d03206ef95b65bf02:

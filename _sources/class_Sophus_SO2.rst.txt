@@ -55,6 +55,7 @@ Overview
 
 		// methods
 	
+		SO2& :ref:`operator=<doxid-class_sophus_1_1_s_o2_1a2ca6d3fc3b5eb4d71afe8ee4537bfb71>`(SO2 const& other);
 		:ref:`ComplexMember<doxid-class_sophus_1_1_s_o2_1a584cf94ed97900921a8958e4b74b1adf>` const& :ref:`unit_complex<doxid-class_sophus_1_1_s_o2_1aa93f83881443dcac079bfc7ac4797ab5>`() const;
 	
 		template <class OtherDerived>
@@ -176,6 +177,16 @@ Constructor from an rotation angle.
 
 Methods
 -------
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_s_o2_1a2ca6d3fc3b5eb4d71afe8ee4537bfb71:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	SO2& operator=(SO2 const& other)
+
+Define copy-assignment operator explicitly. The definition of implicit copy assignment operator is deprecated in presence of a user-declared copy constructor (-Wdeprecated-copy in clang >= 13).
 
 .. index:: pair: function; unit_complex
 .. _doxid-class_sophus_1_1_s_o2_1aa93f83881443dcac079bfc7ac4797ab5:

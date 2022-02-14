@@ -57,6 +57,7 @@ Overview
 
 		// methods
 	
+		SE3& :ref:`operator=<doxid-class_sophus_1_1_s_e3_1ac35e5d0f9ed2231f1d781513aeb9f60a>`(SE3 const& other);
 		:ref:`Scalar<doxid-class_sophus_1_1_s_e3_1a7d92554e50f60d87eb37fe5982498a7f>`* :ref:`data<doxid-class_sophus_1_1_s_e3_1a44417c013e61ad7da4e5e013dbdd88cd>`();
 		:ref:`Scalar<doxid-class_sophus_1_1_s_e3_1a7d92554e50f60d87eb37fe5982498a7f>` const* :ref:`data<doxid-class_sophus_1_1_s_e3_1ad198fe563e25ac6303b46cf7ebf0bf90>`() const;
 		:ref:`SO3Member<doxid-class_sophus_1_1_s_e3_1a5823e158fe34e3e34f7baa3479a27062>`& :ref:`so3<doxid-class_sophus_1_1_s_e3_1aae5e2ebda5e15fc5b84842d9c9b80ee9>`();
@@ -197,6 +198,16 @@ Precondition: Rotation matrix needs to be orthogonal with determinant of 1. The 
 
 Methods
 -------
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_s_e3_1ac35e5d0f9ed2231f1d781513aeb9f60a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	SE3& operator=(SE3 const& other)
+
+Define copy-assignment operator explicitly. The definition of implicit copy assignment operator is deprecated in presence of a user-declared copy constructor (-Wdeprecated-copy in clang >= 13).
 
 .. index:: pair: function; data
 .. _doxid-class_sophus_1_1_s_e3_1a44417c013e61ad7da4e5e013dbdd88cd:

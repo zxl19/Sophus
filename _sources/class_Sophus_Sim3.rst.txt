@@ -62,6 +62,7 @@ Overview
 
 		// methods
 	
+		Sim3& :ref:`operator=<doxid-class_sophus_1_1_sim3_1adcdb87f3eab0136e354551e9a118dcbd>`(Sim3 const& other);
 		:ref:`Scalar<doxid-class_sophus_1_1_sim3_1af6018527dd82e183f658654eef91ab72>`* :ref:`data<doxid-class_sophus_1_1_sim3_1acf0f00c04cbea1f3174d9c6744093955>`();
 		:ref:`Scalar<doxid-class_sophus_1_1_sim3_1af6018527dd82e183f658654eef91ab72>` const* :ref:`data<doxid-class_sophus_1_1_sim3_1a3023d33a5cb839a7596111ed2a36193d>`() const;
 		:ref:`RxSo3Member<doxid-class_sophus_1_1_sim3_1aecc368d8867f7591c3ad97a4eebf1cba>`& :ref:`rxso3<doxid-class_sophus_1_1_sim3_1a08f91fa073924881d5066223cc854001>`();
@@ -176,6 +177,16 @@ Precondition: Top-left 3x3 matrix needs to be "scaled-orthogonal" with positive 
 
 Methods
 -------
+
+.. index:: pair: function; operator=
+.. _doxid-class_sophus_1_1_sim3_1adcdb87f3eab0136e354551e9a118dcbd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Sim3& operator=(Sim3 const& other)
+
+Define copy-assignment operator explicitly. The definition of implicit copy assignment operator is deprecated in presence of a user-declared copy constructor (-Wdeprecated-copy in clang >= 13).
 
 .. index:: pair: function; data
 .. _doxid-class_sophus_1_1_sim3_1acf0f00c04cbea1f3174d9c6744093955:
