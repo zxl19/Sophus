@@ -58,6 +58,13 @@ Overview
 		template <class OtherDerived>
 		:ref:`SO3Base<doxid-class_sophus_1_1_s_o3_base>`<Derived>& :ref:`operator=<doxid-class_sophus_1_1_s_o3_1a627cfe179f201fba569be241857609d8>`(:ref:`SO3Base<doxid-class_sophus_1_1_s_o3_base>`<OtherDerived> const& other);
 	
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`> :ref:`leftJacobian<doxid-class_sophus_1_1_s_o3_1a2e2f8b4a1cba7bc647def5888b0f663f>`(:ref:`Tangent<doxid-class_sophus_1_1_s_o3_1a627bf9876132ee2ff07bf99b44d74201>` const& omega, :ref:`optional<doxid-class_sophus_1_1optional>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`> const& theta_o = :ref:`nullopt<doxid-namespace_sophus_1a51967df3b1702e291aac70303ce49089>`);
+	
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`> :target:`leftJacobianInverse<doxid-class_sophus_1_1_s_o3_1a45e83a26556dad99588e69457ea094fa>`(
+			:ref:`Tangent<doxid-class_sophus_1_1_s_o3_1a627bf9876132ee2ff07bf99b44d74201>` const& omega,
+			:ref:`optional<doxid-class_sophus_1_1optional>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`> const& theta_o = :ref:`nullopt<doxid-namespace_sophus_1a51967df3b1702e291aac70303ce49089>`
+			);
+	
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o3_1ab9ad71135a7dc8b7543b800939ea1062>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`> :ref:`Dx_exp_x<doxid-class_sophus_1_1_s_o3_1ab4e71dbf8d91adf2165c546a3a43ef9b>`(:ref:`Tangent<doxid-class_sophus_1_1_s_o3_1a627bf9876132ee2ff07bf99b44d74201>` const& omega);
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o3_1ab9ad71135a7dc8b7543b800939ea1062>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`> :ref:`Dx_exp_x_at_0<doxid-class_sophus_1_1_s_o3_1a036d9011424424a362d94f54cb20cc27>`();
 		static :ref:`Transformation<doxid-class_sophus_1_1_s_o3_1a5281f6141e77555c28a1c997b7fb642d>` :ref:`Dxi_exp_x_matrix_at_0<doxid-class_sophus_1_1_s_o3_1aa670edd174ce72deae9b687aa57e0ccd>`(int i);
@@ -187,6 +194,20 @@ Accessor of unit quaternion.
 	:ref:`SO3Base<doxid-class_sophus_1_1_s_o3_base>`<Derived>& operator=(:ref:`SO3Base<doxid-class_sophus_1_1_s_o3_base>`<OtherDerived> const& other)
 
 Assignment-like operator from OtherDerived.
+
+.. index:: pair: function; leftJacobian
+.. _doxid-class_sophus_1_1_s_o3_1a2e2f8b4a1cba7bc647def5888b0f663f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`, :ref:`DoF<doxid-class_sophus_1_1_s_o3_1a36e31b59dd699731bfdb31bef2f39454>`> leftJacobian(:ref:`Tangent<doxid-class_sophus_1_1_s_o3_1a627bf9876132ee2ff07bf99b44d74201>` const& omega, :ref:`optional<doxid-class_sophus_1_1optional>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_1a162566df35f939dfbb1a10581af5bfaf>`> const& theta_o = :ref:`nullopt<doxid-namespace_sophus_1a51967df3b1702e291aac70303ce49089>`)
+
+Returns the left Jacobian on lie group. See 1st entry in rightmost column in: `http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17_identities.pdf <http://asrl.utias.utoronto.ca/~tdb/bib/barfoot_ser17_identities.pdf>`__.
+
+A precomputed ``theta`` can be optionally passed in
+
+Warning: Not to be confused with :ref:`Dx_exp_x() <doxid-class_sophus_1_1_s_o3_1ab4e71dbf8d91adf2165c546a3a43ef9b>`, which is derivative of the internal quaternion representation of :ref:`SO3 <doxid-class_sophus_1_1_s_o3>` wrt the tangent vector
 
 .. index:: pair: function; Dx_exp_x
 .. _doxid-class_sophus_1_1_s_o3_1ab4e71dbf8d91adf2165c546a3a43ef9b:
