@@ -1,0 +1,79 @@
+.. index:: pair: class; Sophus::LocalParameterization
+.. _doxid-class_sophus_1_1_local_parameterization:
+
+template class Sophus::LocalParameterization
+============================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ]. :ref:`More...<details-class_sophus_1_1_local_parameterization>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <ceres_local_parameterization.hpp>
+	
+	template <template<typename, int=0> class LieGroup>
+	class LocalParameterization: public LocalParameterization {
+	public:
+		// typedefs
+	
+		using :target:`LieGroupd<doxid-class_sophus_1_1_local_parameterization_1a1973be843cd818ee41007daf9fe1a54e>` = LieGroup<double> ;
+		using :target:`Tangent<doxid-class_sophus_1_1_local_parameterization_1adb35d1443c419df14ee6ffabd65f1979>` = typename LieGroupd::Tangent ;
+		using :target:`TangentMap<doxid-class_sophus_1_1_local_parameterization_1a543e6574af6dc624fd412c88c48bd8cf>` = typename :ref:`Sophus::Mapper<doxid-struct_sophus_1_1_mapper>`<:ref:`Tangent<doxid-class_sophus_1_1_local_parameterization_1adb35d1443c419df14ee6ffabd65f1979>`>::ConstMap ;
+
+		// fields
+	
+		static constexpr int :target:`DoF<doxid-class_sophus_1_1_local_parameterization_1aeeb527502c1e581be8d7f0ec17c35b5c>` = LieGroupd::DoF;
+		static constexpr int :target:`num_parameters<doxid-class_sophus_1_1_local_parameterization_1af0ca390187819556eb35be75c2cb1036>` = LieGroupd::num_parameters;
+
+		// methods
+	
+		bool :ref:`Plus<doxid-class_sophus_1_1_local_parameterization_1a25dbd360f9f11045a185c962a888b94a>`(double const* T_raw, double const* delta_raw, double* T_plus_delta_raw) const;
+		bool :ref:`ComputeJacobian<doxid-class_sophus_1_1_local_parameterization_1a960f48138f8999f3a29f71d541cd2469>`(double const* T_raw, double* jacobian_raw) const;
+		int :target:`GlobalSize<doxid-class_sophus_1_1_local_parameterization_1aa63d1b60133437d3a7bf86cd18d5076b>`() const;
+		int :target:`LocalSize<doxid-class_sophus_1_1_local_parameterization_1a30e3ea5e10e33bec06ad1bc8cc34bbdd>`() const;
+	};
+.. _details-class_sophus_1_1_local_parameterization:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ].
+
+Methods
+-------
+
+.. index:: pair: function; Plus
+.. _doxid-class_sophus_1_1_local_parameterization_1a25dbd360f9f11045a185c962a888b94a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Plus(
+		double const* T_raw,
+		double const* delta_raw,
+		double* T_plus_delta_raw
+		) const
+
+LieGroup plus operation for Ceres.
+
+T \* exp(x)
+
+.. index:: pair: function; ComputeJacobian
+.. _doxid-class_sophus_1_1_local_parameterization_1a960f48138f8999f3a29f71d541cd2469:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool ComputeJacobian(double const* T_raw, double* jacobian_raw) const
+
+Jacobian of LieGroup plus operation for Ceres.
+
+Dx T \* exp(x) with x=0
+

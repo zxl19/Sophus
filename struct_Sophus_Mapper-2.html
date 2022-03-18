@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template struct Sophus::IsFixedSizeVector &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>template struct Sophus::Mapper &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;" href="struct_Sophus_IsFloatingPoint.html" />
-    <link rel="prev" title="template struct Sophus::GetScalar" href="struct_Sophus_GetScalar-2.html" /> 
+    <link rel="next" title="struct Sophus::nullopt_t" href="struct_Sophus_nullopt_t.html" />
+    <link rel="prev" title="template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;" href="struct_Sophus_Mapper.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,14 +52,14 @@
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct Sophus::IsFixedSizeVector</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct Sophus::Mapper</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
@@ -109,9 +109,9 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="global.html">Global Namespace</a> &raquo;</li>
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template struct Sophus::IsFixedSizeVector</li>
+      <li>template struct Sophus::Mapper</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/struct_Sophus_IsFixedSizeVector.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/struct_Sophus_Mapper-2.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -119,19 +119,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="template-struct-sophus-isfixedsizevector">
-<span id="doxid-struct-sophus-1-1-is-fixed-size-vector"></span><span id="index-0"></span><h1>template struct Sophus::IsFixedSizeVector<a class="headerlink" href="#template-struct-sophus-isfixedsizevector" title="Permalink to this headline">¶</a></h1>
+  <section id="template-struct-sophus-mapper">
+<span id="doxid-struct-sophus-1-1-mapper"></span><span id="index-0"></span><h1>template struct Sophus::Mapper<a class="headerlink" href="#template-struct-sophus-mapper" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>If the Vector type is of fixed size, then IsFixedSizeVector::value will be true.</p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;types.hpp&gt;</span><span class="cp"></span>
+<p>Helper for mapping tangent vectors (scalars) over pointers to data.</p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ceres_local_parameterization.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">template</span> <span class="o">&lt;</span>
-    <span class="k">typename</span> <span class="n">Vector</span><span class="p">,</span>
-    <span class="kt">int</span> <span class="n">NumDimensions</span><span class="p">,</span>
-    <span class="k">typename</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">Vector</span><span class="o">::</span><span class="n">RowsAtCompileTime</span> <span class="o">==</span> <span class="n">NumDimensions</span><span class="o">&amp;&amp;</span>              <span class="n">Vector</span><span class="o">::</span><span class="n">ColsAtCompileTime</span> <span class="o">==</span> <span class="mi">1</span><span class="o">&gt;::</span><span class="n">type</span>
-    <span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nl">IsFixedSizeVector</span><span class="p">:</span> <span class="k">public</span> <span class="n">true_type</span> <span class="p">{</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">E</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">Mapper</span> <span class="p">{</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-mapper-1a358bf1ab4fe839d168d1dbae3f67000f">Scalar</span><span></span> <span class="o">=</span> <span class="n">T</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-mapper-1a7df03376e664102094c4384980e54d5f">Map</span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a358bf1ab4fe839d168d1dbae3f67000f"><span class="std std-ref">Scalar</span></a><span></span><span class="o">&amp;</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-mapper-1a3287b0af4b7299c45e7b3d827f6c2c69">ConstMap</span><span></span> <span class="o">=</span> <span class="k">const</span> <a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a358bf1ab4fe839d168d1dbae3f67000f"><span class="std std-ref">Scalar</span></a><span></span><span class="o">&amp;</span> <span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="k">static</span> <a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a7df03376e664102094c4384980e54d5f"><span class="std std-ref">Map</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-mapper-1ae598534c4074036a1f9ab2d16c5fd0c9">map</span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a358bf1ab4fe839d168d1dbae3f67000f"><span class="std std-ref">Scalar</span></a><span></span><span class="o">*</span> <span class="n">ptr</span><span class="p">);</span>
+    <span class="k">static</span> <a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a3287b0af4b7299c45e7b3d827f6c2c69"><span class="std std-ref">ConstMap</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-mapper-1a8de3e5b2e44d012e71515677795c5c0b">map</span><span></span><span class="p">(</span><span class="k">const</span> <a class="reference internal" href="#doxid-struct-sophus-1-1-mapper-1a358bf1ab4fe839d168d1dbae3f67000f"><span class="std std-ref">Scalar</span></a><span></span><span class="o">*</span> <span class="n">ptr</span><span class="p">);</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -139,8 +145,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="struct_Sophus_GetScalar-2.html" class="btn btn-neutral float-left" title="template struct Sophus::GetScalar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_Sophus_IsFloatingPoint.html" class="btn btn-neutral float-right" title="template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_Sophus_Mapper.html" class="btn btn-neutral float-left" title="template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="struct_Sophus_nullopt_t.html" class="btn btn-neutral float-right" title="struct Sophus::nullopt_t" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -50,14 +50,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="namespace_Sophus.html">namespace Sophus</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants.html">template struct Sophus::Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO3.html">template class Sophus::RxSO3</a></li>
@@ -214,6 +217,16 @@
 
     <span class="kt">void</span> <a class="reference internal" href="#doxid-class-sophus-1-1-s-o3-base-1a25cac542342b6f4215e8eedb9c51b0ed"><span class="std std-ref">setQuaternion</span></a><span></span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Quaternion</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-s-o3-base-1a9278bd344193c917f5cbf3c91bea3d2c"><span class="std std-ref">Scalar</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">quaternion</span><span class="p">);</span>
     <a class="reference internal" href="#doxid-class-sophus-1-1-s-o3-base-1a1e370b275fb63d7c870f2d186a501689"><span class="std std-ref">QuaternionType</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-sophus-1-1-s-o3-base-1a6353aab1a8c265a681c9a0035b90dcfd"><span class="std std-ref">unit_quaternion</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span>
+        <span class="k">typename</span> <span class="n">QuaternionProductType</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="n">QuaternionTypeA</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="n">QuaternionTypeB</span>
+        <span class="o">&gt;</span>
+    <span class="k">static</span> <span class="n">QuaternionProductType</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-s-o3-base-1ab929ad83fadc65e3016a7fd027819e05">QuaternionProduct</span><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">QuaternionTypeA</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">QuaternionTypeB</span><span class="o">&amp;</span> <span class="n">b</span>
+        <span class="p">);</span>
 <span class="p">};</span>
 
 <span class="c1">// direct descendants</span>

@@ -185,6 +185,8 @@
 </li>
         <li><a href="class_Sophus_BasisFunction.html#index-0">Sophus::BasisFunction</a>
 </li>
+        <li><a href="class_Sophus_LocalParameterization.html#index-0">Sophus::LocalParameterization</a>
+</li>
         <li><a href="class_Sophus_RxSO2.html#index-0">Sophus::RxSO2</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-0">Sophus::RxSO2Base</a>
@@ -237,6 +239,13 @@
       </ul></li>
       <li><a href="pysophus.html#sophus.complex.Complex">Complex (class in sophus.complex)</a>
 </li>
+      <li>
+    ComputeJacobian
+
+      <ul>
+        <li><a href="class_Sophus_LocalParameterization.html#index-2">function</a>
+</li>
+      </ul></li>
       <li><a href="pysophus.html#sophus.complex.Complex.conj">conj() (sophus.complex.Complex method)</a>
 
       <ul>
@@ -247,7 +256,7 @@
     curveNumDiff
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-15">function</a>
+        <li><a href="namespace_Sophus.html#index-16">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -518,6 +527,8 @@
       <ul>
         <li><a href="class_Sophus_RxSO2Base.html#index-5">Adj</a>, <a href="class_Sophus_RxSO3Base.html#index-5">[1]</a>, <a href="class_Sophus_SE2Base.html#index-5">[2]</a>, <a href="class_Sophus_SE3Base.html#index-5">[3]</a>, <a href="class_Sophus_SO2Base.html#index-5">[4]</a>, <a href="class_Sophus_SO3Base.html#index-5">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-5">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-5">[7]</a>
 </li>
+        <li><a href="class_Sophus_LocalParameterization.html#index-2">ComputeJacobian</a>
+</li>
         <li><a href="class_Sophus_RxSO2.html#index-12">Dx_exp_x</a>, <a href="class_Sophus_RxSO3.html#index-12">[1]</a>, <a href="class_Sophus_SE2.html#index-17">[2]</a>, <a href="class_Sophus_SE3.html#index-16">[3]</a>, <a href="class_Sophus_SO2.html#index-12">[4]</a>, <a href="class_Sophus_SO3.html#index-10">[5]</a>, <a href="class_Sophus_Sim2.html#index-16">[6]</a>, <a href="class_Sophus_Sim3.html#index-16">[7]</a>
 </li>
         <li><a href="class_Sophus_RxSO2.html#index-13">Dx_exp_x_at_0</a>, <a href="class_Sophus_RxSO3.html#index-11">[1]</a>, <a href="class_Sophus_SE2.html#index-18">[2]</a>, <a href="class_Sophus_SE3.html#index-17">[3]</a>, <a href="class_Sophus_SO2.html#index-13">[4]</a>, <a href="class_Sophus_SO3.html#index-11">[5]</a>, <a href="class_Sophus_Sim2.html#index-15">[6]</a>, <a href="class_Sophus_Sim3.html#index-15">[7]</a>
@@ -526,25 +537,27 @@
 </li>
         <li><a href="class_Sophus_RxSO2.html#index-14">Dxi_exp_x_matrix_at_0</a>, <a href="class_Sophus_RxSO3.html#index-13">[1]</a>, <a href="class_Sophus_SE2.html#index-19">[2]</a>, <a href="class_Sophus_SE3.html#index-18">[3]</a>, <a href="class_Sophus_SO2.html#index-14">[4]</a>, <a href="class_Sophus_SO3.html#index-12">[5]</a>, <a href="class_Sophus_Sim2.html#index-17">[6]</a>, <a href="class_Sophus_Sim3.html#index-17">[7]</a>
 </li>
+        <li><a href="class_Sophus_LocalParameterization.html#index-1">Plus</a>
+</li>
         <li><a href="class_Sophus_RxSO2.html#index-1">RxSO2</a>, <a href="class_Sophus_RxSO2.html#index-2">[1]</a>, <a href="class_Sophus_RxSO2.html#index-3">[2]</a>, <a href="class_Sophus_RxSO2.html#index-4">[3]</a>, <a href="class_Sophus_RxSO2.html#index-5">[4]</a>, <a href="class_Sophus_RxSO2.html#index-6">[5]</a>, <a href="class_Sophus_RxSO2.html#index-7">[6]</a>, <a href="class_Sophus_RxSO2.html#index-8">[7]</a>
 </li>
         <li><a href="class_Sophus_RxSO3.html#index-1">RxSO3</a>, <a href="class_Sophus_RxSO3.html#index-2">[1]</a>, <a href="class_Sophus_RxSO3.html#index-3">[2]</a>, <a href="class_Sophus_RxSO3.html#index-4">[3]</a>, <a href="class_Sophus_RxSO3.html#index-5">[4]</a>, <a href="class_Sophus_RxSO3.html#index-6">[5]</a>, <a href="class_Sophus_RxSO3.html#index-7">[6]</a>
 </li>
         <li><a href="class_Sophus_SE2.html#index-1">SE2</a>, <a href="class_Sophus_SE2.html#index-2">[1]</a>, <a href="class_Sophus_SE2.html#index-3">[2]</a>, <a href="class_Sophus_SE2.html#index-4">[3]</a>, <a href="class_Sophus_SE2.html#index-5">[4]</a>, <a href="class_Sophus_SE2.html#index-6">[5]</a>, <a href="class_Sophus_SE2.html#index-7">[6]</a>, <a href="class_Sophus_SE2.html#index-8">[7]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-10">SE2FromLine</a>
+        <li><a href="namespace_Sophus.html#index-11">SE2FromLine</a>
 </li>
         <li><a href="class_Sophus_SE3.html#index-1">SE3</a>, <a href="class_Sophus_SE3.html#index-2">[1]</a>, <a href="class_Sophus_SE3.html#index-3">[2]</a>, <a href="class_Sophus_SE3.html#index-4">[3]</a>, <a href="class_Sophus_SE3.html#index-5">[4]</a>, <a href="class_Sophus_SE3.html#index-6">[5]</a>, <a href="class_Sophus_SE3.html#index-7">[6]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-12">SE3FromPlane</a>
+        <li><a href="namespace_Sophus.html#index-13">SE3FromPlane</a>
 </li>
         <li><a href="class_Sophus_SO2.html#index-1">SO2</a>, <a href="class_Sophus_SO2.html#index-2">[1]</a>, <a href="class_Sophus_SO2.html#index-3">[2]</a>, <a href="class_Sophus_SO2.html#index-4">[3]</a>, <a href="class_Sophus_SO2.html#index-5">[4]</a>, <a href="class_Sophus_SO2.html#index-6">[5]</a>, <a href="class_Sophus_SO2.html#index-7">[6]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-5">SO2FromNormal</a>
+        <li><a href="namespace_Sophus.html#index-6">SO2FromNormal</a>
 </li>
         <li><a href="class_Sophus_SO3.html#index-1">SO3</a>, <a href="class_Sophus_SO3.html#index-2">[1]</a>, <a href="class_Sophus_SO3.html#index-3">[2]</a>, <a href="class_Sophus_SO3.html#index-4">[3]</a>, <a href="class_Sophus_SO3.html#index-5">[4]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-8">SO3FromNormal</a>
+        <li><a href="namespace_Sophus.html#index-9">SO3FromNormal</a>
 </li>
         <li><a href="class_Sophus_Sim2.html#index-1">Sim2</a>, <a href="class_Sophus_Sim2.html#index-2">[1]</a>, <a href="class_Sophus_Sim2.html#index-3">[2]</a>, <a href="class_Sophus_Sim2.html#index-4">[3]</a>, <a href="class_Sophus_Sim2.html#index-5">[4]</a>, <a href="class_Sophus_Sim2.html#index-6">[5]</a>
 </li>
@@ -562,7 +575,7 @@
 </li>
         <li><a href="class_Eigen_Map-11.html#index-1">complex</a>, <a href="class_Eigen_Map.html#index-1">[1]</a>, <a href="class_Sophus_RxSO2.html#index-10">[2]</a>, <a href="class_Sophus_RxSO2Base.html#index-23">[3]</a>, <a href="class_Sophus_Sim2Base.html#index-21">[4]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-15">curveNumDiff</a>
+        <li><a href="namespace_Sophus.html#index-16">curveNumDiff</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-8">data</a>, <a href="class_Sophus_RxSO2Base.html#index-9">[1]</a>, <a href="class_Sophus_RxSO3Base.html#index-7">[2]</a>, <a href="class_Sophus_RxSO3Base.html#index-8">[3]</a>, <a href="class_Sophus_SE2.html#index-10">[4]</a>, <a href="class_Sophus_SE2.html#index-11">[5]</a>, <a href="class_Sophus_SE3.html#index-10">[6]</a>, <a href="class_Sophus_SE3.html#index-9">[7]</a>, <a href="class_Sophus_SO2Base.html#index-7">[8]</a>, <a href="class_Sophus_SO2Base.html#index-8">[9]</a>, <a href="class_Sophus_SO3Base.html#index-10">[10]</a>, <a href="class_Sophus_SO3Base.html#index-11">[11]</a>, <a href="class_Sophus_Sim2.html#index-8">[12]</a>, <a href="class_Sophus_Sim2.html#index-9">[13]</a>, <a href="class_Sophus_Sim3.html#index-8">[14]</a>, <a href="class_Sophus_Sim3.html#index-9">[15]</a>
 </li>
@@ -582,29 +595,29 @@
 </li>
         <li><a href="class_Sophus_RxSO2.html#index-17">hat</a>, <a href="class_Sophus_RxSO3.html#index-17">[1]</a>, <a href="class_Sophus_SE2.html#index-23">[2]</a>, <a href="class_Sophus_SE3.html#index-22">[3]</a>, <a href="class_Sophus_SO2.html#index-16">[4]</a>, <a href="class_Sophus_SO3.html#index-17">[5]</a>, <a href="class_Sophus_Sim2.html#index-20">[6]</a>, <a href="class_Sophus_Sim3.html#index-20">[7]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-14">interpolate</a>
+        <li><a href="namespace_Sophus.html#index-15">interpolate</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-10">inverse</a>, <a href="class_Sophus_RxSO3Base.html#index-9">[1]</a>, <a href="class_Sophus_SE2Base.html#index-8">[2]</a>, <a href="class_Sophus_SE3Base.html#index-11">[3]</a>, <a href="class_Sophus_SO2Base.html#index-9">[4]</a>, <a href="class_Sophus_SO3Base.html#index-14">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-7">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-7">[7]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-17">isOrthogonal</a>
+        <li><a href="namespace_Sophus.html#index-18">isOrthogonal</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-18">isScaledOrthogonalAndPositive</a>
+        <li><a href="namespace_Sophus.html#index-19">isScaledOrthogonalAndPositive</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-3">iterativeMean</a>
+        <li><a href="namespace_Sophus.html#index-4">iterativeMean</a>
 </li>
         <li><a href="class_Sophus_SO3.html#index-9">leftJacobian</a>
 </li>
         <li><a href="class_Sophus_RxSO2.html#index-18">lieBracket</a>, <a href="class_Sophus_RxSO3.html#index-18">[1]</a>, <a href="class_Sophus_SE2.html#index-24">[2]</a>, <a href="class_Sophus_SE3.html#index-23">[3]</a>, <a href="class_Sophus_SO2.html#index-18">[4]</a>, <a href="class_Sophus_SO3.html#index-18">[5]</a>, <a href="class_Sophus_Sim2.html#index-21">[6]</a>, <a href="class_Sophus_Sim3.html#index-21">[7]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-9">lineFromSE2</a>
+        <li><a href="namespace_Sophus.html#index-10">lineFromSE2</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-11">log</a>, <a href="class_Sophus_RxSO3Base.html#index-10">[1]</a>, <a href="class_Sophus_SE2Base.html#index-9">[2]</a>, <a href="class_Sophus_SE3Base.html#index-12">[3]</a>, <a href="class_Sophus_SO2Base.html#index-10">[4]</a>, <a href="class_Sophus_SO3Base.html#index-15">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-8">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-8">[7]</a>
 </li>
         <li><a href="class_Sophus_RxSO3Base.html#index-11">logAndTheta</a>, <a href="class_Sophus_SO3Base.html#index-16">[1]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-13">makeHyperplaneUnique</a>
+        <li><a href="namespace_Sophus.html#index-14">makeHyperplaneUnique</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-19">makeRotationMatrix</a>
+        <li><a href="namespace_Sophus.html#index-20">makeRotationMatrix</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-12">matrix</a>, <a href="class_Sophus_RxSO3Base.html#index-12">[1]</a>, <a href="class_Sophus_SE2Base.html#index-11">[2]</a>, <a href="class_Sophus_SE3Base.html#index-14">[3]</a>, <a href="class_Sophus_SO2Base.html#index-12">[4]</a>, <a href="class_Sophus_SO3Base.html#index-18">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-9">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-9">[7]</a>
 </li>
@@ -612,11 +625,11 @@
 </li>
         <li><a href="class_Sophus_SE3Base.html#index-15">matrix3x4</a>, <a href="class_Sophus_Sim3Base.html#index-10">[1]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-20">maxMetric</a>
+        <li><a href="namespace_Sophus.html#index-21">maxMetric</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-4">normalFromSO2</a>
+        <li><a href="namespace_Sophus.html#index-5">normalFromSO2</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-6">normalFromSO3</a>
+        <li><a href="namespace_Sophus.html#index-7">normalFromSO3</a>
 </li>
         <li><a href="class_Sophus_SE2Base.html#index-10">normalize</a>, <a href="class_Sophus_SE3Base.html#index-13">[1]</a>, <a href="class_Sophus_SO2Base.html#index-11">[2]</a>, <a href="class_Sophus_SO3Base.html#index-17">[3]</a>
 </li>
@@ -628,7 +641,7 @@
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-21">params</a>, <a href="class_Sophus_RxSO3Base.html#index-20">[1]</a>, <a href="class_Sophus_SE2Base.html#index-20">[2]</a>, <a href="class_Sophus_SE3Base.html#index-28">[3]</a>, <a href="class_Sophus_SO2Base.html#index-21">[4]</a>, <a href="class_Sophus_SO3Base.html#index-13">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-17">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-19">[7]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-11">planeFromSE3</a>
+        <li><a href="namespace_Sophus.html#index-12">planeFromSE3</a>
 </li>
         <li><a href="class_Eigen_Map-13.html#index-1">quaternion</a>, <a href="class_Eigen_Map-15.html#index-1">[1]</a>, <a href="class_Sophus_RxSO3.html#index-9">[2]</a>, <a href="class_Sophus_RxSO3Base.html#index-22">[3]</a>, <a href="class_Sophus_Sim3Base.html#index-21">[4]</a>
 </li>
@@ -640,7 +653,7 @@
 </li>
         <li><a href="class_Sophus_SE3.html#index-26">rotZ</a>, <a href="class_Sophus_SO3.html#index-21">[1]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-7">rotationFromNormal</a>
+        <li><a href="namespace_Sophus.html#index-8">rotationFromNormal</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-24">rotationMatrix</a>, <a href="class_Sophus_RxSO3Base.html#index-23">[1]</a>, <a href="class_Sophus_SE2Base.html#index-21">[2]</a>, <a href="class_Sophus_SE3Base.html#index-23">[3]</a>, <a href="class_Sophus_Sim2Base.html#index-22">[4]</a>, <a href="class_Sophus_Sim3Base.html#index-22">[5]</a>
 </li>
@@ -656,7 +669,7 @@
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-22">setComplex</a>, <a href="class_Sophus_SE2Base.html#index-22">[1]</a>, <a href="class_Sophus_SO2Base.html#index-22">[2]</a>, <a href="class_Sophus_Sim2Base.html#index-20">[3]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-22">setElementAt</a>
+        <li><a href="namespace_Sophus.html#index-23">setElementAt</a>
 </li>
         <li><a href="class_Sophus_RxSO3Base.html#index-21">setQuaternion</a>, <a href="class_Sophus_SE3Base.html#index-26">[1]</a>, <a href="class_Sophus_SO3Base.html#index-26">[2]</a>, <a href="class_Sophus_Sim3Base.html#index-20">[3]</a>
 </li>
@@ -670,13 +683,13 @@
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-29">setScaledRotationMatrix</a>, <a href="class_Sophus_RxSO3Base.html#index-27">[1]</a>, <a href="class_Sophus_Sim2Base.html#index-28">[2]</a>, <a href="class_Sophus_Sim3Base.html#index-28">[3]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-21">setToZero</a>
+        <li><a href="namespace_Sophus.html#index-22">setToZero</a>
 </li>
         <li><a href="class_Eigen_Map-10.html#index-1">so2</a>, <a href="class_Eigen_Map-10.html#index-2">[1]</a>, <a href="class_Eigen_Map-14.html#index-1">[2]</a>, <a href="class_Sophus_SE2.html#index-12">[3]</a>, <a href="class_Sophus_SE2.html#index-13">[4]</a>, <a href="class_Sophus_SE2Base.html#index-24">[5]</a>, <a href="class_Sophus_SE2Base.html#index-25">[6]</a>
 </li>
         <li><a href="class_Eigen_Map-12.html#index-1">so3</a>, <a href="class_Eigen_Map-9.html#index-1">[1]</a>, <a href="class_Eigen_Map-9.html#index-2">[2]</a>, <a href="class_Sophus_SE3.html#index-11">[3]</a>, <a href="class_Sophus_SE3.html#index-12">[4]</a>, <a href="class_Sophus_SE3Base.html#index-24">[5]</a>, <a href="class_Sophus_SE3Base.html#index-25">[6]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-23">squaredNorm</a>
+        <li><a href="namespace_Sophus.html#index-24">squaredNorm</a>
 </li>
         <li><a href="class_Sophus_SE2.html#index-27">trans</a>, <a href="class_Sophus_SE3.html#index-28">[1]</a>
 </li>
@@ -688,7 +701,7 @@
 </li>
         <li><a href="class_Eigen_Map-10.html#index-3">translation</a>, <a href="class_Eigen_Map-10.html#index-4">[1]</a>, <a href="class_Eigen_Map-12.html#index-2">[2]</a>, <a href="class_Eigen_Map-14.html#index-2">[3]</a>, <a href="class_Eigen_Map-2.html#index-2">[4]</a>, <a href="class_Eigen_Map-3.html#index-3">[5]</a>, <a href="class_Eigen_Map-3.html#index-4">[6]</a>, <a href="class_Eigen_Map-4.html#index-2">[7]</a>, <a href="class_Eigen_Map-5.html#index-3">[8]</a>, <a href="class_Eigen_Map-5.html#index-4">[9]</a>, <a href="class_Eigen_Map-9.html#index-3">[10]</a>, <a href="class_Eigen_Map-9.html#index-4">[11]</a>, <a href="class_Sophus_SE2.html#index-14">[12]</a>, <a href="class_Sophus_SE2.html#index-15">[13]</a>, <a href="class_Sophus_SE2Base.html#index-26">[14]</a>, <a href="class_Sophus_SE2Base.html#index-27">[15]</a>, <a href="class_Sophus_SE3.html#index-13">[16]</a>, <a href="class_Sophus_SE3.html#index-14">[17]</a>, <a href="class_Sophus_SE3Base.html#index-29">[18]</a>, <a href="class_Sophus_SE3Base.html#index-30">[19]</a>, <a href="class_Sophus_Sim2.html#index-12">[20]</a>, <a href="class_Sophus_Sim2.html#index-13">[21]</a>, <a href="class_Sophus_Sim2Base.html#index-29">[22]</a>, <a href="class_Sophus_Sim2Base.html#index-30">[23]</a>, <a href="class_Sophus_Sim3.html#index-12">[24]</a>, <a href="class_Sophus_Sim3.html#index-13">[25]</a>, <a href="class_Sophus_Sim3Base.html#index-29">[26]</a>, <a href="class_Sophus_Sim3Base.html#index-30">[27]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-24">transpose</a>
+        <li><a href="namespace_Sophus.html#index-25">transpose</a>
 </li>
         <li><a href="class_Eigen_Map-6.html#index-1">unit_complex</a>, <a href="class_Eigen_Map-7.html#index-2">[1]</a>, <a href="class_Sophus_SE2Base.html#index-28">[2]</a>, <a href="class_Sophus_SO2.html#index-9">[3]</a>, <a href="class_Sophus_SO2Base.html#index-23">[4]</a>
 </li>
@@ -698,7 +711,7 @@
 </li>
         <li><a href="class_Eigen_Map-16.html#index-2">unit_quaternion_nonconst</a>, <a href="class_Sophus_SO3.html#index-24">[1]</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-16">vectorFieldNumDiff</a>
+        <li><a href="namespace_Sophus.html#index-17">vectorFieldNumDiff</a>
 </li>
         <li><a href="class_Sophus_RxSO2.html#index-20">vee</a>, <a href="class_Sophus_RxSO3.html#index-20">[1]</a>, <a href="class_Sophus_SE2.html#index-30">[2]</a>, <a href="class_Sophus_SE3.html#index-32">[3]</a>, <a href="class_Sophus_SO2.html#index-20">[4]</a>, <a href="class_Sophus_SO3.html#index-23">[5]</a>, <a href="class_Sophus_Sim2.html#index-23">[6]</a>, <a href="class_Sophus_Sim3.html#index-23">[7]</a>
 </li>
@@ -752,7 +765,7 @@
     interpolate
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-14">function</a>
+        <li><a href="namespace_Sophus.html#index-15">function</a>
 </li>
       </ul></li>
       <li><a href="pysophus.html#sophus.complex.Complex.inv">inv() (sophus.complex.Complex method)</a>
@@ -768,27 +781,34 @@
         <li><a href="class_Sophus_RxSO2Base.html#index-10">function</a>, <a href="class_Sophus_RxSO3Base.html#index-9">[1]</a>, <a href="class_Sophus_SE2Base.html#index-8">[2]</a>, <a href="class_Sophus_SE3Base.html#index-11">[3]</a>, <a href="class_Sophus_SO2Base.html#index-9">[4]</a>, <a href="class_Sophus_SO3Base.html#index-14">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-7">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-7">[7]</a>
 </li>
       </ul></li>
+      <li>
+    IsMappable
+
+      <ul>
+        <li><a href="namespace_Sophus.html#index-1">typedef</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     isOrthogonal
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-17">function</a>
+        <li><a href="namespace_Sophus.html#index-18">function</a>
 </li>
       </ul></li>
       <li>
     isScaledOrthogonalAndPositive
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-18">function</a>
+        <li><a href="namespace_Sophus.html#index-19">function</a>
 </li>
       </ul></li>
       <li>
     iterativeMean
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-3">function</a>
+        <li><a href="namespace_Sophus.html#index-4">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -815,14 +835,14 @@
     Line2
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-2">typedef</a>
+        <li><a href="namespace_Sophus.html#index-3">typedef</a>
 </li>
       </ul></li>
       <li>
     lineFromSE2
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-9">function</a>
+        <li><a href="namespace_Sophus.html#index-10">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -857,14 +877,14 @@
     makeHyperplaneUnique
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-13">function</a>
+        <li><a href="namespace_Sophus.html#index-14">function</a>
 </li>
       </ul></li>
       <li>
     makeRotationMatrix
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-19">function</a>
+        <li><a href="namespace_Sophus.html#index-20">function</a>
 </li>
       </ul></li>
       <li>
@@ -904,7 +924,7 @@
     maxMetric
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-20">function</a>
+        <li><a href="namespace_Sophus.html#index-21">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -935,7 +955,7 @@
     normalFromSO2
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-4">function</a>
+        <li><a href="namespace_Sophus.html#index-5">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -944,7 +964,7 @@
     normalFromSO3
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-6">function</a>
+        <li><a href="namespace_Sophus.html#index-7">function</a>
 </li>
       </ul></li>
       <li>
@@ -1007,7 +1027,7 @@
     Plane3
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-1">typedef</a>
+        <li><a href="namespace_Sophus.html#index-2">typedef</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1016,7 +1036,14 @@
     planeFromSE3
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-11">function</a>
+        <li><a href="namespace_Sophus.html#index-12">function</a>
+</li>
+      </ul></li>
+      <li>
+    Plus
+
+      <ul>
+        <li><a href="class_Sophus_LocalParameterization.html#index-1">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1060,7 +1087,7 @@
     rotationFromNormal
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-7">function</a>
+        <li><a href="namespace_Sophus.html#index-8">function</a>
 </li>
       </ul></li>
       <li>
@@ -1154,7 +1181,7 @@
     SE2FromLine
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-10">function</a>
+        <li><a href="namespace_Sophus.html#index-11">function</a>
 </li>
       </ul></li>
       <li>
@@ -1170,7 +1197,7 @@
     SE3FromPlane
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-12">function</a>
+        <li><a href="namespace_Sophus.html#index-13">function</a>
 </li>
       </ul></li>
       <li>
@@ -1191,7 +1218,7 @@
     setElementAt
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-22">function</a>
+        <li><a href="namespace_Sophus.html#index-23">function</a>
 </li>
       </ul></li>
       <li>
@@ -1240,7 +1267,7 @@
     setToZero
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-21">function</a>
+        <li><a href="namespace_Sophus.html#index-22">function</a>
 </li>
       </ul></li>
       <li><a href="pysophus.html#sophus.complex.TestComplex.setUp">setUp() (sophus.complex.TestComplex method)</a>
@@ -1291,7 +1318,7 @@
     SO2FromNormal
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-5">function</a>
+        <li><a href="namespace_Sophus.html#index-6">function</a>
 </li>
       </ul></li>
       <li>
@@ -1314,7 +1341,7 @@
     SO3FromNormal
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-8">function</a>
+        <li><a href="namespace_Sophus.html#index-9">function</a>
 </li>
       </ul></li>
       <li>
@@ -1363,14 +1390,14 @@
     Sophus::GetScalar
 
       <ul>
-        <li><a href="struct_Sophus_GetScalar.html#index-0">struct</a>
+        <li><a href="struct_Sophus_GetScalar-2.html#index-0">struct</a>
 </li>
       </ul></li>
       <li>
     Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;
 
       <ul>
-        <li><a href="struct_Sophus_GetScalar-2.html#index-0">struct</a>
+        <li><a href="struct_Sophus_GetScalar.html#index-0">struct</a>
 </li>
       </ul></li>
       <li>
@@ -1384,16 +1411,14 @@
     Sophus::IsFloatingPoint
 
       <ul>
-        <li><a href="struct_Sophus_IsFloatingPoint.html#index-0">struct</a>
+        <li><a href="struct_Sophus_IsFloatingPoint-2.html#index-0">struct</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;
 
       <ul>
-        <li><a href="struct_Sophus_IsFloatingPoint-2.html#index-0">struct</a>
+        <li><a href="struct_Sophus_IsFloatingPoint.html#index-0">struct</a>
 </li>
       </ul></li>
       <li>
@@ -1401,6 +1426,29 @@
 
       <ul>
         <li><a href="struct_Sophus_IsUniformRandomBitGenerator.html#index-0">struct</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    Sophus::LocalParameterization
+
+      <ul>
+        <li><a href="class_Sophus_LocalParameterization.html#index-0">class</a>
+</li>
+      </ul></li>
+      <li>
+    Sophus::Mapper
+
+      <ul>
+        <li><a href="struct_Sophus_Mapper-2.html#index-0">struct</a>
+</li>
+      </ul></li>
+      <li>
+    Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;
+
+      <ul>
+        <li><a href="struct_Sophus_Mapper.html#index-0">struct</a>
 </li>
       </ul></li>
       <li>
@@ -1616,7 +1664,7 @@
     squaredNorm
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-23">function</a>
+        <li><a href="namespace_Sophus.html#index-24">function</a>
 </li>
       </ul></li>
       <li>
@@ -1627,17 +1675,21 @@
 </li>
         <li><a href="struct_Sophus_Constants-2.html#index-0">Sophus::Constants&lt;float&gt;</a>
 </li>
-        <li><a href="struct_Sophus_GetScalar.html#index-0">Sophus::GetScalar</a>
+        <li><a href="struct_Sophus_GetScalar-2.html#index-0">Sophus::GetScalar</a>
 </li>
-        <li><a href="struct_Sophus_GetScalar-2.html#index-0">Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a>
+        <li><a href="struct_Sophus_GetScalar.html#index-0">Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a>
 </li>
         <li><a href="struct_Sophus_IsFixedSizeVector.html#index-0">Sophus::IsFixedSizeVector</a>
 </li>
-        <li><a href="struct_Sophus_IsFloatingPoint.html#index-0">Sophus::IsFloatingPoint</a>
+        <li><a href="struct_Sophus_IsFloatingPoint-2.html#index-0">Sophus::IsFloatingPoint</a>
 </li>
-        <li><a href="struct_Sophus_IsFloatingPoint-2.html#index-0">Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a>
+        <li><a href="struct_Sophus_IsFloatingPoint.html#index-0">Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a>
 </li>
         <li><a href="struct_Sophus_IsUniformRandomBitGenerator.html#index-0">Sophus::IsUniformRandomBitGenerator</a>
+</li>
+        <li><a href="struct_Sophus_Mapper-2.html#index-0">Sophus::Mapper</a>
+</li>
+        <li><a href="struct_Sophus_Mapper.html#index-0">Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a>
 </li>
         <li><a href="struct_Sophus_RxSO3Base_TangentAndTheta.html#index-0">Sophus::RxSO3Base::TangentAndTheta</a>
 </li>
@@ -1684,7 +1736,7 @@
     transpose
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-24">function</a>
+        <li><a href="namespace_Sophus.html#index-25">function</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1714,9 +1766,11 @@
     typedef
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-2">Line2</a>
+        <li><a href="namespace_Sophus.html#index-1">IsMappable</a>
 </li>
-        <li><a href="namespace_Sophus.html#index-1">Plane3</a>
+        <li><a href="namespace_Sophus.html#index-3">Line2</a>
+</li>
+        <li><a href="namespace_Sophus.html#index-2">Plane3</a>
 </li>
         <li><a href="class_Sophus_RxSO2Base.html#index-1">ReturnScalar</a>, <a href="class_Sophus_RxSO3Base.html#index-1">[1]</a>, <a href="class_Sophus_SE2Base.html#index-1">[2]</a>, <a href="class_Sophus_SE3Base.html#index-1">[3]</a>, <a href="class_Sophus_SO2Base.html#index-1">[4]</a>, <a href="class_Sophus_SO3Base.html#index-1">[5]</a>, <a href="class_Sophus_Sim2Base.html#index-1">[6]</a>, <a href="class_Sophus_Sim3Base.html#index-1">[7]</a>
 </li>
@@ -1798,7 +1852,7 @@
     vectorFieldNumDiff
 
       <ul>
-        <li><a href="namespace_Sophus.html#index-16">function</a>
+        <li><a href="namespace_Sophus.html#index-17">function</a>
 </li>
       </ul></li>
       <li>

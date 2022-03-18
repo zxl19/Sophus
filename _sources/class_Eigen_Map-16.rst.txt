@@ -139,6 +139,16 @@ Inherited Members
 	
 		void :ref:`setQuaternion<doxid-class_sophus_1_1_s_o3_base_1a25cac542342b6f4215e8eedb9c51b0ed>`(Eigen::Quaternion<:ref:`Scalar<doxid-class_sophus_1_1_s_o3_base_1a9278bd344193c917f5cbf3c91bea3d2c>`> const& quaternion);
 		:ref:`QuaternionType<doxid-class_sophus_1_1_s_o3_base_1a1e370b275fb63d7c870f2d186a501689>` const& :ref:`unit_quaternion<doxid-class_sophus_1_1_s_o3_base_1a6353aab1a8c265a681c9a0035b90dcfd>`() const;
+	
+		template <
+			typename QuaternionProductType,
+			typename QuaternionTypeA,
+			typename QuaternionTypeB
+			>
+		static QuaternionProductType :ref:`QuaternionProduct<doxid-class_sophus_1_1_s_o3_base_1ab929ad83fadc65e3016a7fd027819e05>`(
+			const QuaternionTypeA& a,
+			const QuaternionTypeB& b
+			);
 
 .. _details-class_eigen_1_1_map_3_01_sophus_1_1_s_o3_3_01_scalar___01_4_00_01_options_01_4:
 

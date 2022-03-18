@@ -222,7 +222,17 @@
     <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base"><span class="std std-ref">SO3Base</span></a><span></span><span class="o">&lt;</span><span class="n">Derived</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a2014d2ddcdf751914f17ba4eb80be115"><span class="std std-ref">operator*=</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base"><span class="std std-ref">SO3Base</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerived</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
 
     <span class="kt">void</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a25cac542342b6f4215e8eedb9c51b0ed"><span class="std std-ref">setQuaternion</span></a><span></span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Quaternion</span><span class="o">&lt;</span><a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a9278bd344193c917f5cbf3c91bea3d2c"><span class="std std-ref">Scalar</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">quaternion</span><span class="p">);</span>
-    <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a1e370b275fb63d7c870f2d186a501689"><span class="std std-ref">QuaternionType</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a6353aab1a8c265a681c9a0035b90dcfd"><span class="std std-ref">unit_quaternion</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+    <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a1e370b275fb63d7c870f2d186a501689"><span class="std std-ref">QuaternionType</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1a6353aab1a8c265a681c9a0035b90dcfd"><span class="std std-ref">unit_quaternion</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span>
+        <span class="k">typename</span> <span class="n">QuaternionProductType</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="n">QuaternionTypeA</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="n">QuaternionTypeB</span>
+        <span class="o">&gt;</span>
+    <span class="k">static</span> <span class="n">QuaternionProductType</span> <a class="reference internal" href="class_Sophus_SO3Base.html#doxid-class-sophus-1-1-s-o3-base-1ab929ad83fadc65e3016a7fd027819e05"><span class="std std-ref">QuaternionProduct</span></a><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">QuaternionTypeA</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span>
+        <span class="k">const</span> <span class="n">QuaternionTypeB</span><span class="o">&amp;</span> <span class="n">b</span>
+        <span class="p">);</span></pre>
 </section>
 </section>
 <section id="detailed-documentation">

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template struct Sophus::GetScalar &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt; &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
@@ -20,7 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;" href="struct_Sophus_GetScalar-2.html" />
+    <link rel="next" title="template struct Sophus::GetScalar" href="struct_Sophus_GetScalar-2.html" />
     <link rel="prev" title="template struct Sophus::Constants&lt;float&gt;" href="struct_Sophus_Constants-2.html" /> 
 </head>
 
@@ -50,16 +50,19 @@
 <li class="toctree-l2 current"><a class="reference internal" href="namespace_Sophus.html">namespace Sophus</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants.html">template struct Sophus::Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct Sophus::GetScalar</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO3.html">template class Sophus::RxSO3</a></li>
@@ -106,7 +109,7 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="global.html">Global Namespace</a> &raquo;</li>
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template struct Sophus::GetScalar</li>
+      <li>template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/struct_Sophus_GetScalar.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -116,17 +119,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="template-struct-sophus-getscalar">
-<span id="doxid-struct-sophus-1-1-get-scalar"></span><span id="index-0"></span><h1>template struct Sophus::GetScalar<a class="headerlink" href="#template-struct-sophus-getscalar" title="Permalink to this headline">¶</a></h1>
+  <section id="template-struct-sophus-getscalar-matrix-scalar-m-n">
+<span id="doxid-struct-sophus-1-1-get-scalar-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4"></span><span id="index-0"></span><h1>template struct Sophus::GetScalar&lt;Matrix&lt;<a href="#id1"><span class="problematic" id="id2">Scalar_</span></a>, M, N&gt;&gt;<a class="headerlink" href="#template-struct-sophus-getscalar-matrix-scalar-m-n" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;types.hpp&gt;</span><span class="cp"></span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">GetScalar</span> <span class="p">{</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="n">GetScalar</span><span class="o">&lt;</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">Scalar_</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">N</span><span class="o">&gt;&gt;</span> <span class="p">{</span>
     <span class="c1">// typedefs</span>
 
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-get-scalar-1a69e12367620dae13d79250f9b7baf91f">Scalar</span><span></span> <span class="o">=</span> <span class="n">Scalar_</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-get-scalar-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4-1a71c992c48778e72954591c6c3b6eb8f8">Scalar</span><span></span> <span class="o">=</span> <span class="n">Scalar_</span> <span class="p">;</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -135,7 +138,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="struct_Sophus_Constants-2.html" class="btn btn-neutral float-left" title="template struct Sophus::Constants&lt;float&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_Sophus_GetScalar-2.html" class="btn btn-neutral float-right" title="template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="struct_Sophus_GetScalar-2.html" class="btn btn-neutral float-right" title="template struct Sophus::GetScalar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
