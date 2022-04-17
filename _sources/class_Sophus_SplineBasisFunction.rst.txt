@@ -1,0 +1,35 @@
+.. index:: pair: class; Sophus::SplineBasisFunction
+.. _doxid-class_sophus_1_1_spline_basis_function:
+
+template class Sophus::SplineBasisFunction
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <spline.hpp>
+	
+	template <class Scalar>
+	class SplineBasisFunction {
+	public:
+		// methods
+	
+		static Eigen::Matrix<Scalar, 3, 4> :target:`C<doxid-class_sophus_1_1_spline_basis_function_1a51483771f5e8c4b12f8e218ae0335b43>`();
+		static :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<Scalar> :target:`B<doxid-class_sophus_1_1_spline_basis_function_1ab915f14269501838aa7d66e5ed0da3ff>`(Scalar const& u);
+	
+		static :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<Scalar> :target:`Dt_B<doxid-class_sophus_1_1_spline_basis_function_1a473cfdb47379a139f1c74d36c7ee13b0>`(
+			Scalar const& u,
+			Scalar const& delta_t
+			);
+	
+		static :ref:`Vector3<doxid-namespace_sophus_1ade8af1bfa6ef21fdd15e6a3a89929be5>`<Scalar> :target:`Dt2_B<doxid-class_sophus_1_1_spline_basis_function_1a556daf67d650e1d62a0576794cd4df93>`(
+			Scalar const& u,
+			Scalar const& delta_t
+			);
+	};

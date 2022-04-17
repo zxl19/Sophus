@@ -43,7 +43,7 @@ namespace Sophus
 	class_Sophus_Sim2Base.rst
 	class_Sophus_Sim3.rst
 	class_Sophus_Sim3Base.rst
-	class_Sophus_SplineBasisSpline.rst
+	class_Sophus_SplineBasisFunction.rst
 	class_Sophus_optional.rst
 
 Overview
@@ -252,7 +252,7 @@ Overview
 	class :ref:`Sim3Base<doxid-class_sophus_1_1_sim3_base>`;
 
 	template <class Scalar>
-	class :ref:`SplineBasisSpline<doxid-class_sophus_1_1_spline_basis_spline>`;
+	class :ref:`SplineBasisFunction<doxid-class_sophus_1_1_spline_basis_function>`;
 
 	template <class T>
 	class :ref:`optional<doxid-class_sophus_1_1optional>`;
