@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template class Sophus::SplineImpl &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>template class Sophus::BasisSplineImpl &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template class Sophus::optional" href="class_Sophus_optional.html" />
-    <link rel="prev" title="template class Sophus::SplineFn" href="class_Sophus_SplineFn.html" /> 
+    <link rel="next" title="template class Sophus::Cartesian" href="class_Sophus_Cartesian.html" />
+    <link rel="prev" title="template class Sophus::BasisSplineFn" href="class_Sophus_BasisSplineFn.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,18 +48,27 @@
 <li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="namespace_Sophus.html">namespace Sophus</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_Sophus_SegmentCase.html">enum Sophus::SegmentCase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_BasisSplineSegment.html">template struct Sophus::BasisSplineSegment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants.html">template struct Sophus::Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IndexAndU.html">struct Sophus::IndexAndU</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSpline.html">template class Sophus::BasisSpline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineFn.html">template class Sophus::BasisSplineFn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::BasisSplineImpl</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Cartesian.html">template class Sophus::Cartesian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_CartesianBase.html">template class Sophus::CartesianBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
@@ -77,11 +86,7 @@
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim2Base.html">template class Sophus::Sim2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3.html">template class Sophus::Sim3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3Base.html">template class Sophus::Sim3Base</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Spline.html">template class Sophus::Spline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineFn.html">template class Sophus::SplineFn</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::SplineImpl</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineBasisSpline.html">template class Sophus::SplineBasisSpline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_optional.html">template class Sophus::optional</a></li>
 <li class="toctree-l3"><a class="reference internal" href="namespace_Sophus.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="namespace_Sophus.html#detailed-documentation">Detailed Documentation</a></li>
@@ -109,9 +114,9 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="global.html">Global Namespace</a> &raquo;</li>
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template class Sophus::SplineImpl</li>
+      <li>template class Sophus::BasisSplineImpl</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/class_Sophus_SplineImpl.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/class_Sophus_BasisSplineImpl.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -119,51 +124,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="template-class-sophus-splineimpl">
-<span id="doxid-class-sophus-1-1-spline-impl"></span><span id="index-0"></span><h1>template class Sophus::SplineImpl<a class="headerlink" href="#template-class-sophus-splineimpl" title="Permalink to this headline">¶</a></h1>
+  <section id="template-class-sophus-basissplineimpl">
+<span id="doxid-class-sophus-1-1-basis-spline-impl"></span><span id="index-0"></span><h1>template class Sophus::BasisSplineImpl<a class="headerlink" href="#template-class-sophus-basissplineimpl" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;spline.hpp&gt;</span><span class="cp"></span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
-<span class="k">class</span> <span class="n">SplineImpl</span> <span class="p">{</span>
+<span class="k">class</span> <span class="n">BasisSplineImpl</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
 
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1adb173ef109c7de36cf6acc68e6c81d23">LieGroup</span><span></span> <span class="o">=</span> <span class="n">LieGroup_</span> <span class="p">;</span>
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a1221ad97fa667da443716d9abd81b48b">Scalar</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Scalar</span> <span class="p">;</span>
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1abe3efd4b080523dcb5f15020f9ed139d">Transformation</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Transformation</span> <span class="p">;</span>
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1af4002e8bd7f5f8275edb392c5a6c7c9d">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Tangent</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a7daa8bd393997290136a5137a3d94268">LieGroup</span><span></span> <span class="o">=</span> <span class="n">LieGroup_</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a6d45d58c6fb5efc678534687f04b8426">Scalar</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Scalar</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a1d58c3f2ffa1e2a73011be519744e991">Transformation</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Transformation</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a3cdc9fa5d9e07fad41cb4b5172eb943e">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroup</span><span class="o">::</span><span class="n">Tangent</span> <span class="p">;</span>
 
     <span class="c1">// construction</span>
 
-    <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a6575441256cebd3bd1cafb2d5ff4f751">SplineImpl</span><span></span><span class="p">(</span>
-        <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1adb173ef109c7de36cf6acc68e6c81d23"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;</span> <span class="n">parent_Ts_control_point</span><span class="p">,</span>
+    <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a62b9295afaa11817c7460c544fd05c51">BasisSplineImpl</span><span></span><span class="p">(</span>
+        <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a7daa8bd393997290136a5137a3d94268"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;&amp;</span> <span class="n">parent_Ts_control_point</span><span class="p">,</span>
         <span class="kt">double</span> <span class="n">delta_t</span>
         <span class="p">);</span>
 
     <span class="c1">// methods</span>
 
-    <a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1adb173ef109c7de36cf6acc68e6c81d23"><span class="std std-ref">LieGroup</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a4e1cf2b82a0d33f6fae21079a68ba634">parent_T_spline</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a7daa8bd393997290136a5137a3d94268"><span class="std std-ref">LieGroup</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1af89de650d1d345edf62369fbd513868c">parent_T_spline</span><span></span><span class="p">(</span>
         <span class="kt">int</span> <span class="n">i</span><span class="p">,</span>
         <span class="kt">double</span> <span class="n">u</span>
-        <span class="p">);</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 
-    <a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1abe3efd4b080523dcb5f15020f9ed139d"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a3a3e4ac012c281d2d86ff8fc2d091de9">Dt_parent_T_spline</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a1d58c3f2ffa1e2a73011be519744e991"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a783f9396d39740e16e44312d0e2b0a78">Dt_parent_T_spline</span><span></span><span class="p">(</span>
         <span class="kt">int</span> <span class="n">i</span><span class="p">,</span>
         <span class="kt">double</span> <span class="n">u</span>
-        <span class="p">);</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 
-    <a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1abe3efd4b080523dcb5f15020f9ed139d"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1aef6c7597ca687348fb4b147dce121f17">Dt2_parent_T_spline</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a1d58c3f2ffa1e2a73011be519744e991"><span class="std std-ref">Transformation</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1aa9133269610d0f23f3753b42dd0d05b7">Dt2_parent_T_spline</span><span></span><span class="p">(</span>
         <span class="kt">int</span> <span class="n">i</span><span class="p">,</span>
         <span class="kt">double</span> <span class="n">u</span>
-        <span class="p">);</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 
-    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1adb173ef109c7de36cf6acc68e6c81d23"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a2ff5540320250cc038c4a46a16ec6cae">parent_Ts_control_point</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-spline-impl-1adb173ef109c7de36cf6acc68e6c81d23"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1aacd976233be2c353bb9f338097b9fdfe">parent_Ts_control_point</span><span></span><span class="p">();</span>
-    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a9b167db1ad5f3c19f4c4cfbb4daf2fbb">getNumSegments</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1ab5de99a8701ae616a5ed69b0da46b473">delta_t</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-impl-1a389cf610e0865b5dd70383a77f9c7336">recomputeControlTangentVectors</span><span></span><span class="p">();</span>
+    <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a7daa8bd393997290136a5137a3d94268"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1ac46d104c8c40a67fd0aba05b1938646f">parent_Ts_control_point</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-basis-spline-impl-1a7daa8bd393997290136a5137a3d94268"><span class="std std-ref">LieGroup</span></a><span></span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a01324eb0f61c71b1ca2e9f7e76c1bcb8">parent_Ts_control_point</span><span></span><span class="p">();</span>
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a0d2cfe124b3b2bbd286ec33feda41547">getNumSegments</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-basis-spline-impl-1a43fd43533b3b07999d6cbca4d0a984f0">delta_t</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -171,8 +175,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="class_Sophus_SplineFn.html" class="btn btn-neutral float-left" title="template class Sophus::SplineFn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="class_Sophus_optional.html" class="btn btn-neutral float-right" title="template class Sophus::optional" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_Sophus_BasisSplineFn.html" class="btn btn-neutral float-left" title="template class Sophus::BasisSplineFn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Sophus_Cartesian.html" class="btn btn-neutral float-right" title="template class Sophus::Cartesian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

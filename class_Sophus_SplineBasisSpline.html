@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>struct Sophus::Spline::IndexAndU &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>template class Sophus::SplineBasisSpline &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template class Sophus::SplineFn" href="class_Sophus_SplineFn.html" />
-    <link rel="prev" title="template class Sophus::Spline" href="class_Sophus_Spline.html" /> 
+    <link rel="next" title="template class Sophus::optional" href="class_Sophus_optional.html" />
+    <link rel="prev" title="template class Sophus::Sim3Base" href="class_Sophus_Sim3Base.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,18 +48,25 @@
 <li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="namespace_Sophus.html">namespace Sophus</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_Sophus_SegmentCase.html">enum Sophus::SegmentCase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_BasisSplineSegment.html">template struct Sophus::BasisSplineSegment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants.html">template struct Sophus::Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IndexAndU.html">struct Sophus::IndexAndU</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSpline.html">template class Sophus::BasisSpline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineFn.html">template class Sophus::BasisSplineFn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineImpl.html">template class Sophus::BasisSplineImpl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Cartesian.html">template class Sophus::Cartesian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_CartesianBase.html">template class Sophus::CartesianBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
@@ -77,12 +84,9 @@
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim2Base.html">template class Sophus::Sim2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3.html">template class Sophus::Sim3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3Base.html">template class Sophus::Sim3Base</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="class_Sophus_Spline.html">template class Sophus::Spline</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">struct Sophus::Spline::IndexAndU</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::SplineBasisSpline</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineFn.html">template class Sophus::SplineFn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineImpl.html">template class Sophus::SplineImpl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_optional.html">template class Sophus::optional</a></li>
 <li class="toctree-l3"><a class="reference internal" href="namespace_Sophus.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="namespace_Sophus.html#detailed-documentation">Detailed Documentation</a></li>
@@ -110,10 +114,9 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="global.html">Global Namespace</a> &raquo;</li>
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-          <li><a href="class_Sophus_Spline.html">template class Sophus::Spline</a> &raquo;</li>
-      <li>struct Sophus::Spline::IndexAndU</li>
+      <li>template class Sophus::SplineBasisSpline</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/struct_Sophus_Spline_IndexAndU.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/class_Sophus_SplineBasisSpline.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -121,15 +124,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="struct-sophus-spline-indexandu">
-<span id="doxid-struct-sophus-1-1-spline-1-1-index-and-u"></span><span id="index-0"></span><h1>struct Sophus::Spline::IndexAndU<a class="headerlink" href="#struct-sophus-spline-indexandu" title="Permalink to this headline">¶</a></h1>
+  <section id="template-class-sophus-splinebasisspline">
+<span id="doxid-class-sophus-1-1-spline-basis-spline"></span><span id="index-0"></span><h1>template class Sophus::SplineBasisSpline<a class="headerlink" href="#template-class-sophus-splinebasisspline" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">struct</span> <span class="n">IndexAndU</span> <span class="p">{</span>
-    <span class="c1">// fields</span>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;spline.hpp&gt;</span><span class="cp"></span>
 
-    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-spline-1-1-index-and-u-1a4c0cb89e075b91f19a512b5e6eba8bbc">i</span><span></span><span class="p">;</span>
-    <span class="kt">double</span> <span class="doxyrest-code-target target" id="doxid-struct-sophus-1-1-spline-1-1-index-and-u-1a4f7241dc2c65fb01554d65730c4d8c96">u</span><span></span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">SplineBasisSpline</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// methods</span>
+
+    <span class="k">static</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-basis-spline-1a179960e4b8a7c8530ea2aa76201aa074">C</span><span></span><span class="p">();</span>
+    <span class="k">static</span> <a class="reference internal" href="namespace_Sophus.html#doxid-namespace-sophus-1ade8af1bfa6ef21fdd15e6a3a89929be5"><span class="std std-ref">Vector3</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-basis-spline-1a6ed2c282dbc2dbc82ce9f00e6ff506bd">B</span><span></span><span class="p">(</span><span class="n">Scalar</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_Sophus.html#doxid-namespace-sophus-1ade8af1bfa6ef21fdd15e6a3a89929be5"><span class="std std-ref">Vector3</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-basis-spline-1ac7faa68dfaede29ecbd8baf77ef158cf">Dt_B</span><span></span><span class="p">(</span>
+        <span class="n">Scalar</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span>
+        <span class="n">Scalar</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">delta_t</span>
+        <span class="p">);</span>
+
+    <span class="k">static</span> <a class="reference internal" href="namespace_Sophus.html#doxid-namespace-sophus-1ade8af1bfa6ef21fdd15e6a3a89929be5"><span class="std std-ref">Vector3</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-spline-basis-spline-1a5e9bdb39127e6c1902110737e02e1fc7">Dt2_B</span><span></span><span class="p">(</span>
+        <span class="n">Scalar</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">,</span>
+        <span class="n">Scalar</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">delta_t</span>
+        <span class="p">);</span>
 <span class="p">};</span></pre>
 </section>
 
@@ -137,8 +154,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="class_Sophus_Spline.html" class="btn btn-neutral float-left" title="template class Sophus::Spline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="class_Sophus_SplineFn.html" class="btn btn-neutral float-right" title="template class Sophus::SplineFn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_Sophus_Sim3Base.html" class="btn btn-neutral float-left" title="template class Sophus::Sim3Base" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Sophus_optional.html" class="btn btn-neutral float-right" title="template class Sophus::optional" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

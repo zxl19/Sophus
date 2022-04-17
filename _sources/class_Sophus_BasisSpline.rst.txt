@@ -1,0 +1,49 @@
+.. index:: pair: class; Sophus::BasisSpline
+.. _doxid-class_sophus_1_1_basis_spline:
+
+template class Sophus::BasisSpline
+==================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <spline.hpp>
+	
+	template <class LieGroup_>
+	class BasisSpline {
+	public:
+		// typedefs
+	
+		using :target:`LieGroup<doxid-class_sophus_1_1_basis_spline_1af6dd4e4de091b5c77f9fba2e06969d44>` = LieGroup_ ;
+		using :target:`Scalar<doxid-class_sophus_1_1_basis_spline_1ac58c94195c65d7c69d5de3889700a7fe>` = typename LieGroup::Scalar ;
+		using :target:`Transformation<doxid-class_sophus_1_1_basis_spline_1aae98a85403c3d2c28dbae58036ebea45>` = typename LieGroup::Transformation ;
+		using :target:`Tangent<doxid-class_sophus_1_1_basis_spline_1acf07c02354c0afb7b751c2a524fdf44c>` = typename LieGroup::Tangent ;
+
+		// construction
+	
+		:target:`BasisSpline<doxid-class_sophus_1_1_basis_spline_1ad375ce837c6a1dfaa466d2b0870cec79>`(
+			std::vector<:ref:`LieGroup<doxid-class_sophus_1_1_basis_spline_1af6dd4e4de091b5c77f9fba2e06969d44>`> parent_Ts_control_point,
+			double t0,
+			double delta_t
+			);
+
+		// methods
+	
+		:ref:`LieGroup<doxid-class_sophus_1_1_basis_spline_1af6dd4e4de091b5c77f9fba2e06969d44>` :target:`parent_T_spline<doxid-class_sophus_1_1_basis_spline_1a4faa61107b26431acdb7b9f045a49bdd>`(double t) const;
+		:ref:`Transformation<doxid-class_sophus_1_1_basis_spline_1aae98a85403c3d2c28dbae58036ebea45>` :target:`Dt_parent_T_spline<doxid-class_sophus_1_1_basis_spline_1a67c0841df049fe1cd8a074eedda40b36>`(double t) const;
+		:ref:`Transformation<doxid-class_sophus_1_1_basis_spline_1aae98a85403c3d2c28dbae58036ebea45>` :target:`Dt2_parent_T_spline<doxid-class_sophus_1_1_basis_spline_1a63aeb1873f7b1dde87792eca8520049a>`(double t) const;
+		double :target:`t0<doxid-class_sophus_1_1_basis_spline_1ad77646e28f8f8e61a339fd0fc4c68ef6>`() const;
+		double :target:`tmax<doxid-class_sophus_1_1_basis_spline_1a30ba02987f29780fb60a5887c296e4d6>`() const;
+		const std::vector<:ref:`LieGroup<doxid-class_sophus_1_1_basis_spline_1af6dd4e4de091b5c77f9fba2e06969d44>`>& :target:`parent_Ts_control_point<doxid-class_sophus_1_1_basis_spline_1a5adf5121e11a64aa0fbf7ff92e64ecd8>`() const;
+		std::vector<:ref:`LieGroup<doxid-class_sophus_1_1_basis_spline_1af6dd4e4de091b5c77f9fba2e06969d44>`>& :target:`parent_Ts_control_point<doxid-class_sophus_1_1_basis_spline_1a026b78cee7311bedd09a50ea392673cf>`();
+		int :target:`getNumSegments<doxid-class_sophus_1_1_basis_spline_1a8c4fb246d3d6f5ddc70064feafe83697>`() const;
+		double :target:`s<doxid-class_sophus_1_1_basis_spline_1a6d5220228313e544fd2a952f50a2e920>`(double t) const;
+		double :target:`delta_t<doxid-class_sophus_1_1_basis_spline_1a27914a23ee86ef22ccdd341916fe168c>`() const;
+		:ref:`IndexAndU<doxid-struct_sophus_1_1_index_and_u>` :target:`index_and_u<doxid-class_sophus_1_1_basis_spline_1a665993183dab3409decc994045111014>`(double t) const;
+	};

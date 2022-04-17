@@ -108,6 +108,9 @@ Overview
 	// direct descendants
 
 	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::RxSO3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::RxSO3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o3_3_01_scalar___01_4_00_01_options_01_4>`;
 .. _details-class_sophus_1_1_rx_s_o3_base:
 

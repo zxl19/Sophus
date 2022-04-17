@@ -1,13 +1,13 @@
-.. index:: pair: struct; Sophus::Mapper<T, typename std::enable_if<IsMappableV<T>>::type>
-.. _doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4:
+.. index:: pair: struct; Sophus::Mapper
+.. _doxid-struct_sophus_1_1_mapper:
 
-template struct Sophus::Mapper<T, typename std::enable_if<IsMappableV<T>>::type>
-================================================================================
+template struct Sophus::Mapper
+==============================
 
 .. toctree::
 	:hidden:
 
-
+Helper for mapping tangent vectors (scalars) over pointers to data.
 
 
 .. ref-code-block:: cpp
@@ -15,16 +15,16 @@ template struct Sophus::Mapper<T, typename std::enable_if<IsMappableV<T>>::type>
 
 	#include <ceres_local_parameterization.hpp>
 	
-	template <typename T>
-	struct Mapper<T, typename std::enable_if<IsMappableV<T>>::type> {
+	template <typename T, typename E = void>
+	struct Mapper {
 		// typedefs
 	
-		using :target:`Scalar<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1af23554879e6519b865e3d84e1d31b4be>` = typename T::Scalar ;
-		using :target:`Map<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1a98657476e3f3f2f5edd8e918f500da20>` = Eigen::Map<T> ;
-		using :target:`ConstMap<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1a7dd49c8e4816ca4a311a9260a2b34498>` = :ref:`Eigen::Map<doxid-struct_sophus_1_1_mapper_1a7df03376e664102094c4384980e54d5f>`<const T> ;
+		using :target:`Scalar<doxid-struct_sophus_1_1_mapper_1a358bf1ab4fe839d168d1dbae3f67000f>` = T ;
+		using :target:`Map<doxid-struct_sophus_1_1_mapper_1a7df03376e664102094c4384980e54d5f>` = :ref:`Scalar<doxid-struct_sophus_1_1_mapper_1a358bf1ab4fe839d168d1dbae3f67000f>`& ;
+		using :target:`ConstMap<doxid-struct_sophus_1_1_mapper_1a3287b0af4b7299c45e7b3d827f6c2c69>` = const :ref:`Scalar<doxid-struct_sophus_1_1_mapper_1a358bf1ab4fe839d168d1dbae3f67000f>`& ;
 
 		// methods
 	
-		static :ref:`Map<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1a98657476e3f3f2f5edd8e918f500da20>` :target:`map<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1aa3a023622a41409124df076b1cc8d750>`(:ref:`Scalar<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1af23554879e6519b865e3d84e1d31b4be>`* ptr);
-		static :ref:`ConstMap<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1a7dd49c8e4816ca4a311a9260a2b34498>` :target:`map<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1a316bfb0787349bec40bb5544ae87ff33>`(const :ref:`Scalar<doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4_1af23554879e6519b865e3d84e1d31b4be>`* ptr);
+		static :ref:`Map<doxid-struct_sophus_1_1_mapper_1a7df03376e664102094c4384980e54d5f>` :target:`map<doxid-struct_sophus_1_1_mapper_1ae598534c4074036a1f9ab2d16c5fd0c9>`(:ref:`Scalar<doxid-struct_sophus_1_1_mapper_1a358bf1ab4fe839d168d1dbae3f67000f>`* ptr);
+		static :ref:`ConstMap<doxid-struct_sophus_1_1_mapper_1a3287b0af4b7299c45e7b3d827f6c2c69>` :target:`map<doxid-struct_sophus_1_1_mapper_1a8de3e5b2e44d012e71515677795c5c0b>`(const :ref:`Scalar<doxid-struct_sophus_1_1_mapper_1a358bf1ab4fe839d168d1dbae3f67000f>`* ptr);
 	};

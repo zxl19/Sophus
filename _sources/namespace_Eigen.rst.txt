@@ -23,6 +23,8 @@ namespace Eigen
 	class_Eigen_Map-14.rst
 	class_Eigen_Map-15.rst
 	class_Eigen_Map-16.rst
+	class_Eigen_Map-17.rst
+	class_Eigen_Map-18.rst
 
 
 
@@ -35,11 +37,8 @@ namespace Eigen
 
 	// classes
 
-	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::RxSO2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
-
-	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::Sim3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+	template <class Scalar_, int M, int Options>
+	class :ref:`Map<Sophus::Cartesian<Scalar_, M> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_cartesian_3_01_scalar___00_01_m_01_4_01const_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::Sim2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim2_3_01_scalar___01_4_00_01_options_01_4>`;
@@ -48,19 +47,34 @@ namespace Eigen
 	class :ref:`Map<Sophus::Sim2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::SE3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e3_3_01_scalar___01_4_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::Sim3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::SO2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::Sim3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_sim3_3_01_scalar___01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::SO2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o2_3_01_scalar___01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::SO2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
-
-	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::SO3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::SE3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e3_3_01_scalar___01_4_00_01_options_01_4>`;
+	class :ref:`Map<Sophus::SE3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::SE2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int Options>
+	class :ref:`Map<Sophus::RxSO2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+
+	template <class Scalar_, int M, int Options>
+	class :ref:`Map<Sophus::Cartesian<Scalar_, M>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_cartesian_3_01_scalar___00_01_m_01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::SE2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e2_3_01_scalar___01_4_00_01_options_01_4>`;
@@ -69,16 +83,10 @@ namespace Eigen
 	class :ref:`Map<Sophus::RxSO2<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o2_3_01_scalar___01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::SE3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
+	class :ref:`Map<Sophus::RxSO3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o3_3_01_scalar___01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::RxSO3<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o3_3_01_scalar___01_4_01const_00_01_options_01_4>`;
-
-	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::SE2<Scalar_> const, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_e2_3_01_scalar___01_4_01const_00_01_options_01_4>`;
-
-	template <class Scalar_, int Options>
-	class :ref:`Map<Sophus::RxSO3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_rx_s_o3_3_01_scalar___01_4_00_01_options_01_4>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`Map<Sophus::SO3<Scalar_>, Options><doxid-class_eigen_1_1_map_3_01_sophus_1_1_s_o3_3_01_scalar___01_4_00_01_options_01_4>`;

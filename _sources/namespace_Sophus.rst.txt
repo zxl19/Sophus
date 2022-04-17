@@ -7,10 +7,13 @@ namespace Sophus
 .. toctree::
 	:hidden:
 
+	enum_Sophus_SegmentCase.rst
+	struct_Sophus_BasisSplineSegment.rst
 	struct_Sophus_Constants.rst
 	struct_Sophus_Constants-2.rst
 	struct_Sophus_GetScalar.rst
 	struct_Sophus_GetScalar-2.rst
+	struct_Sophus_IndexAndU.rst
 	struct_Sophus_IsFixedSizeVector.rst
 	struct_Sophus_IsFloatingPoint.rst
 	struct_Sophus_IsFloatingPoint-2.rst
@@ -18,7 +21,11 @@ namespace Sophus
 	struct_Sophus_Mapper.rst
 	struct_Sophus_Mapper-2.rst
 	struct_Sophus_nullopt_t.rst
-	class_Sophus_BasisFunction.rst
+	class_Sophus_BasisSpline.rst
+	class_Sophus_BasisSplineFn.rst
+	class_Sophus_BasisSplineImpl.rst
+	class_Sophus_Cartesian.rst
+	class_Sophus_CartesianBase.rst
 	class_Sophus_LocalParameterization.rst
 	class_Sophus_RxSO2.rst
 	class_Sophus_RxSO2Base.rst
@@ -36,9 +43,7 @@ namespace Sophus
 	class_Sophus_Sim2Base.rst
 	class_Sophus_Sim3.rst
 	class_Sophus_Sim3Base.rst
-	class_Sophus_Spline.rst
-	class_Sophus_SplineFn.rst
-	class_Sophus_SplineImpl.rst
+	class_Sophus_SplineBasisSpline.rst
 	class_Sophus_optional.rst
 
 Overview
@@ -55,6 +60,10 @@ Overview
 
 	// typedefs
 
+	using :target:`Cartesian2<doxid-namespace_sophus_1a94af1361bd6045b8e5941973101fd148>` = :ref:`Cartesian<doxid-class_sophus_1_1_cartesian>`<Scalar_, 2> ;
+	using :target:`Cartesian3<doxid-namespace_sophus_1af97c9ad1bd5ffd480826bcd722e149f7>` = :ref:`Cartesian<doxid-class_sophus_1_1_cartesian>`<Scalar_, 3> ;
+	using :target:`Cartesian2d<doxid-namespace_sophus_1a26056d5971d80903819739c89eb654a2>` = :ref:`Cartesian2<doxid-namespace_sophus_1a94af1361bd6045b8e5941973101fd148>`<double> ;
+	using :target:`Cartesian3d<doxid-namespace_sophus_1a2c48a96f9e52d7021053ff2cc6b5de68>` = :ref:`Cartesian3<doxid-namespace_sophus_1af97c9ad1bd5ffd480826bcd722e149f7>`<double> ;
 	using :target:`IsSpecialized<doxid-namespace_sophus_1a15afd097e630f8b17dc457e40743fc23>` = decltype(:ref:`complete<doxid-namespace_sophus_1aba2fe45c2dd479a51c6fbb80b4b1f9de>`(std::declval<T*>())) ;
 	using :ref:`IsMappable<doxid-namespace_sophus_1aff6ce902ed185145405434e7045bf6c0>` = :ref:`IsSpecialized<doxid-namespace_sophus_1a15afd097e630f8b17dc457e40743fc23>`<Eigen::internal::traits<std::decay_t<T>>> ;
 	using :target:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>` = typename std::enable_if<B, T>::type ;
@@ -127,7 +136,14 @@ Overview
 	using :target:`Line2d<doxid-namespace_sophus_1adc9ec06d50ffb2518147a017b4f748f2>` = :ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<double> ;
 	using :target:`Line2f<doxid-namespace_sophus_1ae28ef27852fa968ec29bd8e07243f50f>` = :ref:`Line2<doxid-namespace_sophus_1a8d4e600ccb6b9c105dfb2f156ad2b906>`<float> ;
 
+	// enums
+
+	enum :ref:`SegmentCase<doxid-namespace_sophus_1aaf00ca63369e9c5c093117329a7ed728>`;
+
 	// structs
+
+	template <class LieGroup>
+	struct :ref:`BasisSplineSegment<doxid-struct_sophus_1_1_basis_spline_segment>`;
 
 	template <class Scalar>
 	struct :ref:`Constants<doxid-struct_sophus_1_1_constants>`;
@@ -135,11 +151,13 @@ Overview
 	template <>
 	struct :ref:`Constants<float><doxid-struct_sophus_1_1_constants_3_01float_01_4>`;
 
+	template <class Scalar_>
+	struct :ref:`GetScalar<doxid-struct_sophus_1_1_get_scalar>`;
+
 	template <class Scalar_, int M, int N>
 	struct :ref:`GetScalar<Matrix<Scalar_, M, N>><doxid-struct_sophus_1_1_get_scalar_3_01_matrix_3_01_scalar___00_01_m_00_01_n_01_4_01_4>`;
 
-	template <class Scalar_>
-	struct :ref:`GetScalar<doxid-struct_sophus_1_1_get_scalar>`;
+	struct :ref:`IndexAndU<doxid-struct_sophus_1_1_index_and_u>`;
 
 	template <
 		typename Vector,
@@ -148,27 +166,39 @@ Overview
 		>
 	struct :ref:`IsFixedSizeVector<doxid-struct_sophus_1_1_is_fixed_size_vector>`;
 
-	template <class Scalar, int M, int N>
-	struct :ref:`IsFloatingPoint<Matrix<Scalar, M, N>><doxid-struct_sophus_1_1_is_floating_point_3_01_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4>`;
-
 	template <class Scalar>
 	struct :ref:`IsFloatingPoint<doxid-struct_sophus_1_1_is_floating_point>`;
+
+	template <class Scalar, int M, int N>
+	struct :ref:`IsFloatingPoint<Matrix<Scalar, M, N>><doxid-struct_sophus_1_1_is_floating_point_3_01_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4>`;
 
 	template <class G>
 	struct :ref:`IsUniformRandomBitGenerator<doxid-struct_sophus_1_1_is_uniform_random_bit_generator>`;
 
-	template <typename T>
-	struct :ref:`Mapper<T, typename std::enable_if<IsMappableV<T>>::type><doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4>`;
-
 	template <typename T, typename E = void>
 	struct :ref:`Mapper<doxid-struct_sophus_1_1_mapper>`;
+
+	template <typename T>
+	struct :ref:`Mapper<T, typename std::enable_if<IsMappableV<T>>::type><doxid-struct_sophus_1_1_mapper_3_01_t_00_01typename_01std_1_1enable__if_3_01_is_mappable_v_3_01_t_01_4_01_4_1_1type_01_4>`;
 
 	struct :ref:`nullopt_t<doxid-struct_sophus_1_1nullopt__t>`;
 
 	// classes
 
-	template <class Scalar>
-	class :ref:`BasisFunction<doxid-class_sophus_1_1_basis_function>`;
+	template <class LieGroup_>
+	class :ref:`BasisSpline<doxid-class_sophus_1_1_basis_spline>`;
+
+	template <class LieGroup_>
+	class :ref:`BasisSplineFn<doxid-class_sophus_1_1_basis_spline_fn>`;
+
+	template <class LieGroup_>
+	class :ref:`BasisSplineImpl<doxid-class_sophus_1_1_basis_spline_impl>`;
+
+	template <class Scalar_, int M, int Options>
+	class :ref:`Cartesian<doxid-class_sophus_1_1_cartesian>`;
+
+	template <class Derived, int M>
+	class :ref:`CartesianBase<doxid-class_sophus_1_1_cartesian_base>`;
 
 	template <template<typename, int=0> class LieGroup>
 	class :ref:`LocalParameterization<doxid-class_sophus_1_1_local_parameterization>`;
@@ -221,14 +251,8 @@ Overview
 	template <class Derived>
 	class :ref:`Sim3Base<doxid-class_sophus_1_1_sim3_base>`;
 
-	template <class LieGroup_>
-	class :ref:`Spline<doxid-class_sophus_1_1_spline>`;
-
-	template <class LieGroup_>
-	class :ref:`SplineFn<doxid-class_sophus_1_1_spline_fn>`;
-
-	template <class LieGroup_>
-	class :ref:`SplineImpl<doxid-class_sophus_1_1_spline_impl>`;
+	template <class Scalar>
+	class :ref:`SplineBasisSpline<doxid-class_sophus_1_1_spline_basis_spline>`;
 
 	template <class T>
 	class :ref:`optional<doxid-class_sophus_1_1optional>`;
@@ -245,6 +269,13 @@ Overview
 		SequenceContainer const& foo_Ts_bar,
 		int max_num_iterations
 		);
+
+	template <
+		class SequenceContainer,
+		int Dim = SequenceContainer::value_type::DoF,
+		class Scalar = typename SequenceContainer::value_type::Scalar
+		>
+	:ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_same<typename SequenceContainer::value_type, :ref:`Cartesian<doxid-class_sophus_1_1_cartesian>`<Scalar, Dim>>::value, :ref:`optional<doxid-class_sophus_1_1optional>`<typename SequenceContainer::value_type>> :target:`average<doxid-namespace_sophus_1aa8be7d7726366c4d8b21d9c9556e25ec>`(SequenceContainer const& foo_Ts_bar);
 
 	template <
 		class SequenceContainer,

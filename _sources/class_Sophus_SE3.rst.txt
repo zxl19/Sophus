@@ -340,7 +340,7 @@ The first three components of ``a`` represent the translational part ``upsilon``
 	template <class S = Scalar>
 	static :ref:`enable_if_t<doxid-namespace_sophus_1a4424dd9c3553f3bb3137e735d8c9d406>`<std::is_floating_point<S>::value, SE3> fitToSE3(:ref:`Matrix4<doxid-namespace_sophus_1ac203d11abd626d6a31b3870a7b1dce56>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e3_1a7d92554e50f60d87eb37fe5982498a7f>`> const& T)
 
-Returns closest :ref:`SE3 <doxid-class_sophus_1_1_s_e3>` given arbirary 4x4 matrix.
+Returns closest :ref:`SE3 <doxid-class_sophus_1_1_s_e3>` given arbitrary 4x4 matrix.
 
 .. index:: pair: function; generator
 .. _doxid-class_sophus_1_1_s_e3_1a1d2675cf27d51ed7e39e01c31d684424:

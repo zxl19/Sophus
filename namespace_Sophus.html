@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template struct Sophus::Constants" href="struct_Sophus_Constants.html" />
-    <link rel="prev" title="template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;" href="class_Eigen_Map-16.html" /> 
+    <link rel="next" title="enum Sophus::SegmentCase" href="enum_Sophus_SegmentCase.html" />
+    <link rel="prev" title="template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;" href="class_Eigen_Map-18.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,18 +48,25 @@
 <li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">namespace Sophus</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enum_Sophus_SegmentCase.html">enum Sophus::SegmentCase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_BasisSplineSegment.html">template struct Sophus::BasisSplineSegment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants.html">template struct Sophus::Constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Constants-2.html">template struct Sophus::Constants&lt;float&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar.html">template struct Sophus::GetScalar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_GetScalar-2.html">template struct Sophus::GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IndexAndU.html">struct Sophus::IndexAndU</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html">template struct Sophus::IsFixedSizeVector</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint.html">template struct Sophus::IsFloatingPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html">template struct Sophus::IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html">template struct Sophus::IsUniformRandomBitGenerator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
-<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper.html">template struct Sophus::Mapper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_Sophus_Mapper-2.html">template struct Sophus::Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</a></li>
 <li class="toctree-l3"><a class="reference internal" href="struct_Sophus_nullopt_t.html">struct Sophus::nullopt_t</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisFunction.html">template class Sophus::BasisFunction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSpline.html">template class Sophus::BasisSpline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineFn.html">template class Sophus::BasisSplineFn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineImpl.html">template class Sophus::BasisSplineImpl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Cartesian.html">template class Sophus::Cartesian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_CartesianBase.html">template class Sophus::CartesianBase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
@@ -77,9 +84,7 @@
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim2Base.html">template class Sophus::Sim2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3.html">template class Sophus::Sim3</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Sim3Base.html">template class Sophus::Sim3Base</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Spline.html">template class Sophus::Spline</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineFn.html">template class Sophus::SplineFn</a></li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineImpl.html">template class Sophus::SplineImpl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_SplineBasisSpline.html">template class Sophus::SplineBasisSpline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_optional.html">template class Sophus::optional</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
@@ -130,6 +135,10 @@
 
 <span class="c1">// typedefs</span>
 
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1a94af1361bd6045b8e5941973101fd148">Cartesian2</span><span></span> <span class="o">=</span> <a class="reference internal" href="class_Sophus_Cartesian.html#doxid-class-sophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar_</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1af97c9ad1bd5ffd480826bcd722e149f7">Cartesian3</span><span></span> <span class="o">=</span> <a class="reference internal" href="class_Sophus_Cartesian.html#doxid-class-sophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar_</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1a26056d5971d80903819739c89eb654a2">Cartesian2d</span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-sophus-1a94af1361bd6045b8e5941973101fd148"><span class="std std-ref">Cartesian2</span></a><span></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1a2c48a96f9e52d7021053ff2cc6b5de68">Cartesian3d</span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-sophus-1af97c9ad1bd5ffd480826bcd722e149f7"><span class="std std-ref">Cartesian3</span></a><span></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="p">;</span>
 <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1a15afd097e630f8b17dc457e40743fc23">IsSpecialized</span><span></span> <span class="o">=</span> <span class="k">decltype</span><span class="p">(</span><a class="reference internal" href="#doxid-namespace-sophus-1aba2fe45c2dd479a51c6fbb80b4b1f9de"><span class="std std-ref">complete</span></a><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">()))</span> <span class="p">;</span>
 <span class="k">using</span> <a class="reference internal" href="#doxid-namespace-sophus-1aff6ce902ed185145405434e7045bf6c0"><span class="std std-ref">IsMappable</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-sophus-1a15afd097e630f8b17dc457e40743fc23"><span class="std std-ref">IsSpecialized</span></a><span></span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">traits</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&gt;</span> <span class="p">;</span>
 <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1a4424dd9c3553f3bb3137e735d8c9d406">enable_if_t</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">B</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span> <span class="p">;</span>
@@ -202,7 +211,14 @@
 <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1adc9ec06d50ffb2518147a017b4f748f2">Line2d</span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-sophus-1a8d4e600ccb6b9c105dfb2f156ad2b906"><span class="std std-ref">Line2</span></a><span></span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="p">;</span>
 <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1ae28ef27852fa968ec29bd8e07243f50f">Line2f</span><span></span> <span class="o">=</span> <a class="reference internal" href="#doxid-namespace-sophus-1a8d4e600ccb6b9c105dfb2f156ad2b906"><span class="std std-ref">Line2</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="p">;</span>
 
+<span class="c1">// enums</span>
+
+<span class="k">enum</span> <a class="reference internal" href="enum_Sophus_SegmentCase.html#doxid-namespace-sophus-1aaf00ca63369e9c5c093117329a7ed728"><span class="std std-ref">SegmentCase</span></a><span></span><span class="p">;</span>
+
 <span class="c1">// structs</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_BasisSplineSegment.html#doxid-struct-sophus-1-1-basis-spline-segment"><span class="std std-ref">BasisSplineSegment</span></a><span></span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="o">&gt;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Constants.html#doxid-struct-sophus-1-1-constants"><span class="std std-ref">Constants</span></a><span></span><span class="p">;</span>
@@ -210,11 +226,13 @@
 <span class="k">template</span> <span class="o">&lt;&gt;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Constants-2.html#doxid-struct-sophus-1-1-constants-3-01float-01-4"><span class="std std-ref">Constants&lt;float&gt;</span></a><span></span><span class="p">;</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_GetScalar.html#doxid-struct-sophus-1-1-get-scalar-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4"><span class="std std-ref">GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</span></a><span></span><span class="p">;</span>
-
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_GetScalar-2.html#doxid-struct-sophus-1-1-get-scalar"><span class="std std-ref">GetScalar</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_GetScalar.html#doxid-struct-sophus-1-1-get-scalar"><span class="std std-ref">GetScalar</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_GetScalar-2.html#doxid-struct-sophus-1-1-get-scalar-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4"><span class="std std-ref">GetScalar&lt;Matrix&lt;Scalar_, M, N&gt;&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IndexAndU.html#doxid-struct-sophus-1-1-index-and-u"><span class="std std-ref">IndexAndU</span></a><span></span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span>
     <span class="k">typename</span> <span class="n">Vector</span><span class="p">,</span>
@@ -223,27 +241,39 @@
     <span class="o">&gt;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsFixedSizeVector.html#doxid-struct-sophus-1-1-is-fixed-size-vector"><span class="std std-ref">IsFixedSizeVector</span></a><span></span><span class="p">;</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsFloatingPoint.html#doxid-struct-sophus-1-1-is-floating-point-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4"><span class="std std-ref">IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</span></a><span></span><span class="p">;</span>
-
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html#doxid-struct-sophus-1-1-is-floating-point"><span class="std std-ref">IsFloatingPoint</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsFloatingPoint.html#doxid-struct-sophus-1-1-is-floating-point"><span class="std std-ref">IsFloatingPoint</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsFloatingPoint-2.html#doxid-struct-sophus-1-1-is-floating-point-3-01-matrix-3-01-scalar-00-01-m-00-01-n-01-4-01-4"><span class="std std-ref">IsFloatingPoint&lt;Matrix&lt;Scalar, M, N&gt;&gt;</span></a><span></span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">G</span><span class="o">&gt;</span>
 <span class="k">struct</span> <a class="reference internal" href="struct_Sophus_IsUniformRandomBitGenerator.html#doxid-struct-sophus-1-1-is-uniform-random-bit-generator"><span class="std std-ref">IsUniformRandomBitGenerator</span></a><span></span><span class="p">;</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Mapper.html#doxid-struct-sophus-1-1-mapper-3-01-t-00-01typename-01std-1-1enable-if-3-01-is-mappable-v-3-01-t-01-4-01-4-1-1type-01-4"><span class="std std-ref">Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</span></a><span></span><span class="p">;</span>
-
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">E</span> <span class="o">=</span> <span class="kt">void</span><span class="o">&gt;</span>
-<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Mapper-2.html#doxid-struct-sophus-1-1-mapper"><span class="std std-ref">Mapper</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Mapper.html#doxid-struct-sophus-1-1-mapper"><span class="std std-ref">Mapper</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_Sophus_Mapper-2.html#doxid-struct-sophus-1-1-mapper-3-01-t-00-01typename-01std-1-1enable-if-3-01-is-mappable-v-3-01-t-01-4-01-4-1-1type-01-4"><span class="std std-ref">Mapper&lt;T, typename std::enable_if&lt;IsMappableV&lt;T&gt;&gt;::type&gt;</span></a><span></span><span class="p">;</span>
 
 <span class="k">struct</span> <a class="reference internal" href="struct_Sophus_nullopt_t.html#doxid-struct-sophus-1-1nullopt-t"><span class="std std-ref">nullopt_t</span></a><span></span><span class="p">;</span>
 
 <span class="c1">// classes</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="o">&gt;</span>
-<span class="k">class</span> <a class="reference internal" href="class_Sophus_BasisFunction.html#doxid-class-sophus-1-1-basis-function"><span class="std std-ref">BasisFunction</span></a><span></span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_BasisSpline.html#doxid-class-sophus-1-1-basis-spline"><span class="std std-ref">BasisSpline</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_BasisSplineFn.html#doxid-class-sophus-1-1-basis-spline-fn"><span class="std std-ref">BasisSplineFn</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_BasisSplineImpl.html#doxid-class-sophus-1-1-basis-spline-impl"><span class="std std-ref">BasisSplineImpl</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar_</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="kt">int</span> <span class="n">Options</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_Cartesian.html#doxid-class-sophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Derived</span><span class="p">,</span> <span class="kt">int</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_CartesianBase.html#doxid-class-sophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">,</span> <span class="kt">int</span><span class="o">=</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">class</span> <span class="n">LieGroup</span><span class="o">&gt;</span>
 <span class="k">class</span> <a class="reference internal" href="class_Sophus_LocalParameterization.html#doxid-class-sophus-1-1-local-parameterization"><span class="std std-ref">LocalParameterization</span></a><span></span><span class="p">;</span>
@@ -296,14 +326,8 @@
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Derived</span><span class="o">&gt;</span>
 <span class="k">class</span> <a class="reference internal" href="class_Sophus_Sim3Base.html#doxid-class-sophus-1-1-sim3-base"><span class="std std-ref">Sim3Base</span></a><span></span><span class="p">;</span>
 
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
-<span class="k">class</span> <a class="reference internal" href="class_Sophus_Spline.html#doxid-class-sophus-1-1-spline"><span class="std std-ref">Spline</span></a><span></span><span class="p">;</span>
-
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
-<span class="k">class</span> <a class="reference internal" href="class_Sophus_SplineFn.html#doxid-class-sophus-1-1-spline-fn"><span class="std std-ref">SplineFn</span></a><span></span><span class="p">;</span>
-
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">LieGroup_</span><span class="o">&gt;</span>
-<span class="k">class</span> <a class="reference internal" href="class_Sophus_SplineImpl.html#doxid-class-sophus-1-1-spline-impl"><span class="std std-ref">SplineImpl</span></a><span></span><span class="p">;</span>
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Scalar</span><span class="o">&gt;</span>
+<span class="k">class</span> <a class="reference internal" href="class_Sophus_SplineBasisSpline.html#doxid-class-sophus-1-1-spline-basis-spline"><span class="std std-ref">SplineBasisSpline</span></a><span></span><span class="p">;</span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <a class="reference internal" href="class_Sophus_optional.html#doxid-class-sophus-1-1optional"><span class="std std-ref">optional</span></a><span></span><span class="p">;</span>
@@ -320,6 +344,13 @@
     <span class="n">SequenceContainer</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">foo_Ts_bar</span><span class="p">,</span>
     <span class="kt">int</span> <span class="n">max_num_iterations</span>
     <span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span>
+    <span class="k">class</span> <span class="n">SequenceContainer</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">Dim</span> <span class="o">=</span> <span class="n">SequenceContainer</span><span class="o">::</span><span class="n">value_type</span><span class="o">::</span><span class="n">DoF</span><span class="p">,</span>
+    <span class="k">class</span> <span class="n">Scalar</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">SequenceContainer</span><span class="o">::</span><span class="n">value_type</span><span class="o">::</span><span class="n">Scalar</span>
+    <span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespace-sophus-1a4424dd9c3553f3bb3137e735d8c9d406"><span class="std std-ref">enable_if_t</span></a><span></span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">SequenceContainer</span><span class="o">::</span><span class="n">value_type</span><span class="p">,</span> <a class="reference internal" href="class_Sophus_Cartesian.html#doxid-class-sophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span> <span class="n">Dim</span><span class="o">&gt;&gt;::</span><span class="n">value</span><span class="p">,</span> <a class="reference internal" href="class_Sophus_optional.html#doxid-class-sophus-1-1optional"><span class="std std-ref">optional</span></a><span></span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">SequenceContainer</span><span class="o">::</span><span class="n">value_type</span><span class="o">&gt;&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespace-sophus-1aa8be7d7726366c4d8b21d9c9556e25ec">average</span><span></span><span class="p">(</span><span class="n">SequenceContainer</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">foo_Ts_bar</span><span class="p">);</span>
 
 <span class="k">template</span> <span class="o">&lt;</span>
     <span class="k">class</span> <span class="n">SequenceContainer</span><span class="p">,</span>
@@ -607,8 +638,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="class_Eigen_Map-16.html" class="btn btn-neutral float-left" title="template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="struct_Sophus_Constants.html" class="btn btn-neutral float-right" title="template struct Sophus::Constants" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_Eigen_Map-18.html" class="btn btn-neutral float-left" title="template class Eigen::Map&lt;Sophus::SO3&lt;Scalar_&gt;, Options&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_Sophus_SegmentCase.html" class="btn btn-neutral float-right" title="enum Sophus::SegmentCase" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
