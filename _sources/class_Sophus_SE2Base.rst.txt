@@ -52,6 +52,7 @@ Overview
 		:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<NewScalarType> :ref:`cast<doxid-class_sophus_1_1_s_e2_base_1ae329df5078fb9b3e1f67e73414763c85>`() const;
 	
 		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_base_1acca32d528cb1fbc3802c3674e4fed8e2>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_base_1a4e6ceef8753350e4775c6692d6bcfb46>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_base_1a1687e170939eeb9913c78d248e1316a9>`> :ref:`Dx_this_mul_exp_x_at_0<doxid-class_sophus_1_1_s_e2_base_1a69f2ea252601499991a5021666a84168>`() const;
+		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_base_1acca32d528cb1fbc3802c3674e4fed8e2>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_base_1a1687e170939eeb9913c78d248e1316a9>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_base_1a4e6ceef8753350e4775c6692d6bcfb46>`> :ref:`Dx_log_this_inv_by_x_at_this<doxid-class_sophus_1_1_s_e2_base_1aa28bf4bbfd6a56e1d68daf5690b53c7e>`() const;
 		:ref:`SE2<doxid-class_sophus_1_1_s_e2>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_base_1acca32d528cb1fbc3802c3674e4fed8e2>`> :ref:`inverse<doxid-class_sophus_1_1_s_e2_base_1a0ef9f72ad9db6769fb95a8916fc607bc>`() const;
 		:ref:`Tangent<doxid-class_sophus_1_1_s_e2_base_1a2b57342204656b32c07bacc7911f588f>` :ref:`log<doxid-class_sophus_1_1_s_e2_base_1a0c9e8ff7cc7e2efeb467810c4c23e8e3>`() const;
 		void :ref:`normalize<doxid-class_sophus_1_1_s_e2_base_1a1ce6a88b1912ec7957544129f7154a98>`();
@@ -197,6 +198,16 @@ Returns copy of instance casted to NewScalarType.
 	:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_base_1acca32d528cb1fbc3802c3674e4fed8e2>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_base_1a4e6ceef8753350e4775c6692d6bcfb46>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_base_1a1687e170939eeb9913c78d248e1316a9>`> Dx_this_mul_exp_x_at_0() const
 
 Returns derivative of this \* exp(x) wrt x at x=0.
+
+.. index:: pair: function; Dx_log_this_inv_by_x_at_this
+.. _doxid-class_sophus_1_1_s_e2_base_1aa28bf4bbfd6a56e1d68daf5690b53c7e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_base_1acca32d528cb1fbc3802c3674e4fed8e2>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_base_1a1687e170939eeb9913c78d248e1316a9>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_base_1a4e6ceef8753350e4775c6692d6bcfb46>`> Dx_log_this_inv_by_x_at_this() const
+
+Returns derivative of log(this^{-1} \* x) by x at x=this.
 
 .. index:: pair: function; inverse
 .. _doxid-class_sophus_1_1_s_e2_base_1a0ef9f72ad9db6769fb95a8916fc607bc:

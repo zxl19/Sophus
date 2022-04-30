@@ -27,6 +27,7 @@ namespace Sophus
 	class_Sophus_Cartesian.rst
 	class_Sophus_CartesianBase.rst
 	class_Sophus_LocalParameterization.rst
+	class_Sophus_Manifold.rst
 	class_Sophus_RxSO2.rst
 	class_Sophus_RxSO2Base.rst
 	class_Sophus_RxSO3.rst
@@ -202,6 +203,9 @@ Overview
 
 	template <template<typename, int=0> class LieGroup>
 	class :ref:`LocalParameterization<doxid-class_sophus_1_1_local_parameterization>`;
+
+	template <template<typename, int=0> class LieGroup>
+	class :ref:`Manifold<doxid-class_sophus_1_1_manifold>`;
 
 	template <class Scalar_, int Options>
 	class :ref:`RxSO2<doxid-class_sophus_1_1_rx_s_o2>`;

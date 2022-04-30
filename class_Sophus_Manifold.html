@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template class Sophus::LocalParameterization &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>template class Sophus::Manifold &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="template class Sophus::Manifold" href="class_Sophus_Manifold.html" />
-    <link rel="prev" title="template class Sophus::CartesianBase" href="class_Sophus_CartesianBase.html" /> 
+    <link rel="next" title="template class Sophus::RxSO2" href="class_Sophus_RxSO2.html" />
+    <link rel="prev" title="template class Sophus::LocalParameterization" href="class_Sophus_LocalParameterization.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -67,12 +67,12 @@
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_BasisSplineImpl.html">template class Sophus::BasisSplineImpl</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_Cartesian.html">template class Sophus::Cartesian</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_CartesianBase.html">template class Sophus::CartesianBase</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::LocalParameterization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_Sophus_LocalParameterization.html">template class Sophus::LocalParameterization</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Sophus::Manifold</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="class_Sophus_Manifold.html">template class Sophus::Manifold</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2.html">template class Sophus::RxSO2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO2Base.html">template class Sophus::RxSO2Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_Sophus_RxSO3.html">template class Sophus::RxSO3</a></li>
@@ -117,9 +117,9 @@
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="global.html">Global Namespace</a> &raquo;</li>
           <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template class Sophus::LocalParameterization</li>
+      <li>template class Sophus::Manifold</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/class_Sophus_LocalParameterization.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/class_Sophus_Manifold.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -127,50 +127,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="template-class-sophus-localparameterization">
-<span id="doxid-class-sophus-1-1-local-parameterization"></span><span id="index-0"></span><h1>template class Sophus::LocalParameterization<a class="headerlink" href="#template-class-sophus-localparameterization" title="Permalink to this headline">¶</a></h1>
+  <section id="template-class-sophus-manifold">
+<span id="doxid-class-sophus-1-1-manifold"></span><span id="index-0"></span><h1>template class Sophus::Manifold<a class="headerlink" href="#template-class-sophus-manifold" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ]. <a class="reference internal" href="#details-class-sophus-1-1-local-parameterization"><span class="std std-ref">More…</span></a></p>
-<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ceres_local_parameterization.hpp&gt;</span><span class="cp"></span>
+<p>Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ]. <a class="reference internal" href="#details-class-sophus-1-1-manifold"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;ceres_manifold.hpp&gt;</span><span class="cp"></span>
 
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="p">,</span> <span class="kt">int</span><span class="o">=</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">class</span> <span class="n">LieGroup</span><span class="o">&gt;</span>
-<span class="k">class</span> <span class="nl">LocalParameterization</span><span class="p">:</span> <span class="k">public</span> <span class="n">LocalParameterization</span> <span class="p">{</span>
+<span class="k">class</span> <span class="nl">Manifold</span><span class="p">:</span> <span class="k">public</span> <span class="n">Manifold</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
     <span class="c1">// typedefs</span>
 
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1a1973be843cd818ee41007daf9fe1a54e">LieGroupd</span><span></span> <span class="o">=</span> <span class="n">LieGroup</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="p">;</span>
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1adb35d1443c419df14ee6ffabd65f1979">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">Tangent</span> <span class="p">;</span>
-    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1a543e6574af6dc624fd412c88c48bd8cf">TangentMap</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="struct_Sophus_Mapper.html#doxid-struct-sophus-1-1-mapper"><span class="std std-ref">Sophus::Mapper</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-local-parameterization-1adb35d1443c419df14ee6ffabd65f1979"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;::</span><span class="n">ConstMap</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a2941fe1ceb4b1d4f7271c6241a8d2f92">LieGroupd</span><span></span> <span class="o">=</span> <span class="n">LieGroup</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a8e8844887496f0d63553de0453f3c272">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">Tangent</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a3f0307ff6dbe1ebb1595ebfb3616ffa2">TangentMap</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="struct_Sophus_Mapper.html#doxid-struct-sophus-1-1-mapper"><span class="std std-ref">Sophus::Mapper</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-manifold-1a8e8844887496f0d63553de0453f3c272"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;::</span><span class="n">Map</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a5640c395d36ea1cdb7345abbc9cccaff">TangentConstMap</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="struct_Sophus_Mapper.html#doxid-struct-sophus-1-1-mapper"><span class="std std-ref">Sophus::Mapper</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-manifold-1a8e8844887496f0d63553de0453f3c272"><span class="std std-ref">Tangent</span></a><span></span><span class="o">&gt;::</span><span class="n">ConstMap</span> <span class="p">;</span>
 
     <span class="c1">// fields</span>
 
-    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1aeeb527502c1e581be8d7f0ec17c35b5c">DoF</span><span></span> <span class="o">=</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">DoF</span><span class="p">;</span>
-    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1af0ca390187819556eb35be75c2cb1036">num_parameters</span><span></span> <span class="o">=</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">num_parameters</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a4de6f85090482642ae769c90ddd5fd27">DoF</span><span></span> <span class="o">=</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">DoF</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1abe9a434ed6a2ca656ea0f9a60d89f4c9">num_parameters</span><span></span> <span class="o">=</span> <span class="n">LieGroupd</span><span class="o">::</span><span class="n">num_parameters</span><span class="p">;</span>
 
     <span class="c1">// methods</span>
 
-    <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-sophus-1-1-local-parameterization-1a25dbd360f9f11045a185c962a888b94a"><span class="std std-ref">Plus</span></a><span></span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">delta_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">T_plus_delta_raw</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-    <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-sophus-1-1-local-parameterization-1a960f48138f8999f3a29f71d541cd2469"><span class="std std-ref">ComputeJacobian</span></a><span></span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">jacobian_raw</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1aa63d1b60133437d3a7bf86cd18d5076b">GlobalSize</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-local-parameterization-1a30e3ea5e10e33bec06ad1bc8cc34bbdd">LocalSize</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-sophus-1-1-manifold-1a89127df2d5f1c4058d8553599412ff59"><span class="std std-ref">Plus</span></a><span></span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">delta_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">T_plus_delta_raw</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">bool</span> <a class="reference internal" href="#doxid-class-sophus-1-1-manifold-1a3e946e456130ae6841c674eed7392b41"><span class="std std-ref">PlusJacobian</span></a><span></span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">jacobian_raw</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1affca44205e195e7b0c4b5f192787f2c7">Minus</span><span></span><span class="p">(</span>
+        <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">y_raw</span><span class="p">,</span>
+        <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">x_raw</span><span class="p">,</span>
+        <span class="kt">double</span><span class="o">*</span> <span class="n">y_minus_x_raw</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a640932a5357195b8a31522c259a6082b">MinusJacobian</span><span></span><span class="p">(</span>
+        <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">x_raw</span><span class="p">,</span>
+        <span class="kt">double</span><span class="o">*</span> <span class="n">jacobian_raw</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1a88d0412f0337554ec14a6153d983ffef">AmbientSize</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-manifold-1af94899c476b1740e4ee7c556723ba34e">TangentSize</span><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
 <span class="p">};</span></pre>
 </section>
 <section id="detailed-documentation">
-<span id="details-class-sophus-1-1-local-parameterization"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<span id="details-class-sophus-1-1-manifold"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
 <p>Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ].</p>
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-local-parameterization-1a25dbd360f9f11045a185c962a888b94a"><span id="index-1"></span><span></span><span class="kt">bool</span> <span class="n">Plus</span><span class="p">(</span>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-manifold-1a89127df2d5f1c4058d8553599412ff59"><span id="index-1"></span><span></span><span class="kt">bool</span> <span class="n">Plus</span><span class="p">(</span>
     <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span>
     <span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">delta_raw</span><span class="p">,</span>
     <span class="kt">double</span><span class="o">*</span> <span class="n">T_plus_delta_raw</span>
     <span class="p">)</span> <span class="k">const</span></pre>
 <p>LieGroup plus operation for Ceres.</p>
 <p>T * exp(x)</p>
-<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-local-parameterization-1a960f48138f8999f3a29f71d541cd2469"><span id="index-2"></span><span></span><span class="kt">bool</span> <span class="n">ComputeJacobian</span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">jacobian_raw</span><span class="p">)</span> <span class="k">const</span></pre>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-manifold-1a3e946e456130ae6841c674eed7392b41"><span id="index-2"></span><span></span><span class="kt">bool</span> <span class="n">PlusJacobian</span><span class="p">(</span><span class="kt">double</span> <span class="k">const</span><span class="o">*</span> <span class="n">T_raw</span><span class="p">,</span> <span class="kt">double</span><span class="o">*</span> <span class="n">jacobian_raw</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Jacobian of LieGroup plus operation for Ceres.</p>
 <p>Dx T * exp(x) with x=0</p>
 </section>
@@ -181,8 +194,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="class_Sophus_CartesianBase.html" class="btn btn-neutral float-left" title="template class Sophus::CartesianBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="class_Sophus_Manifold.html" class="btn btn-neutral float-right" title="template class Sophus::Manifold" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="class_Sophus_LocalParameterization.html" class="btn btn-neutral float-left" title="template class Sophus::LocalParameterization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Sophus_RxSO2.html" class="btn btn-neutral float-right" title="template class Sophus::RxSO2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

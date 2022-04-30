@@ -1,0 +1,92 @@
+.. index:: pair: class; Sophus::Manifold
+.. _doxid-class_sophus_1_1_manifold:
+
+template class Sophus::Manifold
+===============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ]. :ref:`More...<details-class_sophus_1_1_manifold>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <ceres_manifold.hpp>
+	
+	template <template<typename, int=0> class LieGroup>
+	class Manifold: public Manifold {
+	public:
+		// typedefs
+	
+		using :target:`LieGroupd<doxid-class_sophus_1_1_manifold_1a2941fe1ceb4b1d4f7271c6241a8d2f92>` = LieGroup<double> ;
+		using :target:`Tangent<doxid-class_sophus_1_1_manifold_1a8e8844887496f0d63553de0453f3c272>` = typename LieGroupd::Tangent ;
+		using :target:`TangentMap<doxid-class_sophus_1_1_manifold_1a3f0307ff6dbe1ebb1595ebfb3616ffa2>` = typename :ref:`Sophus::Mapper<doxid-struct_sophus_1_1_mapper>`<:ref:`Tangent<doxid-class_sophus_1_1_manifold_1a8e8844887496f0d63553de0453f3c272>`>::Map ;
+		using :target:`TangentConstMap<doxid-class_sophus_1_1_manifold_1a5640c395d36ea1cdb7345abbc9cccaff>` = typename :ref:`Sophus::Mapper<doxid-struct_sophus_1_1_mapper>`<:ref:`Tangent<doxid-class_sophus_1_1_manifold_1a8e8844887496f0d63553de0453f3c272>`>::ConstMap ;
+
+		// fields
+	
+		static constexpr int :target:`DoF<doxid-class_sophus_1_1_manifold_1a4de6f85090482642ae769c90ddd5fd27>` = LieGroupd::DoF;
+		static constexpr int :target:`num_parameters<doxid-class_sophus_1_1_manifold_1abe9a434ed6a2ca656ea0f9a60d89f4c9>` = LieGroupd::num_parameters;
+
+		// methods
+	
+		bool :ref:`Plus<doxid-class_sophus_1_1_manifold_1a89127df2d5f1c4058d8553599412ff59>`(double const* T_raw, double const* delta_raw, double* T_plus_delta_raw) const;
+		bool :ref:`PlusJacobian<doxid-class_sophus_1_1_manifold_1a3e946e456130ae6841c674eed7392b41>`(double const* T_raw, double* jacobian_raw) const;
+	
+		bool :target:`Minus<doxid-class_sophus_1_1_manifold_1affca44205e195e7b0c4b5f192787f2c7>`(
+			double const* y_raw,
+			double const* x_raw,
+			double* y_minus_x_raw
+			) const;
+	
+		bool :target:`MinusJacobian<doxid-class_sophus_1_1_manifold_1a640932a5357195b8a31522c259a6082b>`(
+			double const* x_raw,
+			double* jacobian_raw
+			) const;
+	
+		int :target:`AmbientSize<doxid-class_sophus_1_1_manifold_1a88d0412f0337554ec14a6153d983ffef>`() const;
+		int :target:`TangentSize<doxid-class_sophus_1_1_manifold_1af94899c476b1740e4ee7c556723ba34e>`() const;
+	};
+.. _details-class_sophus_1_1_manifold:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Templated local parameterization for LieGroup [with implemented LieGroup::Dx_this_mul_exp_x_at_0() ].
+
+Methods
+-------
+
+.. index:: pair: function; Plus
+.. _doxid-class_sophus_1_1_manifold_1a89127df2d5f1c4058d8553599412ff59:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool Plus(
+		double const* T_raw,
+		double const* delta_raw,
+		double* T_plus_delta_raw
+		) const
+
+LieGroup plus operation for Ceres.
+
+T \* exp(x)
+
+.. index:: pair: function; PlusJacobian
+.. _doxid-class_sophus_1_1_manifold_1a3e946e456130ae6841c674eed7392b41:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool PlusJacobian(double const* T_raw, double* jacobian_raw) const
+
+Jacobian of LieGroup plus operation for Ceres.
+
+Dx T \* exp(x) with x=0
+

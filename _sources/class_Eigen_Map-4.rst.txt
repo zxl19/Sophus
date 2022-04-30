@@ -91,6 +91,7 @@ Inherited Members
 		:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<NewScalarType> :ref:`cast<doxid-class_sophus_1_1_s_e3_base_1acb9440dca0877102eb3cde1d0aa79035>`() const;
 	
 		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e3_base_1a3eb701512103dc1c78d6b6e58d70a5b9>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e3_base_1ac0ee11a7faadafa313b906270cee545b>`, :ref:`DoF<doxid-class_sophus_1_1_s_e3_base_1a185c5b140a0815351de44c4ea5d89103>`> :ref:`Dx_this_mul_exp_x_at_0<doxid-class_sophus_1_1_s_e3_base_1a1104d6ab18ccc69a6f5d031c2e767731>`() const;
+		:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e3_base_1a3eb701512103dc1c78d6b6e58d70a5b9>`, :ref:`DoF<doxid-class_sophus_1_1_s_e3_base_1a185c5b140a0815351de44c4ea5d89103>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e3_base_1ac0ee11a7faadafa313b906270cee545b>`> :ref:`Dx_log_this_inv_by_x_at_this<doxid-class_sophus_1_1_s_e3_base_1a6bf191bf9ae150a06462af87bc760054>`() const;
 		:ref:`SE3<doxid-class_sophus_1_1_s_e3>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e3_base_1a3eb701512103dc1c78d6b6e58d70a5b9>`> :ref:`inverse<doxid-class_sophus_1_1_s_e3_base_1ad5356ba502dd3c15e2513cf459d498e9>`() const;
 		:ref:`Tangent<doxid-class_sophus_1_1_s_e3_base_1ad244e90ba57d543113905b7e29a4e105>` :ref:`log<doxid-class_sophus_1_1_s_e3_base_1a97d84dd32d7d023a03f05a74da6377d8>`() const;
 		void :ref:`normalize<doxid-class_sophus_1_1_s_e3_base_1a33626101e4eef59db31ea8a1dee9d590>`();
