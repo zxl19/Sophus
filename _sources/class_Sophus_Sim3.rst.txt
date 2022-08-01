@@ -58,6 +58,13 @@ Overview
 			Eigen::MatrixBase<D2> const& translation
 			);
 	
+		template <class D1, class D2>
+		:ref:`Sim3<doxid-class_sophus_1_1_sim3_1a0e3438cdc4af4a087b715840c3eaf046>`(
+			:ref:`Scalar<doxid-class_sophus_1_1_sim3_1af6018527dd82e183f658654eef91ab72>` const& scale,
+			Eigen::QuaternionBase<D1> const& unit_quaternion,
+			Eigen::MatrixBase<D2> const& translation
+			);
+	
 		:ref:`Sim3<doxid-class_sophus_1_1_sim3_1af067914bcbf110d6c94bede34800bb48>`(:ref:`Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_sim3_1af6018527dd82e183f658654eef91ab72>`, 4, 4> const& T);
 
 		// methods
@@ -160,6 +167,23 @@ Constructor from :ref:`RxSO3 <doxid-class_sophus_1_1_rx_s_o3>` and translation v
 		)
 
 Constructor from quaternion and translation vector.
+
+Precondition: quaternion must not be close to zero.
+
+.. index:: pair: function; Sim3
+.. _doxid-class_sophus_1_1_sim3_1a0e3438cdc4af4a087b715840c3eaf046:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class D1, class D2>
+	Sim3(
+		:ref:`Scalar<doxid-class_sophus_1_1_sim3_1af6018527dd82e183f658654eef91ab72>` const& scale,
+		Eigen::QuaternionBase<D1> const& unit_quaternion,
+		Eigen::MatrixBase<D2> const& translation
+		)
+
+Constructor from scale factor, unit quaternion, and translation vector.
 
 Precondition: quaternion must not be close to zero.
 

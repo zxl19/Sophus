@@ -51,6 +51,9 @@ Overview
 	
 		template <class D>
 		:ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3_1ae0d33507a9e3269b56eb2f5c49e7e697>`(Eigen::QuaternionBase<D> const& quat);
+	
+		template <class D>
+		:ref:`RxSO3<doxid-class_sophus_1_1_rx_s_o3_1a411ecb910164303e154643634e5a3bd4>`(:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_1a2b965ca1ebaa99ecc36f6c5ecb48fdfe>` const& scale, Eigen::QuaternionBase<D> const& unit_quat);
 
 		// methods
 	
@@ -172,6 +175,22 @@ Precondition: ``scale`` must not to be close to either zero or infinity.
 Constructor from quaternion.
 
 Precondition: quaternion must not be close to either zero or infinity.
+
+.. index:: pair: function; RxSO3
+.. _doxid-class_sophus_1_1_rx_s_o3_1a411ecb910164303e154643634e5a3bd4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class D>
+	RxSO3(
+		:ref:`Scalar<doxid-class_sophus_1_1_rx_s_o3_1a2b965ca1ebaa99ecc36f6c5ecb48fdfe>` const& scale,
+		Eigen::QuaternionBase<D> const& unit_quat
+		)
+
+Constructor from scale factor and unit quaternion.
+
+Precondition: quaternion must not be close to zero.
 
 Methods
 -------
