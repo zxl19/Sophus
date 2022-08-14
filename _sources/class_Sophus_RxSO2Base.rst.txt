@@ -44,6 +44,7 @@ Overview
 		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_rx_s_o2_base_1a4160a7d353c7b1769d399fa17baa0e57>` = 2;
 		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_rx_s_o2_base_1a26630d82ba9db2b7a5cf6904beaf7780>` = 2;
 		static constexpr int :ref:`N<doxid-class_sophus_1_1_rx_s_o2_base_1a552179627c9a84f8455b3c3fff18afb5>` = 2;
+		static constexpr int :ref:`Dim<doxid-class_sophus_1_1_rx_s_o2_base_1a449ee7e56526785dbdd3f477c7cfa482>` = 2;
 
 		// methods
 	
@@ -174,6 +175,16 @@ Number of internal parameters used (complex number is a tuple).
 	static constexpr int N = 2
 
 Group transformations are 2x2 matrices.
+
+.. index:: pair: variable; Dim
+.. _doxid-class_sophus_1_1_rx_s_o2_base_1a449ee7e56526785dbdd3f477c7cfa482:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int Dim = 2
+
+Points are 2-dimensional.
 
 Methods
 -------

@@ -83,6 +83,7 @@ Inherited Members
 		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_s_o3_base_1af7f4a85af50fbb862737c1bae89cb285>` = 3;
 		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_s_o3_base_1adcced501092a9e6652ea9998b179f860>` = 4;
 		static constexpr int :ref:`N<doxid-class_sophus_1_1_s_o3_base_1ab80bb53a6a6dd721c668ac55e8bffa15>` = 3;
+		static constexpr int :ref:`Dim<doxid-class_sophus_1_1_s_o3_base_1a0da207bbbf7a8118c4249a2ba42242e3>` = 3;
 
 		// methods
 	

@@ -42,6 +42,7 @@ Overview
 		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_cartesian_base_1aaa5be411938975489ae7cca50167d805>` = M;
 		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_cartesian_base_1af311567722d2b203637c15899eaedd05>` = M;
 		static constexpr int :ref:`N<doxid-class_sophus_1_1_cartesian_base_1a704864bf4541cb672ea9c862c3d5558f>` = M + 1;
+		static constexpr int :target:`Dim<doxid-class_sophus_1_1_cartesian_base_1a981c781e115ec24b5677e8ad2ed05167>` = M;
 
 		// methods
 	
@@ -109,7 +110,7 @@ On the other hand, Cartesian(M) can be seen as a special case of SE(M) with iden
 
 The purpose of this class is two-fold:
 
-* for educational purpose, to highlight how Lie groups genereliza over Euclidean vector spaces.
+* for educational purpose, to highlight how Lie groups generalize over Euclidean vector spaces.
 
 * to be used in templated/generic algorithms (such as Sophus::Spline) which are implemented against the Lie group interface.
 

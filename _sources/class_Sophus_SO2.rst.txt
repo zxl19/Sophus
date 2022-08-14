@@ -64,6 +64,7 @@ Overview
 		static SO2<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`> :ref:`exp<doxid-class_sophus_1_1_s_o2_1a680272fa1fd8c5591890bf044baa0d6f>`(:ref:`Tangent<doxid-class_sophus_1_1_s_o2_1aa736bce5fd6ca327d9162bd04d5254ab>` const& theta);
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_1a1e4f748d382d9ec512b0b29110ada096>`, :ref:`DoF<doxid-class_sophus_1_1_s_o2_1a913ab6b6d1788ad8c5824759c3551b63>`> :ref:`Dx_exp_x<doxid-class_sophus_1_1_s_o2_1a202ce061962f8917bccd6b8c8c1abf23>`(:ref:`Tangent<doxid-class_sophus_1_1_s_o2_1aa736bce5fd6ca327d9162bd04d5254ab>` const& theta);
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_1a1e4f748d382d9ec512b0b29110ada096>`, :ref:`DoF<doxid-class_sophus_1_1_s_o2_1a913ab6b6d1788ad8c5824759c3551b63>`> :ref:`Dx_exp_x_at_0<doxid-class_sophus_1_1_s_o2_1ae7f87cb7559a551991db0d28e942bef3>`();
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`, 2, :ref:`DoF<doxid-class_sophus_1_1_s_o2_1a913ab6b6d1788ad8c5824759c3551b63>`> :ref:`Dx_exp_x_times_point_at_0<doxid-class_sophus_1_1_s_o2_1afdfed8ebd061c29169eec6eda3b608ad>`(:ref:`Point<doxid-class_sophus_1_1_s_o2_1adc0c883d16673a01978351aff2c36e65>` const& point);
 		static :ref:`Transformation<doxid-class_sophus_1_1_s_o2_1a7cfa471521686013483a170682d01504>` :ref:`Dxi_exp_x_matrix_at_0<doxid-class_sophus_1_1_s_o2_1af609e3651b87b0b8f63c8cd9d7f2093e>`(int);
 		static :ref:`Transformation<doxid-class_sophus_1_1_s_o2_1a7cfa471521686013483a170682d01504>` :ref:`generator<doxid-class_sophus_1_1_s_o2_1a86823b7ee6608eda53783ebcdf9ba56a>`();
 		static :ref:`Transformation<doxid-class_sophus_1_1_s_o2_1a7cfa471521686013483a170682d01504>` :ref:`hat<doxid-class_sophus_1_1_s_o2_1a6edca804182226f10afeee4a218ef67b>`(:ref:`Tangent<doxid-class_sophus_1_1_s_o2_1aa736bce5fd6ca327d9162bd04d5254ab>` const& theta);
@@ -242,6 +243,16 @@ Returns derivative of exp(x) wrt. x.
 	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_o2_1a1e4f748d382d9ec512b0b29110ada096>`, :ref:`DoF<doxid-class_sophus_1_1_s_o2_1a913ab6b6d1788ad8c5824759c3551b63>`> Dx_exp_x_at_0()
 
 Returns derivative of exp(x) wrt. x_i at x=0.
+
+.. index:: pair: function; Dx_exp_x_times_point_at_0
+.. _doxid-class_sophus_1_1_s_o2_1afdfed8ebd061c29169eec6eda3b608ad:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_o2_1acca9bfebc6024a3cc0714778e1f21145>`, 2, :ref:`DoF<doxid-class_sophus_1_1_s_o2_1a913ab6b6d1788ad8c5824759c3551b63>`> Dx_exp_x_times_point_at_0(:ref:`Point<doxid-class_sophus_1_1_s_o2_1adc0c883d16673a01978351aff2c36e65>` const& point)
+
+Returns derivative of exp(x) \* p wrt. x_i at x=0.
 
 .. index:: pair: function; Dxi_exp_x_matrix_at_0
 .. _doxid-class_sophus_1_1_s_o2_1af609e3651b87b0b8f63c8cd9d7f2093e:

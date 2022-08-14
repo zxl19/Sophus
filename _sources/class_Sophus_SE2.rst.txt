@@ -72,6 +72,7 @@ Overview
 	
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_1a8445ea8e0f28fe66d572389aa179b083>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_1a4c27687b19195e641e02fae482425c63>`> :ref:`Dx_exp_x<doxid-class_sophus_1_1_s_e2_1ab4df81f3c8d15ec39b62188e58b13882>`(:ref:`Tangent<doxid-class_sophus_1_1_s_e2_1a4738d92a3090f7de2ccd9be5a43e4756>` const& upsilon_theta);
 		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_1a8445ea8e0f28fe66d572389aa179b083>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_1a4c27687b19195e641e02fae482425c63>`> :ref:`Dx_exp_x_at_0<doxid-class_sophus_1_1_s_e2_1a8744d7292505dbdcfea25769a61c0890>`();
+		static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`, 2, :ref:`DoF<doxid-class_sophus_1_1_s_e2_1a4c27687b19195e641e02fae482425c63>`> :ref:`Dx_exp_x_times_point_at_0<doxid-class_sophus_1_1_s_e2_1aa0ac9c8c02e19627db4d6cc7e34e9d77>`(:ref:`Point<doxid-class_sophus_1_1_s_e2_1ac9e90df436a4c125bfb0246f89c3c33d>` const& point);
 		static :ref:`Transformation<doxid-class_sophus_1_1_s_e2_1a93a0f56a1ad1273418b8d20642a6f26e>` :ref:`Dxi_exp_x_matrix_at_0<doxid-class_sophus_1_1_s_e2_1ab32d7b505cab06369b0e11ebf0bacae3>`(int i);
 		static SE2<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`> :ref:`exp<doxid-class_sophus_1_1_s_e2_1a651521508ca5e3fce30cde748d56b265>`(:ref:`Tangent<doxid-class_sophus_1_1_s_e2_1a4738d92a3090f7de2ccd9be5a43e4756>` const& a);
 	
@@ -304,6 +305,16 @@ Returns derivative of exp(x) wrt. x.
 	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`, :ref:`num_parameters<doxid-class_sophus_1_1_s_e2_1a8445ea8e0f28fe66d572389aa179b083>`, :ref:`DoF<doxid-class_sophus_1_1_s_e2_1a4c27687b19195e641e02fae482425c63>`> Dx_exp_x_at_0()
 
 Returns derivative of exp(x) wrt. x_i at x=0.
+
+.. index:: pair: function; Dx_exp_x_times_point_at_0
+.. _doxid-class_sophus_1_1_s_e2_1aa0ac9c8c02e19627db4d6cc7e34e9d77:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_s_e2_1a47dd966109754975f2611d7d1254d2d8>`, 2, :ref:`DoF<doxid-class_sophus_1_1_s_e2_1a4c27687b19195e641e02fae482425c63>`> Dx_exp_x_times_point_at_0(:ref:`Point<doxid-class_sophus_1_1_s_e2_1ac9e90df436a4c125bfb0246f89c3c33d>` const& point)
+
+Returns derivative of exp(x) \* p wrt. x_i at x=0.
 
 .. index:: pair: function; Dxi_exp_x_matrix_at_0
 .. _doxid-class_sophus_1_1_s_e2_1ab32d7b505cab06369b0e11ebf0bacae3:

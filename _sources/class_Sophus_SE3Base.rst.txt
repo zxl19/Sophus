@@ -44,6 +44,7 @@ Overview
 		static constexpr int :ref:`DoF<doxid-class_sophus_1_1_s_e3_base_1a185c5b140a0815351de44c4ea5d89103>` = 6;
 		static constexpr int :ref:`num_parameters<doxid-class_sophus_1_1_s_e3_base_1ac0ee11a7faadafa313b906270cee545b>` = 7;
 		static constexpr int :ref:`N<doxid-class_sophus_1_1_s_e3_base_1ac3e6d2440d5bcf63f9e1bfda254d40de>` = 4;
+		static constexpr int :ref:`Dim<doxid-class_sophus_1_1_s_e3_base_1aac77b54393f6f9b319a77b2cc18f90bf>` = 3;
 
 		// methods
 	
@@ -166,6 +167,16 @@ Number of internal parameters used (4-tuple for quaternion, three for translatio
 	static constexpr int N = 4
 
 Group transformations are 4x4 matrices.
+
+.. index:: pair: variable; Dim
+.. _doxid-class_sophus_1_1_s_e3_base_1aac77b54393f6f9b319a77b2cc18f90bf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static constexpr int Dim = 3
+
+Points are 3-dimensional.
 
 Methods
 -------

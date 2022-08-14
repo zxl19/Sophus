@@ -35,6 +35,7 @@ Overview
 		static constexpr int :target:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>` = Base::DoF;
 		static constexpr int :target:`num_parameters<doxid-class_sophus_1_1_cartesian_1aa2b8bbcb1719131acd353d0c212b217c>` = Base::num_parameters;
 		static constexpr int :target:`N<doxid-class_sophus_1_1_cartesian_1ac87575b5d687092f6d60b34972ac03e0>` = Base::N;
+		static constexpr int :target:`Dim<doxid-class_sophus_1_1_cartesian_1a760e271ed2bc353e893cd4af005416a6>` = Base::Dim;
 
 		// construction
 	
@@ -60,6 +61,7 @@ Overview
 	
 		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, :ref:`num_parameters<doxid-class_sophus_1_1_cartesian_1aa2b8bbcb1719131acd353d0c212b217c>`, :ref:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>`> :ref:`Dx_exp_x_at_0<doxid-class_sophus_1_1_cartesian_1a24138afde08bf74917e2c43f3ebcaddf>`();
 		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, :ref:`num_parameters<doxid-class_sophus_1_1_cartesian_1aa2b8bbcb1719131acd353d0c212b217c>`, :ref:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>`> :ref:`Dx_exp_x<doxid-class_sophus_1_1_cartesian_1a2962313946d4d5740d34a6cb66d10d99>`(:ref:`Tangent<doxid-class_sophus_1_1_cartesian_1a1d96591bf4808659c152993e013fd428>` const&);
+		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, :ref:`Dim<doxid-class_sophus_1_1_cartesian_1a760e271ed2bc353e893cd4af005416a6>`, :ref:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>`> :ref:`Dx_exp_x_times_point_at_0<doxid-class_sophus_1_1_cartesian_1adf2342c885ca2cdc36e9e4aaac3dfbc3>`(:ref:`Point<doxid-class_sophus_1_1_cartesian_1ae1a024013b3b5373ef8d51cc353b54d2>` const&);
 		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Transformation<doxid-class_sophus_1_1_cartesian_1a961bae17ea949338b107ffb6ede3efd1>` :ref:`Dxi_exp_x_matrix_at_0<doxid-class_sophus_1_1_cartesian_1acd60127f1f57adddb835e274cdd9708d>`(int i);
 		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Transformation<doxid-class_sophus_1_1_cartesian_1a961bae17ea949338b107ffb6ede3efd1>` :ref:`generator<doxid-class_sophus_1_1_cartesian_1af7e540f1a0127ed3844c5fd4350344e5>`(int i);
 		static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` Cartesian<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, M> :ref:`exp<doxid-class_sophus_1_1_cartesian_1a8d299736116477316f6af158ad39a35d>`(:ref:`Tangent<doxid-class_sophus_1_1_cartesian_1a1d96591bf4808659c152993e013fd428>` const& a);
@@ -211,6 +213,16 @@ Returns derivative of exp(x) wrt. x.
 	static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, :ref:`num_parameters<doxid-class_sophus_1_1_cartesian_1aa2b8bbcb1719131acd353d0c212b217c>`, :ref:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>`> Dx_exp_x(:ref:`Tangent<doxid-class_sophus_1_1_cartesian_1a1d96591bf4808659c152993e013fd428>` const&)
 
 Returns derivative of exp(x) wrt. x_i at x=0.
+
+.. index:: pair: function; Dx_exp_x_times_point_at_0
+.. _doxid-class_sophus_1_1_cartesian_1adf2342c885ca2cdc36e9e4aaac3dfbc3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static :ref:`SOPHUS_FUNC<doxid-common_8hpp_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Sophus::Matrix<doxid-namespace_sophus_1a6da48bb60b569fdd4619fcd8f5fb2498>`<:ref:`Scalar<doxid-class_sophus_1_1_cartesian_1af99d599b7c3aa3e6da13d25f446a2dd6>`, :ref:`Dim<doxid-class_sophus_1_1_cartesian_1a760e271ed2bc353e893cd4af005416a6>`, :ref:`DoF<doxid-class_sophus_1_1_cartesian_1a104e9531612b2f67f37d5adfb1d6659a>`> Dx_exp_x_times_point_at_0(:ref:`Point<doxid-class_sophus_1_1_cartesian_1ae1a024013b3b5373ef8d51cc353b54d2>` const&)
+
+Returns derivative of exp(x) \* p wrt. x_i at x=0.
 
 .. index:: pair: function; Dxi_exp_x_matrix_at_0
 .. _doxid-class_sophus_1_1_cartesian_1acd60127f1f57adddb835e274cdd9708d:

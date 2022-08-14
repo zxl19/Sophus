@@ -160,6 +160,7 @@
     <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-class-sophus-1-1-cartesian-base-1aaa5be411938975489ae7cca50167d805"><span class="std std-ref">DoF</span></a><span></span> <span class="o">=</span> <span class="n">M</span><span class="p">;</span>
     <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-class-sophus-1-1-cartesian-base-1af311567722d2b203637c15899eaedd05"><span class="std std-ref">num_parameters</span></a><span></span> <span class="o">=</span> <span class="n">M</span><span class="p">;</span>
     <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="#doxid-class-sophus-1-1-cartesian-base-1a704864bf4541cb672ea9c862c3d5558f"><span class="std std-ref">N</span></a><span></span> <span class="o">=</span> <span class="n">M</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-class-sophus-1-1-cartesian-base-1a981c781e115ec24b5677e8ad2ed05167">Dim</span><span></span> <span class="o">=</span> <span class="n">M</span><span class="p">;</span>
 
     <span class="c1">// methods</span>
 
@@ -221,7 +222,7 @@
 <p>On the other hand, Cartesian(M) can be seen as a special case of SE(M) with identity rotation, and hence represents pure translation.</p>
 <p>The purpose of this class is two-fold:</p>
 <ul class="simple">
-<li><p>for educational purpose, to highlight how Lie groups genereliza over Euclidean vector spaces.</p></li>
+<li><p>for educational purpose, to highlight how Lie groups generalize over Euclidean vector spaces.</p></li>
 <li><p>to be used in templated/generic algorithms (such as Sophus::Spline) which are implemented against the Lie group interface.</p></li>
 </ul>
 <p>Obviously, Cartesian(M) can just be represented as a M-tuple.</p>
