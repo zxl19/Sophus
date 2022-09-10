@@ -1,0 +1,335 @@
+.. index:: pair: class; sophus::MutImage
+.. _doxid-classsophus_1_1_mut_image:
+
+template class sophus::MutImage
+===============================
+
+.. toctree::
+	:hidden:
+
+	struct_sophus_MutImage_Deleter.rst
+	struct_sophus_MutImage_TypedDeleterImpl.rst
+
+Overview
+~~~~~~~~
+
+A image with write access to pixels and exclusive ownership. There is no copy constr / copy assignment, but move constr / assignment. :ref:`More...<details-classsophus_1_1_mut_image>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image.h>
+	
+	template <
+		class PixelT,
+		template<typename> class AllocatorT = Eigen::aligned_allocator
+		>
+	class MutImage: public :ref:`sophus::MutImageView<doxid-classsophus_1_1_mut_image_view>` {
+	public:
+		// structs
+	
+		struct :ref:`Deleter<doxid-structsophus_1_1_mut_image_1_1_deleter>`;
+		struct :ref:`TypedDeleterImpl<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl>`;
+
+		// construction
+	
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image_1aeddeddd4e61c2593b2c1b9b68fde1752>`();
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image_1ac14215aa07a55f2346401ec21f9ef627>`(:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` shape);
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image_1af4effd4f1deb670f5e618abdf281a88a>`(:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size);
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image_1af0f12255d8b0bf36bafaa0c503dc6ad4>`(const MutImage<PixelT>& other);
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image_1a448bdaad72204a7e4bcbd2075848bd0e>`(MutImage&& img);
+
+		// methods
+	
+		MutImage& :ref:`operator=<doxid-classsophus_1_1_mut_image_1aa26a6dfa8472bf7b2bc54399b941a224>`(const MutImage&);
+		MutImage& :ref:`operator=<doxid-classsophus_1_1_mut_image_1a4c28d0289b706f8fd858eda7c695284a>`(MutImage&& img);
+		:ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<PixelT> :target:`mutView<doxid-classsophus_1_1_mut_image_1a04e711d1370077d113d2398dcac72bf2>`() const;
+		void :ref:`swap<doxid-classsophus_1_1_mut_image_1a000c48f19cb2fe041b8f6c4cd33ddee1>`(MutImage& img);
+		void :ref:`reset<doxid-classsophus_1_1_mut_image_1a3766846e503a146d4f3a7e9743ca5f93>`();
+		static MutImage :ref:`makeCopyFrom<doxid-classsophus_1_1_mut_image_1a557b1a6713e4e60a20b0ee5c26a4dd22>`(const :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT>& view);
+	
+		template <class OtherPixelT, class UnaryOperationT>
+		static MutImage :ref:`makeFromTransform<doxid-classsophus_1_1_mut_image_1aa7c53dee089fc06edd6fa9205b9cbda4>`(
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<OtherPixelT> view,
+			const UnaryOperationT& unary_op
+			);
+	
+		template <class LhsPixelT, class RhsPixelT, class BinaryOperationT>
+		static MutImage :ref:`makeFromTransform<doxid-classsophus_1_1_mut_image_1a3e42be966944b787f2ebb4a7b187a487>`(
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<LhsPixelT> lhs,
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<RhsPixelT> rhs,
+			const BinaryOperationT& binary_op
+			);
+
+	protected:
+		// fields
+	
+		std::shared_ptr<uint8_t> :ref:`shared_<doxid-classsophus_1_1_mut_image_1a7c3c83d8ee54d14fcb5c2f12eeef2aee>`;
+
+		// methods
+	
+		:ref:`Deleter<doxid-structsophus_1_1_mut_image_1_1_deleter>` :ref:`leakAndReturnDeleter<doxid-classsophus_1_1_mut_image_1aab0b555e03bd1cae4d7a76fe4cc76569>`();
+	};
+
+Inherited Members
+-----------------
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-inherited-code-block
+
+	public:
+		// methods
+	
+		bool :ref:`isEmpty<doxid-structsophus_1_1_image_view_1aaa668b0af726468b3bd2683664d2b436>`() const;
+		bool :ref:`isContiguous<doxid-structsophus_1_1_image_view_1a1bd56b9a976edfb97da4641530a4d884>`();
+		:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` const& :ref:`imageSize<doxid-structsophus_1_1_image_view_1a9c91a9b91e771adae8f3d4ca84a94fd9>`() const;
+		:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` const& :ref:`shape<doxid-structsophus_1_1_image_view_1ad16825882e671a05bf225b486e3a2353>`() const;
+		int :ref:`width<doxid-structsophus_1_1_image_view_1ae2211bc7c2f77c77865b3298dfa5b483>`() const;
+		int :ref:`height<doxid-structsophus_1_1_image_view_1a854204b8493083da1d167255bddd2460>`() const;
+		size_t :ref:`pitchBytes<doxid-structsophus_1_1_image_view_1a2946b7c9af8c0854a6c42448c81c325f>`() const;
+		bool :ref:`colInBounds<doxid-structsophus_1_1_image_view_1a0c4e617b87689307dfa800ee448b9a49>`(int u) const;
+		bool :ref:`rowInBounds<doxid-structsophus_1_1_image_view_1a12131b7c9063a7d89421e73faaa95cfb>`(int v) const;
+		PixelT const* :ref:`rowPtr<doxid-structsophus_1_1_image_view_1a633b273fc5bdbd197e3abc6b569e0391>`(int v) const;
+		PixelT const& :ref:`checked<doxid-structsophus_1_1_image_view_1aa409f1b7cc9dc14f0d366f44fb38d5c3>`(int u, int v) const;
+		PixelT const& :ref:`checked<doxid-structsophus_1_1_image_view_1a255adf8e1e0aecca27e2df720951c586>`(Eigen::Vector2i uv) const;
+		PixelT const& :ref:`unchecked<doxid-structsophus_1_1_image_view_1ae44c5748efbf4b7c0c90b85d4ac02976>`(int u, int v) const;
+		PixelT const& :ref:`unchecked<doxid-structsophus_1_1_image_view_1a63f9e2ac00674d04598e2eba15a4b9af>`(Eigen::Vector2i uv) const;
+		PixelT const* :ref:`data<doxid-structsophus_1_1_image_view_1a8571da7d58ef1225854f1a29addd4de2>`() const;
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>` :ref:`subview<doxid-structsophus_1_1_image_view_1ac65af4ec779959aa561ac57cd9b30a74>`(Eigen::Vector2i uv, :ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size) const;
+	
+		template <class ReduceOpT, class ValT>
+		ValT :ref:`reduce<doxid-structsophus_1_1_image_view_1aae8aa511af60dcf9fa820228ff2c59e5>`(
+			const ReduceOpT& reduce_op,
+			ValT val = ValT{}
+			) const;
+	
+		template <class ShortCircuitReduceOpT, class ValT>
+		ValT :ref:`shortCircuitReduce<doxid-structsophus_1_1_image_view_1afcd53d4b256323275b0112949dea1387>`(
+			const ShortCircuitReduceOpT& short_circuit_reduce_op,
+			ValT val = ValT{}
+			) const;
+	
+		bool :ref:`operator==<doxid-structsophus_1_1_image_view_1a604bea6b9f4332c367fe6a2da33e53bf>`(const :ref:`ImageView<doxid-structsophus_1_1_image_view>`& rhs);
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> :ref:`view<doxid-classsophus_1_1_mut_image_view_1aeff2707d7d803ee69c01d017a65e9905>`() const;
+		void :ref:`copyDataFrom<doxid-classsophus_1_1_mut_image_view_1a8d1c99e38144096995f80049fa14b4ca>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> view) const;
+		PixelT* :ref:`mutRowPtr<doxid-classsophus_1_1_mut_image_view_1acc8c79be6bcf6705518da71d41c725cf>`(int v) const;
+		PixelT& :ref:`checkedMut<doxid-classsophus_1_1_mut_image_view_1a8ddaa54665fc2173f1692481caa2a695>`(int u, int v) const;
+		PixelT& :ref:`checkedMut<doxid-classsophus_1_1_mut_image_view_1af9d16e4b89074f49e4910759ab9f4c41>`(Eigen::Vector2i uv) const;
+		PixelT& :ref:`uncheckedMut<doxid-classsophus_1_1_mut_image_view_1a48aabc7deb35765eade7758d6caa472e>`(int u, int v) const;
+		PixelT& :ref:`uncheckedMut<doxid-classsophus_1_1_mut_image_view_1a3e6c916db3f33f6cc78d34390e91798d>`(Eigen::Vector2i uv) const;
+	
+		template <class UnaryOperationT>
+		void :ref:`mutate<doxid-classsophus_1_1_mut_image_view_1a83241706e6879e29c17d8653e8d87294>`(const UnaryOperationT& unary_op) const;
+	
+		template <class OtherPixelT, class UnaryOperationT>
+		void :ref:`transformFrom<doxid-classsophus_1_1_mut_image_view_1a258f7c16e5eced544c89b67addd17b5e>`(
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<OtherPixelT> view,
+			const UnaryOperationT& unary_op
+			) const;
+	
+		template <class LhsPixelT, class RhsPixelT, class BinaryOperationT>
+		void :ref:`transformFrom<doxid-classsophus_1_1_mut_image_view_1ab5147bff52d5ddd5400863c0958faef8>`(
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<LhsPixelT> lhs,
+			:ref:`ImageView<doxid-structsophus_1_1_image_view>`<RhsPixelT> rhs,
+			const BinaryOperationT& binary_op
+			) const;
+	
+		void :ref:`fill<doxid-classsophus_1_1_mut_image_view_1a988479e79027c810c9f5f767a87ce48a>`(const PixelT& val) const;
+		PixelT* :ref:`mutData<doxid-classsophus_1_1_mut_image_view_1a12892650b7ba468971b0446cfa36ceb6>`() const;
+		:ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>` :ref:`mutSubview<doxid-classsophus_1_1_mut_image_view_1ae613259588daec1516a3d990619ba256>`(Eigen::Vector2i uv, :ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size) const;
+		static :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>` :ref:`unsafeConstCast<doxid-classsophus_1_1_mut_image_view_1a30e67ab5bb0322544de670dff40c81d8>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> view);
+
+	protected:
+		// fields
+	
+		:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` :ref:`shape_<doxid-structsophus_1_1_image_view_1a2c341454e66c51e706df6631597c97d2>` = {};
+		PixelT const* :ref:`ptr_<doxid-structsophus_1_1_image_view_1a104b4d2a3c41b20973235c6d5e8c1d86>` = nullptr;
+
+		// methods
+	
+		void :ref:`setViewToEmpty<doxid-structsophus_1_1_image_view_1aba91c44d559dac0fdc9bda95c4a47d98>`();
+
+.. _details-classsophus_1_1_mut_image:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+A image with write access to pixels and exclusive ownership. There is no copy constr / copy assignment, but move constr / assignment.
+
+Content from a :ref:`MutImage <doxid-classsophus_1_1_mut_image>` can be moved into an :ref:`Image <doxid-classsophus_1_1_image>`.
+
+Type is nullable. In that case ``this->:ref:`isEmpty() <doxid-structsophus_1_1_image_view_1aaa668b0af726468b3bd2683664d2b436>``` is true.
+
+Similar to Pangolin::ManagedImage.
+
+Fields
+------
+
+.. index:: pair: variable; shared_
+.. _doxid-classsophus_1_1_mut_image_1a7c3c83d8ee54d14fcb5c2f12eeef2aee:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::shared_ptr<uint8_t> shared_
+
+:ref:`MutImage <doxid-classsophus_1_1_mut_image>` has unique ownership, and hence behaves like a unique_ptr. As an implementation detail, we use a shared_ptr here, so it will be easy to support moving a :ref:`Image <doxid-classsophus_1_1_image>` with unique ownership at runtime into a :ref:`MutImage <doxid-classsophus_1_1_mut_image>`. Class invariant: shared\_.use_count() == 0 \|\| shared\_.use_count() == 1.
+
+Construction
+------------
+
+.. index:: pair: function; MutImage
+.. _doxid-classsophus_1_1_mut_image_1aeddeddd4e61c2593b2c1b9b68fde1752:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage()
+
+Constructs empty image.
+
+.. index:: pair: function; MutImage
+.. _doxid-classsophus_1_1_mut_image_1ac14215aa07a55f2346401ec21f9ef627:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage(:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` shape)
+
+Creates new image with given shape.
+
+If shape is not empty, memory allocation will happen.
+
+.. index:: pair: function; MutImage
+.. _doxid-classsophus_1_1_mut_image_1af4effd4f1deb670f5e618abdf281a88a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage(:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size)
+
+Creates new contiguous image with given size.
+
+If shape is not empty, memory allocation will happen.
+
+.. index:: pair: function; MutImage
+.. _doxid-classsophus_1_1_mut_image_1af0f12255d8b0bf36bafaa0c503dc6ad4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage(const MutImage<PixelT>& other)
+
+Not copy constructable.
+
+.. index:: pair: function; MutImage
+.. _doxid-classsophus_1_1_mut_image_1a448bdaad72204a7e4bcbd2075848bd0e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage(MutImage&& img)
+
+Move constructor - is cheap - no memory allocations.
+
+Methods
+-------
+
+.. index:: pair: function; operator=
+.. _doxid-classsophus_1_1_mut_image_1aa26a6dfa8472bf7b2bc54399b941a224:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage& operator=(const MutImage&)
+
+Not copy assignable.
+
+.. index:: pair: function; operator=
+.. _doxid-classsophus_1_1_mut_image_1a4c28d0289b706f8fd858eda7c695284a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	MutImage& operator=(MutImage&& img)
+
+Move assignment.
+
+.. index:: pair: function; swap
+.. _doxid-classsophus_1_1_mut_image_1a000c48f19cb2fe041b8f6c4cd33ddee1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void swap(MutImage& img)
+
+Swaps img and this.
+
+.. index:: pair: function; reset
+.. _doxid-classsophus_1_1_mut_image_1a3766846e503a146d4f3a7e9743ca5f93:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void reset()
+
+Clears image.
+
+If image was not empty, memory deallocations will happen.
+
+.. index:: pair: function; makeCopyFrom
+.. _doxid-classsophus_1_1_mut_image_1a557b1a6713e4e60a20b0ee5c26a4dd22:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static MutImage makeCopyFrom(const :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT>& view)
+
+Creates contiguous copy from view.
+
+If view is not empty, memory allocation will happen.
+
+.. index:: pair: function; makeFromTransform
+.. _doxid-classsophus_1_1_mut_image_1aa7c53dee089fc06edd6fa9205b9cbda4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherPixelT, class UnaryOperationT>
+	static MutImage makeFromTransform(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<OtherPixelT> view,
+		const UnaryOperationT& unary_op
+		)
+
+Creates new :ref:`MutImage <doxid-classsophus_1_1_mut_image>` given view and unary transform function.
+
+mut_image(u, v) = unary_op(view(u, v));
+
+.. index:: pair: function; makeFromTransform
+.. _doxid-classsophus_1_1_mut_image_1a3e42be966944b787f2ebb4a7b187a487:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class LhsPixelT, class RhsPixelT, class BinaryOperationT>
+	static MutImage makeFromTransform(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<LhsPixelT> lhs,
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<RhsPixelT> rhs,
+		const BinaryOperationT& binary_op
+		)
+
+Creates new :ref:`MutImage <doxid-classsophus_1_1_mut_image>` given two views and binary transform function.
+
+mut_image(u, v) = binary_op(lhs(u, v), rhs(u, v));
+
+.. index:: pair: function; leakAndReturnDeleter
+.. _doxid-classsophus_1_1_mut_image_1aab0b555e03bd1cae4d7a76fe4cc76569:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`Deleter<doxid-structsophus_1_1_mut_image_1_1_deleter>` leakAndReturnDeleter()
+
+Leaks memory and returns deleter.
+

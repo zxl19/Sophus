@@ -1,0 +1,20 @@
+.. index:: pair: struct; farm_ng::HasType<T, std::variant<Us...>>
+.. _doxid-structfarm__ng_1_1_has_type_3_01_t_00_01std_1_1variant_3_01_us_8_8_8_01_4_01_4:
+
+template struct farm_ng::HasType<T, std::variant<Us...>>
+========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <variant_utils.h>
+	
+	template <class T, class... Us>
+	struct HasType<T, std::variant<Us...>>: public std::disjunction< std::is_same< T, Us >... > {
+	};

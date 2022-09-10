@@ -1,0 +1,24 @@
+.. index:: pair: struct; farm_ng::ErrorDetail
+.. _doxid-structfarm__ng_1_1_error_detail:
+
+struct farm_ng::ErrorDetail
+===========================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <logger.h>
+	
+	struct ErrorDetail {
+		// fields
+	
+		std::string :target:`file<doxid-structfarm__ng_1_1_error_detail_1a676f2059f25fb1fed395ea06565f9c3e>`;
+		int :target:`line<doxid-structfarm__ng_1_1_error_detail_1ad21d388c5b6669dc2ccad72be33947d1>`;
+		std::string :target:`msg<doxid-structfarm__ng_1_1_error_detail_1a970435a052ac91fda8ef4f552fbdd9cb>`;
+	};

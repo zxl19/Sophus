@@ -1,0 +1,67 @@
+.. index:: pair: class; sophus::Tests
+.. _doxid-classsophus_1_1_tests:
+
+template class sophus::Tests
+============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	template <class ScalarT>
+	class Tests {
+	public:
+		// typedefs
+	
+		using :target:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` = typename :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`, 2>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` = typename :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`, 2>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a0dcb73571151bbd50ab68cd1d8de64ca>` = typename :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`, 3>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1a791373c23000d027bdaf34f5922a44df>` = typename :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`, 3>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`RotationMatrixType<doxid-classsophus_1_1_tests_1a4bbcd93bf967b4931996322ae55e8a86>` = typename :ref:`So2<doxid-classsophus_1_1_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>::Transformation ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1aebecb29057a598fc47ac215f6a846800>` = typename :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1a7a907a6e00bb3f0a87f12b212ff11180>` = typename :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`RotationMatrixType<doxid-classsophus_1_1_tests_1aaa809f0acbfa7d138e4e35068a4df35b>` = typename :ref:`So3<doxid-classsophus_1_1_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>::Transformation ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a8d105b9845fd3dbf0eac91a7c93ec6eb>` = typename :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1ae23dd6bb6bc7b90e49bcbe9d4010abef>` = typename :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`SE2Type<doxid-classsophus_1_1_tests_1ab847c0fb61b7d1444799f206a439aee2>` = :ref:`Se2<doxid-classsophus_1_1_se2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a1e42eb32acc013e2f0ae9fc343c8bbaf>` = typename :ref:`Se2<doxid-classsophus_1_1_se2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1abef48e157628739e9a09d73920ca37ab>` = typename :ref:`Se2<doxid-classsophus_1_1_se2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`SE3Type<doxid-classsophus_1_1_tests_1a784740b66f208f5529d80c14457b5254>` = :ref:`Se3<doxid-classsophus_1_1_se3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a2c34ae4f09f12ede8acd97a99d49b0a1>` = typename :ref:`Se3<doxid-classsophus_1_1_se3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1ada25ea5b50da89e332e508f8d16eb2ff>` = typename :ref:`Se3<doxid-classsophus_1_1_se3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`Sim2Type<doxid-classsophus_1_1_tests_1a0c2de25440b285e7bbfea1ea47f52c3e>` = :ref:`Sim2<doxid-classsophus_1_1_sim2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`RxSO2Type<doxid-classsophus_1_1_tests_1a4fdb8e288b13331726a259efc5fe2b83>` = :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a8ad15105f3a16ae193cd4fd90b672163>` = typename :ref:`Sim2<doxid-classsophus_1_1_sim2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Vector2Type<doxid-classsophus_1_1_tests_1aa9f5917c76dc43801873145b45edb9d0>` = Eigen::Vector2<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1a45da76dca925418161c9c7de7556831a>` = typename :ref:`Sim2<doxid-classsophus_1_1_sim2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`Sim3Type<doxid-classsophus_1_1_tests_1afee9a122ba1cbf3f7a39e32703043c26>` = :ref:`Sim3<doxid-classsophus_1_1_sim3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`RxSO3Type<doxid-classsophus_1_1_tests_1ac2ecabef36ee9bd399d4f83dfb302b7a>` = :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1a7593bee71b00e333227ae1caca52aa06>` = typename :ref:`Sim3<doxid-classsophus_1_1_sim3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Vector4Type<doxid-classsophus_1_1_tests_1acded512958b3da501d8aeefe4d201e8a>` = Eigen::Vector4<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1abc625adf08cc0c45b09275c9c373f09b>` = typename :ref:`Sim3<doxid-classsophus_1_1_sim3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`SO2Type<doxid-classsophus_1_1_tests_1aaf13d7b6373df5ed11f016ada7db0fbd>` = :ref:`So2<doxid-classsophus_1_1_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1ae00a9b22ac40d4b9cd0145bbdb4017a4>` = typename :ref:`So2<doxid-classsophus_1_1_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1a971e82209633064ef7858168c234c690>` = typename :ref:`So2<doxid-classsophus_1_1_so2>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+		using :target:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>` = ScalarT ;
+		using :target:`SO3Type<doxid-classsophus_1_1_tests_1a35b4f450671cb86c8137afe5e53f75a0>` = :ref:`So3<doxid-classsophus_1_1_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`> ;
+		using :target:`Point<doxid-classsophus_1_1_tests_1af98cb00457bb4217020e649e82d354e8>` = typename :ref:`So3<doxid-classsophus_1_1_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Point<doxid-classsophus_1_1_tests_1a4c118cf49a6dba4851f8a2c69488d0ca>` ;
+		using :target:`Tangent<doxid-classsophus_1_1_tests_1ab261bf37b9073fc0efc5b7f6a831da10>` = typename :ref:`So3<doxid-classsophus_1_1_so3>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>:::ref:`Tangent<doxid-classsophus_1_1_tests_1acd1c90f2c34c644fa2941b6d50e7aed7>` ;
+
+		// fields
+	
+		const :ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>` :target:`k_pi<doxid-classsophus_1_1_tests_1a1b34204a68689086abe47aa25ff705e7>` = :ref:`kPi<doxid-namespacesophus_1aba152cfc28ddf3694c9d42c0067c7bd8>`<:ref:`Scalar<doxid-classsophus_1_1_tests_1a49a5ecb3b00031193b7920debaf27d55>`>;
+
+		// construction
+	
+		:target:`Tests<doxid-classsophus_1_1_tests_1a2282f04454ed94addd865bf7bb65de6c>`();
+
+		// methods
+	
+		void :target:`runAll<doxid-classsophus_1_1_tests_1a638d4b4fc2b97db7219e923cbf0d1112>`();
+	};

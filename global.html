@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Namespace &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace Eigen" href="namespace_Eigen.html" />
+    <link rel="prev" title="FARM_ENUM" href="page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Sophus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">C++ Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pysophus.html">Sympy API - Symbolic Sophus In Python</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.html">FARM_ENUM</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Global Namespace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ceres.html">namespace ceres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_farm_ng.html">namespace farm_ng</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_sophus.html">namespace sophus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_Garage.html">struct Garage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart.html">template struct RotationalPart&lt;sophus::SE3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-2.html">template struct RotationalPart&lt;sophus::Sim2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-3.html">template struct RotationalPart&lt;sophus::Sim3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-4.html">template struct RotationalPart&lt;sophus::SO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-5.html">template struct RotationalPart&lt;sophus::Se2F64&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-6.html">template struct RotationalPart&lt;sophus::RxSO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-7.html">template struct RotationalPart&lt;sophus::RxSO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-8.html">template struct RotationalPart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-9.html">template struct RotationalPart&lt;sophus::SO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_CompileOnlyTernaryCostFunctorExample.html">class CompileOnlyTernaryCostFunctorExample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_PosePointReprojFunctor.html">class PosePointReprojFunctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#macros">Macros</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Global Namespace</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/global.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="global"></span><section id="global-namespace">
+<span id="index-0"></span><h1>Global Namespace<a class="headerlink" href="#global-namespace" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_Eigen.html#doxid-namespace-eigen"><span class="std std-ref">Eigen</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_ceres.html#doxid-namespaceceres"><span class="std std-ref">ceres</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_farm_ng.html#doxid-namespacefarm-ng"><span class="std std-ref">farm_ng</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_farm_ng_details.html#doxid-namespacefarm-ng-1-1details"><span class="std std-ref">farm_ng::details</span></a><span></span><span class="p">;</span>
+<span class="k">namespace</span> <a class="reference internal" href="namespace_sophus.html#doxid-namespacesophus"><span class="std std-ref">sophus</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_sophus_experimental.html#doxid-namespacesophus-1-1experimental"><span class="std std-ref">sophus::experimental</span></a><span></span><span class="p">;</span>
+    <span class="k">namespace</span> <a class="reference internal" href="namespace_sophus_jet_helpers.html#doxid-namespacesophus-1-1jet-helpers"><span class="std std-ref">sophus::jet_helpers</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2rxso2-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2rxso3-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2se2-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2se3-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2sim2-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2sim3-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2so2-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-ceres-2so3-test-8cpp-1a9ad293cf315c33e96e60a5157b3f0642">StdVector</span><span></span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">aligned_allocator</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;&gt;</span> <span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_Garage.html#doxid-struct-garage"><span class="std std-ref">Garage</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart.html#doxid-struct-rotational-part-3-01sophus-1-1-s-e3d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::SE3d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-2.html#doxid-struct-rotational-part-3-01sophus-1-1-sim2d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::Sim2d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-3.html#doxid-struct-rotational-part-3-01sophus-1-1-sim3d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::Sim3d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-4.html#doxid-struct-rotational-part-3-01sophus-1-1-s-o2d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::SO2d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-5.html#doxid-struct-rotational-part-3-01sophus-1-1-se2-f64-01-4"><span class="std std-ref">RotationalPart&lt;sophus::Se2F64&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-6.html#doxid-struct-rotational-part-3-01sophus-1-1-rx-s-o2d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::RxSO2d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-7.html#doxid-struct-rotational-part-3-01sophus-1-1-rx-s-o3d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::RxSO3d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">LieGroupT</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-8.html#doxid-struct-rotational-part"><span class="std std-ref">RotationalPart</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_RotationalPart-9.html#doxid-struct-rotational-part-3-01sophus-1-1-s-o3d-01-4"><span class="std std-ref">RotationalPart&lt;sophus::SO3d&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_CompileOnlyTernaryCostFunctorExample.html#doxid-class-compile-only-ternary-cost-functor-example"><span class="std std-ref">CompileOnlyTernaryCostFunctorExample</span></a><span></span><span class="p">;</span>
+<span class="k">class</span> <a class="reference internal" href="class_PosePointReprojFunctor.html#doxid-class-pose-point-reproj-functor"><span class="std std-ref">PosePointReprojFunctor</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="n">farm_ng_core_logging</span> <span class="n">Console</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2logging-2-c-make-lists-8txt-1ae9d0fe9a759d6b11991107e5eb87a645">logging</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_logging</span> <span class="n">Console</span> <span class="n">string</span> <span class="n">format</span> <span class="n">and</span> <span class="n">CHECK</span> <span class="n">macros</span> <span class="n">No</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2logging-2-c-make-lists-8txt-1ad32cbabe686dda3c44b74bce7d921fc1">dependency</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_logging</span> <span class="n">Console</span> <span class="n">string</span> <span class="n">format</span> <span class="n">and</span> <span class="n">CHECK</span> <span class="n">macros</span> <span class="n">No</span> <span class="n">but</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2logging-2-c-make-lists-8txt-1aae8d03d7da003dfa2883668ae5a8d59f">libfmt</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1abadab92370a8b891a03eb4e0b0027c04">erase</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="n">string</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1a6dc5607b9bbdce30671f084e6c51bfd3">utils</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="n">string</span> <span class="n">file</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1a76d9d55ffe809b1729a6b0e2974261ff">system</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="n">string</span> <span class="n">file</span> <span class="n">threading</span> <span class="n">tools</span> <span class="n">and</span> <span class="n">other</span> <span class="n">general</span> <span class="n">purpose</span> <span class="n">miscellaneous</span> <span class="n">utilities</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1aa428a95978186ac8f8e106d2f7c894aa">Note</span><span></span><span class="p">;</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="n">string</span> <span class="n">file</span> <span class="n">threading</span> <span class="n">tools</span> <span class="n">and</span> <span class="n">other</span> <span class="n">general</span> <span class="n">purpose</span> <span class="n">miscellaneous</span> <span class="n">utilities</span> <span class="n">no</span> <span class="n">computer</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1ad9ef9d7c0a5f1e2374f787be2801fcde">vision</span><span></span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="kt">double</span> <span class="doxyrest-code-target target" id="doxid-camera-model-test-8cpp-1af76b1cbee6975410245bb3137a44df6a">kEps</span><span></span> <span class="o">=</span> <span class="mf">1e-5</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="n">sophus_ceres</span> <span class="doxyrest-code-target target" id="doxid-sophus-2ceres-2-c-make-lists-8txt-1a1b6967426351547a12d25fe268428413">set</span><span></span><span class="p">(</span><span class="n">sophus_ceres_src_prefixes</span> <span class="n">jet_helpers</span> <span class="n">manifold</span> <span class="n">typetraits</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2ceres-2-c-make-lists-8txt-1a6e4e945e3eb75a05c270cca2b3f5ebfa">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_ceres_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="n">sophus_core</span> <span class="doxyrest-code-target target" id="doxid-sophus-2core-2-c-make-lists-8txt-1afae7deaa65bc25dc95f1e764ecad9bb0">set</span><span></span><span class="p">(</span><span class="n">sophus_core_src_prefixes</span> <span class="n">common</span> <span class="n">types</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2core-2-c-make-lists-8txt-1a7c275d574d31fda402db2196b998a75c">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_core_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="n">sophus_experimental</span> <span class="doxyrest-code-target target" id="doxid-sophus-2experimental-2-c-make-lists-8txt-1a2fc11a12da70306d021b1fb64b28ded0">set</span><span></span><span class="p">(</span><span class="n">sophus_experimental_src_prefixes</span> <span class="n">least_squares</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2experimental-2-c-make-lists-8txt-1a8410648200c4dacaf188fd39cf2fd944">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_experimental_cpp</span> <span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">cpp</span><span class="p">);</span>
+<span class="n">h</span> <span class="doxyrest-code-target target" id="doxid-sophus-2experimental-2-c-make-lists-8txt-1aee639d91bba9081ec1dac675eb5cf757">endforeach</span><span></span><span class="p">();</span>
+<span class="n">sophus_geometry</span> <span class="doxyrest-code-target target" id="doxid-sophus-2geometry-2-c-make-lists-8txt-1add6801cc02627c8492b539fd8d344ab9">set</span><span></span><span class="p">(</span><span class="n">sophus_geometry_src_prefixes</span> <span class="n">fit_plane</span> <span class="n">inverse_depth</span> <span class="n">plane_conv</span> <span class="n">point_transform</span> <span class="n">projection</span> <span class="n">ray</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2geometry-2-c-make-lists-8txt-1a50242e876652039a0206205ebabfd3bd">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_geometry_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="n">sophus_image</span> <span class="doxyrest-code-target target" id="doxid-sophus-2image-2-c-make-lists-8txt-1a563a7f32ece22ae77b6d54d42c649a72">set</span><span></span><span class="p">(</span><span class="n">sophus_image_src_prefixes</span> <span class="n">image</span> <span class="n">image_size</span> <span class="n">image_types</span> <span class="n">image_view</span> <span class="n">runtime_image</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2image-2-c-make-lists-8txt-1af11fb813573ad109986ecf98ccb2adaf">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_image_cpp</span> <span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">cpp</span><span class="p">);</span>
+<span class="n">h</span> <span class="doxyrest-code-target target" id="doxid-sophus-2image-2-c-make-lists-8txt-1aa2423789072b14865a474daa0a308aa8">endforeach</span><span></span><span class="p">();</span>
+<span class="n">sophus_interp</span> <span class="doxyrest-code-target target" id="doxid-sophus-2interp-2-c-make-lists-8txt-1aff5d1981caca696d419071fbb75070b0">set</span><span></span><span class="p">(</span><span class="n">sophus_interp_src_prefixes</span> <span class="n">average</span> <span class="n">interpolate</span> <span class="n">spline</span> <span class="n">details</span><span class="o">/</span> <span class="n">interpolate_impl</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2interp-2-c-make-lists-8txt-1acdaea68dfc61fc6fb42c1318d563a985">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_interp_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2interp-2-c-make-lists-8txt-1a2ded3389667eff5031cad1f6263ef747">add_library</span><span></span><span class="p">(</span><span class="n">sophus</span><span class="o">::</span><span class="n">sophus_interp</span> <span class="n">ALIAS</span> <span class="n">sophus_interp</span><span class="p">);</span>
+<span class="n">sophus_lie</span> <span class="doxyrest-code-target target" id="doxid-sophus-2lie-2-c-make-lists-8txt-1a1f73ebe7de99fbaaabc5954909a55152">set</span><span></span><span class="p">(</span><span class="n">sophus_lie_src_prefixes</span> <span class="n">cartesian</span> <span class="n">rxso2</span> <span class="n">rxso3</span> <span class="n">se2</span> <span class="n">se3</span> <span class="n">sim2</span> <span class="n">sim3</span> <span class="n">so2</span> <span class="n">so3</span> <span class="n">details</span><span class="o">/</span> <span class="n">sim_impl</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2lie-2-c-make-lists-8txt-1a5888b75baff714bdc840ef924f0dc11c">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_lie_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="n">sophus_math</span> <span class="doxyrest-code-target target" id="doxid-sophus-2math-2-c-make-lists-8txt-1abf6d918598c601af34923cb1b92d7cf3">set</span><span></span><span class="p">(</span><span class="n">sophus_math_src_prefixes</span> <span class="n">rotation_matrix</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2math-2-c-make-lists-8txt-1a77c0274ce128c845869c4493057e522b">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_math_h</span> <span class="err">$</span><span class="p">{</span><span class="n">CMAKE_CURRENT_SOURCE_DIR</span><span class="p">}</span><span class="o">/</span><span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">h</span><span class="p">);</span>
+<span class="n">sophus_sensor</span> <span class="doxyrest-code-target target" id="doxid-sophus-2sensor-2-c-make-lists-8txt-1ac29f9423e9328054e8622ccedf7572e7">set</span><span></span><span class="p">(</span><span class="n">sophus_sensor_src_prefixes</span> <span class="n">camera_model</span> <span class="n">clipping_planes</span> <span class="n">imu_model</span> <span class="n">camera_rig</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-sophus-2sensor-2-c-make-lists-8txt-1a80bbdb79c3ab98ebd3644f5ba8191b35">list</span><span></span><span class="p">(</span><span class="n">APPEND</span> <span class="n">sophus_sensor_cpp</span> <span class="err">$</span><span class="p">{</span><span class="n">x</span><span class="p">}.</span> <span class="n">cpp</span><span class="p">);</span>
+<span class="n">h</span> <span class="doxyrest-code-target target" id="doxid-sophus-2sensor-2-c-make-lists-8txt-1aa773617045fa25f680ddb5bf77ea1511">endforeach</span><span></span><span class="p">();</span>
+<span class="n">farm_ng_core_enum</span> <span class="n">Set</span> <span class="n">of</span> <span class="n">macros</span> <span class="k">for</span> <span class="n">compile</span> <span class="n">time</span> <span class="k">enum</span> <span class="n">introspection</span> <span class="n">autogeneration</span> <span class="n">of</span> <span class="n">auxilary</span> <span class="n">helper</span> <span class="n">functions</span> <span class="n">Depends</span> <span class="n">on</span> <span class="n">farm_ng_core_logging</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2enum-2-c-make-lists-8txt-1ac1feb8a1b6ee752286208b22cddccf67">add_library</span><span></span><span class="p">(</span><span class="n">farm_ng_core_enum</span> <span class="n">INTERFACE</span> <span class="k">enum</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_flags</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_without_ostream</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_flags_without_ostream</span><span class="p">.</span> <span class="n">h</span><span class="p">);</span>
+<span class="o">&lt;</span><span class="nl">INSTALL_INTERFACE</span><span class="p">:</span><span class="err">$</span><span class="p">{</span><span class="n">CMAKE_INSTALL_INCLUDEDIR</span><span class="p">}</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2enum-2-c-make-lists-8txt-1a99dd619bb89a32e9e872ed74206417b0">target_sources</span><span></span><span class="p">(</span><span class="n">farm_ng_core_enum</span> <span class="n">INTERFACE</span> <span class="n">FILE_SET</span> <span class="n">HEADERS</span> <span class="n">BASE_DIRS</span> <span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span> <span class="n">FILES</span> <span class="k">enum</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_flags</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_without_ostream</span><span class="p">.</span><span class="n">h</span> <span class="n">enum_flags_without_ostream</span><span class="p">.</span><span class="n">h</span> <span class="n">impl</span><span class="o">/</span><span class="n">enum_details</span><span class="p">.</span><span class="n">h</span> <span class="n">impl</span><span class="o">/</span><span class="n">enum_flag_details</span><span class="p">.</span> <span class="n">h</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2enum-2-c-make-lists-8txt-1ae8815960f128bc514857ab03d5f04b30">set</span><span></span><span class="p">(</span><span class="n">FARM_NG_ENUM_TESTS</span> <span class="k">enum</span> <span class="n">enum_without_ostream</span> <span class="n">enum_flags</span> <span class="n">enum_flags_without_ostream</span><span class="p">);</span>
+<span class="n">farm_ng_core_misc</span> <span class="n">Header</span> <span class="n">only</span> <span class="n">standard</span> <span class="n">library</span> <span class="n">additions</span> <span class="n">such</span> <span class="n">as</span> <span class="n">string</span> <span class="n">file</span> <span class="n">threading</span> <span class="n">tools</span> <span class="n">and</span> <span class="n">other</span> <span class="n">general</span> <span class="n">purpose</span> <span class="n">miscellaneous</span> <span class="n">utilities</span> <span class="n">no</span> <span class="n">computer</span> <span class="n">not</span> <span class="n">math</span> <span class="n">Only</span> <span class="n">depends</span> <span class="n">on</span> <span class="n">farm_ng_core_enum</span> <span class="n">and</span> <span class="n">farm_ng_core_logging</span> <span class="n">and</span> <span class="n">should</span> <span class="n">not</span> <span class="n">pull</span> <span class="n">in</span> <span class="n">additional</span> <a class="reference internal" href="#doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2logging-2-c-make-lists-8txt-1ad32cbabe686dda3c44b74bce7d921fc1"><span class="std std-ref">dependency</span></a><span></span> <span class="n">in</span> <span class="n">the</span> <span class="n">future</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1acb58deb163239cb682b6e8d901a66273">set</span><span></span><span class="p">(</span><span class="n">base_enum_src_prefixes</span> <a class="reference internal" href="#doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1abadab92370a8b891a03eb4e0b0027c04"><span class="std std-ref">erase</span></a><span></span> <span class="n">filesystem</span> <span class="n">stopwatch</span> <span class="n">tokenize</span><span class="p">);</span>
+<span class="o">&lt;</span><span class="nl">INSTALL_INTERFACE</span><span class="p">:</span><span class="err">$</span><span class="p">{</span><span class="n">CMAKE_INSTALL_INCLUDEDIR</span><span class="p">}</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1a89c56194dbbcc4c27c5ed603748e7381">target_sources</span><span></span><span class="p">(</span><span class="n">farm_ng_core_misc</span> <span class="n">INTERFACE</span> <span class="n">FILE_SET</span> <span class="n">HEADERS</span> <span class="n">BASE_DIRS</span> <span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="p">..</span> <span class="n">FILES</span> <span class="n">erase</span><span class="p">.</span><span class="n">h</span> <span class="n">filesystem</span><span class="p">.</span><span class="n">h</span> <span class="n">stopwatch</span><span class="p">.</span><span class="n">h</span> <span class="n">tokenize</span><span class="p">.</span><span class="n">h</span> <span class="n">variant_utils</span><span class="p">.</span><span class="n">h</span> <span class="kt">void</span><span class="p">.</span> <span class="n">h</span><span class="p">);</span>
+<span class="doxyrest-code-target target" id="doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1a27ebc9b3376cb5b8547586e6678807e3">foreach</span><span></span><span class="p">(</span><span class="n">test_basename</span> <span class="err">$</span><span class="p">{</span><span class="n">base_enum_src_prefixes</span><span class="p">});</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2rxso2-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2rxso2-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2rxso3-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2rxso3-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2se2-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2se2-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2se3-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2se3-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2sim2-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2sim2-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2sim3-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2sim3-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2so2-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2so2-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-ceres-2so3-test-8cpp-1a2c3f6775325c30275d11c6abee2db6a0">main</span><span></span><span class="p">(</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="kt">char</span><span class="o">**</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-lie-2so3-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="doxyrest-code-target target" id="doxid-least-squares-test-8cpp-1aca935732cc124e57ccfbe096873c52cb">TEST</span><span></span><span class="p">(</span>
+    <span class="n">binary_cost</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-least-squares-test-8cpp-1a25c94a46ada9c5e97e3c489e8766844f">TEST</span><span></span><span class="p">(</span>
+    <span class="n">ternary_cost</span><span class="p">,</span>
+    <span class="n">compile_test</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-fit-plane-test-8cpp-1ac8682f9164703b2e9327dc9a2c3128a9">TEST</span><span></span><span class="p">(</span>
+    <span class="n">fit_plane</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-inverse-depth-test-8cpp-1a23a4dfe5f9538a1dce3d489759f957b7">TEST</span><span></span><span class="p">(</span>
+    <span class="n">inverse_depth</span><span class="p">,</span>
+    <span class="n">integrations</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-plane-conv-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+
+<span class="doxyrest-code-target target" id="doxid-point-transform-test-8cpp-1a23a4dfe5f9538a1dce3d489759f957b7">TEST</span><span></span><span class="p">(</span>
+    <span class="n">inverse_depth</span><span class="p">,</span>
+    <span class="n">integrations</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-point-transform-test-8cpp-1aa59b0667c46d8a2cfdb2141a4807cab7">TEST</span><span></span><span class="p">(</span>
+    <span class="n">point_transform</span><span class="p">,</span>
+    <span class="n">integrations</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-ray-test-8cpp-1a993733211468cbe9c82712eb64886401">TEST</span><span></span><span class="p">(</span>
+    <span class="n">ray</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-size-test-8cpp-1af15dff884104c3bc7dca72f9a126e62c">TEST</span><span></span><span class="p">(</span>
+    <span class="n">image_size</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-test-8cpp-1ac4736237b4d942ed8245443f240bd607">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_MutImage.html#doxid-classsophus-1-1-mut-image"><span class="std std-ref">MutImage</span></a><span></span><span class="p">,</span>
+    <span class="n">empty</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-test-8cpp-1a56ba0e1f798d3a82aae84c5be1f773c6">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_MutImage.html#doxid-classsophus-1-1-mut-image"><span class="std std-ref">MutImage</span></a><span></span><span class="p">,</span>
+    <span class="n">create_copy_access</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-test-8cpp-1a059be5d4f232be4e2c6a388d8821d736">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_MutImage.html#doxid-classsophus-1-1-mut-image"><span class="std std-ref">MutImage</span></a><span></span><span class="p">,</span>
+    <span class="n">makeFromTransform</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-test-8cpp-1a969d85cafd6e70bd9374655f6c1c6ad7">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_Image.html#doxid-classsophus-1-1-image"><span class="std std-ref">Image</span></a><span></span><span class="p">,</span>
+    <span class="n">empty_and_non_empty</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-test-8cpp-1a053de8b73aacb892c13be2a21779d240">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_Image.html#doxid-classsophus-1-1-image"><span class="std std-ref">Image</span></a><span></span><span class="p">,</span>
+    <span class="n">shared_ownership</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-types-test-8cpp-1a5fc5000d0c2688b183022ff3c130c5ab">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="namespace_sophus.html#doxid-namespacesophus-1a84ba571059139ad8de131bb9de2343d3"><span class="std std-ref">ImageBool</span></a><span></span><span class="p">,</span>
+    <span class="n">logic</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-types-test-8cpp-1ad373914bf44356db1eaad2047a35227b">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-image-types-8h-1aff8f7576cc2d1a9739a47e510c932e6a"><span class="std std-ref">FARM_CHECK_IMAGE_EQ</span></a><span></span><span class="p">,</span>
+    <span class="n">death_test</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-view-test-8cpp-1ae34b8f692eae9e7a6967c8ed4a347d28">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="struct_sophus_ImageView.html#doxid-structsophus-1-1-image-view"><span class="std std-ref">ImageView</span></a><span></span><span class="p">,</span>
+    <span class="n">empty</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-view-test-8cpp-1a01225ed24c59192b4d435b73940a0683">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="struct_sophus_ImageView.html#doxid-structsophus-1-1-image-view"><span class="std std-ref">ImageView</span></a><span></span><span class="p">,</span>
+    <span class="n">create_and_access</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-view-test-8cpp-1a5016156a4fdf5b7293df6e1c36e5de2e">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_MutImageView.html#doxid-classsophus-1-1-mut-image-view"><span class="std std-ref">MutImageView</span></a><span></span><span class="p">,</span>
+    <span class="n">empty</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-image-view-test-8cpp-1a0ef2334786a81b11abab4f6a5b692afd">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="class_sophus_MutImageView.html#doxid-classsophus-1-1-mut-image-view"><span class="std std-ref">MutImageView</span></a><span></span><span class="p">,</span>
+    <span class="n">create_and_access</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1ab6cbc08fe602f3b8ed4412f04956fae4">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="namespace_sophus.html#doxid-namespacesophus-1a78395e5b72761c2d77c1207a7a4af475"><span class="std std-ref">AnyImage</span></a><span></span><span class="p">,</span>
+    <span class="n">create_access_and_extract</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1adbb2ad9bc8e286b0249c5409527fde7c">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="namespace_sophus.html#doxid-namespacesophus-1afebc6bb5384c7773f0ede478ff3ca2f3"><span class="std std-ref">IntensityImage</span></a><span></span><span class="p">,</span>
+    <span class="n">create_access_and_extract</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1af6e3c340d2155eb5cc56741078353b0e">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="namespace_sophus.html#doxid-namespacesophus-1a78395e5b72761c2d77c1207a7a4af475"><span class="std std-ref">AnyImage</span></a><span></span><span class="p">,</span>
+    <span class="n">runtime_type_info</span>
+    <span class="p">);</span>
+
+<span class="kt">float</span> <span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1ae087e9700a3d5f427dede7bd34cb454b">sum</span><span></span><span class="p">(</span><a class="reference internal" href="struct_sophus_ImageView.html#doxid-structsophus-1-1-image-view"><span class="std std-ref">ImageView</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">view</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1a295ef1281203aad88e5949bd29fb351c">plusOne</span><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_MutImageView.html#doxid-classsophus-1-1-mut-image-view"><span class="std std-ref">MutImageView</span></a><span></span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">mut_view</span><span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1a0045a4dab7360f9b4f179210438b6124">TEST</span><span></span><span class="p">(</span>
+    <span class="n">ClassHierarchy</span><span class="p">,</span>
+    <span class="n">call_function</span>
+    <span class="p">);</span>
+
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-cartesian2-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-cartesian3-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+<span class="kt">int</span> <span class="doxyrest-code-target target" id="doxid-common-test-8cpp-1ae66f6b31b5ad750f1fe042a706a4e3d4">main</span><span></span><span class="p">();</span>
+<a class="reference internal" href="class_sophus_CameraModel.html#doxid-classsophus-1-1-camera-model"><span class="std std-ref">CameraModel</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-camera-model-test-8cpp-1a337f48efa1feb10176bc6c682350cbb5">openCvCameraModel</span><span></span><span class="p">();</span>
+
+<span class="doxyrest-code-target target" id="doxid-camera-model-test-8cpp-1ae60c2856c31f30e24a04021ae180bb7d">TEST</span><span></span><span class="p">(</span>
+    <span class="n">camera_model</span><span class="p">,</span>
+    <span class="n">projection_round_trip</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-camera-model-test-8cpp-1a9a84f07f639f5b064bee88f468e46aeb">TEST</span><span></span><span class="p">(</span>
+    <span class="n">camera_model</span><span class="p">,</span>
+    <span class="n">scale_up_down_roundtrip</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-camera-model-test-8cpp-1adbbee1a53cdf100d76d0e6c0d4ae62ad">TEST</span><span></span><span class="p">(</span>
+    <span class="n">camera_model</span><span class="p">,</span>
+    <span class="n">ortho_cam</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-camera-rig-test-8cpp-1af3fbe44ebfcae081d4d12b2ebb8c1718">TEST</span><span></span><span class="p">(</span>
+    <span class="n">camera_rig</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-imu-model-test-8cpp-1a8d64a46e5c782e5252e2432ad043b2a6">TEST</span><span></span><span class="p">(</span>
+    <span class="n">imu_model</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-test-8cpp-1a31def77948529d5dfff881dbfe50f5f0">FARM_ENUMFLAGS</span><span></span><span class="p">(</span>
+    <span class="n">MyFlags</span><span class="p">,</span>
+    <span class="kt">uint32_t</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">,</span> <span class="n">daz</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-test-8cpp-1aead6c367dbd74bbb59dde5d76c0a62be">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">toString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-test-8cpp-1a29c00c2497757f76cc2a21546e0023b6">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">StringsAndValues</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1aa2ee94fefa3cb4c2e9eb0c57b3a03405">FARM_ENUMFLAGS_WITHOUT_OSTREAM</span><span></span><span class="p">(</span>
+    <span class="n">MyFlags</span><span class="p">,</span>
+    <span class="kt">uint32_t</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="n">bar</span><span class="p">,</span> <span class="n">daz</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1aa397866d9f9a1f7c3d7446710e2ccc93">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">none</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1a790c67e01f016426756f35a31ec29535">FARM_ENUMFLAGS_WITHOUT_OSTREAM</span><span></span><span class="p">(</span>
+    <span class="n">EightFlags</span><span class="p">,</span>
+    <span class="kt">uint8_t</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">bit0</span><span class="p">,</span> <span class="n">bit1</span><span class="p">,</span> <span class="n">bit2</span><span class="p">,</span> <span class="n">bit3</span><span class="p">,</span> <span class="n">bit4</span><span class="p">,</span> <span class="n">bit5</span><span class="p">,</span> <span class="n">bit6</span><span class="p">,</span> <span class="n">bit7</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1ae2b306c6e10f92e27804352ec7ff8997">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">bits</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1a32095940e285db4093826c864f713f8c">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">trySetFlagFromString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1aefb39abdc669fb0afb15cfeb6d32d1d3">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">setClearToggle</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1a80390ef14b765ce49c6561d0fec2c0b8">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumFlags</span><span class="p">,</span>
+    <span class="n">toString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1a36923dd570b7c1f5fc294a92500078ba">FARM_ENUMFLAGS_WITHOUT_OSTREAM_DEF</span><span></span><span class="p">(</span>
+    <span class="n">Bike</span><span class="p">,</span>
+    <span class="kt">uint8_t</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">frontWheel</span><span class="p">,</span> <span class="n">backWheel</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-test-8cpp-1a2b0f1c0b2ebf7f6fc660a4a390a6d2a7">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">nestedEnumFlags</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-test-8cpp-1a210a0e430089578431ec77971a05e9ca">FARM_ENUM</span><span></span><span class="p">(</span>
+    <span class="n">Fruits</span><span class="p">,</span>
+    <span class="kt">size_t</span><span class="p">,</span>
+    <span class="p">((</span><span class="n">apple</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">banana</span><span class="p">,</span> <span class="n">pear</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-test-8cpp-1aead6c367dbd74bbb59dde5d76c0a62be">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">toString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-test-8cpp-1aed861d9838dfb9635dbd4f7426303296">FARM_ENUM_DEF</span><span></span><span class="p">(</span>
+    <span class="n">Autos</span><span class="p">,</span>
+    <span class="kt">int32_t</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">van</span><span class="p">,</span> <span class="n">truck</span><span class="p">,</span> <span class="n">sedan</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-test-8cpp-1a242e29f18b2c953b6edb1ceb913fdd0f">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">trySetFromString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-test-8cpp-1a63b0cb53815eb0e09e46b6dd4eb097f3">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">StringsAndValues</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1a196dd58d6efb35c63a05e520fc9e97ed">FARM_ENUM_WITHOUT_OSTREAM</span><span></span><span class="p">(</span>
+    <span class="n">Fruits</span><span class="p">,</span>
+    <span class="kt">uint8_t</span><span class="p">,</span>
+    <span class="p">((</span><span class="n">apple</span><span class="p">,</span> <span class="mi">1</span><span class="p">),(</span><span class="n">banana</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">pear</span><span class="p">)</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1a35476fbf470951e3958d871b08aa36b0">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">defaultDeath</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1aead6c367dbd74bbb59dde5d76c0a62be">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">toString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1a63b0cb53815eb0e09e46b6dd4eb097f3">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">StringsAndValues</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1acb45f2fca64af6d946e4c07d325cdc6f">FARM_ENUM_WITHOUT_OSTREAM_DEF</span><span></span><span class="p">(</span>
+    <span class="n">Autos</span><span class="p">,</span>
+    <span class="kt">int</span><span class="p">,</span>
+    <span class="p">(</span><span class="n">van</span><span class="p">,</span> <span class="n">truck</span><span class="p">,(</span><span class="n">sedan</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-enum-without-ostream-test-8cpp-1a242e29f18b2c953b6edb1ceb913fdd0f">TEST</span><span></span><span class="p">(</span>
+    <span class="n">EnumTest</span><span class="p">,</span>
+    <span class="n">trySetFromString</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1a7bb3fb61b0f37804f2ebf5c3a2ea34dd">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">success</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1a8d9c4872f9b8d48dd3fd68b738df0d11">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">single_error</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1a144d4303f24288f45e5fa5ef9b29b762">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">multi_error</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1a8d8ff5e6b767ee00685398bd8fa1ee84">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">unwrap</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1ad2d396b1239d223d2af386b454d2fced">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">optional</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-expected-test-8cpp-1aa2cd4ddbea3daab487e550dd33d00bcc">TEST</span><span></span><span class="p">(</span>
+    <span class="n">expected</span><span class="p">,</span>
+    <span class="n">fancy_error</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-format-test-8cpp-1ac82c141715e3bd1a9eef488d4365d0c9">TEST</span><span></span><span class="p">(</span>
+    <span class="n">format</span><span class="p">,</span>
+    <span class="n">functional</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-format-test-8cpp-1acb8fa79eba0abfe44ca75a3a90adea3f">TEST</span><span></span><span class="p">(</span>
+    <span class="n">runtime_format</span><span class="p">,</span>
+    <span class="n">functional</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-logger-test-8cpp-1ae4670c1cc36cf6ac2c9e040a3c9b8b57">TEST</span><span></span><span class="p">(</span>
+    <span class="n">logger</span><span class="p">,</span>
+    <span class="n">unit</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-erase-test-8cpp-1a04128ca1321d34c60731f293a90c1d9d">TEST</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-thirdparty-2farm-ng-core-2farm-ng-2core-2misc-2-c-make-lists-8txt-1abadab92370a8b891a03eb4e0b0027c04"><span class="std std-ref">erase</span></a><span></span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-filesystem-test-8cpp-1ad613335036f86dd2fbd945210f6df926">TEST</span><span></span><span class="p">(</span>
+    <span class="n">filesystem</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-filesystem-test-8cpp-1afa7c1dccded9b655ca228117221492cc">TEST</span><span></span><span class="p">(</span>
+    <span class="n">filesystem</span><span class="p">,</span>
+    <span class="n">createUniqueTemporaryDirectory</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-filesystem-test-8cpp-1ab8b6f06332093aa2861048ca2202bf4c">TEST</span><span></span><span class="p">(</span>
+    <span class="n">filesystem</span><span class="p">,</span>
+    <span class="n">no_parent_path</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-stopwatch-test-8cpp-1a008a249afd1b205c78173a0ff84acf81">TEST</span><span></span><span class="p">(</span>
+    <span class="n">stopwatch</span><span class="p">,</span>
+    <span class="n">integrations</span>
+    <span class="p">);</span>
+
+<span class="doxyrest-code-target target" id="doxid-tokenize-test-8cpp-1a7cc7111e86cafa41194bc329bdbe366e">TEST</span><span></span><span class="p">(</span>
+    <span class="n">tokenize</span><span class="p">,</span>
+    <span class="n">smoke</span>
+    <span class="p">);</span>
+
+<span class="c1">// macros</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a66ca91954e8bbe36af1f35d9744e87a7"><span class="std std-ref">FARM_AT</span></a><span></span><span class="p">(</span> \
+    <span class="n">contiguous_container</span><span class="p">,</span> \
+    <span class="n">index</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1abee69747ee89670079f070ef415947d3"><span class="std std-ref">FARM_CHECK</span></a><span></span><span class="p">(</span> \
+    <span class="n">condition</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1aa8c03e4559ec2193f2352b3451b7ec56"><span class="std std-ref">FARM_CHECK_EQ</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a7143bbb015fa8e14b6ec23df411d89d0"><span class="std std-ref">FARM_CHECK_FOLDER_IS_EMPTY</span></a><span></span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a08762db8f5a3c5dac7dc529680b307cd"><span class="std std-ref">FARM_CHECK_GE</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ade6fbda37ab54a2f7e16ee325661b9a0"><span class="std std-ref">FARM_CHECK_GT</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-image-types-8h-1aff8f7576cc2d1a9739a47e510c932e6a"><span class="std std-ref">FARM_CHECK_IMAGE_EQ</span></a><span></span><span class="p">(</span> \
+    <span class="n">left_image</span><span class="p">,</span> \
+    <span class="n">right_image</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ae7d07e472a5e685275bf88eb41f4660a"><span class="std std-ref">FARM_CHECK_IS_FILE</span></a><span></span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a76749746acfe6361ead8c131c4c34e40"><span class="std std-ref">FARM_CHECK_IS_FOLDER</span></a><span></span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ae07338b60ba5d848e5b5fe0feb536c71"><span class="std std-ref">FARM_CHECK_LE</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a6fe8cec8ae7ab6533c3a0bb24d9872f4"><span class="std std-ref">FARM_CHECK_LT</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a93d3bd85f4c5572444f92301849ee561"><span class="std std-ref">FARM_CHECK_NE</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a5fb91e81794e54d181b5e17984823258"><span class="std std-ref">FARM_CHECK_NEAR</span></a><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="n">thr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-expected-8h-1a54f4fa712d2b0152119112a2f4810551">FARM_CHECK_OR_ERROR</span><span></span><span class="p">(</span> \
+    <span class="n">condition</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a63a0d4d4be8423416a2ce94c89591455"><span class="std std-ref">FARM_CHECK_PATH_EXIST</span></a><span></span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-8h-1a5268dfdcfb4a14db714de4e279928ddf">FARM_ENUM</span><span></span><span class="p">(</span> \
+    <span class="n">EnumName</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-8h-1a3119d921bdb6afbabc190e45dc04b9d1">FARM_ENUMFLAGS</span><span></span><span class="p">(</span> \
+    <span class="n">EnumName</span><span class="p">,</span> \
+    <span class="n">UINT_TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-8h-1a89bc1563076600ac848949c4d82c8954">FARM_ENUMFLAGS_ALIAS</span><span></span><span class="p">(</span><span class="n">NAME</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-8h-1a3cb5b852adcf321cba3f0b90463e195f">FARM_ENUMFLAGS_DEF</span><span></span><span class="p">(</span> \
+    <span class="n">EnumName</span><span class="p">,</span> \
+    <span class="n">UINT_TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a00f63d23477adf9dbee4d1d78090970b">FARM_ENUMFLAGS_DETAILS_COMMA_SEP_INTS</span><span></span><span class="p">(</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a0904699d8186720ccb474bb50c4d4c41">FARM_ENUMFLAGS_DETAILS_COMMA_SEP_STRINGS</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a1240265e4a0fc18d9e6850770c69f366">FARM_ENUMFLAGS_DETAILS_CSV_STRING</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a61931c13d4643fd22da989987cdb94b6">FARM_ENUMFLAGS_DETAILS_FLAG_DEFINITIONS</span><span></span><span class="p">(...)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a86a5ef61d20a33a8de798294cb3be192">FARM_ENUMFLAGS_DETAILS_OP_COMMA_INT</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">VAL</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1ab2edde5b3351873a34aba04ef3c429e9">FARM_ENUMFLAGS_DETAILS_OP_COMMA_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">STRING</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a29fde553d1b45158b60a2b271bf207cf">FARM_ENUMFLAGS_DETAILS_OP_COMMA_VALUE_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">STRING</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1adbb1ba03fb76bdf236c4f6c0f3dd54be">FARM_ENUMFLAGS_DETAILS_OP_INIT_FLAG</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">I</span><span class="p">,</span> \
+    <span class="n">FLAG</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-8h-1aa062d8b7cbfb75000f4996b9cdb97a93">FARM_ENUMFLAGS_OSTREAM_OVERLOAD</span><span></span><span class="p">(</span><span class="n">NAME</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-8h-1a36400e595d739c65b0019a2cd8f0cbb7">FARM_ENUMFLAGS_WITHOUT_OSTREAM</span><span></span><span class="p">(</span> \
+    <span class="n">NAME</span><span class="p">,</span> \
+    <span class="n">UINT_TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flags-without-ostream-8h-1ae4f8479816607114ec3e0f3fd1dc78bc">FARM_ENUMFLAGS_WITHOUT_OSTREAM_DEF</span><span></span><span class="p">(</span> \
+    <span class="n">NAME</span><span class="p">,</span> \
+    <span class="n">UINT_TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a3b98dfba449c1228f804c2912fa505de">FARM_ENUMFLAG_DETAILS_OP_PUSHBACK_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">FLAG</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a325397eba618b8d9eeaf2e00f685d727">FARM_ENUMFLAG_DETAILS_OP_SET_ENUM_FROM_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">FLAG</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a78ffbae3a50d723ff743bc5cc67f8975">FARM_ENUMFLAG_DETAILS_OP_SINGLE_FLAG_CHECK</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">FLAG</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-flag-details-8h-1a304fd1b286935c068b2aefdd9f27e61a">FARM_ENUMFLAG_DETAILS_OP_STRING_FOR_FLAG</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">FLAG</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-without-ostream-8h-1ad7c43cb8eb543d72dd24df4845548dc7">FARM_ENUM_ALIAS</span><span></span><span class="p">(</span><span class="n">NAME</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-8h-1a7c96c8b54291c96e3a4e1cca16d3ba2b">FARM_ENUM_DEF</span><span></span><span class="p">(</span> \
+    <span class="n">EnumName</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a72c4136a8a89b39e75f623b2c32da562">FARM_ENUM_DETAILS_COMMA_SEP_INTS</span><span></span><span class="p">(</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">INT_TYPE</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1ad8abe13e9cb5b7894439b02f230361eb">FARM_ENUM_DETAILS_COMMA_SEP_STRINGS</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1ab685405aaa706a16b81d96aa21f99d70">FARM_ENUM_DETAILS_CSV</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a02b4c1facebc86e9e008260e7137fa79">FARM_ENUM_DETAILS_CSV_STRING</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a2e0cedf163e2ea268ff130a098521258">FARM_ENUM_DETAILS_GET_INT_TYPE</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1aef9c2db41b965eb7a8e31c8d39490a5d">FARM_ENUM_DETAILS_GET_VARS</span><span></span><span class="p">(...)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a429a62bcc76437392aca2ed03b9d16f4">FARM_ENUM_DETAILS_OP_COMMA_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1acb15496614efdcd53e67822d324549a7">FARM_ENUM_DETAILS_OP_COMMA_VALUE</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1aedcf7ec175ccb8e59e8a97dfe243497a">FARM_ENUM_DETAILS_OP_COMMA_VALUE_STRING</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1ae077a3ae5de7c4a43ada2ed17033ad88">FARM_ENUM_DETAILS_OP_INTS</span><span></span><span class="p">(</span> \
+    <span class="n">dummy</span><span class="p">,</span> \
+    <span class="n">TYPES</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a4a3e7542e9626f11fc06e083557de405">FARM_ENUM_DETAILS_OP_MAKE_TUPLE</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">dummy2</span><span class="p">,</span> \
+    <span class="n">ENUM</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a25dde975baef7059d7a790e1d7f245b2">FARM_ENUM_DETAILS_OP_POSITION_ICASE</span><span></span><span class="p">(</span> \
+    <span class="n">dummy</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">I</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a163d471603c4ee1c38b4961c0926c932">FARM_ENUM_DETAILS_OP_SET_VALUE_CASES</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a6803a4d582c325495c7606066072ed6f">FARM_ENUM_DETAILS_OP_TO_PRETTY_CASE</span><span></span><span class="p">(</span> \
+    <span class="n">dummy</span><span class="p">,</span> \
+    <span class="n">types</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a074c1f2a7660476b01427de4e506d1a3">FARM_ENUM_DETAILS_OP_TO_STRING_CASE</span><span></span><span class="p">(</span> \
+    <span class="n">dummy1</span><span class="p">,</span> \
+    <span class="n">TYPE</span><span class="p">,</span> \
+    <span class="n">PAIR</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1a554f63301fbc0ace0d3fa11b7f48cebf">FARM_ENUM_DETAILS_OP_VALUE_WITH_INIT</span><span></span><span class="p">(</span><span class="n">PAIR</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-details-8h-1aa9463ae5ca65aed351a5ab4e43d45acc">FARM_ENUM_DETAILS_TO_SEQ_OF_TUPLES</span><span></span><span class="p">(...)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-8h-1acecaa3d9b8c151d5235d828e6f582c62">FARM_ENUM_OSTREAM_OVERLOAD</span><span></span><span class="p">(</span><span class="n">EnumName</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-without-ostream-8h-1a11e36e8fbafbfe54989067957558c817">FARM_ENUM_WITHOUT_OSTREAM</span><span></span><span class="p">(</span> \
+    <span class="n">NAME</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-enum-without-ostream-8h-1ace9a5119f7f49b25e8a51168ea0e27f3">FARM_ENUM_WITHOUT_OSTREAM_DEF</span><span></span><span class="p">(</span> \
+    <span class="n">NAME</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-expected-8h-1ae162dbf2a7d1c0d357e6a3fa331ed32d">FARM_ERROR</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-expected-8h-1aede3d28ac1463bc5ff8f48122309c89c">FARM_ERROR_DETAIL</span><span></span><span class="p">(...)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ac3874531d92042df89d535df9d40f8ce"><span class="std std-ref">FARM_FATAL</span></a><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-format-8h-1a433412d321d236f0533bf9f9011fe0c0"><span class="std std-ref">FARM_FORMAT</span></a><span></span><span class="p">(...)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a29086f21d2fabd04ee66ac9d1601a38d"><span class="std std-ref">FARM_GET</span></a><span></span><span class="p">(</span> \
+    <span class="n">associative_container</span><span class="p">,</span> \
+    <span class="n">key</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1ab1a749dfd7206da5a259a7ff47e6dc78">FARM_IMPL_ABORT</span><span></span><span class="p">()</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-logger-8h-1a7f8b7b06112b264fa4df04f1e156632d">FARM_IMPL_CHECK_OP</span><span></span><span class="p">(</span> \
+    <span class="n">symbol</span><span class="p">,</span> \
+    <span class="n">name_str</span><span class="p">,</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1ab422e4a205ad94cd9515445d4b223cbe">FARM_IMPL_FORMAT_ARGS</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1abf1113fd7306ff10dc3b206f43bf428e">FARM_IMPL_FORMAT_VARG</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-logger-8h-1a037512bed3e9916e82f6ebc5a8a32cc0">FARM_IMPL_LOG_HEADER</span><span></span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1a052f0ffd9178d17adc569bd21acdde05">FARM_IMPL_LOG_PRINTLN</span><span></span><span class="p">(...)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1a2b55f864d234e2588e632c3bd88c8b92">FARM_IMPL_LOG_PRINTLN_ARGS</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1a385551b2638bc28277047f7510774faf">FARM_IMPL_LOG_PRINTLN_ONE</span><span></span><span class="p">(</span><span class="n">cstr</span><span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1af5aff0a60f23d6a7f138e7fd84ed984c">FARM_IMPL_LOG_PRINTLN_VARG</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ad4fbebb9257f9600805efc8a6d40d9a0"><span class="std std-ref">FARM_LOG_INFO</span></a><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a6ddf9667795e471ca352d68db31ab305"><span class="std std-ref">FARM_LOG_INFO_EVERY_N</span></a><span></span><span class="p">(</span> \
+    <span class="n">N</span><span class="p">,</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a73b84d06e0f15963e2a5be9b51698fd8"><span class="std std-ref">FARM_LOG_WARNING</span></a><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1ac66457eb102bac25373662e288760b90"><span class="std std-ref">FARM_MAP_INSERT</span></a><span></span><span class="p">(</span> \
+    <span class="n">map</span><span class="p">,</span> \
+    <span class="n">key</span><span class="p">,</span> \
+    <span class="n">value</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-runtime-image-test-8cpp-1a0ce6f813694c0e62d4349192eec9ded7">FARM_NG_TEST_IMG_EQ</span><span></span><span class="p">(</span> \
+    <span class="n">lhs</span><span class="p">,</span> \
+    <span class="n">rhs</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-logger-8h-1ae1d4d1e36f20a5f8590d4e9e371449b7">FARM_PRINTLN</span><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-format-8h-1a6b6fa40a082b51401b8eba074597e93c"><span class="std std-ref">FARM_RUNTIME_FORMAT</span></a><span></span><span class="p">(</span> \
+    <span class="n">str</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-format-8h-1a910183612218259f530c31674ad42d9b">FARM_STRING</span><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-expected-8h-1a88b31487567475f37fff049489ea00a4"><span class="std std-ref">FARM_TRY</span></a><span></span><span class="p">(</span> \
+    <span class="n">Type_val</span><span class="p">,</span> \
+    <span class="n">expected_val</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1a13db2d316d133430cf1637566a1aaa9c"><span class="std std-ref">FARM_UNIMPLEMENTED</span></a><span></span><span class="p">(</span> \
+    <span class="n">cstr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-logger-8h-1aa6263e6115a59c112188a536bf1560e8"><span class="std std-ref">FARM_UNWRAP</span></a><span></span><span class="p">(</span> \
+    <span class="n">wrapper</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28">SOPHUS_FUNC</span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-common-8h-1adc97d3e69cc46d5aff5132e1fa2d9688">SOPHUS_FUNCTION</span><span></span>
+<span class="cp">#define </span><span class="doxyrest-code-target target" id="doxid-test-macros-8h-1a9a763d03e0d8daa3c7cb92eb1db5220d">SOPHUS_STRINGIFY</span><span></span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8h-1a094dfcb125cce443541e6614df9ff704"><span class="std std-ref">SOPHUS_TEST</span></a><span></span><span class="p">(</span> \
+    <span class="n">passed</span><span class="p">,</span> \
+    <span class="n">condition</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8h-1adceb75d7f4ac8872a96560097b91f090"><span class="std std-ref">SOPHUS_TEST_APPROX</span></a><span></span><span class="p">(</span> \
+    <span class="n">passed</span><span class="p">,</span> \
+    <span class="n">left</span><span class="p">,</span> \
+    <span class="n">right</span><span class="p">,</span> \
+    <span class="n">thr</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8h-1afa1fcfecdacca873ea54874272d05e90"><span class="std std-ref">SOPHUS_TEST_EQUAL</span></a><span></span><span class="p">(</span> \
+    <span class="n">passed</span><span class="p">,</span> \
+    <span class="n">left</span><span class="p">,</span> \
+    <span class="n">right</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8h-1a47cf0311fff8d84d7044a599dc452b6a"><span class="std std-ref">SOPHUS_TEST_NEQ</span></a><span></span><span class="p">(</span> \
+    <span class="n">passed</span><span class="p">,</span> \
+    <span class="n">left</span><span class="p">,</span> \
+    <span class="n">right</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span>
+
+<span class="cp">#define </span><a class="reference internal" href="#doxid-test-macros-8h-1a2cf21393818b417fb877bd6198d1b140"><span class="std std-ref">SOPHUS_TEST_NOT_APPROX</span></a><span></span><span class="p">(</span> \
+    <span class="n">passed</span><span class="p">,</span> \
+    <span class="n">left</span><span class="p">,</span> \
+    <span class="n">right</span><span class="p">,</span> \
+    <span class="n">thr</span><span class="p">,</span> \
+    <span class="n">descr</span><span class="p">,</span> \
+    <span class="p">...</span> \
+    <span class="p">)</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-global"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<section id="macros">
+<h3>Macros<a class="headerlink" href="#macros" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a66ca91954e8bbe36af1f35d9744e87a7"><span id="index-1"></span><span></span><span class="cp">#define FARM_AT(contiguous_container, index, ...)</span></pre>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">contiguous_container[index]</span></code>, but panics if <code class="docutils literal notranslate"><span class="pre">index</span></code> is out of bounds.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1abee69747ee89670079f070ef415947d3"><span id="index-2"></span><span></span><span class="cp">#define FARM_CHECK(condition, ...)</span></pre>
+<p>If condition is false, Print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1aa8c03e4559ec2193f2352b3451b7ec56"><span id="index-3"></span><span></span><span class="cp">#define FARM_CHECK_EQ(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code> == <code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a7143bbb015fa8e14b6ec23df411d89d0"><span id="index-4"></span><span></span><span class="cp">#define FARM_CHECK_FOLDER_IS_EMPTY(path)</span></pre>
+<p>Checks whether the given path is an empty folder. Hence it checks whether a) it does exit, b) it is a folder (and not a file), c) it is empty.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a08762db8f5a3c5dac7dc529680b307cd"><span id="index-5"></span><span></span><span class="cp">#define FARM_CHECK_GE(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code>&gt;= <code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ade6fbda37ab54a2f7e16ee325661b9a0"><span id="index-6"></span><span></span><span class="cp">#define FARM_CHECK_GT(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code>&gt; <code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-image-types-8h-1aff8f7576cc2d1a9739a47e510c932e6a"><span id="index-7"></span><span></span><span class="cp">#define FARM_CHECK_IMAGE_EQ(left_image, right_image, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">left_image</span></code> == <code class="docutils literal notranslate"><span class="pre">right_image</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ae7d07e472a5e685275bf88eb41f4660a"><span id="index-8"></span><span></span><span class="cp">#define FARM_CHECK_IS_FILE(path)</span></pre>
+<p>Checks whether the given path is a regular file. Hence it checks whether a) it does exit, b) it is a regular file.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a76749746acfe6361ead8c131c4c34e40"><span id="index-9"></span><span></span><span class="cp">#define FARM_CHECK_IS_FOLDER(path)</span></pre>
+<p>Checks whether the given path is a folder. Hence it checks whether a) it does exit, b) it is a folder (and not a file).</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ae07338b60ba5d848e5b5fe0feb536c71"><span id="index-10"></span><span></span><span class="cp">#define FARM_CHECK_LE(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code> &lt;= <code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a6fe8cec8ae7ab6533c3a0bb24d9872f4"><span id="index-11"></span><span></span><span class="cp">#define FARM_CHECK_LT(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code> &lt;<code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a93d3bd85f4c5572444f92301849ee561"><span id="index-12"></span><span></span><span class="cp">#define FARM_CHECK_NE(lhs, rhs, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code>!= <code class="docutils literal notranslate"><span class="pre">rhs</span></code>, print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a5fb91e81794e54d181b5e17984823258"><span id="index-13"></span><span></span><span class="cp">#define FARM_CHECK_NEAR(lhs, rhs, thr, ...)</span></pre>
+<p>If it is false that <code class="docutils literal notranslate"><span class="pre">lhs</span></code> is near <code class="docutils literal notranslate"><span class="pre">rhs</span></code> according to threshold <code class="docutils literal notranslate"><span class="pre">thr</span></code>, print formatted error message and then panic.</p>
+<p><code class="docutils literal notranslate"><span class="pre">lhs</span></code> and <code class="docutils literal notranslate"><span class="pre">rhs</span></code> are near, if maxMetric(lhs, rhs) &lt; thr.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a63a0d4d4be8423416a2ce94c89591455"><span id="index-14"></span><span></span><span class="cp">#define FARM_CHECK_PATH_EXIST(path)</span></pre>
+<p>Checks whether the given path exits.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ac3874531d92042df89d535df9d40f8ce"><span id="index-15"></span><span></span><span class="cp">#define FARM_FATAL(cstr, ...)</span></pre>
+<p>Print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-format-8h-1a433412d321d236f0533bf9f9011fe0c0"><span id="index-16"></span><span></span><span class="cp">#define FARM_FORMAT(...)</span></pre>
+<p>Formats the <code class="docutils literal notranslate"><span class="pre">cstr</span></code> using the libfmt library.</p>
+<p>See here for details: <a class="reference external" href="https://fmt.dev/latest/syntax.html">https://fmt.dev/latest/syntax.html</a></p>
+<p>Note that compile-time format check is performed, and hence cstr needs to be a string literal. If no compile-time check is required, and/or the string is a variable, call <code class="docutils literal notranslate"><a class="reference internal" href="#doxid-format-8h-1a6b6fa40a082b51401b8eba074597e93c"><span class="std std-ref"><span class="pre">FARM_RUNTIME_FORMAT(fmt,</span> <span class="pre">…)</span></span></a></code> instead.</p>
+<p>FARM_COMPILE_TIME_FMT is not defined, the runtime version will be used, to speed up compile times.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a29086f21d2fabd04ee66ac9d1601a38d"><span id="index-17"></span><span></span><span class="cp">#define FARM_GET(associative_container, key, ...)</span></pre>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">associative_container[key]</span></code>, but panics if the container does not contain <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ad4fbebb9257f9600805efc8a6d40d9a0"><span id="index-18"></span><span></span><span class="cp">#define FARM_LOG_INFO(cstr, ...)</span></pre>
+<p>LOG INFO: Log cstr formatted (using variadic arguments) to cerr.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a6ddf9667795e471ca352d68db31ab305"><span id="index-19"></span><span></span><span class="cp">#define FARM_LOG_INFO_EVERY_N(N, cstr, ...)</span></pre>
+<p>LOG INFO: Only log every nth encounter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a73b84d06e0f15963e2a5be9b51698fd8"><span id="index-20"></span><span></span><span class="cp">#define FARM_LOG_WARNING(cstr, ...)</span></pre>
+<p>LOG WARNING: Log cstr formatted (using variadic arguments) to cerr.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1ac66457eb102bac25373662e288760b90"><span id="index-21"></span><span></span><span class="cp">#define FARM_MAP_INSERT(map, key, value, ...)</span></pre>
+<p>Insert <code class="docutils literal notranslate"><span class="pre">val</span></code> to <code class="docutils literal notranslate"><span class="pre">map</span></code>, but panics if the container does contain <code class="docutils literal notranslate"><span class="pre">key</span></code> already.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-format-8h-1a6b6fa40a082b51401b8eba074597e93c"><span id="index-22"></span><span></span><span class="cp">#define FARM_RUNTIME_FORMAT(str, ...)</span></pre>
+<p>Formats the <code class="docutils literal notranslate"><span class="pre">cstr</span></code> using the libfmt library.</p>
+<p>See here for details: <a class="reference external" href="https://fmt.dev/latest/syntax.html">https://fmt.dev/latest/syntax.html</a></p>
+<p>If <code class="docutils literal notranslate"><span class="pre">str</span></code> is cstring literal, call FARM_FORMAT instead, and the format will be checked at compile time.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-expected-8h-1a88b31487567475f37fff049489ea00a4"><span id="index-23"></span><span></span><span class="cp">#define FARM_TRY(Type_val, expected_val)</span></pre>
+<p>Assigns <code class="docutils literal notranslate"><span class="pre">*expected_val</span></code> to <code class="docutils literal notranslate"><span class="pre">Type_val</span></code>, but returns error if there is one.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1a13db2d316d133430cf1637566a1aaa9c"><span id="index-24"></span><span></span><span class="cp">#define FARM_UNIMPLEMENTED(cstr, ...)</span></pre>
+<p>Print formatted error message and then panic.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-logger-8h-1aa6263e6115a59c112188a536bf1560e8"><span id="index-25"></span><span></span><span class="cp">#define FARM_UNWRAP(wrapper, ...)</span></pre>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">*wrapper</span></code>, but panics if <code class="docutils literal notranslate"><span class="pre">wrapper</span></code> is <code class="docutils literal notranslate"><span class="pre">nullopt</span></code> or <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8h-1a094dfcb125cce443541e6614df9ff704"><span id="index-26"></span><span></span><span class="cp">#define SOPHUS_TEST(passed, condition, descr, ...)</span></pre>
+<p>Tests whether condition is true. The in-out parameter passed will be set to false if test fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8h-1adceb75d7f4ac8872a96560097b91f090"><span id="index-27"></span><span></span><span class="cp">#define SOPHUS_TEST_APPROX(passed, left, right, thr, descr, ...)</span></pre>
+<p>Tests whether left is approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8h-1afa1fcfecdacca873ea54874272d05e90"><span id="index-28"></span><span></span><span class="cp">#define SOPHUS_TEST_EQUAL(passed, left, right, descr, ...)</span></pre>
+<p>Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8h-1a47cf0311fff8d84d7044a599dc452b6a"><span id="index-29"></span><span></span><span class="cp">#define SOPHUS_TEST_NEQ(passed, left, right, descr, ...)</span></pre>
+<p>Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-test-macros-8h-1a2cf21393818b417fb877bd6198d1b140"><span id="index-30"></span><span></span><span class="cp">#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, descr, ...)</span></pre>
+<p>Tests whether left is NOT approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.html" class="btn btn-neutral float-left" title="FARM_ENUM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_Eigen.html" class="btn btn-neutral float-right" title="namespace Eigen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Hauke Strasdat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+.. index:: pair: class; sophus::RuntimeImage
+.. _doxid-classsophus_1_1_runtime_image:
+
+template class sophus::RuntimeImage
+===================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Type-erased image with shared ownership, and read-only access to pixels. Type is nullable. :ref:`More...<details-classsophus_1_1_runtime_image>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image.h>
+	
+	template <
+		template<typename> class PredicateT = AnyImagePredicate,
+		template<typename> class AllocatorT = Eigen::aligned_allocator
+		>
+	class RuntimeImage {
+	public:
+		// construction
+	
+		:ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image_1aca5edd807a32bd82c2d2751217506c55>`();
+	
+		template <class PixelT>
+		:ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image_1a600dc95206d1a1ad5d95415ffb7dd415>`(:ref:`Image<doxid-classsophus_1_1_image>`<PixelT, AllocatorT> const& image);
+	
+		template <class PixelT>
+		:ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image_1aa01cdca708595a371521e935cee624d2>`(:ref:`MutImage<doxid-classsophus_1_1_mut_image>`<PixelT>&& image);
+
+		// methods
+	
+		template <class PixelT>
+		bool :ref:`has<doxid-classsophus_1_1_runtime_image_1a6df88b0975ff8d7211cf08d6844d1d49>`() const;
+	
+		template <class PixelT>
+		:ref:`Image<doxid-classsophus_1_1_image>`<PixelT, AllocatorT> :ref:`image<doxid-classsophus_1_1_runtime_image_1a33942cbab3f7d14183e34bda73877b97>`() const;
+	
+		template <class PixelT>
+		:ref:`Image<doxid-classsophus_1_1_image>`<PixelT, AllocatorT> :target:`reinterpretAs<doxid-classsophus_1_1_runtime_image_1a8cdbc5f54937e65324a6b722f6546885>`(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` reinterpreted_size) const;
+	
+		:ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>` :target:`pixelType<doxid-classsophus_1_1_runtime_image_1a4065435e1bfc9bb309cd8e4e7894d1d5>`() const;
+		int :target:`numChannels<doxid-classsophus_1_1_runtime_image_1aba6b9c21b4e52f5ada779e49e6af08e7>`() const;
+		int :ref:`numBytesPerPixelChannel<doxid-classsophus_1_1_runtime_image_1a8d8e1fa64b0505d150ca30ca785251e1>`() const;
+		NumberType :target:`numberType<doxid-classsophus_1_1_runtime_image_1a9d7a565b1fd4345a093ec0ca0dbb7c1e>`() const;
+		:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` const& :target:`shape<doxid-classsophus_1_1_runtime_image_1a0355cd964eaba9fe7163a71f1bcd6c04>`() const;
+		:ref:`ImageSize<doxid-structsophus_1_1_image_size>` const& :target:`imageSize<doxid-classsophus_1_1_runtime_image_1aeb1f646113d507581bb40814c32fb095>`() const;
+		int :target:`width<doxid-classsophus_1_1_runtime_image_1a44e0fd32e058d7262fe7c82c5b4fb7bf>`() const;
+		int :target:`height<doxid-classsophus_1_1_runtime_image_1aa51a01f757d0655426bef7a793f7ebde>`() const;
+		size_t :target:`pitchBytes<doxid-classsophus_1_1_runtime_image_1a645cde57d85520cff8927cb7e480ccfb>`() const;
+		size_t :target:`useCount<doxid-classsophus_1_1_runtime_image_1a37e667954bf1092b0214b46215ec84ec>`() const;
+		const uint8_t* :target:`rawPtr<doxid-classsophus_1_1_runtime_image_1a6c3ee9dea12c815f3a58c4d0ae8fdcce>`() const;
+		bool :target:`isEmpty<doxid-classsophus_1_1_runtime_image_1ac9589f50f6a8c7cc8abfe8970fc06181>`() const;
+	};
+.. _details-classsophus_1_1_runtime_image:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type-erased image with shared ownership, and read-only access to pixels. Type is nullable.
+
+Construction
+------------
+
+.. index:: pair: function; RuntimeImage
+.. _doxid-classsophus_1_1_runtime_image_1aca5edd807a32bd82c2d2751217506c55:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	RuntimeImage()
+
+Empty image.
+
+.. index:: pair: function; RuntimeImage
+.. _doxid-classsophus_1_1_runtime_image_1a600dc95206d1a1ad5d95415ffb7dd415:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	RuntimeImage(:ref:`Image<doxid-classsophus_1_1_image>`<PixelT, AllocatorT> const& image)
+
+Create type-erased image from :ref:`Image <doxid-classsophus_1_1_image>`.
+
+Ownership is shared between :ref:`RuntimeImage <doxid-classsophus_1_1_runtime_image>` and :ref:`Image <doxid-classsophus_1_1_image>`, and hence the reference count will be increased by one (unless input is empty). By design not "explicit".
+
+.. index:: pair: function; RuntimeImage
+.. _doxid-classsophus_1_1_runtime_image_1aa01cdca708595a371521e935cee624d2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	RuntimeImage(:ref:`MutImage<doxid-classsophus_1_1_mut_image>`<PixelT>&& image)
+
+Create type-erased image from :ref:`MutImage <doxid-classsophus_1_1_mut_image>`. By design not "explicit".
+
+Methods
+-------
+
+.. index:: pair: function; has
+.. _doxid-classsophus_1_1_runtime_image_1a6df88b0975ff8d7211cf08d6844d1d49:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	bool has() const
+
+Return true is this contains data of type PixelT.
+
+.. index:: pair: function; image
+.. _doxid-classsophus_1_1_runtime_image_1a33942cbab3f7d14183e34bda73877b97:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	:ref:`Image<doxid-classsophus_1_1_image>`<PixelT, AllocatorT> image() const
+
+Returns typed image.
+
+Precondition: this-> :ref:`has\<PixelT>() <doxid-classsophus_1_1_runtime_image_1a6df88b0975ff8d7211cf08d6844d1d49>`
+
+.. index:: pair: function; numBytesPerPixelChannel
+.. _doxid-classsophus_1_1_runtime_image_1a8d8e1fa64b0505d150ca30ca785251e1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int numBytesPerPixelChannel() const
+
+Number of bytes per channel of a single pixel.
+
+E.g. a pixel of Eigen::Matrix<uint8_t, 3, 1> has 1 byte per channel.
+

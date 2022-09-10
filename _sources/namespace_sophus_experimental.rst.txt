@@ -1,0 +1,115 @@
+.. index:: pair: namespace; sophus::experimental
+.. _doxid-namespacesophus_1_1experimental:
+
+namespace sophus::experimental
+==============================
+
+.. toctree::
+	:hidden:
+
+	struct_sophus_experimental_ArgTypes.rst
+	struct_sophus_experimental_CondVar.rst
+	struct_sophus_experimental_CostFamily.rst
+	struct_sophus_experimental_CostTermRef.rst
+	struct_sophus_experimental_LeastSquaresCostTerm.rst
+	struct_sophus_experimental_LeastSquaresCostTermState.rst
+	struct_sophus_experimental_ManifoldFamily.rst
+	struct_sophus_experimental_ManifoldFamilyTupleTraits.rst
+	struct_sophus_experimental_ManifoldFamilyTupleTraits-2.rst
+	struct_sophus_experimental_Var.rst
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace experimental {
+
+	// structs
+
+	template <bool kCalcDx, class CostFunctorT, class... CostArgT>
+	struct :ref:`ArgTypes<doxid-structsophus_1_1experimental_1_1_arg_types>`;
+
+	template <int kTangentDim, class ManifoldT>
+	struct :ref:`CondVar<doxid-structsophus_1_1experimental_1_1_cond_var>`;
+
+	template <int kBlockDim, int kNumVarArgs>
+	struct :ref:`CostFamily<doxid-structsophus_1_1experimental_1_1_cost_family>`;
+
+	template <int kArgs, class ConstArgT = farm_ng::Void>
+	struct :ref:`CostTermRef<doxid-structsophus_1_1experimental_1_1_cost_term_ref>`;
+
+	template <int kBlockDim, int kNumVarArgs>
+	struct :ref:`LeastSquaresCostTerm<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term>`;
+
+	template <int kBlockDim>
+	struct :ref:`LeastSquaresCostTermState<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state>`;
+
+	template <int kTangentDim, class ManifoldT = Eigen::Vector<double, kTangentDim>>
+	struct :ref:`ManifoldFamily<doxid-structsophus_1_1experimental_1_1_manifold_family>`;
+
+	template <int... kInputDim, class... ManifoldT>
+	struct :ref:`ManifoldFamilyTupleTraits<std::tuple<ManifoldFamily<kInputDim, ManifoldT>...>><doxid-structsophus_1_1experimental_1_1_manifold_family_tuple_traits_3_01std_1_1tuple_3_01_manifold_fam17bafb57c0e6e33f74b3f1ac85fd2902>`;
+
+	template <class TT>
+	struct :ref:`ManifoldFamilyTupleTraits<doxid-structsophus_1_1experimental_1_1_manifold_family_tuple_traits>`;
+
+	template <int kTangentDim, class ManifoldT>
+	struct :ref:`Var<doxid-structsophus_1_1experimental_1_1_var>`;
+
+	// global functions
+
+	:target:`FARM_ENUM<doxid-namespacesophus_1_1experimental_1a08408a9f37a04de20bd2472e4df89438>`(
+		ArgType,
+		(variable, conditioned)
+		);
+
+	template <class ArgTypesT, size_t kNumArgs, size_t kI = 0>
+	constexpr bool :target:`areAllVarEq<doxid-namespacesophus_1_1experimental_1a6e3dcd19ca2ca810b8831a297f57ecbe>`(
+		std::array<int, kNumArgs> const& lhs,
+		std::array<int, kNumArgs> const& rhs
+		);
+
+	template <class ArgTypesT, size_t kNumArgs, size_t kI = 0>
+	constexpr bool :target:`lessFixed<doxid-namespacesophus_1_1experimental_1a7f461714621344df824267c7d18e15dd>`(
+		std::array<int, kNumArgs> const& lhs,
+		std::array<int, kNumArgs> const& rhs
+		);
+
+	template <class ArgTypesT, size_t kNumArgs, size_t kI = 0>
+	constexpr bool :target:`isLess<doxid-namespacesophus_1_1experimental_1ad7861532f955c283b08481f4d4a8007d>`(
+		std::array<int, kNumArgs> const& lhs,
+		std::array<int, kNumArgs> const& rhs
+		);
+
+	template <size_t kNumArgs, size_t kI = 0, int... kInputDim, class... ManifoldT>
+	void :target:`costTermArgsFromIds<doxid-namespacesophus_1_1experimental_1ab549687d1438617641acf7966bfb088d>`(
+		std::tuple<ManifoldT...>& cost_term_args,
+		std::array<int, kNumArgs> const& arg_ids,
+		std::tuple<:ref:`ManifoldFamily<doxid-structsophus_1_1experimental_1_1_manifold_family>`<kInputDim, ManifoldT>...> const& manifold_family_tuple
+		);
+
+	template <
+		class ArgTypesT,
+		size_t kNumArgs,
+		size_t kI = 0,
+		int... kInputDim,
+		class... ManifoldT
+		>
+	void :target:`costTermArgsFromFixedManifolds<doxid-namespacesophus_1_1experimental_1aeff295c372f08a59009ad2339e9ecf13>`(
+		std::array<int, kNumArgs>& arg_ids,
+		std::tuple<ManifoldT...>& cost_term_args,
+		] std::array<int, ArgTypesT::kNumFixedArgs> fixed_arg_ids,
+		std::tuple<:ref:`ManifoldFamily<doxid-structsophus_1_1experimental_1_1_manifold_family>`<kInputDim, ManifoldT>...> const& manifold_family_tuple
+		);
+
+	template <bool kCalcDx = true, class CostFunctorT, class... CostTermArgT>
+	static :ref:`CostFamily<doxid-structsophus_1_1experimental_1_1_cost_family>`<:ref:`ArgTypes<doxid-structsophus_1_1experimental_1_1_arg_types>`<kCalcDx, CostFunctorT, CostTermArgT...>::kBlockDim, :ref:`ArgTypes<doxid-structsophus_1_1experimental_1_1_arg_types>`<kCalcDx, CostFunctorT, CostTermArgT...>::kNumVarArgs> :target:`apply<doxid-namespacesophus_1_1experimental_1afd87e2a009d1cdfbdcb77797d1b33a2d>`(
+		] CostFunctorT cost_functor,
+		std::vector<:ref:`CostTermRef<doxid-structsophus_1_1experimental_1_1_cost_term_ref>`<:ref:`ArgTypes<doxid-structsophus_1_1experimental_1_1_arg_types>`<kCalcDx, CostFunctorT, CostTermArgT...>::kNumArgs, typename CostFunctorT::ConstantType>> const& arg_id_arrays,
+		CostTermArgT const&... cost_arg
+		);
+
+	} // namespace experimental

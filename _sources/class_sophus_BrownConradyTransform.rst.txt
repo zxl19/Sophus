@@ -1,0 +1,64 @@
+.. index:: pair: class; sophus::BrownConradyTransform
+.. _doxid-classsophus_1_1_brown_conrady_transform:
+
+class sophus::BrownConradyTransform
+===================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <brown_conrady.h>
+	
+	class BrownConradyTransform {
+	public:
+		// typedefs
+	
+		using :target:`ProjInCameraZ1Plane<doxid-classsophus_1_1_brown_conrady_transform_1a49145c037b8351ced4d10de131bfaec3>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`Params<doxid-classsophus_1_1_brown_conrady_transform_1acac7163a4ef8dac09296c8278111f98b>` = Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_brown_conrady_transform_1acaece271f72351292da71c6c60542d80>`, 1> ;
+		using :target:`DistorationParams<doxid-classsophus_1_1_brown_conrady_transform_1ad9d3d460fb9d59bdf2ffbeea138ab067>` = Eigen::Matrix<ScalarT, :ref:`kNumDistortionParams<doxid-classsophus_1_1_brown_conrady_transform_1a594b41bb33060ad0db81b18766ff2c53>`, 1> ;
+
+		// fields
+	
+		static constexpr int :target:`kNumDistortionParams<doxid-classsophus_1_1_brown_conrady_transform_1a594b41bb33060ad0db81b18766ff2c53>` = 5;
+		static constexpr int :target:`kNumParams<doxid-classsophus_1_1_brown_conrady_transform_1acaece271f72351292da71c6c60542d80>` = :ref:`kNumDistortionParams<doxid-classsophus_1_1_brown_conrady_transform_1a594b41bb33060ad0db81b18766ff2c53>` + 4;
+		static const constexpr std::string_view :target:`kProjectionModel<doxid-classsophus_1_1_brown_conrady_transform_1ac72bbe5af724c8b605637ea23d6460ba>` =       "BrownConrady: fx, fy, cx, cy, k1, k2, p1, p2, k3";
+
+		// methods
+	
+		template <class ParamScalarT, class PointScalarT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<typename Eigen::ScalarBinaryOpTraits<ParamScalarT, PointScalarT>::ReturnType> :target:`projImpl<doxid-classsophus_1_1_brown_conrady_transform_1a516b9471a84d0a838ea269b7cf6576e4>`(
+			const :ref:`DistorationParams<doxid-classsophus_1_1_brown_conrady_transform_1ad9d3d460fb9d59bdf2ffbeea138ab067>`<ParamScalarT>& distortion,
+			const :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<PointScalarT>& point_normalized
+			);
+	
+		template <class ScalarT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<ScalarT> :target:`unprojImpl<doxid-classsophus_1_1_brown_conrady_transform_1a7d4f96ad586232b192e18f9e95901fbe>`(
+			const :ref:`DistorationParams<doxid-classsophus_1_1_brown_conrady_transform_1ad9d3d460fb9d59bdf2ffbeea138ab067>`<ScalarT>& distortion,
+			const :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<ScalarT>& uv_normalized
+			);
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<typename PointTypeT::Scalar> :target:`warp<doxid-classsophus_1_1_brown_conrady_transform_1ab524497993546308c2585cc4f5eef587>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& proj_point_in_camera_z1_plane
+			);
+	
+		template <class ScalarT>
+		static :ref:`ProjInCameraZ1Plane<doxid-classsophus_1_1_brown_conrady_transform_1a49145c037b8351ced4d10de131bfaec3>`<ScalarT> :target:`unwarp<doxid-classsophus_1_1_brown_conrady_transform_1a44e298863f6c097c7b3da6517a9c9fe4>`(
+			const :ref:`Params<doxid-classsophus_1_1_brown_conrady_transform_1acac7163a4ef8dac09296c8278111f98b>`<ScalarT>& params,
+			const :ref:`PixelImage<doxid-classsophus_1_1_brown_conrady_transform_1a19bca139ef004acb37d388e1e2bb2732>`<ScalarT>& pixel_image
+			);
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static Eigen::Matrix<typename PointTypeT::Scalar, 2, 2> :target:`dxWarp<doxid-classsophus_1_1_brown_conrady_transform_1a5ad13f4ea252f5b0afcf694251e95be1>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& proj_point_in_camera_z1_plane
+			);
+	};

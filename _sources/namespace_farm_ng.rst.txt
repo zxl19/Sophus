@@ -1,0 +1,234 @@
+.. index:: pair: namespace; farm_ng
+.. _doxid-namespacefarm__ng:
+
+namespace farm_ng
+=================
+
+.. toctree::
+	:hidden:
+
+	namespace_farm_ng_details.rst
+	struct_farm_ng_A.rst
+	struct_farm_ng_Ab.rst
+	struct_farm_ng_Abc.rst
+	struct_farm_ng_Error.rst
+	struct_farm_ng_ErrorDetail.rst
+	struct_farm_ng_HasType.rst
+	struct_farm_ng_HasType-2.rst
+	struct_farm_ng_Overload.rst
+	struct_farm_ng_ScopedTimer.rst
+	struct_farm_ng_Success.rst
+	struct_farm_ng_Void.rst
+	class_farm_ng_StopwatchSingleton.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace farm_ng {
+
+	// namespaces
+
+	namespace :ref:`farm_ng::details<doxid-namespacefarm__ng_1_1details>`;
+
+	// typedefs
+
+	using :target:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>` = tl::expected<TT, ET> ;
+
+	// structs
+
+	struct :ref:`A<doxid-structfarm__ng_1_1_a>`;
+	struct :ref:`Ab<doxid-structfarm__ng_1_1_ab>`;
+	struct :ref:`Abc<doxid-structfarm__ng_1_1_abc>`;
+	struct :ref:`Error<doxid-structfarm__ng_1_1_error>`;
+	struct :ref:`ErrorDetail<doxid-structfarm__ng_1_1_error_detail>`;
+
+	template <class T, class... Us>
+	struct :ref:`HasType<T, std::variant<Us...>><doxid-structfarm__ng_1_1_has_type_3_01_t_00_01std_1_1variant_3_01_us_8_8_8_01_4_01_4>`;
+
+	template <class T, class Variant>
+	struct :ref:`HasType<doxid-structfarm__ng_1_1_has_type>`;
+
+	template <class... Ts>
+	struct :ref:`Overload<doxid-structfarm__ng_1_1_overload>`;
+
+	struct :ref:`ScopedTimer<doxid-structfarm__ng_1_1_scoped_timer>`;
+	struct :ref:`Success<doxid-structfarm__ng_1_1_success>`;
+	struct :ref:`Void<doxid-structfarm__ng_1_1_void>`;
+
+	// classes
+
+	class :ref:`StopwatchSingleton<doxid-classfarm__ng_1_1_stopwatch_singleton>`;
+
+	// global variables
+
+	constexpr bool :ref:`AlwaysFalse<doxid-namespacefarm__ng_1a71efad730b54b1381ca0f3c8ac6ae9b8>` = false;
+	constexpr bool :target:`has_type_v<doxid-namespacefarm__ng_1a192f7266136156fa7e1c0165322a3bc3>` = :ref:`HasType<doxid-structfarm__ng_1_1_has_type>`<T, Variant>::value;
+
+	// global functions
+
+	std::ostream& :target:`operator<<<doxid-namespacefarm__ng_1a66ade9e60d627d6a6caee1f6a2d7909b>`(
+		std::ostream& os,
+		const :ref:`Error<doxid-structfarm__ng_1_1_error>`& error
+		);
+
+	template <class TT, class ET = Error>
+	std::optional<TT> :target:`fromExpected<doxid-namespacefarm__ng_1a1eb05560838d05f46d8ac5986f0a2bc5>`(:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<TT, ET> expected);
+
+	template <class TT>
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<TT> :target:`fromOptional<doxid-namespacefarm__ng_1aa253ef797e6ea4fdfca1f367af492f23>`(std::optional<TT> optional);
+
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`A<doxid-structfarm__ng_1_1_a>`> :target:`makeA<doxid-namespacefarm__ng_1a00187d6feedcfb970681343b1934d616>`(bool a_error);
+
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`Ab<doxid-structfarm__ng_1_1_ab>`> :target:`makeAb<doxid-namespacefarm__ng_1a1f22b0855feb9043a7f597cf94fe1d81>`(
+		bool a_error,
+		bool b_error
+		);
+
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`Abc<doxid-structfarm__ng_1_1_abc>`> :target:`makeAbc<doxid-namespacefarm__ng_1aad2dc4f6b37814d9a32be2a887b7f07f>`(
+		bool a_error,
+		bool b_error,
+		bool c_error
+		);
+
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`Abc<doxid-structfarm__ng_1_1_abc>`> :target:`makeAbcAtOnce<doxid-namespacefarm__ng_1ab6e6b1fbd789523e747b90b514820646>`(
+		bool a_error,
+		bool b_error,
+		bool c_error
+		);
+
+	:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`A<doxid-structfarm__ng_1_1_a>`> :target:`sum<doxid-namespacefarm__ng_1a52760dc913cbfd1865bd611ca652a18f>`(
+		:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`A<doxid-structfarm__ng_1_1_a>`> maybe_left,
+		:ref:`Expected<doxid-namespacefarm__ng_1a6264830e65119062b9fb5ccab228f04c>`<:ref:`A<doxid-structfarm__ng_1_1_a>`> maybe_right
+		);
+
+	std::function<void(const std::string&)>& :target:`getLogLineFunction<doxid-namespacefarm__ng_1a698b344c82d26cd0956d704de19e80bb>`();
+	void :target:`setLogLineFunction<doxid-namespacefarm__ng_1a9ffc91d4aee4cf707731aa724f70e120>`(std::function<void(const std::string&)> f);
+	void :target:`logLine<doxid-namespacefarm__ng_1a38165e841c393f042631954dc56b2cea>`(const std::string& line);
+
+	template <class TypeT>
+	auto :ref:`maxMetric<doxid-namespacefarm__ng_1ad4b995625986331438e23aae21686e1d>`(TypeT const& p0, TypeT const& p1);
+
+	template <class ContainerT, class PredT>
+	size_t :ref:`eraseIf<doxid-namespacefarm__ng_1a4344a182379dd8d8082eb791714cb0f8>`(ContainerT& c, PredT pred);
+
+	std::optional<std::filesystem::path> :ref:`createVersionedFolder<doxid-namespacefarm__ng_1ac263a4c49f763996fcf0513024cfe0ab>`(const std::filesystem::path& target_path);
+	std::optional<std::filesystem::path> :ref:`createUniqueTemporaryDirectory<doxid-namespacefarm__ng_1acfc82bd0eb4fe347eadab622d00ad046>`();
+	std::vector<std::string> :ref:`tokenize<doxid-namespacefarm__ng_1ad87bef4e720856f6d294e1a767a5b2ea>`(const std::string& str, char delimiter = ' ');
+
+	template <class... Ts>
+	:target:`Overload<doxid-namespacefarm__ng_1a11ac9be6e9c558ae73c36dc32b5d696f>`(Ts...);
+
+	template <class Variant, typename... Alternatives>
+	decltype(auto) :ref:`visit_variant<doxid-namespacefarm__ng_1a04666fcdf6eb7c58dafdbf45820d2f5c>`(
+		Variant&& variant,
+		Alternatives&&... alternatives
+		);
+
+	} // namespace farm_ng
+.. _details-namespacefarm__ng:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Global Variables
+----------------
+
+.. index:: pair: variable; AlwaysFalse
+.. _doxid-namespacefarm__ng_1a71efad730b54b1381ca0f3c8ac6ae9b8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	constexpr bool AlwaysFalse = false
+
+`https://en.cppreference.com/w/cpp/utility/variant/visit <https://en.cppreference.com/w/cpp/utility/variant/visit>`__
+
+Global Functions
+----------------
+
+.. index:: pair: function; maxMetric
+.. _doxid-namespacefarm__ng_1ad4b995625986331438e23aae21686e1d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TypeT>
+	auto maxMetric(TypeT const& p0, TypeT const& p1)
+
+Returns maximum metric between two points ``p0`` and ``p1``, with ``p0, p1`` being matrices or a scalars.
+
+.. index:: pair: function; eraseIf
+.. _doxid-namespacefarm__ng_1a4344a182379dd8d8082eb791714cb0f8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ContainerT, class PredT>
+	size_t eraseIf(
+		ContainerT& c,
+		PredT pred
+		)
+
+`https://en.cppreference.com/w/cpp/container/deque/erase2 <https://en.cppreference.com/w/cpp/container/deque/erase2>`__
+
+.. index:: pair: function; createVersionedFolder
+.. _doxid-namespacefarm__ng_1ac263a4c49f763996fcf0513024cfe0ab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::optional<std::filesystem::path> createVersionedFolder(const std::filesystem::path& target_path)
+
+Given a ``target_path`` name "foo", this function will create a version folder "foo.xy".
+
+First, it attempt to create folder "foo.00". If the path "foo.00" already exits, it attempts to create "foo.01", etc.
+
+Precondition: ``parent_path`` of the versioned folder must exist
+
+Returns nullopt if for unexpected reason creation of the folder fails. Otherwise, it returns the path of the created directory.
+
+.. index:: pair: function; createUniqueTemporaryDirectory
+.. _doxid-namespacefarm__ng_1acfc82bd0eb4fe347eadab622d00ad046:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::optional<std::filesystem::path> createUniqueTemporaryDirectory()
+
+Creates a unique temporary directory with the prefix "/tmp/farm-ng-".
+
+Returns nullopt if for unexpected reason creation of the folder fails. Otherwise, it returns the path of the created directory.
+
+.. index:: pair: function; tokenize
+.. _doxid-namespacefarm__ng_1ad87bef4e720856f6d294e1a767a5b2ea:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::vector<std::string> tokenize(const std::string& str, char delimiter = ' ')
+
+Splits string into N tokens (substrings) based on a delimiter.
+
+.. index:: pair: function; visit_variant
+.. _doxid-namespacefarm__ng_1a04666fcdf6eb7c58dafdbf45820d2f5c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class Variant, typename... Alternatives>
+	decltype(auto) visit_variant(
+		Variant&& variant,
+		Alternatives&&... alternatives
+		)
+
+`https://gist.github.com/s3rvac/d1f30364ce1f732d75ef0c89a1c8c1ef <https://gist.github.com/s3rvac/d1f30364ce1f732d75ef0c89a1c8c1ef>`__
+

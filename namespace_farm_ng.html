@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>namespace farm_ng &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="namespace farm_ng::details" href="namespace_farm_ng_details.html" />
+    <link rel="prev" title="template struct ceres::Jet" href="struct_ceres_Jet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Sophus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">C++ Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pysophus.html">Sympy API - Symbolic Sophus In Python</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.html">FARM_ENUM</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ceres.html">namespace ceres</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">namespace farm_ng</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="namespace_farm_ng_details.html">namespace farm_ng::details</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_A.html">struct farm_ng::A</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Ab.html">struct farm_ng::Ab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Abc.html">struct farm_ng::Abc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Error.html">struct farm_ng::Error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_ErrorDetail.html">struct farm_ng::ErrorDetail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_HasType.html">template struct farm_ng::HasType&lt;T, std::variant&lt;Us…&gt;&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_HasType-2.html">template struct farm_ng::HasType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Overload.html">template struct farm_ng::Overload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_ScopedTimer.html">struct farm_ng::ScopedTimer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Success.html">struct farm_ng::Success</a></li>
+<li class="toctree-l3"><a class="reference internal" href="struct_farm_ng_Void.html">struct farm_ng::Void</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_farm_ng_StopwatchSingleton.html">class farm_ng::StopwatchSingleton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#global-variables">Global Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-functions">Global Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_sophus.html">namespace sophus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_Garage.html">struct Garage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart.html">template struct RotationalPart&lt;sophus::SE3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-2.html">template struct RotationalPart&lt;sophus::Sim2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-3.html">template struct RotationalPart&lt;sophus::Sim3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-4.html">template struct RotationalPart&lt;sophus::SO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-5.html">template struct RotationalPart&lt;sophus::Se2F64&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-6.html">template struct RotationalPart&lt;sophus::RxSO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-7.html">template struct RotationalPart&lt;sophus::RxSO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-8.html">template struct RotationalPart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-9.html">template struct RotationalPart&lt;sophus::SO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_CompileOnlyTernaryCostFunctorExample.html">class CompileOnlyTernaryCostFunctorExample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_PosePointReprojFunctor.html">class PosePointReprojFunctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+      <li>namespace farm_ng</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/namespace_farm_ng.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="namespace-farm-ng">
+<span id="doxid-namespacefarm-ng"></span><span id="index-0"></span><h1>namespace farm_ng<a class="headerlink" href="#namespace-farm-ng" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="k">namespace</span> <span class="n">farm_ng</span> <span class="p">{</span>
+
+<span class="c1">// namespaces</span>
+
+<span class="k">namespace</span> <a class="reference internal" href="namespace_farm_ng_details.html#doxid-namespacefarm-ng-1-1details"><span class="std std-ref">farm_ng::details</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// typedefs</span>
+
+<span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c">Expected</span><span></span> <span class="o">=</span> <span class="n">tl</span><span class="o">::</span><span class="n">expected</span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">ET</span><span class="o">&gt;</span> <span class="p">;</span>
+
+<span class="c1">// structs</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_A.html#doxid-structfarm-ng-1-1-a"><span class="std std-ref">A</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Ab.html#doxid-structfarm-ng-1-1-ab"><span class="std std-ref">Ab</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Abc.html#doxid-structfarm-ng-1-1-abc"><span class="std std-ref">Abc</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Error.html#doxid-structfarm-ng-1-1-error"><span class="std std-ref">Error</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_ErrorDetail.html#doxid-structfarm-ng-1-1-error-detail"><span class="std std-ref">ErrorDetail</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span><span class="p">...</span> <span class="n">Us</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_HasType.html#doxid-structfarm-ng-1-1-has-type-3-01-t-00-01std-1-1variant-3-01-us-8-8-8-01-4-01-4"><span class="std std-ref">HasType&lt;T, std::variant&lt;Us...&gt;&gt;</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">T</span><span class="p">,</span> <span class="k">class</span> <span class="n">Variant</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_HasType-2.html#doxid-structfarm-ng-1-1-has-type"><span class="std std-ref">HasType</span></a><span></span><span class="p">;</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span><span class="p">...</span> <span class="n">Ts</span><span class="o">&gt;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Overload.html#doxid-structfarm-ng-1-1-overload"><span class="std std-ref">Overload</span></a><span></span><span class="p">;</span>
+
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_ScopedTimer.html#doxid-structfarm-ng-1-1-scoped-timer"><span class="std std-ref">ScopedTimer</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Success.html#doxid-structfarm-ng-1-1-success"><span class="std std-ref">Success</span></a><span></span><span class="p">;</span>
+<span class="k">struct</span> <a class="reference internal" href="struct_farm_ng_Void.html#doxid-structfarm-ng-1-1-void"><span class="std std-ref">Void</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// classes</span>
+
+<span class="k">class</span> <a class="reference internal" href="class_farm_ng_StopwatchSingleton.html#doxid-classfarm-ng-1-1-stopwatch-singleton"><span class="std std-ref">StopwatchSingleton</span></a><span></span><span class="p">;</span>
+
+<span class="c1">// global variables</span>
+
+<span class="k">constexpr</span> <span class="kt">bool</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1a71efad730b54b1381ca0f3c8ac6ae9b8"><span class="std std-ref">AlwaysFalse</span></a><span></span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="k">constexpr</span> <span class="kt">bool</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a192f7266136156fa7e1c0165322a3bc3">has_type_v</span><span></span> <span class="o">=</span> <a class="reference internal" href="struct_farm_ng_HasType-2.html#doxid-structfarm-ng-1-1-has-type"><span class="std std-ref">HasType</span></a><span></span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Variant</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">;</span>
+
+<span class="c1">// global functions</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a66ade9e60d627d6a6caee1f6a2d7909b">operator&lt;&lt;</span><span></span><span class="p">(</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span>
+    <span class="k">const</span> <a class="reference internal" href="struct_farm_ng_Error.html#doxid-structfarm-ng-1-1-error"><span class="std std-ref">Error</span></a><span></span><span class="o">&amp;</span> <span class="n">error</span>
+    <span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TT</span><span class="p">,</span> <span class="k">class</span> <span class="n">ET</span> <span class="o">=</span> <span class="n">Error</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a1eb05560838d05f46d8ac5986f0a2bc5">fromExpected</span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><span class="n">TT</span><span class="p">,</span> <span class="n">ET</span><span class="o">&gt;</span> <span class="n">expected</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TT</span><span class="o">&gt;</span>
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1aa253ef797e6ea4fdfca1f367af492f23">fromOptional</span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">TT</span><span class="o">&gt;</span> <span class="n">optional</span><span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_A.html#doxid-structfarm-ng-1-1-a"><span class="std std-ref">A</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a00187d6feedcfb970681343b1934d616">makeA</span><span></span><span class="p">(</span><span class="kt">bool</span> <span class="n">a_error</span><span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_Ab.html#doxid-structfarm-ng-1-1-ab"><span class="std std-ref">Ab</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a1f22b0855feb9043a7f597cf94fe1d81">makeAb</span><span></span><span class="p">(</span>
+    <span class="kt">bool</span> <span class="n">a_error</span><span class="p">,</span>
+    <span class="kt">bool</span> <span class="n">b_error</span>
+    <span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_Abc.html#doxid-structfarm-ng-1-1-abc"><span class="std std-ref">Abc</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1aad2dc4f6b37814d9a32be2a887b7f07f">makeAbc</span><span></span><span class="p">(</span>
+    <span class="kt">bool</span> <span class="n">a_error</span><span class="p">,</span>
+    <span class="kt">bool</span> <span class="n">b_error</span><span class="p">,</span>
+    <span class="kt">bool</span> <span class="n">c_error</span>
+    <span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_Abc.html#doxid-structfarm-ng-1-1-abc"><span class="std std-ref">Abc</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1ab6e6b1fbd789523e747b90b514820646">makeAbcAtOnce</span><span></span><span class="p">(</span>
+    <span class="kt">bool</span> <span class="n">a_error</span><span class="p">,</span>
+    <span class="kt">bool</span> <span class="n">b_error</span><span class="p">,</span>
+    <span class="kt">bool</span> <span class="n">c_error</span>
+    <span class="p">);</span>
+
+<a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_A.html#doxid-structfarm-ng-1-1-a"><span class="std std-ref">A</span></a><span></span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a52760dc913cbfd1865bd611ca652a18f">sum</span><span></span><span class="p">(</span>
+    <a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_A.html#doxid-structfarm-ng-1-1-a"><span class="std std-ref">A</span></a><span></span><span class="o">&gt;</span> <span class="n">maybe_left</span><span class="p">,</span>
+    <a class="reference internal" href="#doxid-namespacefarm-ng-1a6264830e65119062b9fb5ccab228f04c"><span class="std std-ref">Expected</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="struct_farm_ng_A.html#doxid-structfarm-ng-1-1-a"><span class="std std-ref">A</span></a><span></span><span class="o">&gt;</span> <span class="n">maybe_right</span>
+    <span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a698b344c82d26cd0956d704de19e80bb">getLogLineFunction</span><span></span><span class="p">();</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a9ffc91d4aee4cf707731aa724f70e120">setLogLineFunction</span><span></span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">void</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="p">)</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">);</span>
+<span class="kt">void</span> <span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a38165e841c393f042631954dc56b2cea">logLine</span><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">line</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TypeT</span><span class="o">&gt;</span>
+<span class="k">auto</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1ad4b995625986331438e23aae21686e1d"><span class="std std-ref">maxMetric</span></a><span></span><span class="p">(</span><span class="n">TypeT</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="n">TypeT</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">ContainerT</span><span class="p">,</span> <span class="k">class</span> <span class="n">PredT</span><span class="o">&gt;</span>
+<span class="kt">size_t</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1a4344a182379dd8d8082eb791714cb0f8"><span class="std std-ref">eraseIf</span></a><span></span><span class="p">(</span><span class="n">ContainerT</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">,</span> <span class="n">PredT</span> <span class="n">pred</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1ac263a4c49f763996fcf0513024cfe0ab"><span class="std std-ref">createVersionedFolder</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&amp;</span> <span class="n">target_path</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1acfc82bd0eb4fe347eadab622d00ad046"><span class="std std-ref">createUniqueTemporaryDirectory</span></a><span></span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1ad87bef4e720856f6d294e1a767a5b2ea"><span class="std std-ref">tokenize</span></a><span></span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">char</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="sc">&#39; &#39;</span><span class="p">);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span><span class="p">...</span> <span class="n">Ts</span><span class="o">&gt;</span>
+<span class="doxyrest-code-target target" id="doxid-namespacefarm-ng-1a11ac9be6e9c558ae73c36dc32b5d696f">Overload</span><span></span><span class="p">(</span><span class="n">Ts</span><span class="p">...);</span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Variant</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Alternatives</span><span class="o">&gt;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span> <a class="reference internal" href="#doxid-namespacefarm-ng-1a04666fcdf6eb7c58dafdbf45820d2f5c"><span class="std std-ref">visit_variant</span></a><span></span><span class="p">(</span>
+    <span class="n">Variant</span><span class="o">&amp;&amp;</span> <span class="n">variant</span><span class="p">,</span>
+    <span class="n">Alternatives</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">alternatives</span>
+    <span class="p">);</span>
+
+<span class="p">}</span> <span class="c1">// namespace farm_ng</span></pre>
+</section>
+<section id="detailed-documentation">
+<span id="details-namespacefarm-ng"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<section id="global-variables">
+<h3>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1a71efad730b54b1381ca0f3c8ac6ae9b8"><span id="index-1"></span><span></span><span class="k">constexpr</span> <span class="kt">bool</span> <span class="n">AlwaysFalse</span> <span class="o">=</span> <span class="nb">false</span></pre>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/utility/variant/visit">https://en.cppreference.com/w/cpp/utility/variant/visit</a></p>
+</section>
+<section id="global-functions">
+<h3>Global Functions<a class="headerlink" href="#global-functions" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1ad4b995625986331438e23aae21686e1d"><span id="index-2"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">TypeT</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">maxMetric</span><span class="p">(</span><span class="n">TypeT</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p0</span><span class="p">,</span> <span class="n">TypeT</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p1</span><span class="p">)</span></pre>
+<p>Returns maximum metric between two points <code class="docutils literal notranslate"><span class="pre">p0</span></code> and <code class="docutils literal notranslate"><span class="pre">p1</span></code>, with <code class="docutils literal notranslate"><span class="pre">p0,</span> <span class="pre">p1</span></code> being matrices or a scalars.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1a4344a182379dd8d8082eb791714cb0f8"><span id="index-3"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">ContainerT</span><span class="p">,</span> <span class="k">class</span> <span class="n">PredT</span><span class="o">&gt;</span>
+<span class="kt">size_t</span> <span class="n">eraseIf</span><span class="p">(</span>
+    <span class="n">ContainerT</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">,</span>
+    <span class="n">PredT</span> <span class="n">pred</span>
+    <span class="p">)</span></pre>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/container/deque/erase2">https://en.cppreference.com/w/cpp/container/deque/erase2</a></p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1ac263a4c49f763996fcf0513024cfe0ab"><span id="index-4"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&gt;</span> <span class="n">createVersionedFolder</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&amp;</span> <span class="n">target_path</span><span class="p">)</span></pre>
+<p>Given a <code class="docutils literal notranslate"><span class="pre">target_path</span></code> name “foo”, this function will create a version folder “foo.xy”.</p>
+<p>First, it attempt to create folder “foo.00”. If the path “foo.00” already exits, it attempts to create “foo.01”, etc.</p>
+<p>Precondition: <code class="docutils literal notranslate"><span class="pre">parent_path</span></code> of the versioned folder must exist</p>
+<p>Returns nullopt if for unexpected reason creation of the folder fails. Otherwise, it returns the path of the created directory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1acfc82bd0eb4fe347eadab622d00ad046"><span id="index-5"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">filesystem</span><span class="o">::</span><span class="n">path</span><span class="o">&gt;</span> <span class="n">createUniqueTemporaryDirectory</span><span class="p">()</span></pre>
+<p>Creates a unique temporary directory with the prefix “/tmp/farm-ng-“.</p>
+<p>Returns nullopt if for unexpected reason creation of the folder fails. Otherwise, it returns the path of the created directory.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1ad87bef4e720856f6d294e1a767a5b2ea"><span id="index-6"></span><span></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">tokenize</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span> <span class="n">str</span><span class="p">,</span> <span class="kt">char</span> <span class="n">delimiter</span> <span class="o">=</span> <span class="sc">&#39; &#39;</span><span class="p">)</span></pre>
+<p>Splits string into N tokens (substrings) based on a delimiter.</p>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-namespacefarm-ng-1a04666fcdf6eb7c58dafdbf45820d2f5c"><span id="index-7"></span><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">Variant</span><span class="p">,</span> <span class="k">typename</span><span class="p">...</span> <span class="n">Alternatives</span><span class="o">&gt;</span>
+<span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span> <span class="n">visit_variant</span><span class="p">(</span>
+    <span class="n">Variant</span><span class="o">&amp;&amp;</span> <span class="n">variant</span><span class="p">,</span>
+    <span class="n">Alternatives</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">alternatives</span>
+    <span class="p">)</span></pre>
+<p><a class="reference external" href="https://gist.github.com/s3rvac/d1f30364ce1f732d75ef0c89a1c8c1ef">https://gist.github.com/s3rvac/d1f30364ce1f732d75ef0c89a1c8c1ef</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_ceres_Jet.html" class="btn btn-neutral float-left" title="template struct ceres::Jet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_farm_ng_details.html" class="btn btn-neutral float-right" title="namespace farm_ng::details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Hauke Strasdat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+.. index:: pair: struct; sophus::LieGroupCeresTests::TestPointCostFunctor
+.. _doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor:
+
+struct sophus::LieGroupCeresTests::TestPointCostFunctor
+=======================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <test_impl.h>
+	
+	struct TestPointCostFunctor {
+		// fields
+	
+		:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>` :target:`t_aw<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor_1a2ea3dc9221c2895cb1a76666773a31f3>`;
+		:ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>` :target:`point_a<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor_1a52a659da76a2840718794aae4d8cb2d8>`;
+
+		// construction
+	
+		:target:`TestPointCostFunctor<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor_1aa7852f7c765e607922de12499b67adc6>`(
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& t_aw,
+			const :ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>`& point_a
+			);
+
+		// methods
+	
+		template <class TT>
+		bool :target:`operator()<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor_1a8f92a91e607d13d191c3b735b95918c8>`(
+			TT const*const s_t_wa,
+			TT const*const spoint_b,
+			TT* s_residuals
+			) const;
+	};

@@ -1,0 +1,52 @@
+.. index:: pair: class; sophus::AffineTransform
+.. _doxid-classsophus_1_1_affine_transform:
+
+class sophus::AffineTransform
+=============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <affine.h>
+	
+	class AffineTransform {
+	public:
+		// typedefs
+	
+		using :target:`ProjInCameraZ1Plane<doxid-classsophus_1_1_affine_transform_1a42c4dde5f0d4479860dcfdf970d94e7d>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`PixelImage<doxid-classsophus_1_1_affine_transform_1a98e2349c5b002fb426847cfbe0b37af7>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`Params<doxid-classsophus_1_1_affine_transform_1af0225ad215420bc0bdce0b52c8c42573>` = Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_affine_transform_1a32c58289696c5b3f1a5c34a8d1e81008>`, 1> ;
+		using :target:`DistorationParams<doxid-classsophus_1_1_affine_transform_1a4636a047413e28833bfe2d3776db708e>` = Eigen::Matrix<ScalarT, :ref:`kNumDistortionParams<doxid-classsophus_1_1_affine_transform_1adc35a61216c1ec5a3dac7e2492a2d8ee>`, 1> ;
+
+		// fields
+	
+		static constexpr int :target:`kNumDistortionParams<doxid-classsophus_1_1_affine_transform_1adc35a61216c1ec5a3dac7e2492a2d8ee>` = 0;
+		static constexpr int :target:`kNumParams<doxid-classsophus_1_1_affine_transform_1a32c58289696c5b3f1a5c34a8d1e81008>` = 4;
+		static const constexpr std::string_view :target:`kProjectionModel<doxid-classsophus_1_1_affine_transform_1aeab26871a005796304275070b5184791>` =       "Pinhole:fx,fy,cx,cy";
+
+		// methods
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_affine_transform_1a98e2349c5b002fb426847cfbe0b37af7>`<typename PointTypeT::Scalar> :target:`warp<doxid-classsophus_1_1_affine_transform_1a66a54467daf1f65f3779a8e7aab9cec7>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& proj_point_in_camera_z1_plane
+			);
+	
+		template <class ScalarT>
+		static :ref:`ProjInCameraZ1Plane<doxid-classsophus_1_1_affine_transform_1a42c4dde5f0d4479860dcfdf970d94e7d>`<ScalarT> :target:`unwarp<doxid-classsophus_1_1_affine_transform_1a862f9236c7cca6bdc70979fa893a6fbf>`(
+			const :ref:`Params<doxid-classsophus_1_1_affine_transform_1af0225ad215420bc0bdce0b52c8c42573>`<ScalarT>& params,
+			const :ref:`PixelImage<doxid-classsophus_1_1_affine_transform_1a98e2349c5b002fb426847cfbe0b37af7>`<ScalarT>& pixel_image
+			);
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static Eigen::Matrix<typename PointTypeT::Scalar, 2, 2> :target:`dxWarp<doxid-classsophus_1_1_affine_transform_1a2b0835f6822d314d00aad6c7d0b005b7>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>&
+			);
+	};

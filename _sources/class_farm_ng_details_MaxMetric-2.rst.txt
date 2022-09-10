@@ -1,0 +1,27 @@
+.. index:: pair: class; farm_ng::details::MaxMetric<Eigen::Matrix<Scalar, M, N>>
+.. _doxid-classfarm__ng_1_1details_1_1_max_metric_3_01_eigen_1_1_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4:
+
+template class farm_ng::details::MaxMetric<Eigen::Matrix<Scalar, M, N>>
+=======================================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <eigen.h>
+	
+	template <class Scalar, int M, int N>
+	class MaxMetric<Eigen::Matrix<Scalar, M, N>> {
+	public:
+		// methods
+	
+		static Scalar :target:`impl<doxid-classfarm__ng_1_1details_1_1_max_metric_3_01_eigen_1_1_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4_1aebdb4b0310912a290ee355c33c86afa9>`(
+			Eigen::Matrix<Scalar, M, N> const& p0,
+			Eigen::Matrix<Scalar, M, N> const& p1
+			);
+	};

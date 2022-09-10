@@ -1,0 +1,22 @@
+.. index:: pair: struct; Garage
+.. _doxid-struct_garage:
+
+struct Garage
+=============
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct Garage {
+		// methods
+	
+		:target:`FARM_ENUMFLAGS_ALIAS<doxid-struct_garage_1ad96d5a2ed52df756297a28faebab90af>`(Bike);
+		:target:`FARM_ENUM_ALIAS<doxid-struct_garage_1a034b367108c0c0732f8db5b52bee400a>`(Autos);
+	};

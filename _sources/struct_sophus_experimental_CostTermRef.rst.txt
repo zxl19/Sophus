@@ -1,0 +1,24 @@
+.. index:: pair: struct; sophus::experimental::CostTermRef
+.. _doxid-structsophus_1_1experimental_1_1_cost_term_ref:
+
+template struct sophus::experimental::CostTermRef
+=================================================
+
+.. toctree::
+	:hidden:
+
+:ref:`Manifold <doxid-classsophus_1_1_manifold>` ids of the cost term arguments.
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kArgs, class ConstArgT = farm_ng::Void>
+	struct CostTermRef {
+		// fields
+	
+		std::array<int, kArgs> :target:`arg_ids<doxid-structsophus_1_1experimental_1_1_cost_term_ref_1aeb02da8570e331ef11d535beea8db4f2>`;
+		ConstArgT :target:`constant<doxid-structsophus_1_1experimental_1_1_cost_term_ref_1a23216fd1fbec0569984b280809ca669c>`;
+	};

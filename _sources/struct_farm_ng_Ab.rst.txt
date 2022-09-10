@@ -1,0 +1,22 @@
+.. index:: pair: struct; farm_ng::Ab
+.. _doxid-structfarm__ng_1_1_ab:
+
+struct farm_ng::Ab
+==================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct Ab {
+		// fields
+	
+		:ref:`A<doxid-structfarm__ng_1_1_a>` :target:`a<doxid-structfarm__ng_1_1_ab_1a6bfcb5baf68e0ebf03a12c95d3b911b7>`;
+		std::string :target:`b<doxid-structfarm__ng_1_1_ab_1aa687a78f787e61fd4c8ea0248dbbee7d>`;
+	};

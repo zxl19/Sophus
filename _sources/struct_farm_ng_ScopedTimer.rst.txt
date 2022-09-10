@@ -1,0 +1,45 @@
+.. index:: pair: struct; farm_ng::ScopedTimer
+.. _doxid-structfarm__ng_1_1_scoped_timer:
+
+struct farm_ng::ScopedTimer
+===========================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Stopwatch for a single, named timer. :ref:`More...<details-structfarm__ng_1_1_scoped_timer>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <stopwatch.h>
+	
+	struct ScopedTimer {
+		// construction
+	
+		:ref:`ScopedTimer<doxid-structfarm__ng_1_1_scoped_timer_1aa28c046e87d6a0bef24d705bfbc6a335>`(std::string str);
+	};
+.. _details-structfarm__ng_1_1_scoped_timer:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Stopwatch for a single, named timer.
+
+Construction
+------------
+
+.. index:: pair: function; ScopedTimer
+.. _doxid-structfarm__ng_1_1_scoped_timer_1aa28c046e87d6a0bef24d705bfbc6a335:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ScopedTimer(std::string str)
+
+Default constructor, requires timer name.
+

@@ -1,0 +1,39 @@
+.. index:: pair: struct; sophus::ScalingNonOrthogonalityGyroModel
+.. _doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model:
+
+template struct sophus::ScalingNonOrthogonalityGyroModel
+========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <imu_model.h>
+	
+	template <class TT>
+	struct ScalingNonOrthogonalityGyroModel {
+		// fields
+	
+		Eigen::Matrix<TT, 3, 1> :target:`scale<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1a483062ff0802e2a0428c666b477c82d6>`;
+		Eigen::Matrix<TT, 3, 1> :target:`non_orthogonality<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1a374057c0d5ffe842ac20d4135576b36f>`;
+		Eigen::Matrix<TT, 3, 1> :target:`gyro_bias<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1ad0572c53926d1a4f34dcc9297d927cb3>`;
+
+		// construction
+	
+		:target:`ScalingNonOrthogonalityGyroModel<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1a27cfbed590263ec0823dbc3ffdf589b6>`(
+			const Eigen::Matrix<TT, 3, 1>& scale = Eigen::Matrix<TT, 3, 1>::Ones(),
+			const Eigen::Matrix<TT, 3, 1>& non_orthogonality = Eigen::Matrix<TT, 3, 1>::Zero(),
+			const Eigen::Matrix<TT, 3, 1>& gyro_bias = Eigen::Matrix<TT, 3, 1>::Zero()
+			);
+
+		// methods
+	
+		Eigen::Matrix<TT, 3, 1> :target:`gyroMeasurement<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1ade4ca342a07187ac6198edc484f15fa9>`(const Eigen::Matrix<TT, 3, 1>& imu_angular_rate_imu) const;
+		Eigen::Matrix<TT, 9, 1> :target:`params<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1af4b3f6b6a387c59b3c8f5f59f4cf765a>`() const;
+		static ScalingNonOrthogonalityGyroModel<TT> :target:`fromParams<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model_1ab38e960c2c1e4ba2fbea7a16bae12fc8>`(const Eigen::Matrix<TT, 9, 1>& params);
+	};

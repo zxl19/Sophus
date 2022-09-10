@@ -1,0 +1,295 @@
+.. index:: pair: struct; sophus::ImageView
+.. _doxid-structsophus_1_1_image_view:
+
+template struct sophus::ImageView
+=================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+A view of an (immutable) image, which does not own the data. :ref:`More...<details-structsophus_1_1_image_view>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image_view.h>
+	
+	template <class PixelT>
+	struct ImageView {
+		// construction
+	
+		:ref:`ImageView<doxid-structsophus_1_1_image_view_1ab9aa20bb3aef5a1255779bfcd20c24f1>`();
+		:ref:`ImageView<doxid-structsophus_1_1_image_view_1a88d6ad256aa23190dda65b9a7ace795e>`(:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` shape, PixelT const* ptr);
+		:ref:`ImageView<doxid-structsophus_1_1_image_view_1a873f19dca42f8182c5b6230ba75d5023>`(:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` image_size, PixelT const* ptr);
+
+		// methods
+	
+		bool :ref:`isEmpty<doxid-structsophus_1_1_image_view_1aaa668b0af726468b3bd2683664d2b436>`() const;
+		bool :ref:`isContiguous<doxid-structsophus_1_1_image_view_1a1bd56b9a976edfb97da4641530a4d884>`();
+		:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` const& :ref:`imageSize<doxid-structsophus_1_1_image_view_1a9c91a9b91e771adae8f3d4ca84a94fd9>`() const;
+		:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` const& :ref:`shape<doxid-structsophus_1_1_image_view_1ad16825882e671a05bf225b486e3a2353>`() const;
+		int :target:`width<doxid-structsophus_1_1_image_view_1ae2211bc7c2f77c77865b3298dfa5b483>`() const;
+		int :target:`height<doxid-structsophus_1_1_image_view_1a854204b8493083da1d167255bddd2460>`() const;
+		size_t :target:`pitchBytes<doxid-structsophus_1_1_image_view_1a2946b7c9af8c0854a6c42448c81c325f>`() const;
+		bool :ref:`colInBounds<doxid-structsophus_1_1_image_view_1a0c4e617b87689307dfa800ee448b9a49>`(int u) const;
+		bool :ref:`rowInBounds<doxid-structsophus_1_1_image_view_1a12131b7c9063a7d89421e73faaa95cfb>`(int v) const;
+		PixelT const* :ref:`rowPtr<doxid-structsophus_1_1_image_view_1a633b273fc5bdbd197e3abc6b569e0391>`(int v) const;
+		PixelT const& :ref:`checked<doxid-structsophus_1_1_image_view_1aa409f1b7cc9dc14f0d366f44fb38d5c3>`(int u, int v) const;
+		PixelT const& :target:`checked<doxid-structsophus_1_1_image_view_1a255adf8e1e0aecca27e2df720951c586>`(Eigen::Vector2i uv) const;
+		PixelT const& :ref:`unchecked<doxid-structsophus_1_1_image_view_1ae44c5748efbf4b7c0c90b85d4ac02976>`(int u, int v) const;
+		PixelT const& :target:`unchecked<doxid-structsophus_1_1_image_view_1a63f9e2ac00674d04598e2eba15a4b9af>`(Eigen::Vector2i uv) const;
+		PixelT const* :ref:`data<doxid-structsophus_1_1_image_view_1a8571da7d58ef1225854f1a29addd4de2>`() const;
+		ImageView :ref:`subview<doxid-structsophus_1_1_image_view_1ac65af4ec779959aa561ac57cd9b30a74>`(Eigen::Vector2i uv, :ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size) const;
+	
+		template <class ReduceOpT, class ValT>
+		ValT :ref:`reduce<doxid-structsophus_1_1_image_view_1aae8aa511af60dcf9fa820228ff2c59e5>`(
+			const ReduceOpT& reduce_op,
+			ValT val = ValT{}
+			) const;
+	
+		template <class ShortCircuitReduceOpT, class ValT>
+		ValT :ref:`shortCircuitReduce<doxid-structsophus_1_1_image_view_1afcd53d4b256323275b0112949dea1387>`(
+			const ShortCircuitReduceOpT& short_circuit_reduce_op,
+			ValT val = ValT{}
+			) const;
+	
+		bool :ref:`operator==<doxid-structsophus_1_1_image_view_1a604bea6b9f4332c367fe6a2da33e53bf>`(const ImageView& rhs);
+
+	protected:
+		// fields
+	
+		:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` :target:`shape_<doxid-structsophus_1_1_image_view_1a2c341454e66c51e706df6631597c97d2>` = {};
+		PixelT const* :target:`ptr_<doxid-structsophus_1_1_image_view_1a104b4d2a3c41b20973235c6d5e8c1d86>` = nullptr;
+
+		// methods
+	
+		void :ref:`setViewToEmpty<doxid-structsophus_1_1_image_view_1aba91c44d559dac0fdc9bda95c4a47d98>`();
+	};
+
+	// direct descendants
+
+	template <class PixelT>
+	class :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`;
+.. _details-structsophus_1_1_image_view:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+A view of an (immutable) image, which does not own the data.
+
+The API of :ref:`ImageView <doxid-structsophus_1_1_image_view>` allows for read-only access. There is an escape hook for write access, see :ref:`MutImageView::unsafeConstCast <doxid-classsophus_1_1_mut_image_view_1a30e67ab5bb0322544de670dff40c81d8>` below.
+
+ImageViews are nullable. In that case ``this->:ref:`isEmpty() <doxid-structsophus_1_1_image_view_1aaa668b0af726468b3bd2683664d2b436>``` is true.
+
+Construction
+------------
+
+.. index:: pair: function; ImageView
+.. _doxid-structsophus_1_1_image_view_1ab9aa20bb3aef5a1255779bfcd20c24f1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ImageView()
+
+Default constructor creates an empty image.
+
+.. index:: pair: function; ImageView
+.. _doxid-structsophus_1_1_image_view_1a88d6ad256aa23190dda65b9a7ace795e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ImageView(:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` shape, PixelT const* ptr)
+
+Creates view from shape and pointer to first pixel.
+
+.. index:: pair: function; ImageView
+.. _doxid-structsophus_1_1_image_view_1a873f19dca42f8182c5b6230ba75d5023:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ImageView(:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` image_size, PixelT const* ptr)
+
+Creates view from image size and pointer to first pixel. The image is assumed to be contiguous and the pitch is set accordingly.
+
+Methods
+-------
+
+.. index:: pair: function; isEmpty
+.. _doxid-structsophus_1_1_image_view_1aaa668b0af726468b3bd2683664d2b436:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool isEmpty() const
+
+Returns true if view is empty.
+
+.. index:: pair: function; isContiguous
+.. _doxid-structsophus_1_1_image_view_1a1bd56b9a976edfb97da4641530a4d884:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool isContiguous()
+
+Returns true if view is contiguous.
+
+.. index:: pair: function; imageSize
+.. _doxid-structsophus_1_1_image_view_1a9c91a9b91e771adae8f3d4ca84a94fd9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` const& imageSize() const
+
+Returns :ref:`ImageSize <doxid-structsophus_1_1_image_size>`. It is {0,0} if view is empty.
+
+.. index:: pair: function; shape
+.. _doxid-structsophus_1_1_image_view_1ad16825882e671a05bf225b486e3a2353:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`ImageShape<doxid-classsophus_1_1_image_shape>` const& shape() const
+
+Returns :ref:`ImageShape <doxid-classsophus_1_1_image_shape>`. It is {{0,0}, 0} is view is empty.
+
+.. index:: pair: function; colInBounds
+.. _doxid-structsophus_1_1_image_view_1a0c4e617b87689307dfa800ee448b9a49:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool colInBounds(int u) const
+
+Returns true if u is in [0, width).
+
+.. index:: pair: function; rowInBounds
+.. _doxid-structsophus_1_1_image_view_1a12131b7c9063a7d89421e73faaa95cfb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool rowInBounds(int v) const
+
+Returns true if v is in [0, height).
+
+.. index:: pair: function; rowPtr
+.. _doxid-structsophus_1_1_image_view_1a633b273fc5bdbd197e3abc6b569e0391:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PixelT const* rowPtr(int v) const
+
+Returns v-th row pointer.
+
+Precondition: v must be in [0, height).
+
+.. index:: pair: function; checked
+.. _doxid-structsophus_1_1_image_view_1aa409f1b7cc9dc14f0d366f44fb38d5c3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PixelT const& checked(int u, int v) const
+
+Returns pixel u, v.
+
+Precondition: u must be in [0, width) and v must be in [0, height).
+
+Note:
+
+* panics if u.v is invalid,
+
+This is a costly function to call - e.g. when iterating over the whole image. Use the following instead:
+
+for (int v=0; v<view.shape(). :ref:`height() <doxid-structsophus_1_1_image_view_1a854204b8493083da1d167255bddd2460>`; ++v) { PixelT const\* row = img.rowPtr(v); for (int u=0; u<view.shape(). :ref:`width() <doxid-structsophus_1_1_image_view_1ae2211bc7c2f77c77865b3298dfa5b483>`; ++u) { PixetT p = row[u]; } }
+
+.. index:: pair: function; unchecked
+.. _doxid-structsophus_1_1_image_view_1ae44c5748efbf4b7c0c90b85d4ac02976:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PixelT const& unchecked(int u, int v) const
+
+Returns pixel u, v.
+
+Precondition: u must be in [0, width) and v must be in [0, height). Silent UB on failure.
+
+.. index:: pair: function; data
+.. _doxid-structsophus_1_1_image_view_1a8571da7d58ef1225854f1a29addd4de2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	PixelT const* data() const
+
+Returns pointer to first pixel.
+
+.. index:: pair: function; subview
+.. _doxid-structsophus_1_1_image_view_1ac65af4ec779959aa561ac57cd9b30a74:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	ImageView subview(Eigen::Vector2i uv, :ref:`sophus::ImageSize<doxid-structsophus_1_1_image_size>` size) const
+
+Returns subview.
+
+.. index:: pair: function; reduce
+.. _doxid-structsophus_1_1_image_view_1aae8aa511af60dcf9fa820228ff2c59e5:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ReduceOpT, class ValT>
+	ValT reduce(
+		const ReduceOpT& reduce_op,
+		ValT val = ValT{}
+		) const
+
+Performs reduction / fold on image view.
+
+.. index:: pair: function; shortCircuitReduce
+.. _doxid-structsophus_1_1_image_view_1afcd53d4b256323275b0112949dea1387:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ShortCircuitReduceOpT, class ValT>
+	ValT shortCircuitReduce(
+		const ShortCircuitReduceOpT& short_circuit_reduce_op,
+		ValT val = ValT{}
+		) const
+
+Performs reduction / fold on image view with short circuit condition.
+
+.. index:: pair: function; operator==
+.. _doxid-structsophus_1_1_image_view_1a604bea6b9f4332c367fe6a2da33e53bf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator==(const ImageView& rhs)
+
+Returns true both views have the same size and contain the same data.
+
+.. index:: pair: function; setViewToEmpty
+.. _doxid-structsophus_1_1_image_view_1aba91c44d559dac0fdc9bda95c4a47d98:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setViewToEmpty()
+
+Resets view such that it is empty.
+

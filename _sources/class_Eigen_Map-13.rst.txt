@@ -1,0 +1,189 @@
+.. index:: pair: class; Eigen::Map<sophus::Cartesian<ScalarT, kM>, kOptions>
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4:
+
+template class Eigen::Map<sophus::Cartesian<ScalarT, kM>, kOptions>
+===================================================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Specialization of Eigen::Map for ``Cartesian``; derived from CartesianBase. :ref:`More...<details-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <cartesian.h>
+	
+	template <class ScalarT, int kM, int kOptions>
+	class Map<sophus::Cartesian<ScalarT, kM>, kOptions>: public sophus:: CartesianBase< Map< sophus::Cartesian< ScalarT, kM >, kOptions >, kM > {
+	public:
+		// typedefs
+	
+		using :target:`Base<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1aa4423a1ebd20d71e2590f6575e8776bc>` = :ref:`sophus::CartesianBase<doxid-classsophus_1_1_cartesian_base>`<:ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<:ref:`sophus::Cartesian<doxid-classsophus_1_1_cartesian>`<ScalarT, kM>, kOptions>, kM> ;
+		using :target:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>` = ScalarT ;
+		using :target:`Transformation<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a8e3beb5a8e28de55cec8bf0f1cda5110>` = typename :ref:`Base::Transformation<doxid-classsophus_1_1_cartesian_base_1a649d7b46dbbabf802ec5ff68e48e4d94>` ;
+		using :target:`Point<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ab7bc64e8c0199d0a420df77e3ca578f5>` = typename :ref:`Base::Point<doxid-classsophus_1_1_cartesian_base_1aa53a41362f4e8b5df411f22fb91a49db>` ;
+		using :target:`HomogeneousPoint<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ab2b0b9dbb4cceb77801ea6f937a34e0c>` = typename :ref:`Base::HomogeneousPoint<doxid-classsophus_1_1_cartesian_base_1a2f782874a4bfe00e13faf5193e75e05e>` ;
+		using :target:`Tangent<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ab217fff928a73ae68068fdbce2560bb0>` = typename :ref:`Base::Tangent<doxid-classsophus_1_1_cartesian_base_1ad768d1d0832fd0cf4fe6163455b1bbce>` ;
+
+		// construction
+	
+		:target:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`(:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`* coeffs);
+
+		// methods
+	
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<Eigen::Vector<:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`, kM>, kOptions>& :ref:`params<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a7a3c43134003eb24aab2ee0dccdb08f4>`();
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<Eigen::Vector<:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`, kM>, kOptions> const& :ref:`params<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1aaacc4c2309ace6a204003475fa200118>`() const;
+	
+		template <class OtherDerivedT>
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianBase<DerivedT, kM>& :ref:`operator=<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a7db300b95996f96ce23cc59abee84002>`(CartesianBase<OtherDerivedT, kM> const& other);
+	
+		template <
+			typename OtherDerivedT,
+			typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerivedT>>::value>::type
+			>
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianBase<DerivedT, kM>& :ref:`operator*=<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a190af56e3799afead5b92aa486ed2a68>`(CartesianBase<OtherDerivedT, kM> const& other);
+	
+		template <typename OtherDerivedT>
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianSum<OtherDerivedT> :ref:`operator*<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a51de3e2f740140d3b2135ffcdb051ecd>`(CartesianBase<OtherDerivedT, kM> const& other);
+	
+		template <
+			typename PointDerivedT,
+			typename = typename std::enable_if<IsFixedSizeVector<PointDerivedT, kM>::value>::type
+			>
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` PointProduct<PointDerivedT> :ref:`operator*<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a75475ee67a8f28b1a4f425844500755e>`(Eigen::MatrixBase<PointDerivedT> const& p);
+	
+		template <
+			typename HPointDerivedT,
+			typename = typename std::enable_if<IsFixedSizeVector<HPointDerivedT, kMatrixDim>::value>::type
+			>
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` HomogeneousPointProduct<HPointDerivedT> :ref:`operator*<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a28c7f639693a1f376f6f5d6a846fb6c7>`(Eigen::MatrixBase<HPointDerivedT> const& p);
+	
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` Line :ref:`operator*<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac09c3598719d07d6c726d19e7dd66adf>`(Line const& l);
+		:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` Hyperplane :ref:`operator*<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac8080848158926fd4b41684b8ff196cd>`(Hyperplane const& p);
+
+	protected:
+		// fields
+	
+		:ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<Eigen::Vector<:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`, kM>, kOptions> :target:`params_<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a8428a438ba4ff71d6aaa9973ff157d2e>`;
+	};
+.. _details-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Specialization of Eigen::Map for ``Cartesian``; derived from CartesianBase.
+
+Allows us to wrap Cartesian objects around POD array.
+
+Methods
+-------
+
+.. index:: pair: function; params
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a7a3c43134003eb24aab2ee0dccdb08f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<Eigen::Vector<:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`, kM>, kOptions>& params()
+
+Mutator of params vector.
+
+.. index:: pair: function; params
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1aaacc4c2309ace6a204003475fa200118:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` :ref:`Map<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac5fb9e95fffdfad9bc69b67f8acc3fc0>`<Eigen::Vector<:ref:`Scalar<doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a9de0f3db50fe3f9a93845c138ca83a69>`, kM>, kOptions> const& params() const
+
+Accessor of params vector.
+
+.. index:: pair: function; operator=
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a7db300b95996f96ce23cc59abee84002:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class OtherDerivedT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianBase<DerivedT, kM>& operator=(CartesianBase<OtherDerivedT, kM> const& other)
+
+Group multiplication, are vector additions.
+
+.. index:: pair: function; operator*=
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a190af56e3799afead5b92aa486ed2a68:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename OtherDerivedT,
+		typename = typename std::enable_if<std::is_same<Scalar, ReturnScalar<OtherDerivedT>>::value>::type
+		>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianBase<DerivedT, kM>& operator*=(CartesianBase<OtherDerivedT, kM> const& other)
+
+In-place group multiplication. This method is only valid if the return type of the multiplication is compatible with this Cartesian's Scalar type.
+
+.. index:: pair: function; operator*
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a51de3e2f740140d3b2135ffcdb051ecd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <typename OtherDerivedT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` CartesianSum<OtherDerivedT> operator*(CartesianBase<OtherDerivedT, kM> const& other)
+
+Group multiplication, are vector additions.
+
+.. index:: pair: function; operator*
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a75475ee67a8f28b1a4f425844500755e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename PointDerivedT,
+		typename = typename std::enable_if<IsFixedSizeVector<PointDerivedT, kM>::value>::type
+		>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` PointProduct<PointDerivedT> operator*(Eigen::MatrixBase<PointDerivedT> const& p)
+
+Group action on points, again just vector addition.
+
+.. index:: pair: function; operator*
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1a28c7f639693a1f376f6f5d6a846fb6c7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <
+		typename HPointDerivedT,
+		typename = typename std::enable_if<IsFixedSizeVector<HPointDerivedT, kMatrixDim>::value>::type
+		>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` HomogeneousPointProduct<HPointDerivedT> operator*(Eigen::MatrixBase<HPointDerivedT> const& p)
+
+Group action on homogeneous points. See above for more details.
+
+.. index:: pair: function; operator*
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac09c3598719d07d6c726d19e7dd66adf:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` Line operator*(Line const& l)
+
+Group action on lines.
+
+.. index:: pair: function; operator*
+.. _doxid-class_eigen_1_1_map_3_01sophus_1_1_cartesian_3_01_scalar_t_00_01k_m_01_4_00_01k_options_01_4_1ac8080848158926fd4b41684b8ff196cd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` Hyperplane operator*(Hyperplane const& p)
+
+Group action on planes.
+

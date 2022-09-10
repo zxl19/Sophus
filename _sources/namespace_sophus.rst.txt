@@ -1,0 +1,1609 @@
+.. index:: pair: namespace; sophus
+.. _doxid-namespacesophus:
+
+namespace sophus
+================
+
+.. toctree::
+	:hidden:
+
+	namespace_sophus_experimental.rst
+	namespace_sophus_jet_helpers.rst
+	enum_sophus_SegmentCase.rst
+	struct_sophus_AnyImagePredicate.rst
+	struct_sophus_BasisSplineSegment.rst
+	struct_sophus_CameraInRig.rst
+	struct_sophus_ClippingPlanes.rst
+	struct_sophus_GetScalar.rst
+	struct_sophus_GetScalar-2.rst
+	struct_sophus_ImageSize.rst
+	struct_sophus_ImageTraits.rst
+	struct_sophus_ImageTraits-2.rst
+	struct_sophus_ImageView.rst
+	struct_sophus_IndexAndU.rst
+	struct_sophus_IntensityImagePredicate.rst
+	struct_sophus_IsFixedSizeVector.rst
+	struct_sophus_IsFloatingPoint.rst
+	struct_sophus_IsFloatingPoint-2.rst
+	struct_sophus_IsUniformRandomBitGenerator.rst
+	struct_sophus_LieGroupCeresTests.rst
+	struct_sophus_Mapper.rst
+	struct_sophus_Mapper-2.rst
+	struct_sophus_MultiCameraRig.rst
+	struct_sophus_Random.rst
+	struct_sophus_Random-2.rst
+	struct_sophus_RuntimePixelType.rst
+	struct_sophus_ScalingNonOrthogonalityAcceleroModel.rst
+	struct_sophus_ScalingNonOrthogonalityGyroModel.rst
+	class_sophus_AffineTransform.rst
+	class_sophus_BasisSpline.rst
+	class_sophus_BasisSplineFn.rst
+	class_sophus_BasisSplineImpl.rst
+	class_sophus_BrownConradyTransform.rst
+	class_sophus_CameraModel.rst
+	class_sophus_CameraModelT.rst
+	class_sophus_Cartesian.rst
+	class_sophus_CartesianBase.rst
+	class_sophus_Image.rst
+	class_sophus_ImageShape.rst
+	class_sophus_ImuModel.rst
+	class_sophus_InverseDepthPoint3.rst
+	class_sophus_KannalaBrandtK3Transform.rst
+	class_sophus_LieGroupTests.rst
+	class_sophus_Manifold.rst
+	class_sophus_MutImage.rst
+	class_sophus_MutImageView.rst
+	class_sophus_OrthographicModelT.rst
+	class_sophus_OrthographicProjection.rst
+	class_sophus_PointTransformer.rst
+	class_sophus_Ray3.rst
+	class_sophus_RuntimeImage.rst
+	class_sophus_RxSo2.rst
+	class_sophus_RxSo2Base.rst
+	class_sophus_RxSo3.rst
+	class_sophus_RxSo3Base.rst
+	class_sophus_Se2.rst
+	class_sophus_Se2Base.rst
+	class_sophus_Se3.rst
+	class_sophus_Se3Base.rst
+	class_sophus_Sim2.rst
+	class_sophus_Sim2Base.rst
+	class_sophus_Sim3.rst
+	class_sophus_Sim3Base.rst
+	class_sophus_So2.rst
+	class_sophus_So2Base.rst
+	class_sophus_So3.rst
+	class_sophus_So3Base.rst
+	class_sophus_SplineBasisFunction.rst
+	class_sophus_Tests.rst
+	class_sophus_UnitVector3.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace sophus {
+
+	// namespaces
+
+	namespace :ref:`sophus::experimental<doxid-namespacesophus_1_1experimental>`;
+	namespace :ref:`sophus::jet_helpers<doxid-namespacesophus_1_1jet__helpers>`;
+
+	// typedefs
+
+	using :target:`IsSpecialized<doxid-namespacesophus_1ae5e92e5b1605295978f733e92f81b58e>` = decltype(:ref:`complete<doxid-namespacesophus_1adea52720c03b2850a65f1502b31e1fb7>`(std::declval<TT*>())) ;
+	using :ref:`IsMappable<doxid-namespacesophus_1a2679b6b04ab723b386e823654b391a2f>` = :ref:`IsSpecialized<doxid-namespacesophus_1ae5e92e5b1605295978f733e92f81b58e>`<Eigen::internal::traits<std::decay_t<TT>>> ;
+	using :target:`InverseDepthPoint3F64<doxid-namespacesophus_1a6d2172c1fac0ca990911908364ec6f56>` = :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<double> ;
+	using :target:`UnitVector3F64<doxid-namespacesophus_1a591cded8e4d095b078dde6f676880ec1>` = :ref:`UnitVector3<doxid-classsophus_1_1_unit_vector3>`<double> ;
+	using :target:`Ray3F64<doxid-namespacesophus_1af9c40578db19bee7a7bba01294cb0c52>` = :ref:`Ray3<doxid-classsophus_1_1_ray3>`<double> ;
+	using :target:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>` = Eigen::Matrix<ChannelT, 3, 1> ;
+	using :target:`Pixel3U8<doxid-namespacesophus_1a357f6dbcfeb324e41eedad7a1a139061>` = :ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<uint8_t> ;
+	using :target:`Pixel3U16<doxid-namespacesophus_1a80f7e3b6275b10d7ffd120c25b6aab02>` = :ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<uint16_t> ;
+	using :target:`Pixel3F32<doxid-namespacesophus_1a39e5641390bdcccc7eb95bc2abb1bc3f>` = :ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<float> ;
+	using :target:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>` = Eigen::Matrix<ChannelT, 4, 1> ;
+	using :target:`Pixel4U8<doxid-namespacesophus_1a506f4368bab7ab088474682cd67d3a2d>` = :ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<uint8_t> ;
+	using :target:`Pixel4U16<doxid-namespacesophus_1ac4fb1bf2dd78421d797351b97cc1fd97>` = :ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<uint16_t> ;
+	using :target:`Pixel4F32<doxid-namespacesophus_1a9a69b0947f141409726829a02f7f93ac>` = :ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<float> ;
+	using :target:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<bool> ;
+	using :target:`MutImageViewBool<doxid-namespacesophus_1add6fb02240ecc044874ca7a17bc7f93c>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<bool> ;
+	using :target:`ImageViewU8<doxid-namespacesophus_1ad496abcda9f667190e72400ed447bf78>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<uint8_t> ;
+	using :target:`ImageViewU16<doxid-namespacesophus_1ae81a4eb51d81eb9264c1e1dd35515b5a>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<uint16_t> ;
+	using :target:`ImageViewF32<doxid-namespacesophus_1abf6ac9a2b001eb2d02686a490a629dcf>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<float> ;
+	using :target:`MutImageViewU8<doxid-namespacesophus_1a5ba9e7b94412725b4060177ce5aae496>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<uint8_t> ;
+	using :target:`MutImageViewU16<doxid-namespacesophus_1ad265685f31fa1cee7cf9b63c64ee31ac>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<uint16_t> ;
+	using :target:`MutImageViewF32<doxid-namespacesophus_1ab72649b1795b6f26ae37b75850119c21>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<float> ;
+	using :target:`ImageView3<doxid-namespacesophus_1a14614050bb3d5e79d333b1cb57cea498>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<:ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<ChannelT>> ;
+	using :target:`ImageView3U8<doxid-namespacesophus_1aa9dfddf6ea400178044c6c7e4b1f07b2>` = :ref:`ImageView3<doxid-namespacesophus_1a14614050bb3d5e79d333b1cb57cea498>`<uint8_t> ;
+	using :target:`ImageView3U16<doxid-namespacesophus_1a9b2be18ce57623391ea80b8d432cd4e2>` = :ref:`ImageView3<doxid-namespacesophus_1a14614050bb3d5e79d333b1cb57cea498>`<uint16_t> ;
+	using :target:`ImageView3F32<doxid-namespacesophus_1aae33c266bc61ac68eeebd2f64e013aa6>` = :ref:`ImageView3<doxid-namespacesophus_1a14614050bb3d5e79d333b1cb57cea498>`<float> ;
+	using :target:`MutImageView3<doxid-namespacesophus_1a8204ce460bd04225b1b8044379238008>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<:ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<ChannelT>> ;
+	using :target:`MutImageView3U8<doxid-namespacesophus_1a8b1f6335d39364a14f85b20184e9f3a5>` = :ref:`MutImageView3<doxid-namespacesophus_1a8204ce460bd04225b1b8044379238008>`<uint8_t> ;
+	using :target:`MutImageView3U16<doxid-namespacesophus_1a373c880b21ce87ddb0c1bc126e18f573>` = :ref:`MutImageView3<doxid-namespacesophus_1a8204ce460bd04225b1b8044379238008>`<uint16_t> ;
+	using :target:`MutImageView3F32<doxid-namespacesophus_1ab78ffc2a17048a8085bec9c013bb696f>` = :ref:`MutImageView3<doxid-namespacesophus_1a8204ce460bd04225b1b8044379238008>`<float> ;
+	using :target:`ImageView4<doxid-namespacesophus_1a259b33fa32b1d0d714d49d7e91e0e9a4>` = :ref:`ImageView<doxid-structsophus_1_1_image_view>`<:ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<ChannelT>> ;
+	using :target:`ImageView4U8<doxid-namespacesophus_1a5d2b8783f25802f6fcfb1e512641b781>` = :ref:`ImageView4<doxid-namespacesophus_1a259b33fa32b1d0d714d49d7e91e0e9a4>`<uint8_t> ;
+	using :target:`ImageView4U16<doxid-namespacesophus_1a7522fe56b3966bb3edc8dbf9445bacb1>` = :ref:`ImageView4<doxid-namespacesophus_1a259b33fa32b1d0d714d49d7e91e0e9a4>`<uint16_t> ;
+	using :target:`ImageView4F32<doxid-namespacesophus_1a74c64a25bbc8e2d1e43f41edb7cb988a>` = :ref:`ImageView4<doxid-namespacesophus_1a259b33fa32b1d0d714d49d7e91e0e9a4>`<float> ;
+	using :target:`MutImageView4<doxid-namespacesophus_1ae7b7ac50659dd24288f3601fabf65209>` = :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<:ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<ChannelT>> ;
+	using :target:`MutImageView4U8<doxid-namespacesophus_1a2389f35ed2c21a048c1f0aa3fc3c1be2>` = :ref:`MutImageView4<doxid-namespacesophus_1ae7b7ac50659dd24288f3601fabf65209>`<uint8_t> ;
+	using :target:`MutImageView4U16<doxid-namespacesophus_1a01761c08da8f387c12f969d98c29dbf2>` = :ref:`MutImageView4<doxid-namespacesophus_1ae7b7ac50659dd24288f3601fabf65209>`<uint16_t> ;
+	using :target:`MutImageView4F32<doxid-namespacesophus_1a7f59a92f44afe6b82559f01735b5f6f5>` = :ref:`MutImageView4<doxid-namespacesophus_1ae7b7ac50659dd24288f3601fabf65209>`<float> ;
+	using :target:`ImageBool<doxid-namespacesophus_1a84ba571059139ad8de131bb9de2343d3>` = :ref:`Image<doxid-classsophus_1_1_image>`<bool> ;
+	using :target:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<bool> ;
+	using :target:`ImageU8<doxid-namespacesophus_1aec4e505f435f88cbe2984e84d0e85a0f>` = :ref:`Image<doxid-classsophus_1_1_image>`<uint8_t> ;
+	using :target:`ImageU16<doxid-namespacesophus_1a9af3dd356599f5f8d53969479378e659>` = :ref:`Image<doxid-classsophus_1_1_image>`<uint16_t> ;
+	using :target:`ImageF32<doxid-namespacesophus_1a4fe12a8f1d7f4213d8c02a3b99262553>` = :ref:`Image<doxid-classsophus_1_1_image>`<float> ;
+	using :target:`MutImageU8<doxid-namespacesophus_1a1fd67b494e6e932528bd38e39ff8b847>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<uint8_t> ;
+	using :target:`MutImageU16<doxid-namespacesophus_1aba9c55f7a38310c0caff699935ff1feb>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<uint16_t> ;
+	using :target:`MutImageF32<doxid-namespacesophus_1aac05ebb7d7c792b29d86a3a9d6b4eb3a>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<float> ;
+	using :target:`Image3<doxid-namespacesophus_1a0aac8c443503386059126b19482be378>` = :ref:`Image<doxid-classsophus_1_1_image>`<:ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<ChannelT>> ;
+	using :target:`Image3U8<doxid-namespacesophus_1aba128eaa4088f727faae606f0ed0df0d>` = :ref:`Image3<doxid-namespacesophus_1a0aac8c443503386059126b19482be378>`<uint8_t> ;
+	using :target:`Image3U16<doxid-namespacesophus_1a5cdbb31d5df3ce423d99da75ad78d806>` = :ref:`Image3<doxid-namespacesophus_1a0aac8c443503386059126b19482be378>`<uint16_t> ;
+	using :target:`Image3F32<doxid-namespacesophus_1a4456e22feff1ccefda6a3032a27508b5>` = :ref:`Image3<doxid-namespacesophus_1a0aac8c443503386059126b19482be378>`<float> ;
+	using :target:`MutImage3<doxid-namespacesophus_1ad487236141ec73eb45bfcb0479774ad0>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<:ref:`Pixel3<doxid-namespacesophus_1ac9dbef7dc975b7af5ef874052261091d>`<ChannelT>> ;
+	using :target:`MutImage3U8<doxid-namespacesophus_1aaf2e7225153b249572a6ba816d84a711>` = :ref:`MutImage3<doxid-namespacesophus_1ad487236141ec73eb45bfcb0479774ad0>`<uint8_t> ;
+	using :target:`MutImage3U16<doxid-namespacesophus_1af6f4ea89939e33a20bc8d36d604b9ec7>` = :ref:`MutImage3<doxid-namespacesophus_1ad487236141ec73eb45bfcb0479774ad0>`<uint16_t> ;
+	using :target:`MutImage3F32<doxid-namespacesophus_1aa86256f4032c12f8c5eb0744bf952919>` = :ref:`MutImage3<doxid-namespacesophus_1ad487236141ec73eb45bfcb0479774ad0>`<float> ;
+	using :target:`Image4<doxid-namespacesophus_1a57bff548f58fb141b0c2de0c77b18262>` = :ref:`Image<doxid-classsophus_1_1_image>`<:ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<ChannelT>> ;
+	using :target:`Image4U8<doxid-namespacesophus_1a16e647679307d4e419aca9d41d7e217b>` = :ref:`Image4<doxid-namespacesophus_1a57bff548f58fb141b0c2de0c77b18262>`<uint8_t> ;
+	using :target:`Image4U16<doxid-namespacesophus_1a55b57db608bf286aa2c80d35bf483824>` = :ref:`Image4<doxid-namespacesophus_1a57bff548f58fb141b0c2de0c77b18262>`<uint16_t> ;
+	using :target:`Image4F32<doxid-namespacesophus_1a147082c4f4a420f9521e5fcd6d074766>` = :ref:`Image4<doxid-namespacesophus_1a57bff548f58fb141b0c2de0c77b18262>`<float> ;
+	using :target:`MutImage4<doxid-namespacesophus_1a191903889e715f5bbf462c2f388437fa>` = :ref:`MutImage<doxid-classsophus_1_1_mut_image>`<:ref:`Pixel4<doxid-namespacesophus_1a2e22fec273edaf663bab1e3b3f6c7a83>`<ChannelT>> ;
+	using :target:`MutImage4U8<doxid-namespacesophus_1a61acaa6c2f49db4d780b4f113b62f0c8>` = :ref:`MutImage4<doxid-namespacesophus_1a191903889e715f5bbf462c2f388437fa>`<uint8_t> ;
+	using :target:`MutImage4U16<doxid-namespacesophus_1a53ef6671657c0cce16b14f1dec536773>` = :ref:`MutImage4<doxid-namespacesophus_1a191903889e715f5bbf462c2f388437fa>`<uint16_t> ;
+	using :target:`MutImage4F32<doxid-namespacesophus_1a2e8d656010b09c9b69366637e4ce6335>` = :ref:`MutImage4<doxid-namespacesophus_1a191903889e715f5bbf462c2f388437fa>`<float> ;
+	using :ref:`AnyImage<doxid-namespacesophus_1a78395e5b72761c2d77c1207a7a4af475>` = :ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image>`<:ref:`AnyImagePredicate<doxid-structsophus_1_1_any_image_predicate>`, AllocatorT> ;
+	using :ref:`IntensityImage<doxid-namespacesophus_1afebc6bb5384c7773f0ede478ff3ca2f3>` = :ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image>`<:ref:`IntensityImagePredicate<doxid-structsophus_1_1_intensity_image_predicate>`, AllocatorT> ;
+	using :target:`Cartesian2<doxid-namespacesophus_1a9af2e3f23d67dc40c59c10fa5bfa518d>` = :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<ScalarT, 2> ;
+	using :target:`Cartesian3<doxid-namespacesophus_1ad218d6e3c731622e035a6c39d2f38732>` = :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<ScalarT, 3> ;
+	using :target:`Cartesian2F64<doxid-namespacesophus_1af8556dfae9491c80094731dd06501f65>` = :ref:`Cartesian2<doxid-namespacesophus_1a9af2e3f23d67dc40c59c10fa5bfa518d>`<double> ;
+	using :target:`Cartesian3F64<doxid-namespacesophus_1ace83dd10b689a575f8f665b12d6d7d83>` = :ref:`Cartesian3<doxid-namespacesophus_1ad218d6e3c731622e035a6c39d2f38732>`<double> ;
+	using :target:`Cartesian2d<doxid-namespacesophus_1ac1dfa915606f7391cf28d30b020798cd>` = :ref:`Cartesian2F64<doxid-namespacesophus_1af8556dfae9491c80094731dd06501f65>` ;
+	using :target:`Cartesian3d<doxid-namespacesophus_1a1c88f098866fc586476919aa78ddb474>` = :ref:`Cartesian3F64<doxid-namespacesophus_1ace83dd10b689a575f8f665b12d6d7d83>` ;
+	using :target:`RxSo2F64<doxid-namespacesophus_1ab8c656f1d956ecf8e76af96ba6ad4acf>` = :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<double> ;
+	using :target:`RxSo2F32<doxid-namespacesophus_1a7c819b82a046fa258b197530124fbccd>` = :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<float> ;
+	using :target:`RxSO2<doxid-namespacesophus_1a2220eefbdc9535f8295eeb4fc8616383>` = :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<ScalarT, kOptions> ;
+	using :target:`RxSO2d<doxid-namespacesophus_1a64b15d595d1de523cfe636826dfc8ae4>` = :ref:`RxSo2F64<doxid-namespacesophus_1ab8c656f1d956ecf8e76af96ba6ad4acf>` ;
+	using :target:`RxSO2f<doxid-namespacesophus_1a852297b22ee21786c0a7bf63a0e6dda7>` = :ref:`RxSo2F32<doxid-namespacesophus_1a7c819b82a046fa258b197530124fbccd>` ;
+	using :target:`RxSo3F64<doxid-namespacesophus_1abf39ed0d4521993f1cdfba9915e36dd5>` = :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<double> ;
+	using :target:`RxSo3F32<doxid-namespacesophus_1a8adfe2cb53cd3e346e003f813fbc4d49>` = :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<float> ;
+	using :target:`RxSO3<doxid-namespacesophus_1a362e70e76d55e4c067f8327f0b2025c3>` = :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<ScalarT, kOptions> ;
+	using :target:`RxSO3d<doxid-namespacesophus_1a2c189e551a879d59291a6614b6a93cca>` = :ref:`RxSo3F64<doxid-namespacesophus_1abf39ed0d4521993f1cdfba9915e36dd5>` ;
+	using :target:`RxSO3f<doxid-namespacesophus_1a54c64e0578b686e782ef01eecfe68d7f>` = :ref:`RxSo3F32<doxid-namespacesophus_1a8adfe2cb53cd3e346e003f813fbc4d49>` ;
+	using :target:`Se2F64<doxid-namespacesophus_1a67a926823931c4f365de3869e9e5bf16>` = :ref:`Se2<doxid-classsophus_1_1_se2>`<double> ;
+	using :target:`Se2F32<doxid-namespacesophus_1a68da3d4d0fefd691454cb832b5632961>` = :ref:`Se2<doxid-classsophus_1_1_se2>`<float> ;
+	using :target:`SE2<doxid-namespacesophus_1a20322a289d6ea3d78680cc218297ce01>` = :ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT, kOptions> ;
+	using :target:`SE2d<doxid-namespacesophus_1ae5e5b7ccef3da857a0295ed3b302d186>` = :ref:`Se2F64<doxid-namespacesophus_1a67a926823931c4f365de3869e9e5bf16>` ;
+	using :target:`SE2f<doxid-namespacesophus_1a01591c8abb269b4ccd14b647ca90d068>` = :ref:`Se2F32<doxid-namespacesophus_1a68da3d4d0fefd691454cb832b5632961>` ;
+	using :target:`Se3F64<doxid-namespacesophus_1a10c2ccdea99376188f7ca55b6faa9df6>` = :ref:`Se3<doxid-classsophus_1_1_se3>`<double> ;
+	using :target:`Se3F32<doxid-namespacesophus_1a523f9f16d1f565f5b9e575e77af86065>` = :ref:`Se3<doxid-classsophus_1_1_se3>`<float> ;
+	using :target:`SE3<doxid-namespacesophus_1a6bba11529d81638899fe1da9a0eebd98>` = :ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT, kOptions> ;
+	using :target:`SE3d<doxid-namespacesophus_1a1a4059ccbd31740d03aef8ace01421cf>` = :ref:`Se3F64<doxid-namespacesophus_1a10c2ccdea99376188f7ca55b6faa9df6>` ;
+	using :target:`SE3f<doxid-namespacesophus_1aa2463da80dec9ed880d59cb7c8d10d48>` = :ref:`Se3F32<doxid-namespacesophus_1a523f9f16d1f565f5b9e575e77af86065>` ;
+	using :target:`Sim2F64<doxid-namespacesophus_1abaefd404cc4b3904c1a283dc410af9b3>` = :ref:`Sim2<doxid-classsophus_1_1_sim2>`<double> ;
+	using :target:`Sim2F32<doxid-namespacesophus_1a11bbdc558327ddb64e78be7639109318>` = :ref:`Sim2<doxid-classsophus_1_1_sim2>`<float> ;
+	using :target:`Sim2d<doxid-namespacesophus_1a68f43831c2d5e30664b9ba6d971e1323>` = :ref:`Sim2F64<doxid-namespacesophus_1abaefd404cc4b3904c1a283dc410af9b3>` ;
+	using :target:`Sim2f<doxid-namespacesophus_1a6eb1c2a6fd1a18aa16fef57ac8cee5f9>` = :ref:`Sim2F32<doxid-namespacesophus_1a11bbdc558327ddb64e78be7639109318>` ;
+	using :target:`Sim3F64<doxid-namespacesophus_1a7ded0c7a36ee7164e22fd264ba5e2db9>` = :ref:`Sim3<doxid-classsophus_1_1_sim3>`<double> ;
+	using :target:`Sim3F32<doxid-namespacesophus_1a09d8886391a5fb3b7697a8a654e1b801>` = :ref:`Sim3<doxid-classsophus_1_1_sim3>`<float> ;
+	using :target:`Sim3d<doxid-namespacesophus_1a586f1cda2b260f646502de5fafba3365>` = :ref:`Sim3F64<doxid-namespacesophus_1a7ded0c7a36ee7164e22fd264ba5e2db9>` ;
+	using :target:`Sim3f<doxid-namespacesophus_1a1efe78e6bd4ea60902272912617b32bc>` = :ref:`Sim3F32<doxid-namespacesophus_1a09d8886391a5fb3b7697a8a654e1b801>` ;
+	using :target:`So2F64<doxid-namespacesophus_1adb166c24bbf0a7ecc5b3e40eb0f3d8d9>` = :ref:`So2<doxid-classsophus_1_1_so2>`<double> ;
+	using :target:`So2F32<doxid-namespacesophus_1a4b93b4312b43b1adb74a92e62afcf86c>` = :ref:`So2<doxid-classsophus_1_1_so2>`<float> ;
+	using :target:`SO2<doxid-namespacesophus_1ab009519fbd7a3c23ece6650732771a5f>` = :ref:`So2<doxid-classsophus_1_1_so2>`<ScalarT, kOptions> ;
+	using :target:`SO2d<doxid-namespacesophus_1a89a9a283f16605eebf191a311fa76687>` = :ref:`So2F64<doxid-namespacesophus_1adb166c24bbf0a7ecc5b3e40eb0f3d8d9>` ;
+	using :target:`SO2f<doxid-namespacesophus_1a72ad6815075015dfbd45ebeaa5880983>` = :ref:`So2F32<doxid-namespacesophus_1a4b93b4312b43b1adb74a92e62afcf86c>` ;
+	using :target:`So3F64<doxid-namespacesophus_1ab9e176acaeabcc0111411ea6d4b2cd30>` = :ref:`So3<doxid-classsophus_1_1_so3>`<double> ;
+	using :target:`So3F32<doxid-namespacesophus_1a2487da51544683d643cccc745be5c8ac>` = :ref:`So3<doxid-classsophus_1_1_so3>`<float> ;
+	using :target:`SO3<doxid-namespacesophus_1ada3c637c37bc749abe58fac91028a350>` = :ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT, kOptions> ;
+	using :target:`SO3d<doxid-namespacesophus_1a7590155ec501fd89d7b1ce1da3549712>` = :ref:`So3F64<doxid-namespacesophus_1ab9e176acaeabcc0111411ea6d4b2cd30>` ;
+	using :target:`SO3f<doxid-namespacesophus_1a8c86d3317936fef9f05d0446a2dda57f>` = :ref:`So3F32<doxid-namespacesophus_1a2487da51544683d643cccc745be5c8ac>` ;
+	using :ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>` = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`AffineTransform<doxid-classsophus_1_1_affine_transform>`> ;
+	using :ref:`BrownConradyModel<doxid-namespacesophus_1a2eacd7d7b808b72cb4f90006e10dc67f>` = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`BrownConradyTransform<doxid-classsophus_1_1_brown_conrady_transform>`> ;
+	using :ref:`KannalaBrandtK3Model<doxid-namespacesophus_1a13b7037d54342591f25eca6ea7aa3602>` = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`KannalaBrandtK3Transform<doxid-classsophus_1_1_kannala_brandt_k3_transform>`> ;
+	using :target:`OrthographicModel<doxid-namespacesophus_1afe25a7371096aede710f54e3bc9644c4>` = :ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`<double> ;
+	using :ref:`CameraTransformVariant<doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804>` = std::variant<:ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>`, :ref:`BrownConradyModel<doxid-namespacesophus_1a2eacd7d7b808b72cb4f90006e10dc67f>`, :ref:`KannalaBrandtK3Model<doxid-namespacesophus_1a13b7037d54342591f25eca6ea7aa3602>`> ;
+	using :target:`GyroModelVariant<doxid-namespacesophus_1a3cc6250cc311b8a44c916d2e24681aba>` = std::variant<:ref:`ScalingNonOrthogonalityGyroModel<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model>`<double>> ;
+	using :target:`AcceleroModelVariant<doxid-namespacesophus_1a3be46970d64a41d4f827b2f9df544dfe>` = std::variant<:ref:`ScalingNonOrthogonalityAcceleroModel<doxid-structsophus_1_1_scaling_non_orthogonality_accelero_model>`<double>> ;
+
+	// enums
+
+	enum :ref:`SegmentCase<doxid-namespacesophus_1afd307b8cdfbe9c85d3a252b5860aefaf>`;
+
+	// structs
+
+	template <class PixelT>
+	struct :ref:`AnyImagePredicate<doxid-structsophus_1_1_any_image_predicate>`;
+
+	template <class LieGroupT>
+	struct :ref:`BasisSplineSegment<doxid-structsophus_1_1_basis_spline_segment>`;
+
+	struct :ref:`CameraInRig<doxid-structsophus_1_1_camera_in_rig>`;
+	struct :ref:`ClippingPlanes<doxid-structsophus_1_1_clipping_planes>`;
+
+	template <class ScalarT>
+	struct :ref:`GetScalar<doxid-structsophus_1_1_get_scalar>`;
+
+	template <class ScalarT, int kM, int kMatrixDim>
+	struct :ref:`GetScalar<Eigen::Matrix<ScalarT, kM, kMatrixDim>><doxid-structsophus_1_1_get_scalar_3_01_eigen_1_1_matrix_3_01_scalar_t_00_01k_m_00_01k_matrix_dim_01_4_01_4>`;
+
+	struct :ref:`ImageSize<doxid-structsophus_1_1_image_size>`;
+
+	template <class TT>
+	struct :ref:`ImageTraits<doxid-structsophus_1_1_image_traits>`;
+
+	template <class TT, int kNumChannelsT>
+	struct :ref:`ImageTraits<Eigen::Matrix<TT, kNumChannelsT, 1>><doxid-structsophus_1_1_image_traits_3_01_eigen_1_1_matrix_3_01_t_t_00_01k_num_channels_t_00_011_01_4_01_4>`;
+
+	template <class PixelT>
+	struct :ref:`ImageView<doxid-structsophus_1_1_image_view>`;
+
+	struct :ref:`IndexAndU<doxid-structsophus_1_1_index_and_u>`;
+
+	template <class PixelT>
+	struct :ref:`IntensityImagePredicate<doxid-structsophus_1_1_intensity_image_predicate>`;
+
+	template <
+		typename VectorT,
+		int kNumDimensions,
+		typename = typename std::enable_if<VectorT::RowsAtCompileTime == kNumDimensions&&        VectorT::ColsAtCompileTime == 1>::type
+		>
+	struct :ref:`IsFixedSizeVector<doxid-structsophus_1_1_is_fixed_size_vector>`;
+
+	template <class ScalarT>
+	struct :ref:`IsFloatingPoint<doxid-structsophus_1_1_is_floating_point>`;
+
+	template <class ScalarT, int kM, int kMatrixDim>
+	struct :ref:`IsFloatingPoint<Eigen::Matrix<ScalarT, kM, kMatrixDim>><doxid-structsophus_1_1_is_floating_point_3_01_eigen_1_1_matrix_3_01_scalar_t_00_01k_m_00_01k_matrix_dim_01_4_01_4>`;
+
+	template <class GeneratorT>
+	struct :ref:`IsUniformRandomBitGenerator<doxid-structsophus_1_1_is_uniform_random_bit_generator>`;
+
+	template <template<typename, int=0> class LieGroupT>
+	struct :ref:`LieGroupCeresTests<doxid-structsophus_1_1_lie_group_ceres_tests>`;
+
+	template <typename TT, typename ET = void>
+	struct :ref:`Mapper<doxid-structsophus_1_1_mapper>`;
+
+	template <typename TT>
+	struct :ref:`Mapper<TT, typename std::enable_if<kIsMappableV<TT>>::type><doxid-structsophus_1_1_mapper_3_01_t_t_00_01typename_01std_1_1enable__if_3_01k_is_mappable_v_3_01_t_t_01_4_01_4_1_1type_01_4>`;
+
+	struct :ref:`MultiCameraRig<doxid-structsophus_1_1_multi_camera_rig>`;
+
+	template <typename TT>
+	struct :ref:`Random<doxid-structsophus_1_1_random>`;
+
+	template <>
+	struct :ref:`Random<double><doxid-structsophus_1_1_random_3_01double_01_4>`;
+
+	struct :ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>`;
+
+	template <class TT>
+	struct :ref:`ScalingNonOrthogonalityAcceleroModel<doxid-structsophus_1_1_scaling_non_orthogonality_accelero_model>`;
+
+	template <class TT>
+	struct :ref:`ScalingNonOrthogonalityGyroModel<doxid-structsophus_1_1_scaling_non_orthogonality_gyro_model>`;
+
+	// classes
+
+	class :ref:`AffineTransform<doxid-classsophus_1_1_affine_transform>`;
+
+	template <class LieGroupT>
+	class :ref:`BasisSpline<doxid-classsophus_1_1_basis_spline>`;
+
+	template <class LieGroupT>
+	class :ref:`BasisSplineFn<doxid-classsophus_1_1_basis_spline_fn>`;
+
+	template <class LieGroupT>
+	class :ref:`BasisSplineImpl<doxid-classsophus_1_1_basis_spline_impl>`;
+
+	class :ref:`BrownConradyTransform<doxid-classsophus_1_1_brown_conrady_transform>`;
+	class :ref:`CameraModel<doxid-classsophus_1_1_camera_model>`;
+
+	template <class ScalarT, class ProjectionT>
+	class :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`;
+
+	template <class ScalarT, int kM, int kOptions>
+	class :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`;
+
+	template <class DerivedT, int kM>
+	class :ref:`CartesianBase<doxid-classsophus_1_1_cartesian_base>`;
+
+	template <
+		class PixelT,
+		template<typename> class AllocatorT = Eigen::aligned_allocator
+		>
+	class :ref:`Image<doxid-classsophus_1_1_image>`;
+
+	class :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`;
+	class :ref:`ImuModel<doxid-classsophus_1_1_imu_model>`;
+
+	template <class T>
+	class :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`;
+
+	class :ref:`KannalaBrandtK3Transform<doxid-classsophus_1_1_kannala_brandt_k3_transform>`;
+
+	template <class LieGroupT>
+	class :ref:`LieGroupTests<doxid-classsophus_1_1_lie_group_tests>`;
+
+	template <template<typename, int=0> class LieGroupT>
+	class :ref:`Manifold<doxid-classsophus_1_1_manifold>`;
+
+	template <
+		class PixelT,
+		template<typename> class AllocatorT = Eigen::aligned_allocator
+		>
+	class :ref:`MutImage<doxid-classsophus_1_1_mut_image>`;
+
+	template <class PixelT>
+	class :ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`;
+
+	template <class ScalarT>
+	class :ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`;
+
+	class :ref:`OrthographicProjection<doxid-classsophus_1_1_orthographic_projection>`;
+
+	template <class TT>
+	class :ref:`PointTransformer<doxid-classsophus_1_1_point_transformer>`;
+
+	template <class TT>
+	class :ref:`Ray3<doxid-classsophus_1_1_ray3>`;
+
+	template <
+		template<typename> class PredicateT = AnyImagePredicate,
+		template<typename> class AllocatorT = Eigen::aligned_allocator
+		>
+	class :ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`;
+
+	template <class DerivedT>
+	class :ref:`RxSo2Base<doxid-classsophus_1_1_rx_so2_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`;
+
+	template <class DerivedT>
+	class :ref:`RxSo3Base<doxid-classsophus_1_1_rx_so3_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`Se2<doxid-classsophus_1_1_se2>`;
+
+	template <class DerivedT>
+	class :ref:`Se2Base<doxid-classsophus_1_1_se2_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`Se3<doxid-classsophus_1_1_se3>`;
+
+	template <class DerivedT>
+	class :ref:`Se3Base<doxid-classsophus_1_1_se3_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`Sim2<doxid-classsophus_1_1_sim2>`;
+
+	template <class DerivedT>
+	class :ref:`Sim2Base<doxid-classsophus_1_1_sim2_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`Sim3<doxid-classsophus_1_1_sim3>`;
+
+	template <class DerivedT>
+	class :ref:`Sim3Base<doxid-classsophus_1_1_sim3_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`So2<doxid-classsophus_1_1_so2>`;
+
+	template <class DerivedT>
+	class :ref:`So2Base<doxid-classsophus_1_1_so2_base>`;
+
+	template <class ScalarT, int kOptions>
+	class :ref:`So3<doxid-classsophus_1_1_so3>`;
+
+	template <class DerivedT>
+	class :ref:`So3Base<doxid-classsophus_1_1_so3_base>`;
+
+	template <class ScalarT>
+	class :ref:`SplineBasisFunction<doxid-classsophus_1_1_spline_basis_function>`;
+
+	template <class ScalarT>
+	class :ref:`Tests<doxid-classsophus_1_1_tests>`;
+
+	template <class T>
+	class :ref:`UnitVector3<doxid-classsophus_1_1_unit_vector3>`;
+
+	// global variables
+
+	constexpr bool :target:`kIsMappableV<doxid-namespacesophus_1a931455199acae4ee33f47f965e4bb01e>` = :ref:`IsMappable<doxid-namespacesophus_1a2679b6b04ab723b386e823654b391a2f>`<TT>::value;
+	const ScalarT :target:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>` = ScalarT(1e-10);
+	const float :target:`kEpsilon< float ><doxid-namespacesophus_1aaee3ddfe81208e5b57344b8d464f147d>` = float(1e-5);
+	const float :target:`kEpsilonF32<doxid-namespacesophus_1a7c532b5c5c174fdec729b68b1cbbd9d7>` = :ref:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>`<float>;
+	const float :target:`kEpsilonF64<doxid-namespacesophus_1a42c86b5f575bb27ee7f0912586d56822>` = :ref:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>`<double>;
+	const ScalarT :target:`kEpsilonPlus<doxid-namespacesophus_1a59602fb8cfef586deec61a931cd70389>` =     :ref:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>`<ScalarT>*(ScalarT(1.) + :ref:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>`<ScalarT>);
+	const ScalarT :target:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>` = sqrt(:ref:`kEpsilon<doxid-namespacesophus_1a5bfe9c50ed4176c2685a47a4915ff7e1>`<ScalarT>);
+	const float :target:`kEpsilonSqrtF32<doxid-namespacesophus_1a1aa171d12500bc1fc28983cca95fd1aa>` = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<float>;
+	const float :target:`kEpsilonSqrtF64<doxid-namespacesophus_1a72e80177b42f2effa6d2a6bee107a409>` = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<double>;
+	const ScalarT :target:`kPi<doxid-namespacesophus_1aba152cfc28ddf3694c9d42c0067c7bd8>` = ScalarT(3.141592653589793238462643383279502884);
+	const float :target:`kPiF32<doxid-namespacesophus_1ab8af599e81b9431b5c6a8751b732cf86>` = :ref:`kPi<doxid-namespacesophus_1aba152cfc28ddf3694c9d42c0067c7bd8>`<float>;
+	const float :target:`kPiF64<doxid-namespacesophus_1aca78f2ca730ea721888b379116fa421a>` = :ref:`kPi<doxid-namespacesophus_1aba152cfc28ddf3694c9d42c0067c7bd8>`<double>;
+	constexpr bool :target:`kIsUniformRandomBitGeneratorV<doxid-namespacesophus_1affb4f38053f01177da7d18aa6083d0c2>` =     :ref:`IsUniformRandomBitGenerator<doxid-structsophus_1_1_is_uniform_random_bit_generator>`<GeneratorT>::kValue;
+
+	// global functions
+
+	template <int kMatrixDim>
+	double :target:`dot<doxid-namespacesophus_1abe8d12aeb8b1dd033fc48d2ee2fdd6b3>`(
+		const Eigen::Vector<double, kMatrixDim>& v1,
+		const Eigen::Vector<double, kMatrixDim>& v2
+		);
+
+	double :target:`dot<doxid-namespacesophus_1a112fa092c709386d2aafa25ae43cfd03>`(
+		const double& a,
+		const double& b
+		);
+
+	template <int kMatrixDim>
+	double :target:`squaredNorm<doxid-namespacesophus_1a4f8f2eb2922305cf654e9804557bf92f>`(const Eigen::Vector<double, kMatrixDim>& vec);
+
+	double :target:`squaredNorm<doxid-namespacesophus_1afa8376b9cfa3400168e1e7b5009c3df8>`(const double& scalar);
+
+	template <typename TT>
+	TT :target:`zero<doxid-namespacesophus_1aa2e316092905488677b294062c004e08>`();
+
+	double :target:`zero< double ><doxid-namespacesophus_1a35657ff8f014f0fc07465fa651a97f1d>`();
+
+	template <typename TT>
+	TT::Scalar* :target:`data<doxid-namespacesophus_1a545ce567bdcb61aab11b6a4c45a709ab>`(TT& t);
+
+	double* :target:`data<doxid-namespacesophus_1a462dee8106a0d67d588fe4bb64863d20>`(double& d);
+
+	template <typename TT>
+	const TT::Scalar* :target:`data<doxid-namespacesophus_1af5cef1ecb4018fd82a75367735152b3a>`(const TT& t);
+
+	const double* :target:`data<doxid-namespacesophus_1adb7ea17011e9d3a7def0afb9ce873966>`(const double& d);
+
+	template <class TT, std::size_t = sizeof(TT)>
+	constexpr std::true_type :target:`complete<doxid-namespacesophus_1adea52720c03b2850a65f1502b31e1fb7>`(TT*);
+
+	constexpr std::false_type :target:`complete<doxid-namespacesophus_1a155086f5fbf86f423d9ff08598be21cc>`(...);
+	void :target:`processTestResult<doxid-namespacesophus_1a8caaf729d1f9ba7039f77361dbcf1a6f>`(bool passed);
+
+	template <class TT>
+	auto :ref:`maxMetric<doxid-namespacesophus_1a5ad048df31ddf7674dff24303de717bb>`(TT const& p0, TT const& p1);
+
+	template <class TT>
+	void :ref:`setToZero<doxid-namespacesophus_1add53ecdf152f4f7564321ec5457c4ece>`(TT& p);
+
+	template <class TT, class ScalarT>
+	void :ref:`setElementAt<doxid-namespacesophus_1aee1127c9e61ad21589d26187af0512f7>`(TT& p, ScalarT value, int i);
+
+	template <class TT>
+	auto :ref:`squaredNorm<doxid-namespacesophus_1a40c4674fb1501d04758a920b9f50be9d>`(TT const& p);
+
+	template <class TT>
+	auto :ref:`transpose<doxid-namespacesophus_1abeb1b6bb7219feb9470ee81a1812c470>`(TT const& p);
+
+	Eigen::Hyperplane<double, 3> :target:`fitPlaneToPoints<doxid-namespacesophus_1a12fa65be3a4d490b9f599c9f4a9dde71>`(const Eigen::Matrix3Xd& points);
+	Eigen::Hyperplane<double, 3> :target:`fitPlaneToPoints<doxid-namespacesophus_1a991b62795c134b4f058e596246e80926>`(const std::vector<Eigen::Vector3d>& points);
+	Eigen::Hyperplane<double, 3> :target:`fitPlaneToPoints<doxid-namespacesophus_1a2e6e04d721e8e68c385b9761cb49c916>`(const std::vector<Eigen::Vector3f>& points);
+
+	template <class ScalarT>
+	Eigen::Vector2<ScalarT> :ref:`normalFromSo2<doxid-namespacesophus_1a6637168b01ce4133c8d184e7d8e7ca1e>`(:ref:`So2<doxid-classsophus_1_1_so2>`<ScalarT> const& foo_rotation_line);
+
+	template <class T>
+	:ref:`So2<doxid-classsophus_1_1_so2>`<T> :ref:`so2FromNormal<doxid-namespacesophus_1aa327c590dd91c6062b3f7ac21f5ce783>`(Eigen::Vector2<T> normal_in_foo);
+
+	template <class ScalarT>
+	Eigen::Vector3<ScalarT> :ref:`normalFromSo3<doxid-namespacesophus_1a2caee45c9ba1b2c46366eedf1516db63>`(:ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT> const& foo_rotation_plane);
+
+	template <class T>
+	Eigen::Matrix3<T> :ref:`rotationFromNormal<doxid-namespacesophus_1a2bf6784f29b90081736cdf518b08a96c>`(
+		Eigen::Vector3<T> const& normal_in_foo,
+		Eigen::Vector3<T> x_dir_hint_foo = Eigen::Vector3<T>(T(1), T(0), T(0)),
+		Eigen::Vector3<T> y_dir_hint_foo = Eigen::Vector3<T>(T(0), T(1), T(0))
+		);
+
+	template <class ScalarT>
+	:ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT> :ref:`so3FromPlane<doxid-namespacesophus_1ae61cb3a418a5dc3170dcce68a2e413e4>`(Eigen::Vector3<ScalarT> const& normal_in_foo);
+
+	template <class ScalarT>
+	Eigen::Hyperplane<ScalarT, 2> :ref:`lineFromSe2<doxid-namespacesophus_1ae49dd3e27a720bd4a6e338b2a1afed81>`(:ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT> const& foo_pose_line);
+
+	template <class ScalarT>
+	:ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT> :ref:`se2FromLine<doxid-namespacesophus_1a7b09662decc61ccd04f2cd3c4fc97819>`(Eigen::Hyperplane<ScalarT, 2> const& line_in_foo);
+
+	template <class ScalarT>
+	Eigen::Hyperplane<ScalarT, 3> :ref:`planeFromSe3<doxid-namespacesophus_1ae7aaa5cb58da1e07b63df41975680f37>`(:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT> const& foo_pose_plane);
+
+	template <class ScalarT>
+	:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT> :ref:`se3FromPlane<doxid-namespacesophus_1af7bf0e6a511e27ec045eafd90d2bfcff>`(Eigen::Hyperplane<ScalarT, 3> const& plane_in_foo);
+
+	template <class ScalarT, int kMatrixDim>
+	Eigen::Hyperplane<ScalarT, kMatrixDim> :ref:`makeHyperplaneUnique<doxid-namespacesophus_1ae66f039c3f14fae4b9379e4bc924753b>`(Eigen::Hyperplane<ScalarT, kMatrixDim> const& plane);
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 3> :ref:`dxProjX<doxid-namespacesophus_1ae6027ccf84116ec83e1d5b0b99a4c2a3>`(const Eigen::Matrix<TT, 3, 1>& p);
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 1> :ref:`proj<doxid-namespacesophus_1a2bc8087a5ce7a1ad28608725880978a9>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point);
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 3> :ref:`dxProjX<doxid-namespacesophus_1ad474278742b2066bb7911eccac6ffbb8>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>&);
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 6> :ref:`dxProjExpXPointAt0<doxid-namespacesophus_1a3a44e3f92b61621be73ae878148948b7>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point);
+
+	template <class TT>
+	Eigen::Matrix<TT, 3, 1> :ref:`scaledTransform<doxid-namespacesophus_1a1cc40bc3d3fd5400dae5a388371b5996>`(
+		const :ref:`sophus::Se3<doxid-classsophus_1_1_se3>`<TT>& foo_pose_bar,
+		const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar
+		);
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 1> :ref:`projTransform<doxid-namespacesophus_1aed3089b2093a2a89f531520984748699>`(
+		const :ref:`sophus::Se3<doxid-classsophus_1_1_se3>`<TT>& foo_pose_bar,
+		const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar
+		);
+
+	template <class PointT>
+	Eigen::Vector2<typename PointT::Scalar> :ref:`proj<doxid-namespacesophus_1a8e88d7fc2b8c476ae89f4373a5e37d64>`(const Eigen::MatrixBase<PointT>& p);
+
+	template <class PointT>
+	Eigen::Vector3<typename PointT::Scalar> :ref:`unproj<doxid-namespacesophus_1a0627e6cb80a7ac8068d601be58de0283>`(
+		const Eigen::MatrixBase<PointT>& p,
+		const typename PointT::Scalar& z = 1.0
+		);
+
+	:ref:`ImageSize<doxid-structsophus_1_1_image_size>` :ref:`half<doxid-namespacesophus_1a23ee009c9964aa18248001e5c1c10132>`(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size);
+	bool :ref:`operator==<doxid-namespacesophus_1a1fcb64f01f64bf218e54cb60c2b78551>`(const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& lhs, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& rhs);
+	bool :ref:`operator<<doxid-namespacesophus_1a65d374b0332726af17006e56281ac356>`(const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& lhs, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& rhs);
+	std::ostream& :ref:`operator<<<doxid-namespacesophus_1a6e294f24b7c5fe650649a98fc7f4f57d>`(std::ostream& os, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& image_size);
+	bool :ref:`operator==<doxid-namespacesophus_1a37757b9d8cf28275276bb51f25b6026e>`(const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& lhs, const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& rhs);
+	std::ostream& :ref:`operator<<<doxid-namespacesophus_1a96aa78533f27a52b688a30232b301b92>`(std::ostream& os, const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& shape);
+	int :ref:`count<doxid-namespacesophus_1acd3b263c34f7ac31477206c18154af0d>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask, bool truth_value);
+	int :ref:`countTrue<doxid-namespacesophus_1a0dd05c303a5fd2d8750c3ca27d8e2748>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	int :ref:`countFalse<doxid-namespacesophus_1a8e840ea0601573e755a4b107a3df3dab>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	bool :ref:`isAllTrue<doxid-namespacesophus_1ae2ecedfb877160311b1573490be7347b>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	bool :ref:`isAnyTrue<doxid-namespacesophus_1ae3236928aa4f35ed44d2c5876e591b7a>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` :ref:`neg<doxid-namespacesophus_1ab9dce7609f51909cc738045bca676319>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	std::optional<Eigen::Vector2i> :ref:`firstPixel<doxid-namespacesophus_1ad4e9a1ddb4f4e84c12904723b2099fdc>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask, bool truth_value);
+	std::optional<Eigen::Vector2i> :ref:`firstTruePixel<doxid-namespacesophus_1a65156903ee5a5fb711b58d7137fb8c45>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	std::optional<Eigen::Vector2i> :ref:`firstFalsePixel<doxid-namespacesophus_1a9b3c172175b9a9b44bbde80f318409c7>`(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask);
+	:ref:`FARM_ENUM<doxid-namespacesophus_1a0e388702ee5b5b10d4ae28319c19df03>`(NumberType, (fixed_point, floating_point));
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` :ref:`isEqualMask<doxid-namespacesophus_1a4ec3ae28a154c65d30398d8323df1f9b>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs);
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` :ref:`isLessMask<doxid-namespacesophus_1a92f553fd33618648d4324ccaeab89274>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs);
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` :ref:`isGreaterMask<doxid-namespacesophus_1a065011d024dc2be64f24b4a34ea9ae94>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs);
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` :ref:`isNearMask<doxid-namespacesophus_1a6e7c157c937ab93900c8a31042cd4697>`(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs,
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs,
+		typename :ref:`ImageTraits<doxid-structsophus_1_1_image_traits>`<PixelT>::ChannelT thr
+		);
+
+	bool :target:`operator==<doxid-namespacesophus_1ac444cf5397eccc761ed9263f746a2d0f>`(
+		const :ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>`& lhs,
+		const :ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>`& rhs
+		);
+
+	std::ostream& :ref:`operator<<<doxid-namespacesophus_1a8b9da03ac5c432de85122a6c6cc382fa>`(std::ostream& os, const :ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>`& type);
+
+	template <class SequenceContainerT>
+	std::optional<typename SequenceContainerT::value_type> :ref:`iterativeMean<doxid-namespacesophus_1a35efcc27d83f28b647ff00dcc7df95e1>`(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations
+		);
+
+	template <
+		class SequenceContainerT,
+		int kPointDim = SequenceContainerT::value_type::kDoF,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`Cartesian<doxid-classsophus_1_1_cartesian>`<ScalarT, kPointDim>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1af30645c1502f48c8f777680061861014>`(SequenceContainerT const& foo_transforms_bar);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`So2<doxid-classsophus_1_1_so2>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1ac18bf675c7b6171e9eefef485caab352>`(SequenceContainerT const& foo_transforms_bar);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`RxSo2<doxid-classsophus_1_1_rx_so2>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1a71030ea34e0f9135b2e34a8b25e87b94>`(SequenceContainerT const& foo_transforms_bar);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1af8fbc4efa3bba1906d11364273d8b4c9>`(SequenceContainerT const& foo_transforms_bar);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`RxSo3<doxid-classsophus_1_1_rx_so3>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1a7d614d665239cc6722b48344bbf40858>`(SequenceContainerT const& foo_transforms_bar);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1a4298bdaec918ec507bb03ec9d1b4e3b0>`(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`Sim2<doxid-classsophus_1_1_sim2>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1adcd317d11018f060a02c70590ab7c019>`(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1aae9aa1d408aa766a6d4ca18ce4d9a44e>`(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations = 20
+		);
+
+	template <
+		class SequenceContainerT,
+		class ScalarT = typename SequenceContainerT::value_type::Scalar
+		>
+	std::enable_if_t<std::is_same<typename SequenceContainerT::value_type, :ref:`Sim3<doxid-classsophus_1_1_sim3>`<ScalarT>>::value, std::optional<typename SequenceContainerT::value_type>> :target:`average<doxid-namespacesophus_1a4549495ebce83b300850280566c8f16b>`(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations = 20
+		);
+
+	template <class GroupT, class Scalar2T = typename GroupT::Scalar>
+	std::enable_if_t<interp_details::Traits<GroupT>::kSupported, GroupT> :ref:`interpolate<doxid-namespacesophus_1aad9d7ef6d72020af7fffa9e205fb2f42>`(
+		GroupT const& foo_transform_bar,
+		GroupT const& foo_transform_daz,
+		Scalar2T p = Scalar2T(0.5f)
+		);
+
+	int :target:`testCartesian<doxid-namespacesophus_1a47430d8be5c65bd0afd529e00d54962b>`();
+
+	template <typename ScalarT>
+	Eigen::Hyperplane<ScalarT, 2> :target:`through<doxid-namespacesophus_1a3eefe8d46586487b0f34034e0311f0f1>`(const Eigen::Vector<ScalarT, 2>* points);
+
+	template <typename ScalarT>
+	Eigen::Hyperplane<ScalarT, 3> :target:`through<doxid-namespacesophus_1a25b9672b74b57adccd6312b6f92b0818>`(const Eigen::Vector<ScalarT, 3>* points);
+
+	template <class ScalarT>
+	std::vector<:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT>, Eigen::aligned_allocator<:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT>>> :target:`getTestSE3s<doxid-namespacesophus_1ad5d859daa5afa7d578f60997f7438b75>`();
+
+	template <class TT>
+	std::vector<:ref:`Se2<doxid-classsophus_1_1_se2>`<TT>, Eigen::aligned_allocator<:ref:`Se2<doxid-classsophus_1_1_se2>`<TT>>> :target:`getTestSE2s<doxid-namespacesophus_1ae6456d1ec18845abe78532a80b2fd3f5>`();
+
+	int :target:`testRxso2<doxid-namespacesophus_1a3d886c9a01eb5acf4b7a6a8403935a37>`();
+	int :target:`testRxso3<doxid-namespacesophus_1ad35c1874f08ac6ffdf854d22f77423e1>`();
+	int :target:`testSe2<doxid-namespacesophus_1a8199d767007ef4c57f157433db39629b>`();
+	int :target:`testSe3<doxid-namespacesophus_1a4f130643907f0404982955196a1124ad>`();
+	int :target:`testSim3<doxid-namespacesophus_1a2be244e9e437c0296486bbd78d1200dd>`();
+	int :target:`testSo2<doxid-namespacesophus_1a41c2cd192bcf08534831852b40680fee>`();
+	int :target:`testSo3<doxid-namespacesophus_1ac3e2e3481cc976ca533e64d348b77b9c>`();
+
+	template <class ScalarT, class FnT>
+	auto :ref:`curveNumDiff<doxid-namespacesophus_1a922caae05124834343584e51902a95a2>`(
+		FnT curve,
+		ScalarT t,
+		ScalarT h = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<ScalarT>
+		);
+
+	template <class ScalarT, int kMatrixDim, int kM, class ScalarOrVectorT, class FnT>
+	Eigen::Matrix<ScalarT, kMatrixDim, kM> :ref:`vectorFieldNumDiff<doxid-namespacesophus_1a3bfa9cb2e104faae385417eb9cb4533f>`(
+		FnT vector_field,
+		ScalarOrVectorT const& a,
+		ScalarT eps = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<ScalarT>
+		);
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` bool :ref:`isOrthogonal<doxid-namespacesophus_1addf6fea8b0b5292312cb656314fa072c>`(Eigen::MatrixBase<DT> const& r);
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` bool :ref:`isScaledOrthogonalAndPositive<doxid-namespacesophus_1af8c0c0e5379e2c23f5301136267394a3>`(Eigen::MatrixBase<DT> const& s_r);
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` std::enable_if_t<std::is_floating_point<typename DT::Scalar>::value, Eigen::Matrix<typename DT::Scalar, DT::RowsAtCompileTime, DT::RowsAtCompileTime>> :ref:`makeRotationMatrix<doxid-namespacesophus_1a8faeec958124cf50f6187760dc5c4bbc>`(Eigen::MatrixBase<DT> const& r);
+
+	:ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>` :ref:`createDefaultPinholeModel<doxid-namespacesophus_1aa8266898ca2397c92913a347150b2ad4>`(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size);
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> :ref:`subsampleDown<doxid-namespacesophus_1a3fb296824486fcd1119ed333b170067d>`(const Eigen::Matrix<ScalarT, 2, 1>& in);
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> :ref:`subsampleUp<doxid-namespacesophus_1a539a264ed34dc86a4b9278ba07ea43e1>`(const Eigen::Matrix<ScalarT, 2, 1>& in);
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> :ref:`binDown<doxid-namespacesophus_1a9828dd1379d0d6f31e6fae6284db74d4>`(const Eigen::Matrix<ScalarT, 2, 1>& in);
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> :ref:`binUp<doxid-namespacesophus_1a9a85c5b6b6c44ffa40dfd3019a90635d>`(const Eigen::Matrix<ScalarT, 2, 1>& in);
+
+	template <class ScalarT>
+	:ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`<ScalarT> :ref:`orthoCamFromBoundingBox<doxid-namespacesophus_1ade5cc965ceb604badbde42db831ce20e>`(
+		const Eigen::AlignedBox<ScalarT, 2>& bounding_box,
+		:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size
+		);
+
+	template <class ScalarT>
+	Eigen::AlignedBox<ScalarT, 2> :ref:`boundingBoxFromOrthoCam<doxid-namespacesophus_1afebdd03bb9eb5d127cc8ddd1c890fb42>`(const :ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`<ScalarT>& ortho_cam);
+
+	:ref:`FARM_ENUM<doxid-namespacesophus_1aad4bf94f3058992489ea22bc5159146e>`(CameraTransformType, (pinhole, brown_conrady, kannala_brandt_k3));
+
+	:ref:`GyroModelVariant<doxid-namespacesophus_1a3cc6250cc311b8a44c916d2e24681aba>` :target:`getModelFromType<doxid-namespacesophus_1a63d61f07ceb7e847c7cf43a90876e3a2>`(
+		GyroModelType model_type,
+		const Eigen::VectorXd& params
+		);
+
+	:ref:`AcceleroModelVariant<doxid-namespacesophus_1a3be46970d64a41d4f827b2f9df544dfe>` :target:`getModelFromType<doxid-namespacesophus_1a098c6ed1b90f2db73f506df559055bee>`(
+		AcceleroModelType model_type,
+		const Eigen::VectorXd& params
+		);
+
+	template <class TT>
+	Eigen::Matrix<TT, 3, 3> :target:`nonOrthogonalityMatrix<doxid-namespacesophus_1a598c8336e5fdaa075f42975fc42b119e>`(const Eigen::Matrix<TT, 3, 1>& non_orthogonality);
+
+	:target:`FARM_ENUM<doxid-namespacesophus_1a5d2d531c3d67e7b82862dc46933f7de7>`(
+		GyroModelType,
+		(scaling_non_orthogonality)
+		);
+
+	:target:`FARM_ENUM<doxid-namespacesophus_1a53cd9259e6fb3c1e2d86a1a3f6ecf799>`(
+		AcceleroModelType,
+		(scaling_non_orthogonality)
+		);
+
+	} // namespace sophus
+.. _details-namespacesophus:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Typedefs
+--------
+
+.. index:: pair: typedef; IsMappable
+.. _doxid-namespacesophus_1a2679b6b04ab723b386e823654b391a2f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using IsMappable = :ref:`IsSpecialized<doxid-namespacesophus_1ae5e92e5b1605295978f733e92f81b58e>`<Eigen::internal::traits<std::decay_t<TT>>> 
+
+Type trait used to distinguish mappable vector types from scalars.
+
+We use this class to distinguish Eigen::Vector<Scalar, kMatrixDim> from Scalar types in LieGroup<T>::Tangent
+
+Primary use is mapping LieGroup::Tangent over raw data, with 2 options:
+
+* LieGroup::Tangent is "scalar" (for :ref:`So2 <doxid-classsophus_1_1_so2>`), then we just dereference pointer
+
+* LieGroup::Tangent is Eigen::Vector<...>, then we need to use Eigen::Map
+
+Specialization of Eigen::internal::traits<T> for T is crucial for for constructing Eigen::Map<T>, thus we use that property for distinguishing between those two options. At this moment there seem to be no option to check this using only "external" API of :ref:`Eigen <doxid-namespace_eigen>`
+
+.. index:: pair: typedef; AnyImage
+.. _doxid-namespacesophus_1a78395e5b72761c2d77c1207a7a4af475:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using AnyImage = :ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image>`<:ref:`AnyImagePredicate<doxid-structsophus_1_1_any_image_predicate>`, AllocatorT> 
+
+:ref:`Image <doxid-classsophus_1_1_image>` representing any number of channels (>=1) and any floating and unsigned integral channel type.
+
+.. index:: pair: typedef; IntensityImage
+.. _doxid-namespacesophus_1afebc6bb5384c7773f0ede478ff3ca2f3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using IntensityImage = :ref:`RuntimeImage<doxid-classsophus_1_1_runtime_image>`<:ref:`IntensityImagePredicate<doxid-structsophus_1_1_intensity_image_predicate>`, AllocatorT> 
+
+:ref:`Image <doxid-classsophus_1_1_image>` to represent intensity image / texture as grayscale (=1 channel), RGB (=3 channel ) and RGBA (=4 channel), either uint8_t [0-255], uint16 [0-65535] or float [0.0-1.0] channel type.
+
+.. index:: pair: typedef; PinholeModel
+.. _doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using PinholeModel = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`AffineTransform<doxid-classsophus_1_1_affine_transform>`> 
+
+Pinhole camera model.
+
+.. index:: pair: typedef; BrownConradyModel
+.. _doxid-namespacesophus_1a2eacd7d7b808b72cb4f90006e10dc67f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using BrownConradyModel = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`BrownConradyTransform<doxid-classsophus_1_1_brown_conrady_transform>`> 
+
+Brown Conrady camera model.
+
+.. index:: pair: typedef; KannalaBrandtK3Model
+.. _doxid-namespacesophus_1a13b7037d54342591f25eca6ea7aa3602:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using KannalaBrandtK3Model = :ref:`CameraModelT<doxid-classsophus_1_1_camera_model_t>`<double, :ref:`KannalaBrandtK3Transform<doxid-classsophus_1_1_kannala_brandt_k3_transform>`> 
+
+KannalaBrandt camera model with k0, k1, k2, k3.
+
+.. index:: pair: typedef; CameraTransformVariant
+.. _doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	using CameraTransformVariant = std::variant<:ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>`, :ref:`BrownConradyModel<doxid-namespacesophus_1a2eacd7d7b808b72cb4f90006e10dc67f>`, :ref:`KannalaBrandtK3Model<doxid-namespacesophus_1a13b7037d54342591f25eca6ea7aa3602>`> 
+
+Variant of camera models.
+
+Global Functions
+----------------
+
+.. index:: pair: function; maxMetric
+.. _doxid-namespacesophus_1a5ad048df31ddf7674dff24303de717bb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	auto maxMetric(TT const& p0, TT const& p1)
+
+Returns maximum metric between two points ``p0`` and ``p1``, with ``p0, p1`` being matrices or a scalars.
+
+.. index:: pair: function; setToZero
+.. _doxid-namespacesophus_1add53ecdf152f4f7564321ec5457c4ece:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	void setToZero(TT& p)
+
+Sets point ``p`` to zero, with ``p`` being a matrix or a scalar.
+
+.. index:: pair: function; setElementAt
+.. _doxid-namespacesophus_1aee1127c9e61ad21589d26187af0512f7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT, class ScalarT>
+	void setElementAt(
+		TT& p,
+		ScalarT value,
+		int i
+		)
+
+Sets ``i`` th component of ``p`` to ``value``, with ``p`` being a matrix or a scalar. If ``p`` is a scalar, ``i`` must be ``0``.
+
+.. index:: pair: function; squaredNorm
+.. _doxid-namespacesophus_1a40c4674fb1501d04758a920b9f50be9d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	auto squaredNorm(TT const& p)
+
+Returns the squared 2-norm of ``p``, with ``p`` being a vector or a scalar.
+
+.. index:: pair: function; transpose
+.. _doxid-namespacesophus_1abeb1b6bb7219feb9470ee81a1812c470:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	auto transpose(TT const& p)
+
+Returns ``:ref:`p.transpose() <doxid-namespacesophus_1abeb1b6bb7219feb9470ee81a1812c470>``` if ``p`` is a matrix, and simply ``p`` if m is a scalar.
+
+.. index:: pair: function; normalFromSo2
+.. _doxid-namespacesophus_1a6637168b01ce4133c8d184e7d8e7ca1e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Vector2<ScalarT> normalFromSo2(:ref:`So2<doxid-classsophus_1_1_so2>`<ScalarT> const& foo_rotation_line)
+
+Takes in a rotation ``foo_rotation_plane`` and returns the corresponding line normal along the y-axis (in reference frame ``foo``).
+
+.. index:: pair: function; so2FromNormal
+.. _doxid-namespacesophus_1aa327c590dd91c6062b3f7ac21f5ce783:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	:ref:`So2<doxid-classsophus_1_1_so2>`<T> so2FromNormal(Eigen::Vector2<T> normal_in_foo)
+
+Takes in line normal in reference frame foo and constructs a corresponding rotation matrix ``foo_rotation_line``.
+
+Precondition: ``normal_in_foo`` must not be close to zero.
+
+.. index:: pair: function; normalFromSo3
+.. _doxid-namespacesophus_1a2caee45c9ba1b2c46366eedf1516db63:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Vector3<ScalarT> normalFromSo3(:ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT> const& foo_rotation_plane)
+
+Takes in a rotation ``foo_rotation_plane`` and returns the corresponding plane normal along the z-axis (in reference frame ``foo``).
+
+.. index:: pair: function; rotationFromNormal
+.. _doxid-namespacesophus_1a2bf6784f29b90081736cdf518b08a96c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class T>
+	Eigen::Matrix3<T> rotationFromNormal(
+		Eigen::Vector3<T> const& normal_in_foo,
+		Eigen::Vector3<T> x_dir_hint_foo = Eigen::Vector3<T>(T(1), T(0), T(0)),
+		Eigen::Vector3<T> y_dir_hint_foo = Eigen::Vector3<T>(T(0), T(1), T(0))
+		)
+
+Takes in plane normal in reference frame foo and constructs a corresponding rotation matrix ``foo_rotation_plane``.
+
+Note: The ``plane`` frame is defined as such that the normal points along the positive z-axis. One can specify hints for the x-axis and y-axis of the ``plane`` frame.
+
+Preconditions:
+
+* ``normal_in_foo``, ``xDirHint_foo``, ``yDirHint_foo`` must not be close to zero.
+
+* ``xDirHint_foo`` and ``yDirHint_foo`` must be approx. perpendicular.
+
+.. index:: pair: function; so3FromPlane
+.. _doxid-namespacesophus_1ae61cb3a418a5dc3170dcce68a2e413e4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	:ref:`So3<doxid-classsophus_1_1_so3>`<ScalarT> so3FromPlane(Eigen::Vector3<ScalarT> const& normal_in_foo)
+
+Takes in plane normal in reference frame foo and constructs a corresponding rotation matrix ``foo_rotation_plane``.
+
+See ``rotationFromNormal`` for details.
+
+.. index:: pair: function; lineFromSe2
+.. _doxid-namespacesophus_1ae49dd3e27a720bd4a6e338b2a1afed81:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Hyperplane<ScalarT, 2> lineFromSe2(:ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT> const& foo_pose_line)
+
+Returns a line (wrt. to frame ``foo``), given a pose of the ``line`` in reference frame ``foo``.
+
+Note: The plane is defined by X-axis of the ``line`` frame.
+
+.. index:: pair: function; se2FromLine
+.. _doxid-namespacesophus_1a7b09662decc61ccd04f2cd3c4fc97819:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	:ref:`Se2<doxid-classsophus_1_1_se2>`<ScalarT> se2FromLine(Eigen::Hyperplane<ScalarT, 2> const& line_in_foo)
+
+Returns the pose ``T_foo_line``, given a line in reference frame ``foo``.
+
+Note: The line is defined by X-axis of the frame ``line``.
+
+.. index:: pair: function; planeFromSe3
+.. _doxid-namespacesophus_1ae7aaa5cb58da1e07b63df41975680f37:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Hyperplane<ScalarT, 3> planeFromSe3(:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT> const& foo_pose_plane)
+
+Returns a plane (wrt. to frame ``foo``), given a pose of the ``plane`` in reference frame ``foo``.
+
+Note: The plane is defined by XY-plane of the frame ``plane``.
+
+.. index:: pair: function; se3FromPlane
+.. _doxid-namespacesophus_1af7bf0e6a511e27ec045eafd90d2bfcff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	:ref:`Se3<doxid-classsophus_1_1_se3>`<ScalarT> se3FromPlane(Eigen::Hyperplane<ScalarT, 3> const& plane_in_foo)
+
+Returns the pose ``foo_pose_plane``, given a plane in reference frame ``foo``.
+
+Note: The plane is defined by XY-plane of the frame ``plane``.
+
+.. index:: pair: function; makeHyperplaneUnique
+.. _doxid-namespacesophus_1ae66f039c3f14fae4b9379e4bc924753b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT, int kMatrixDim>
+	Eigen::Hyperplane<ScalarT, kMatrixDim> makeHyperplaneUnique(Eigen::Hyperplane<ScalarT, kMatrixDim> const& plane)
+
+Takes in a hyperplane and returns unique representation by ensuring that the ``offset`` is not negative.
+
+.. index:: pair: function; dxProjX
+.. _doxid-namespacesophus_1ae6027ccf84116ec83e1d5b0b99a4c2a3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 3> dxProjX(const Eigen::Matrix<TT, 3, 1>& p)
+
+Returns point derivative of inverse depth point projection:
+
+Dx proj(x) with x = (a,b,psi) being an inverse depth point.
+
+.. index:: pair: function; proj
+.. _doxid-namespacesophus_1a2bc8087a5ce7a1ad28608725880978a9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 1> proj(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point)
+
+Projects 3-point (a,b,psi) = (x/z,y/z,1/z) through the origin (0,0,0) onto the plane z=1. Hence it returns (a,b) = (x/z, y/z).
+
+.. index:: pair: function; dxProjX
+.. _doxid-namespacesophus_1ad474278742b2066bb7911eccac6ffbb8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 3> dxProjX(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>&)
+
+Returns point derivative of inverse depth point projection:
+
+Dx proj(x) with x = (a,b,psi) being an inverse depth point.
+
+.. index:: pair: function; dxProjExpXPointAt0
+.. _doxid-namespacesophus_1a3a44e3f92b61621be73ae878148948b7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 6> dxProjExpXPointAt0(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point)
+
+Returns pose derivative of inverse depth point projection at the identity:
+
+Dx proj(exp(x) \* y) at x=0
+
+with y = (a,b,psi) being an inverse depth point.
+
+.. index:: pair: function; scaledTransform
+.. _doxid-namespacesophus_1a1cc40bc3d3fd5400dae5a388371b5996:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 3, 1> scaledTransform(
+		const :ref:`sophus::Se3<doxid-classsophus_1_1_se3>`<TT>& foo_pose_bar,
+		const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar
+		)
+
+Transforms inverse_depth point in frame bar to a scaled inverse depth point in frame foo. Here the scale is psi, the input inverse depth.
+
+Given (a,b,psi) being the inverse depth point in frame bar, it returns
+
+psi \* (foo_pose_bar \* inverse_depth_point_in_bar.toEuclideanPoint3())
+
+for psi!=0.
+
+.. index:: pair: function; projTransform
+.. _doxid-namespacesophus_1aed3089b2093a2a89f531520984748699:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TT>
+	Eigen::Matrix<TT, 2, 1> projTransform(
+		const :ref:`sophus::Se3<doxid-classsophus_1_1_se3>`<TT>& foo_pose_bar,
+		const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar
+		)
+
+Transforms inverse_depth point from frame bar to frame foo followed by a projection.
+
+If psi != 0, hence the point is not at +/- infinity, this function is equivalent to:
+
+camProj(foo_pose_bar \* inverse_depth_point_in_bar.toEuclideanPoint3());
+
+However, this function can also applied when 1/z==0, hence the point is at +/- infinity.
+
+.. index:: pair: function; proj
+.. _doxid-namespacesophus_1a8e88d7fc2b8c476ae89f4373a5e37d64:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PointT>
+	Eigen::Vector2<typename PointT::Scalar> proj(const Eigen::MatrixBase<PointT>& p)
+
+Projects 3-point (x,y,z) through the origin (0,0,0) onto the plane z=1. Hence it returns (x/z, y/z).
+
+Precondition: z must not be close to 0.
+
+.. index:: pair: function; unproj
+.. _doxid-namespacesophus_1a0627e6cb80a7ac8068d601be58de0283:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PointT>
+	Eigen::Vector3<typename PointT::Scalar> unproj(
+		const Eigen::MatrixBase<PointT>& p,
+		const typename PointT::Scalar& z = 1.0
+		)
+
+Maps point on the z=1 plane (a,b) to homogeneous representation of the same point: (z\*a, z\*b, z). Z defaults to 1.
+
+.. index:: pair: function; half
+.. _doxid-namespacesophus_1a23ee009c9964aa18248001e5c1c10132:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`ImageSize<doxid-structsophus_1_1_image_size>` half(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size)
+
+If the original width [height] is odd, the new width [height] will be: (width+1)/2 [height+1)/2].
+
+.. index:: pair: function; operator==
+.. _doxid-namespacesophus_1a1fcb64f01f64bf218e54cb60c2b78551:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator==(const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& lhs, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& rhs)
+
+Equality operator.
+
+.. index:: pair: function; operator<
+.. _doxid-namespacesophus_1a65d374b0332726af17006e56281ac356:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator<(const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& lhs, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& rhs)
+
+Ordering operator, for keys in sets and maps.
+
+.. index:: pair: function; operator<<
+.. _doxid-namespacesophus_1a6e294f24b7c5fe650649a98fc7f4f57d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::ostream& operator<<(std::ostream& os, const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& image_size)
+
+Ostream operator.
+
+.. index:: pair: function; operator==
+.. _doxid-namespacesophus_1a37757b9d8cf28275276bb51f25b6026e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool operator==(const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& lhs, const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& rhs)
+
+Equality operator.
+
+.. index:: pair: function; operator<<
+.. _doxid-namespacesophus_1a96aa78533f27a52b688a30232b301b92:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::ostream& operator<<(std::ostream& os, const :ref:`ImageShape<doxid-classsophus_1_1_image_shape>`& shape)
+
+Ostream operator.
+
+.. index:: pair: function; count
+.. _doxid-namespacesophus_1acd3b263c34f7ac31477206c18154af0d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int count(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask, bool truth_value)
+
+Returns number of pixels equal ``truth_value`` in mask.
+
+.. index:: pair: function; countTrue
+.. _doxid-namespacesophus_1a0dd05c303a5fd2d8750c3ca27d8e2748:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int countTrue(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns number of true pixels in mask.
+
+.. index:: pair: function; countFalse
+.. _doxid-namespacesophus_1a8e840ea0601573e755a4b107a3df3dab:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	int countFalse(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns number of false pixels in mask.
+
+.. index:: pair: function; isAllTrue
+.. _doxid-namespacesophus_1ae2ecedfb877160311b1573490be7347b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool isAllTrue(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns true if all pixels are true.
+
+.. index:: pair: function; isAnyTrue
+.. _doxid-namespacesophus_1ae3236928aa4f35ed44d2c5876e591b7a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool isAnyTrue(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns true if at least one pixel is true.
+
+.. index:: pair: function; neg
+.. _doxid-namespacesophus_1ab9dce7609f51909cc738045bca676319:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` neg(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns boolean image with the result per pixel:
+
+out_mask(..) = !mask(..)
+
+.. index:: pair: function; firstPixel
+.. _doxid-namespacesophus_1ad4e9a1ddb4f4e84c12904723b2099fdc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::optional<Eigen::Vector2i> firstPixel(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask, bool truth_value)
+
+Returns first pixel of mask which equals ``truth_value``, nullopt otherwise.
+
+.. index:: pair: function; firstTruePixel
+.. _doxid-namespacesophus_1a65156903ee5a5fb711b58d7137fb8c45:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::optional<Eigen::Vector2i> firstTruePixel(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns first true pixel, nullopt otherwise.
+
+.. index:: pair: function; firstFalsePixel
+.. _doxid-namespacesophus_1a9b3c172175b9a9b44bbde80f318409c7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::optional<Eigen::Vector2i> firstFalsePixel(:ref:`ImageViewBool<doxid-namespacesophus_1a547ae576727ec26f7bc3ecc561007ea4>` mask)
+
+Returns first false pixel, nullopt otherwise.
+
+.. index:: pair: function; FARM_ENUM
+.. _doxid-namespacesophus_1a0e388702ee5b5b10d4ae28319c19df03:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	FARM_ENUM(NumberType, (fixed_point, floating_point))
+
+Number type.
+
+.. index:: pair: function; isEqualMask
+.. _doxid-namespacesophus_1a4ec3ae28a154c65d30398d8323df1f9b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` isEqualMask(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs)
+
+Returns boolean image with the result per pixel:
+
+mask(..) = lhs(..) == rhs (..)
+
+.. index:: pair: function; isLessMask
+.. _doxid-namespacesophus_1a92f553fd33618648d4324ccaeab89274:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` isLessMask(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs)
+
+Returns boolean image with the result per pixel:
+
+mask(..) = lhs(..) < rhs (..)
+
+.. index:: pair: function; isGreaterMask
+.. _doxid-namespacesophus_1a065011d024dc2be64f24b4a34ea9ae94:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` isGreaterMask(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs, :ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs)
+
+Returns boolean image with the result per pixel:
+
+mask(..) = lhs(..) > rhs (..)
+
+.. index:: pair: function; isNearMask
+.. _doxid-namespacesophus_1a6e7c157c937ab93900c8a31042cd4697:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class PixelT>
+	:ref:`MutImageBool<doxid-namespacesophus_1a1071406b56696805bbbdee6803ef3d84>` isNearMask(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> lhs,
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`<PixelT> rhs,
+		typename :ref:`ImageTraits<doxid-structsophus_1_1_image_traits>`<PixelT>::ChannelT thr
+		)
+
+Returns boolean image with the result per pixel:
+
+mask(..) = \|\|lhs(..), rhs (..)\|\| <= thr
+
+.. index:: pair: function; operator<<
+.. _doxid-namespacesophus_1a8b9da03ac5c432de85122a6c6cc382fa:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::ostream& operator<<(std::ostream& os, const :ref:`RuntimePixelType<doxid-structsophus_1_1_runtime_pixel_type>`& type)
+
+Example: :ref:`RuntimePixelType::fromTemplate\<float>() <doxid-structsophus_1_1_runtime_pixel_type_1ad7c8d46cd9f650b0af929b07aee42692>` outputs: "1F32"; :ref:`RuntimePixelType::fromTemplate <doxid-structsophus_1_1_runtime_pixel_type_1ad7c8d46cd9f650b0af929b07aee42692>` <Eigen::Matrix<uint8_t,4,1>>() outputs: "4U8";.
+
+.. index:: pair: function; iterativeMean
+.. _doxid-namespacesophus_1a35efcc27d83f28b647ff00dcc7df95e1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class SequenceContainerT>
+	std::optional<typename SequenceContainerT::value_type> iterativeMean(
+		SequenceContainerT const& foo_transforms_bar,
+		int max_num_iterations
+		)
+
+Calculates mean iteratively.
+
+Returns ``nullopt`` if it does not converge.
+
+.. index:: pair: function; interpolate
+.. _doxid-namespacesophus_1aad9d7ef6d72020af7fffa9e205fb2f42:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class GroupT, class Scalar2T = typename GroupT::Scalar>
+	std::enable_if_t<interp_details::Traits<GroupT>::kSupported, GroupT> interpolate(
+		GroupT const& foo_transform_bar,
+		GroupT const& foo_transform_daz,
+		Scalar2T p = Scalar2T(0.5f)
+		)
+
+This function interpolates between two Lie group elements ``foo_transform_bar`` and ``foo_transform_daz`` with an interpolation factor of ``alpha`` in [0, 1].
+
+It returns a pose ``foo_T_quiz`` with ``quiz`` being a frame between ``bar`` and ``baz``. If ``alpha=0`` it returns ``foo_transform_bar``. If it is 1, it returns ``foo_transform_daz``.
+
+(Since interpolation on Lie groups is inverse-invariant, we can equivalently think of the input arguments as being ``bar_transform_foo``, ``baz_transform_foo`` and the return value being ``quiz_T_foo``.)
+
+Precondition: ``p`` must be in [0, 1].
+
+.. index:: pair: function; curveNumDiff
+.. _doxid-namespacesophus_1a922caae05124834343584e51902a95a2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT, class FnT>
+	auto curveNumDiff(
+		FnT curve,
+		ScalarT t,
+		ScalarT h = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<ScalarT>
+		)
+
+Calculates the derivative of a curve at a point ``t``.
+
+Here, a curve is a function from a Scalar to a Euclidean space. Thus, it returns either a Scalar, a vector or a matrix.
+
+.. index:: pair: function; vectorFieldNumDiff
+.. _doxid-namespacesophus_1a3bfa9cb2e104faae385417eb9cb4533f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT, int kMatrixDim, int kM, class ScalarOrVectorT, class FnT>
+	Eigen::Matrix<ScalarT, kMatrixDim, kM> vectorFieldNumDiff(
+		FnT vector_field,
+		ScalarOrVectorT const& a,
+		ScalarT eps = :ref:`kEpsilonSqrt<doxid-namespacesophus_1a8e001f20dd5252944386c9189aebf43d>`<ScalarT>
+		)
+
+Calculates the derivative of a vector field at a point ``a``.
+
+Here, a vector field is a function from a vector space to another vector space.
+
+.. index:: pair: function; isOrthogonal
+.. _doxid-namespacesophus_1addf6fea8b0b5292312cb656314fa072c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` bool isOrthogonal(Eigen::MatrixBase<DT> const& r)
+
+Takes in arbitrary square matrix and returns true if it is orthogonal.
+
+.. index:: pair: function; isScaledOrthogonalAndPositive
+.. _doxid-namespacesophus_1af8c0c0e5379e2c23f5301136267394a3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` bool isScaledOrthogonalAndPositive(Eigen::MatrixBase<DT> const& s_r)
+
+Takes in arbitrary square matrix and returns true if it is "scaled-orthogonal" with positive determinant.
+
+.. index:: pair: function; makeRotationMatrix
+.. _doxid-namespacesophus_1a8faeec958124cf50f6187760dc5c4bbc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class DT>
+	:ref:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>` std::enable_if_t<std::is_floating_point<typename DT::Scalar>::value, Eigen::Matrix<typename DT::Scalar, DT::RowsAtCompileTime, DT::RowsAtCompileTime>> makeRotationMatrix(Eigen::MatrixBase<DT> const& r)
+
+Takes in arbitrary square matrix (2x2 or larger) and returns closest orthogonal matrix with positive determinant.
+
+.. index:: pair: function; createDefaultPinholeModel
+.. _doxid-namespacesophus_1aa8266898ca2397c92913a347150b2ad4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>` createDefaultPinholeModel(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size)
+
+Creates default pinhole model from ``image_size``.
+
+.. index:: pair: function; subsampleDown
+.. _doxid-namespacesophus_1a3fb296824486fcd1119ed333b170067d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> subsampleDown(const Eigen::Matrix<ScalarT, 2, 1>& in)
+
+Subsamples pixel down, factor of 0.5.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc>`__
+
+.. index:: pair: function; subsampleUp
+.. _doxid-namespacesophus_1a539a264ed34dc86a4b9278ba07ea43e1:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> subsampleUp(const Eigen::Matrix<ScalarT, 2, 1>& in)
+
+Subsamples pixel up, factor of 2.0.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc>`__
+
+.. index:: pair: function; binDown
+.. _doxid-namespacesophus_1a9828dd1379d0d6f31e6fae6284db74d4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> binDown(const Eigen::Matrix<ScalarT, 2, 1>& in)
+
+Bins pixel down, factor of 0.5.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj>`__
+
+.. index:: pair: function; binUp
+.. _doxid-namespacesophus_1a9a85c5b6b6c44ffa40dfd3019a90635d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::Matrix<ScalarT, 2, 1> binUp(const Eigen::Matrix<ScalarT, 2, 1>& in)
+
+Bins pixel up, factor of 2.0.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj>`__
+
+.. index:: pair: function; orthoCamFromBoundingBox
+.. _doxid-namespacesophus_1ade5cc965ceb604badbde42db831ce20e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	:ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`<ScalarT> orthoCamFromBoundingBox(
+		const Eigen::AlignedBox<ScalarT, 2>& bounding_box,
+		:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size
+		)
+
+Returns orthographic camera model given bounding box and image size.
+
+.. index:: pair: function; boundingBoxFromOrthoCam
+.. _doxid-namespacesophus_1afebdd03bb9eb5d127cc8ddd1c890fb42:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class ScalarT>
+	Eigen::AlignedBox<ScalarT, 2> boundingBoxFromOrthoCam(const :ref:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t>`<ScalarT>& ortho_cam)
+
+Returns 2d bounding box corresponding the the given orthographic camera model.
+
+.. index:: pair: function; FARM_ENUM
+.. _doxid-namespacesophus_1aad4bf94f3058992489ea22bc5159146e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	FARM_ENUM(CameraTransformType, (pinhole, brown_conrady, kannala_brandt_k3))
+
+Camera model projection type.
+

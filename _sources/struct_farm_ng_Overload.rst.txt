@@ -1,0 +1,20 @@
+.. index:: pair: struct; farm_ng::Overload
+.. _doxid-structfarm__ng_1_1_overload:
+
+template struct farm_ng::Overload
+=================================
+
+.. toctree::
+	:hidden:
+
+`https://en.cppreference.com/w/cpp/utility/variant/visit <https://en.cppreference.com/w/cpp/utility/variant/visit>`__
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <variant_utils.h>
+	
+	template <class... Ts>
+	struct Overload: public Ts {
+	};

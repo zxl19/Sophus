@@ -1,0 +1,109 @@
+.. index:: pair: class; sophus::PointTransformer
+.. _doxid-classsophus_1_1_point_transformer:
+
+template class sophus::PointTransformer
+=======================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Functor to efficiently transform a number of point given a :ref:`Se3 <doxid-classsophus_1_1_se3>` pose. :ref:`More...<details-classsophus_1_1_point_transformer>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <point_transform.h>
+	
+	template <class TT>
+	class PointTransformer {
+	public:
+		// construction
+	
+		:target:`PointTransformer<doxid-classsophus_1_1_point_transformer_1a5c934e29ba79a2381a833a8dc2855482>`();
+		:target:`PointTransformer<doxid-classsophus_1_1_point_transformer_1aa4c3f25ff8a6a1603d2f5c37bd0d7f72>`(const :ref:`sophus::Se3<doxid-classsophus_1_1_se3>`<TT>& foo_pose_bar);
+
+		// methods
+	
+		Eigen::Matrix<TT, 3, 1> :ref:`transform<doxid-classsophus_1_1_point_transformer_1abb8806dd22273ecf2f5b5b3f8d5ff5eb>`(const Eigen::Matrix<TT, 3, 1>& point_in_bar) const;
+		Eigen::Matrix<TT, 3, 1> :target:`scaledTransform<doxid-classsophus_1_1_point_transformer_1af6bc2e36c3a29ddae46526dd08e11dd5>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const;
+		Eigen::Matrix<TT, 2, 1> :ref:`projTransform<doxid-classsophus_1_1_point_transformer_1a76a133cd08cfb5c64c5369c5b1cafd16>`(const Eigen::Matrix<TT, 3, 1>& point_in_bar) const;
+		Eigen::Matrix<TT, 2, 1> :ref:`projTransform<doxid-classsophus_1_1_point_transformer_1ab2303f98862c4200181bbbf8b7f00435>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const;
+		Eigen::Matrix<TT, 2, 6> :ref:`dxProjExpXTransformPointAt0<doxid-classsophus_1_1_point_transformer_1a6d6df6a88b5e9fa651ad3202d0a78e1f>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const;
+		Eigen::Matrix<TT, 2, 3> :target:`dxProjTransformX<doxid-classsophus_1_1_point_transformer_1ae195d599e4ea6969601617eb6e0b1688>`(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const;
+		Eigen::Matrix<TT, 3, 3> const& :target:`fooRotationBar<doxid-classsophus_1_1_point_transformer_1a790eab92f39abf9388a37c3d0520c19d>`() const;
+		Eigen::Matrix<TT, 3, 1> const& :target:`barOriginInFoo<doxid-classsophus_1_1_point_transformer_1ab00fcb73a0775caadf7a7e1ea105fd43>`() const;
+	};
+.. _details-classsophus_1_1_point_transformer:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Functor to efficiently transform a number of point given a :ref:`Se3 <doxid-classsophus_1_1_se3>` pose.
+
+When transforming a point ``point_in_bar`` given a :ref:`sophus::Se3 <doxid-classsophus_1_1_se3>` pose ``foo_pose_bar``, one can simply use
+
+``Eigen::Vector3d = foo_pose_bar * point_in_bar;``
+
+Internally, this applies the (unit) quaternion to the left and the right of the point to rotate it and then adds the translation:
+
+.. code-block:: cpp
+
+	point_in_foo = q*point_in_bar*q' + bar_origin_in_foo.
+
+If there are a lot of point to transform, there is a more efficient way using the rotation matrix R which can be precomputed from the quaternion q.
+
+point_in_foo = R \* point_in_bar + bar_origin_in_foo
+
+This is what this functor is for.
+
+Methods
+-------
+
+.. index:: pair: function; transform
+.. _doxid-classsophus_1_1_point_transformer_1abb8806dd22273ecf2f5b5b3f8d5ff5eb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<TT, 3, 1> transform(const Eigen::Matrix<TT, 3, 1>& point_in_bar) const
+
+Transforms a 3-point from frame bar to frame foo.
+
+.. index:: pair: function; projTransform
+.. _doxid-classsophus_1_1_point_transformer_1a76a133cd08cfb5c64c5369c5b1cafd16:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<TT, 2, 1> projTransform(const Eigen::Matrix<TT, 3, 1>& point_in_bar) const
+
+Transforms 3-point in frame bar to foo and projects it onto the Euclidean plane z=1 in foo.
+
+.. index:: pair: function; projTransform
+.. _doxid-classsophus_1_1_point_transformer_1ab2303f98862c4200181bbbf8b7f00435:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<TT, 2, 1> projTransform(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const
+
+Transforms and projects the 3d inverse depth point in frame bar to the Euclidean plane z=1 in foo.
+
+.. index:: pair: function; dxProjExpXTransformPointAt0
+.. _doxid-classsophus_1_1_point_transformer_1a6d6df6a88b5e9fa651ad3202d0a78e1f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<TT, 2, 6> dxProjExpXTransformPointAt0(const :ref:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3>`<TT>& inverse_depth_point_in_bar) const
+
+Returns pose derivative of inverse depth point projection at the identity:
+
+Dx proj(exp(x) \* foo_pose_bar \* foo_in_bar.toEuclideanPoint3()) at x=0
+
+with foo_in_bar = (a,b,psi) being an inverse depth point.
+

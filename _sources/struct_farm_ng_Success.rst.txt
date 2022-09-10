@@ -1,0 +1,11 @@
+.. index:: pair: struct; farm_ng::Success
+.. _doxid-structfarm__ng_1_1_success:
+
+struct farm_ng::Success
+=======================
+
+.. toctree::
+	:hidden:
+
+
+

@@ -1,0 +1,11 @@
+.. index:: pair: struct; sophus::experimental::ManifoldFamilyTupleTraits
+.. _doxid-structsophus_1_1experimental_1_1_manifold_family_tuple_traits:
+
+template struct sophus::experimental::ManifoldFamilyTupleTraits
+===============================================================
+
+.. toctree::
+	:hidden:
+
+
+

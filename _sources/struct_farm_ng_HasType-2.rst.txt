@@ -1,0 +1,11 @@
+.. index:: pair: struct; farm_ng::HasType
+.. _doxid-structfarm__ng_1_1_has_type:
+
+template struct farm_ng::HasType
+================================
+
+.. toctree::
+	:hidden:
+
+
+

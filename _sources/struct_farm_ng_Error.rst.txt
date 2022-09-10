@@ -1,0 +1,22 @@
+.. index:: pair: struct; farm_ng::Error
+.. _doxid-structfarm__ng_1_1_error:
+
+struct farm_ng::Error
+=====================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <expected.h>
+	
+	struct Error {
+		// fields
+	
+		std::vector<:ref:`ErrorDetail<doxid-structfarm__ng_1_1_error_detail>`> :target:`details<doxid-structfarm__ng_1_1_error_1aa565798a9056357ebccf266f1c9df7c3>`;
+	};

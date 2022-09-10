@@ -1,0 +1,25 @@
+.. index:: pair: struct; farm_ng::StopwatchSingleton::StopwatchStats
+.. _doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats:
+
+struct farm_ng::StopwatchSingleton::StopwatchStats
+==================================================
+
+.. toctree::
+	:hidden:
+
+Container for statistics on stopwatch timers.
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <stopwatch.h>
+	
+	struct StopwatchStats {
+		// fields
+	
+		double :target:`mean<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats_1a9b3dc5bb031afdcd054b8ccedab65101>`;
+		double :target:`min<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats_1acc04f4320ece91b7f8e7991e52d4f34a>`;
+		double :target:`max<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats_1a4092e61d958d19bace6f043b6a60d42e>`;
+		int :target:`num<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats_1ae251a1dbff1a7c531b4a58f83e1a4133>`;
+	};

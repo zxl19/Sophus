@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template class Eigen::Map&lt;sophus::Cartesian&lt;ScalarT, kM&gt; const, kOptions&gt; &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="template class Eigen::Map&lt;sophus::Sim2&lt;ScalarT&gt;, kOptions&gt;" href="class_Eigen_Map-2.html" />
+    <link rel="prev" title="namespace Eigen" href="namespace_Eigen.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Sophus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">C++ Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pysophus.html">Sympy API - Symbolic Sophus In Python</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.html">FARM_ENUM</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_Eigen.html">namespace Eigen</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">template class Eigen::Map&lt;sophus::Cartesian&lt;ScalarT, kM&gt; const, kOptions&gt;</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-2.html">template class Eigen::Map&lt;sophus::Sim2&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-3.html">template class Eigen::Map&lt;sophus::Sim2&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-4.html">template class Eigen::Map&lt;sophus::Se3&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-5.html">template class Eigen::Map&lt;sophus::Sim3&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-6.html">template class Eigen::Map&lt;sophus::So2&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-7.html">template class Eigen::Map&lt;sophus::Sim3&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-8.html">template class Eigen::Map&lt;sophus::So2&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-9.html">template class Eigen::Map&lt;sophus::So3&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-10.html">template class Eigen::Map&lt;sophus::Se3&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-11.html">template class Eigen::Map&lt;sophus::Se2&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-12.html">template class Eigen::Map&lt;sophus::RxSo2&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-13.html">template class Eigen::Map&lt;sophus::Cartesian&lt;ScalarT, kM&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-14.html">template class Eigen::Map&lt;sophus::Se2&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-15.html">template class Eigen::Map&lt;sophus::RxSo2&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-16.html">template class Eigen::Map&lt;sophus::RxSo3&lt;ScalarT&gt;, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-17.html">template class Eigen::Map&lt;sophus::RxSo3&lt;ScalarT&gt; const, kOptions&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_Eigen_Map-18.html">template class Eigen::Map&lt;sophus::So3&lt;ScalarT&gt;, kOptions&gt;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_ceres.html">namespace ceres</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_farm_ng.html">namespace farm_ng</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_sophus.html">namespace sophus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_Garage.html">struct Garage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart.html">template struct RotationalPart&lt;sophus::SE3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-2.html">template struct RotationalPart&lt;sophus::Sim2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-3.html">template struct RotationalPart&lt;sophus::Sim3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-4.html">template struct RotationalPart&lt;sophus::SO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-5.html">template struct RotationalPart&lt;sophus::Se2F64&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-6.html">template struct RotationalPart&lt;sophus::RxSO2d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-7.html">template struct RotationalPart&lt;sophus::RxSO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-8.html">template struct RotationalPart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struct_RotationalPart-9.html">template struct RotationalPart&lt;sophus::SO3d&gt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_CompileOnlyTernaryCostFunctorExample.html">class CompileOnlyTernaryCostFunctorExample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class_PosePointReprojFunctor.html">class PosePointReprojFunctor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html#detailed-documentation">Detailed Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+          <li><a href="namespace_Eigen.html">namespace Eigen</a> &raquo;</li>
+      <li>template class Eigen::Map&lt;sophus::Cartesian&lt;ScalarT, kM&gt; const, kOptions&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/class_Eigen_Map.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="template-class-eigen-map-sophus-cartesian-scalart-km-const-koptions">
+<span id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4"></span><span id="index-0"></span><h1>template class Eigen::Map&lt;sophus::Cartesian&lt;ScalarT, kM&gt; const, kOptions&gt;<a class="headerlink" href="#template-class-eigen-map-sophus-cartesian-scalart-km-const-koptions" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Specialization of Eigen::Map for <code class="docutils literal notranslate"><span class="pre">Cartesian</span> <span class="pre">const</span></code>; derived from CartesianBase. <a class="reference internal" href="#details-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4"><span class="std std-ref">More…</span></a></p>
+<pre class="highlight doxyrest-overview-code-block literal-block"><span></span><span class="cp">#include</span> <span class="cpf">&lt;cartesian.h&gt;</span><span class="cp"></span>
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">ScalarT</span><span class="p">,</span> <span class="kt">int</span> <span class="n">kM</span><span class="p">,</span> <span class="kt">int</span> <span class="n">kOptions</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">sophus</span><span class="o">::</span><span class="n">Cartesian</span><span class="o">&lt;</span><span class="n">ScalarT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="p">,</span> <span class="n">kOptions</span><span class="o">&gt;:</span> <span class="k">public</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">sophus::CartesianBase</span></a><span></span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1afe59f5d7e3a69efc24aee919dd46680a">Base</span><span></span> <span class="o">=</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">sophus::CartesianBase</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af724bf677fea0349ef5dbba9f7d78ad9"><span class="std std-ref">Map</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_Cartesian.html#doxid-classsophus-1-1-cartesian"><span class="std std-ref">sophus::Cartesian</span></a><span></span><span class="o">&lt;</span><span class="n">ScalarT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="p">,</span> <span class="n">kOptions</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af40e94fe29915868c979408d4a335617">Scalar</span><span></span> <span class="o">=</span> <span class="n">ScalarT</span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1afc28656450f1779a659efcd6d82684fc">Transformation</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a649d7b46dbbabf802ec5ff68e48e4d94"><span class="std std-ref">Base::Transformation</span></a><span></span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1a284ee3380ce3a6f79db6f93b29a790cc">Point</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa53a41362f4e8b5df411f22fb91a49db"><span class="std std-ref">Base::Point</span></a><span></span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1abf2f47bdb7fbadb27eb11d2caad3fcea">HomogeneousPoint</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a2f782874a4bfe00e13faf5193e75e05e"><span class="std std-ref">Base::HomogeneousPoint</span></a><span></span> <span class="p">;</span>
+    <span class="k">using</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1a3b323acb448ce97fc0642d1b958043af">Tangent</span><span></span> <span class="o">=</span> <span class="k">typename</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ad768d1d0832fd0cf4fe6163455b1bbce"><span class="std std-ref">Base::Tangent</span></a><span></span> <span class="p">;</span>
+
+    <span class="c1">// construction</span>
+
+    <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af724bf677fea0349ef5dbba9f7d78ad9">Map</span><span></span><span class="p">(</span><a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af40e94fe29915868c979408d4a335617"><span class="std std-ref">Scalar</span></a><span></span> <span class="k">const</span><span class="o">*</span> <span class="n">coeffs</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af724bf677fea0349ef5dbba9f7d78ad9"><span class="std std-ref">Map</span></a><span></span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af40e94fe29915868c979408d4a335617"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="p">,</span> <span class="n">kOptions</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1ad0216ec674b1688af90eb500665823bd"><span class="std std-ref">params</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+<span class="k">protected</span><span class="o">:</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af724bf677fea0349ef5dbba9f7d78ad9"><span class="std std-ref">Map</span></a><span></span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af40e94fe29915868c979408d4a335617"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="p">,</span> <span class="n">kOptions</span><span class="o">&gt;</span> <span class="doxyrest-code-target target" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1a306dc4e6b48df3d186a1f0a5d1ed754a">params_</span><span></span><span class="p">;</span>
+<span class="p">};</span></pre>
+<section id="inherited-members">
+<h3>Inherited Members<a class="headerlink" href="#inherited-members" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-overview-inherited-code-block literal-block"><span></span><span class="k">public</span><span class="o">:</span>
+    <span class="c1">// typedefs</span>
+
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">traits</span><span class="o">&lt;</span><span class="n">DerivedT</span><span class="o">&gt;::</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa184fd995c231c6c6012f98bd124949c"><span class="std std-ref">ParamsType</span></a><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">internal</span><span class="o">::</span><span class="n">traits</span><span class="o">&lt;</span><span class="n">DerivedT</span><span class="o">&gt;::</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa184fd995c231c6c6012f98bd124949c"><span class="std std-ref">ParamsType</span></a><span></span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a649d7b46dbbabf802ec5ff68e48e4d94"><span class="std std-ref">Transformation</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a63c8137e11e7305e7bf89f56d00f91a6"><span class="std std-ref">kMatrixDim</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a63c8137e11e7305e7bf89f56d00f91a6"><span class="std std-ref">kMatrixDim</span></a><span></span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa53a41362f4e8b5df411f22fb91a49db"><span class="std std-ref">Point</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a2f782874a4bfe00e13faf5193e75e05e"><span class="std std-ref">HomogeneousPoint</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a63c8137e11e7305e7bf89f56d00f91a6"><span class="std std-ref">kMatrixDim</span></a><span></span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a13d2da5b99fbec8fd090786dabcb694e"><span class="std std-ref">Line</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">ParametrizedLine</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6164187d7b59d1411c1884e80d2fc41a"><span class="std std-ref">Hyperplane</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Hyperplane</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ad768d1d0832fd0cf4fe6163455b1bbce"><span class="std std-ref">Tangent</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a1d07bdf5133281d9bbca801e16d4172b"><span class="std std-ref">Adjoint</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a59d8701929865f64fdda765d55bebd25"><span class="std std-ref">ReturnScalar</span></a><span></span> <span class="o">=</span> <span class="k">typename</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">ScalarBinaryOpTraits</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="k">typename</span> <span class="n">OtherDerivedT</span><span class="o">::</span><span class="n">Scalar</span><span class="o">&gt;::</span><span class="n">ReturnType</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6ffd4ccad4c9812ea4d062e117787f83"><span class="std std-ref">CartesianSum</span></a><span></span> <span class="o">=</span> <a class="reference internal" href="class_sophus_Cartesian.html#doxid-classsophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a59d8701929865f64fdda765d55bebd25"><span class="std std-ref">ReturnScalar</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa0ef5eb3cad3f06bb0be312b7abc4f88"><span class="std std-ref">PointProduct</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a59d8701929865f64fdda765d55bebd25"><span class="std std-ref">ReturnScalar</span></a><span></span><span class="o">&lt;</span><span class="n">PointDerivedT</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="p">;</span>
+    <span class="k">using</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ae9766289b3cc475b3956c821dd27e2d6"><span class="std std-ref">HomogeneousPointProduct</span></a><span></span> <span class="o">=</span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a59d8701929865f64fdda765d55bebd25"><span class="std std-ref">ReturnScalar</span></a><span></span><span class="o">&lt;</span><span class="n">HPointDerivedT</span><span class="o">&gt;</span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a63c8137e11e7305e7bf89f56d00f91a6"><span class="std std-ref">kMatrixDim</span></a><span></span><span class="o">&gt;</span> <span class="p">;</span>
+
+    <span class="c1">// fields</span>
+
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span> <span class="o">=</span> <span class="n">kM</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a48a9b0e6b39976a60667b00423e5ddc5"><span class="std std-ref">kNumParameters</span></a><span></span> <span class="o">=</span> <span class="n">kM</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a63c8137e11e7305e7bf89f56d00f91a6"><span class="std std-ref">kMatrixDim</span></a><span></span> <span class="o">=</span> <span class="n">kM</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aae9b47a2e6b7e538ad73903b22b2c6e2"><span class="std std-ref">kPointDim</span></a><span></span> <span class="o">=</span> <span class="n">kM</span><span class="p">;</span>
+
+    <span class="c1">// methods</span>
+
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a1d07bdf5133281d9bbca801e16d4172b"><span class="std std-ref">Adjoint</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ad08b64e2f93fea322f56757bac54173b"><span class="std std-ref">adj</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">NewScalarTypeT</span><span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_Cartesian.html#doxid-classsophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><span class="n">NewScalarTypeT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1affd8b74471d6eac32a162de32f059fcb"><span class="std std-ref">cast</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a48a9b0e6b39976a60667b00423e5ddc5"><span class="std std-ref">kNumParameters</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ad7e4635c7b45da0d9656b7bbff657d21"><span class="std std-ref">dxThisMulExpXAt0</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a48a9b0e6b39976a60667b00423e5ddc5"><span class="std std-ref">kNumParameters</span></a><span></span><span class="p">,</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6192fbe60e4f47f44d611cfd60831562"><span class="std std-ref">kDoF</span></a><span></span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aae71f0a653ee029caaa84feb8324b20a"><span class="std std-ref">dxLogThisInvTimesXAtThis</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_Cartesian.html#doxid-classsophus-1-1-cartesian"><span class="std std-ref">Cartesian</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c3f1d09aeba273e7af8f2795334c970"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a8c0b424f445c68b7256be495faa4bb64"><span class="std std-ref">inverse</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ad768d1d0832fd0cf4fe6163455b1bbce"><span class="std std-ref">Tangent</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa3f0d32a02dd9f87010ba0b0dcae54c0"><span class="std std-ref">log</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a649d7b46dbbabf802ec5ff68e48e4d94"><span class="std std-ref">Transformation</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ae5278420baf61207340b13e920d9a4b2"><span class="std std-ref">matrix</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="n">OtherDerivedT</span><span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="o">&lt;</span><span class="n">DerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a7db300b95996f96ce23cc59abee84002"><span class="std std-ref">operator=</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">OtherDerivedT</span><span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6ffd4ccad4c9812ea4d062e117787f83"><span class="std std-ref">CartesianSum</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a51de3e2f740140d3b2135ffcdb051ecd"><span class="std std-ref">operator*</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span>
+        <span class="k">typename</span> <span class="n">PointDerivedT</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">IsFixedSizeVector</span><span class="o">&lt;</span><span class="n">PointDerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span>
+        <span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa0ef5eb3cad3f06bb0be312b7abc4f88"><span class="std std-ref">PointProduct</span></a><span></span><span class="o">&lt;</span><span class="n">PointDerivedT</span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a75475ee67a8f28b1a4f425844500755e"><span class="std std-ref">operator*</span></a><span></span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">PointDerivedT</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span>
+        <span class="k">typename</span> <span class="n">HPointDerivedT</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">IsFixedSizeVector</span><span class="o">&lt;</span><span class="n">HPointDerivedT</span><span class="p">,</span> <span class="n">kMatrixDim</span><span class="o">&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span>
+        <span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ae9766289b3cc475b3956c821dd27e2d6"><span class="std std-ref">HomogeneousPointProduct</span></a><span></span><span class="o">&lt;</span><span class="n">HPointDerivedT</span><span class="o">&gt;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a28c7f639693a1f376f6f5d6a846fb6c7"><span class="std std-ref">operator*</span></a><span></span><span class="p">(</span><span class="n">Eigen</span><span class="o">::</span><span class="n">MatrixBase</span><span class="o">&lt;</span><span class="n">HPointDerivedT</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a13d2da5b99fbec8fd090786dabcb694e"><span class="std std-ref">Line</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ac09c3598719d07d6c726d19e7dd66adf"><span class="std std-ref">operator*</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a13d2da5b99fbec8fd090786dabcb694e"><span class="std std-ref">Line</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">l</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6164187d7b59d1411c1884e80d2fc41a"><span class="std std-ref">Hyperplane</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1ac8080848158926fd4b41684b8ff196cd"><span class="std std-ref">operator*</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a6164187d7b59d1411c1884e80d2fc41a"><span class="std std-ref">Hyperplane</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+
+    <span class="k">template</span> <span class="o">&lt;</span>
+        <span class="k">typename</span> <span class="n">OtherDerivedT</span><span class="p">,</span>
+        <span class="k">typename</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">std</span><span class="o">::</span><span class="n">enable_if</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">Scalar</span><span class="p">,</span> <span class="n">ReturnScalar</span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="o">&gt;&gt;::</span><span class="n">value</span><span class="o">&gt;::</span><span class="n">type</span>
+        <span class="o">&gt;</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="o">&lt;</span><span class="n">DerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;&amp;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a190af56e3799afead5b92aa486ed2a68"><span class="std std-ref">operator*=</span></a><span></span><span class="p">(</span><a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base"><span class="std std-ref">CartesianBase</span></a><span></span><span class="o">&lt;</span><span class="n">OtherDerivedT</span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa184fd995c231c6c6012f98bd124949c"><span class="std std-ref">ParamsType</span></a><span></span><span class="o">&amp;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1a994874c029998b720afffff600be90bb"><span class="std std-ref">params</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aa184fd995c231c6c6012f98bd124949c"><span class="std std-ref">ParamsType</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <a class="reference internal" href="class_sophus_CartesianBase.html#doxid-classsophus-1-1-cartesian-base-1aab1f3a0c9a5bfbc2ff075c79cfc7a365"><span class="std std-ref">params</span></a><span></span><span class="p">()</span> <span class="k">const</span><span class="p">;</span></pre>
+</section>
+</section>
+<section id="detailed-documentation">
+<span id="details-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Specialization of Eigen::Map for <code class="docutils literal notranslate"><span class="pre">Cartesian</span> <span class="pre">const</span></code>; derived from CartesianBase.</p>
+<p>Allows us to wrap Cartesian objects around POD array.</p>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1ad0216ec674b1688af90eb500665823bd"><span id="index-1"></span><a class="reference internal" href="global.html#doxid-common-8h-1a719070c34a48abcdf2f623e4160b4c28"><span class="std std-ref">SOPHUS_FUNC</span></a><span></span> <a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af724bf677fea0349ef5dbba9f7d78ad9"><span class="std std-ref">Map</span></a><span></span><span class="o">&lt;</span><span class="n">Eigen</span><span class="o">::</span><span class="n">Vector</span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-eigen-1-1-map-3-01sophus-1-1-cartesian-3-01-scalar-t-00-01k-m-01-4-01const-00-01k-options-01-4-1af40e94fe29915868c979408d4a335617"><span class="std std-ref">Scalar</span></a><span></span><span class="p">,</span> <span class="n">kM</span><span class="o">&gt;</span> <span class="k">const</span><span class="p">,</span> <span class="n">kOptions</span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">params</span><span class="p">()</span> <span class="k">const</span></pre>
+<p>Accessor of params vector.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="namespace_Eigen.html" class="btn btn-neutral float-left" title="namespace Eigen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="class_Eigen_Map-2.html" class="btn btn-neutral float-right" title="template class Eigen::Map&lt;sophus::Sim2&lt;ScalarT&gt;, kOptions&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Hauke Strasdat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

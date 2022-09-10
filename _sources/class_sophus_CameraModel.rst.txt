@@ -1,0 +1,369 @@
+.. index:: pair: class; sophus::CameraModel
+.. _doxid-classsophus_1_1_camera_model:
+
+class sophus::CameraModel
+=========================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Concrete camera model class. :ref:`More...<details-classsophus_1_1_camera_model>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <camera_model.h>
+	
+	class CameraModel {
+	public:
+		// construction
+	
+		template <class TransformModelT>
+		:ref:`CameraModel<doxid-classsophus_1_1_camera_model_1a453e88e24ba7d2a179447e8c634607ef>`(
+			std::string frame_name,
+			TransformModelT model
+			);
+	
+		:ref:`CameraModel<doxid-classsophus_1_1_camera_model_1a572c9c5e43032abb5c96bd915c7f5e00>`(
+			std::string frame_name,
+			:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size,
+			CameraTransformType projection_type,
+			const Eigen::VectorXd& params
+			);
+
+		// methods
+	
+		std::string_view :ref:`cameraTransformName<doxid-classsophus_1_1_camera_model_1a48138721ad1754bfb68c3059c2f95167>`() const;
+		std::string& :ref:`mutFrameName<doxid-classsophus_1_1_camera_model_1aea6da49f82042b8b7bb52550d0669c3e>`();
+		const std::string& :ref:`frameName<doxid-classsophus_1_1_camera_model_1a24abd0e2a544390b0c09a70059cd6e6b>`() const;
+		:ref:`CameraTransformVariant<doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804>`& :ref:`mutModelVariant<doxid-classsophus_1_1_camera_model_1ac9c3c7fef0e12280d4881804467e26ec>`();
+		const :ref:`CameraTransformVariant<doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804>`& :ref:`modelVariant<doxid-classsophus_1_1_camera_model_1a02e752143548f32466b716fafacfd549>`() const;
+		CameraTransformType :ref:`transformType<doxid-classsophus_1_1_camera_model_1ae3a2af58f0ba6b9283c57781244b2dff>`() const;
+		Eigen::VectorXd :ref:`params<doxid-classsophus_1_1_camera_model_1a7770873d99fbb7aba0e472eec40ccba8>`() const;
+		void :ref:`setParams<doxid-classsophus_1_1_camera_model_1aa0192569ee9dfd18ee31c7301ec94ffc>`(const Eigen::VectorXd& params);
+		Eigen::VectorXd :ref:`distortionParams<doxid-classsophus_1_1_camera_model_1a7f3ee6b92ed1bf8c1f7ca7d9a2834499>`() const;
+		Eigen::Vector2d :ref:`camProj<doxid-classsophus_1_1_camera_model_1a2d7d86d2b46cb35ac80d14cee2a67208>`(const Eigen::Vector3d& point_camera) const;
+		Eigen::Vector2d :ref:`warp<doxid-classsophus_1_1_camera_model_1afb7b56d1de297bb10b2a23385386f2eb>`(const Eigen::Vector2d& point2_in_camera_z1_plane) const;
+		Eigen::Matrix2d :target:`dxWarp<doxid-classsophus_1_1_camera_model_1a1e3f0df0fc40b819e9c6269b9aeb9fcb>`(const Eigen::Vector2d& point2_in_camera_z1_plane) const;
+		Eigen::Matrix<double, 2, 3> :ref:`dxCamProjX<doxid-classsophus_1_1_camera_model_1ad7a28ea98adf6c20ca22a825e32974a2>`(const Eigen::Vector3d& point_in_camera) const;
+		Eigen::Matrix<double, 2, 6> :ref:`dxCamProjExpXPointAt0<doxid-classsophus_1_1_camera_model_1a18129e9b11cf61b0499bb4f4c1002a95>`(const Eigen::Vector3d& point_in_camera) const;
+		Eigen::Vector3d :ref:`camUnproj<doxid-classsophus_1_1_camera_model_1a816ae3e16ba24ea35b82aee25424f246>`(const Eigen::Vector2d& pixel_image, double depth_z) const;
+		Eigen::Vector2d :ref:`unwarp<doxid-classsophus_1_1_camera_model_1ac97cbbf6c628e263142e6af83c9e4330>`(const Eigen::Vector2d& pixel_image) const;
+		CameraModel :ref:`subsampleDown<doxid-classsophus_1_1_camera_model_1af726b3e2046e2f46c64a467a2c633a59>`() const;
+		CameraModel :ref:`subsampleUp<doxid-classsophus_1_1_camera_model_1a8b90615f4123efa82fc583ddbfcb766e>`() const;
+		CameraModel :ref:`binDown<doxid-classsophus_1_1_camera_model_1a09a17f01cd69a024cc1d849c046b041d>`() const;
+		CameraModel :ref:`binUp<doxid-classsophus_1_1_camera_model_1a77f99d96a8b222b33be1cf1b0f7d0aae>`() const;
+		const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& :ref:`imageSize<doxid-classsophus_1_1_camera_model_1a716171579800c629be13ce181eaddbef>`() const;
+		CameraModel :ref:`roi<doxid-classsophus_1_1_camera_model_1a64ef52bffc098b19b07bea8470f868c8>`(const Eigen::Vector2i& top_left, :ref:`ImageSize<doxid-structsophus_1_1_image_size>` roi_size) const;
+		bool :ref:`contains<doxid-classsophus_1_1_camera_model_1adb0f85464ea18e8c871c7c2604812241>`(const Eigen::Vector2i& obs, int border = 0) const;
+		bool :ref:`contains<doxid-classsophus_1_1_camera_model_1a4aa7e105eea371b8183cc21976f18d02>`(const Eigen::Vector2d& obs, double border = 0) const;
+		CameraModel :target:`scale<doxid-classsophus_1_1_camera_model_1ac90462239413599cb957337d3fd0c1ce>`(:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size) const;
+		static CameraModel :ref:`createDefaultPinholeModel<doxid-classsophus_1_1_camera_model_1ad8a949c8410920307988e5398fe188ee>`(std::string frame_name, :ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size);
+	};
+.. _details-classsophus_1_1_camera_model:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Concrete camera model class.
+
+Construction
+------------
+
+.. index:: pair: function; CameraModel
+.. _doxid-classsophus_1_1_camera_model_1a453e88e24ba7d2a179447e8c634607ef:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	template <class TransformModelT>
+	CameraModel(
+		std::string frame_name,
+		TransformModelT model
+		)
+
+Constructs camera model from ``frame_name`` and concrete projection model.
+
+.. index:: pair: function; CameraModel
+.. _doxid-classsophus_1_1_camera_model_1a572c9c5e43032abb5c96bd915c7f5e00:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel(
+		std::string frame_name,
+		:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size,
+		CameraTransformType projection_type,
+		const Eigen::VectorXd& params
+		)
+
+Constructs camera model from ``frame_name``, ``image_size``, ``projection_type`` flag and ``params`` vector.
+
+Precondition: ``params.size()`` must match the number of parameters of the specified ``projection_type`` (TransformModel::kNumParams).
+
+Methods
+-------
+
+.. index:: pair: function; cameraTransformName
+.. _doxid-classsophus_1_1_camera_model_1a48138721ad1754bfb68c3059c2f95167:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string_view cameraTransformName() const
+
+Returns string representation for the concrete camera transform flag.
+
+.. index:: pair: function; mutFrameName
+.. _doxid-classsophus_1_1_camera_model_1aea6da49f82042b8b7bb52550d0669c3e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::string& mutFrameName()
+
+Frame name mutator.
+
+.. index:: pair: function; frameName
+.. _doxid-classsophus_1_1_camera_model_1a24abd0e2a544390b0c09a70059cd6e6b:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const std::string& frameName() const
+
+Frame name accessor.
+
+.. index:: pair: function; mutModelVariant
+.. _doxid-classsophus_1_1_camera_model_1ac9c3c7fef0e12280d4881804467e26ec:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`CameraTransformVariant<doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804>`& mutModelVariant()
+
+Distortion variant mutator.
+
+.. index:: pair: function; modelVariant
+.. _doxid-classsophus_1_1_camera_model_1a02e752143548f32466b716fafacfd549:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const :ref:`CameraTransformVariant<doxid-namespacesophus_1a3eeb94b55fd8469cb8b7c469a7fda804>`& modelVariant() const
+
+Distortion variant accessor.
+
+.. index:: pair: function; transformType
+.. _doxid-classsophus_1_1_camera_model_1ae3a2af58f0ba6b9283c57781244b2dff:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraTransformType transformType() const
+
+Camera transform flag.
+
+.. index:: pair: function; params
+.. _doxid-classsophus_1_1_camera_model_1a7770873d99fbb7aba0e472eec40ccba8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::VectorXd params() const
+
+Returns ``params`` vector by value.
+
+.. index:: pair: function; setParams
+.. _doxid-classsophus_1_1_camera_model_1aa0192569ee9dfd18ee31c7301ec94ffc:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void setParams(const Eigen::VectorXd& params)
+
+Sets ``params`` vector.
+
+Precontion: ``params.size()`` must match the number of parameters of the specivied ``projection_type`` (TransformModel::kNumParams).
+
+.. index:: pair: function; distortionParams
+.. _doxid-classsophus_1_1_camera_model_1a7f3ee6b92ed1bf8c1f7ca7d9a2834499:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::VectorXd distortionParams() const
+
+Returns distortion parameters vector by value.
+
+.. index:: pair: function; camProj
+.. _doxid-classsophus_1_1_camera_model_1a2d7d86d2b46cb35ac80d14cee2a67208:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Vector2d camProj(const Eigen::Vector3d& point_camera) const
+
+Given a point in 3D space in the camera frame, compute the corresponding pixel coordinates in the image.
+
+.. index:: pair: function; warp
+.. _doxid-classsophus_1_1_camera_model_1afb7b56d1de297bb10b2a23385386f2eb:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Vector2d warp(const Eigen::Vector2d& point2_in_camera_z1_plane) const
+
+Maps a 2-point in the z=1 plane of the camera to a pixel in the image.
+
+.. index:: pair: function; dxCamProjX
+.. _doxid-classsophus_1_1_camera_model_1ad7a28ea98adf6c20ca22a825e32974a2:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<double, 2, 3> dxCamProjX(const Eigen::Vector3d& point_in_camera) const
+
+Derivative of camProj(x) with respect to x=0.
+
+.. index:: pair: function; dxCamProjExpXPointAt0
+.. _doxid-classsophus_1_1_camera_model_1a18129e9b11cf61b0499bb4f4c1002a95:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<double, 2, 6> dxCamProjExpXPointAt0(const Eigen::Vector3d& point_in_camera) const
+
+Derivative of camProj(exp(x) \* point) with respect to x=0.
+
+.. index:: pair: function; camUnproj
+.. _doxid-classsophus_1_1_camera_model_1a816ae3e16ba24ea35b82aee25424f246:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Vector3d camUnproj(const Eigen::Vector2d& pixel_image, double depth_z) const
+
+Given pixel coordinates in the distorted image, and a corresponding depth, reproject to a 3d point in the camera's reference frame.
+
+.. index:: pair: function; unwarp
+.. _doxid-classsophus_1_1_camera_model_1ac97cbbf6c628e263142e6af83c9e4330:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Vector2d unwarp(const Eigen::Vector2d& pixel_image) const
+
+Maps a pixel in the image to a 2-point in the z=1 plane of the camera.
+
+.. index:: pair: function; subsampleDown
+.. _doxid-classsophus_1_1_camera_model_1af726b3e2046e2f46c64a467a2c633a59:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel subsampleDown() const
+
+Subsamples pixel down, factor of 0.5.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.97r8rr8owwpc>`__
+
+If the original width [height] is odd, the new width [height] will be: (width+1)/2 [height+1)/2].
+
+.. index:: pair: function; subsampleUp
+.. _doxid-classsophus_1_1_camera_model_1a8b90615f4123efa82fc583ddbfcb766e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel subsampleUp() const
+
+Subsamples pixel up, factor of 2.0.
+
+.. index:: pair: function; binDown
+.. _doxid-classsophus_1_1_camera_model_1a09a17f01cd69a024cc1d849c046b041d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel binDown() const
+
+Bins pixel down, factor of 0.5.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj>`__
+
+If the original width [height] is odd, the new width [height] will be: (width+1)/2 [height+1)/2].
+
+.. index:: pair: function; binUp
+.. _doxid-classsophus_1_1_camera_model_1a77f99d96a8b222b33be1cf1b0f7d0aae:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel binUp() const
+
+Bins pixel up, factor of 2.0.
+
+See for details: `https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj <https://docs.google.com/document/d/1xmhCMWklP2UoQMGaMqFnsoPWoeMvBfXN7S8-ie9k0UA/edit#heading=h.elfm6123mecj>`__
+
+.. index:: pair: function; imageSize
+.. _doxid-classsophus_1_1_camera_model_1a716171579800c629be13ce181eaddbef:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& imageSize() const
+
+:ref:`Image <doxid-classsophus_1_1_image>` size accessor.
+
+.. index:: pair: function; roi
+.. _doxid-classsophus_1_1_camera_model_1a64ef52bffc098b19b07bea8470f868c8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	CameraModel roi(const Eigen::Vector2i& top_left, :ref:`ImageSize<doxid-structsophus_1_1_image_size>` roi_size) const
+
+Region of interest given ``top_left`` and ` ``roi_size``.
+
+.. index:: pair: function; contains
+.. _doxid-classsophus_1_1_camera_model_1adb0f85464ea18e8c871c7c2604812241:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool contains(const Eigen::Vector2i& obs, int border = 0) const
+
+Returns true if obs is within image.
+
+Note: Postiive border makes the image frame smaller.
+
+.. index:: pair: function; contains
+.. _doxid-classsophus_1_1_camera_model_1a4aa7e105eea371b8183cc21976f18d02:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool contains(const Eigen::Vector2d& obs, double border = 0) const
+
+Returns true if obs is within image.
+
+Postiive border makes the image frame smaller.
+
+.. index:: pair: function; createDefaultPinholeModel
+.. _doxid-classsophus_1_1_camera_model_1ad8a949c8410920307988e5398fe188ee:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static CameraModel createDefaultPinholeModel(
+		std::string frame_name,
+		:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size
+		)
+
+Creates default pinhole model from ``image_size``.
+

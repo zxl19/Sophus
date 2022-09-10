@@ -1,0 +1,27 @@
+.. index:: pair: class; farm_ng::details::MaxMetric
+.. _doxid-classfarm__ng_1_1details_1_1_max_metric:
+
+template class farm_ng::details::MaxMetric
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <logger.h>
+	
+	template <class ScalarT>
+	class MaxMetric {
+	public:
+		// methods
+	
+		static ScalarT :target:`impl<doxid-classfarm__ng_1_1details_1_1_max_metric_1a46abc01e67a1a48db1366991fb87dfbb>`(
+			ScalarT s0,
+			ScalarT s1
+			);
+	};

@@ -1,0 +1,98 @@
+.. index:: pair: class; farm_ng::StopwatchSingleton
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton:
+
+class farm_ng::StopwatchSingleton
+=================================
+
+.. toctree::
+	:hidden:
+
+	struct_farm_ng_StopwatchSingleton_Bucket.rst
+	struct_farm_ng_StopwatchSingleton_StopwatchStats.rst
+
+Overview
+~~~~~~~~
+
+Stopwatch class for creating multiple, optionally concurrent, timers. :ref:`More...<details-classfarm__ng_1_1_stopwatch_singleton>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <stopwatch.h>
+	
+	class StopwatchSingleton {
+	public:
+		// structs
+	
+		struct :ref:`Bucket<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket>`;
+		struct :ref:`StopwatchStats<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats>`;
+
+		// methods
+	
+		static StopwatchSingleton& :ref:`getInstance<doxid-classfarm__ng_1_1_stopwatch_singleton_1a6946290415bd47d61e4f8078db528cc4>`();
+		void :ref:`start<doxid-classfarm__ng_1_1_stopwatch_singleton_1ac53f4e4a9c1310981daa67489fcc5214>`(std::string str);
+		double :ref:`stop<doxid-classfarm__ng_1_1_stopwatch_singleton_1a0f0b613b6b02fef9633b8231b5004ef9>`(std::string str);
+		std::map<std::string, :ref:`StopwatchStats<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats>`> :ref:`getStats<doxid-classfarm__ng_1_1_stopwatch_singleton_1ab0c1ac45b2145ae4f2610715a58fa69f>`();
+		void :ref:`print<doxid-classfarm__ng_1_1_stopwatch_singleton_1a7967fd1e463f398be533127bd90b15ef>`();
+	};
+.. _details-classfarm__ng_1_1_stopwatch_singleton:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Stopwatch class for creating multiple, optionally concurrent, timers.
+
+Methods
+-------
+
+.. index:: pair: function; getInstance
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton_1a6946290415bd47d61e4f8078db528cc4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	static StopwatchSingleton& getInstance()
+
+Returns an instance of the stopwatch timer.
+
+.. index:: pair: function; start
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton_1ac53f4e4a9c1310981daa67489fcc5214:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void start(std::string str)
+
+Start a new, named timer.
+
+.. index:: pair: function; stop
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton_1a0f0b613b6b02fef9633b8231b5004ef9:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	double stop(std::string str)
+
+Stops the named timer and returns the duration.
+
+.. index:: pair: function; getStats
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton_1ab0c1ac45b2145ae4f2610715a58fa69f:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	std::map<std::string, :ref:`StopwatchStats<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_stopwatch_stats>`> getStats()
+
+Return container of stopwatch timer statistics.
+
+.. index:: pair: function; print
+.. _doxid-classfarm__ng_1_1_stopwatch_singleton_1a7967fd1e463f398be533127bd90b15ef:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	void print()
+
+Prints statistics of stopwatch timers.
+

@@ -1,0 +1,47 @@
+.. index:: pair: class; sophus::OrthographicProjection
+.. _doxid-classsophus_1_1_orthographic_projection:
+
+class sophus::OrthographicProjection
+====================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <orthographic.h>
+	
+	class OrthographicProjection {
+	public:
+		// typedefs
+	
+		using :target:`PointCamera<doxid-classsophus_1_1_orthographic_projection_1a0a7ff6cc6a6ede664ca1a3fa9f6b4243>` = Eigen::Matrix<ScalarT, 3, 1> ;
+		using :target:`PixelImage<doxid-classsophus_1_1_orthographic_projection_1ac0fe2d4bd49f04803574783bc2968492>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`Params<doxid-classsophus_1_1_orthographic_projection_1aace997eb8d01d59b781d103fbbf5e61e>` = Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_orthographic_projection_1ab0e84aae7a7138e7ccfce9368742baa0>`, 1> ;
+		using :target:`DistorationParams<doxid-classsophus_1_1_orthographic_projection_1a197ebecf35e393bdc1eb7cb0de686707>` = Eigen::Matrix<ScalarT, :ref:`kNumDistortionParams<doxid-classsophus_1_1_orthographic_projection_1a5e732b447d26b09e1a59be4d61d300bf>`, 1> ;
+
+		// fields
+	
+		static constexpr int :target:`kNumDistortionParams<doxid-classsophus_1_1_orthographic_projection_1a5e732b447d26b09e1a59be4d61d300bf>` = 0;
+		static constexpr int :target:`kNumParams<doxid-classsophus_1_1_orthographic_projection_1ab0e84aae7a7138e7ccfce9368742baa0>` = 4;
+		static const constexpr std::string_view :target:`kProjectionModel<doxid-classsophus_1_1_orthographic_projection_1a597d99ab43fd8afd2a49e564dab6cd69>` =       "Orthographic:scale_x,scale_y,offset_x,offset_y";
+
+		// methods
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_orthographic_projection_1ac0fe2d4bd49f04803574783bc2968492>`<typename PointTypeT::Scalar> :target:`camProj<doxid-classsophus_1_1_orthographic_projection_1a41dc1ccd4da22ed680384fd1b11cc117>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& point_camera
+			);
+	
+		template <class ScalarT>
+		static :ref:`PointCamera<doxid-classsophus_1_1_orthographic_projection_1a0a7ff6cc6a6ede664ca1a3fa9f6b4243>`<ScalarT> :target:`camUnproj<doxid-classsophus_1_1_orthographic_projection_1a1ade484e91a49e3ddd3388e2c1f5be12>`(
+			const :ref:`Params<doxid-classsophus_1_1_orthographic_projection_1aace997eb8d01d59b781d103fbbf5e61e>`<ScalarT>& params,
+			const :ref:`PixelImage<doxid-classsophus_1_1_orthographic_projection_1ac0fe2d4bd49f04803574783bc2968492>`<ScalarT>& pixel_image,
+			double depth_z
+			);
+	};

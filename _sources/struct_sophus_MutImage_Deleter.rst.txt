@@ -1,0 +1,30 @@
+.. index:: pair: struct; sophus::MutImage::Deleter
+.. _doxid-structsophus_1_1_mut_image_1_1_deleter:
+
+struct sophus::MutImage::Deleter
+================================
+
+.. toctree::
+	:hidden:
+
+:ref:`Deleter <doxid-structsophus_1_1_mut_image_1_1_deleter>` for :ref:`MutImage <doxid-classsophus_1_1_mut_image>`.
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image.h>
+	
+	struct Deleter {
+		// fields
+	
+		std::optional<:ref:`TypedDeleterImpl<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl>`> :target:`image_deleter<doxid-structsophus_1_1_mut_image_1_1_deleter_1a4b90c1466ada3c8712843162aa35b58c>`;
+
+		// construction
+	
+		:target:`Deleter<doxid-structsophus_1_1_mut_image_1_1_deleter_1af8e9d6a35b6e84e08f78c977c415b9af>`(:ref:`TypedDeleterImpl<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl>` image_deleter);
+
+		// methods
+	
+		void :target:`operator()<doxid-structsophus_1_1_mut_image_1_1_deleter_1ad698c3515dd4330dacb5feebd47685f9>`(uint8_t* p) const;
+	};

@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::experimental::ManifoldFamilyTupleTraits<std::tuple<ManifoldFamily<kInputDim, ManifoldT>...>>
+.. _doxid-structsophus_1_1experimental_1_1_manifold_family_tuple_traits_3_01std_1_1tuple_3_01_manifold_fam17bafb57c0e6e33f74b3f1ac85fd2902:
+
+template struct sophus::experimental::ManifoldFamilyTupleTraits<std::tuple<ManifoldFamily<kInputDim, ManifoldT>...>>
+====================================================================================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int... kInputDim, class... ManifoldT>
+	struct ManifoldFamilyTupleTraits<std::tuple<ManifoldFamily<kInputDim, ManifoldT>...>> {
+		// typedefs
+	
+		using :target:`ManifoldTuple<doxid-structsophus_1_1experimental_1_1_manifold_family_tuple_traits_3_01std_1_1tuple_3_01_manifold_fam17bafb57c0e6e33f74b3f1ac85fd2902_1ad0ab430fdd004fc2dc97413a49960c7a>` = std::tuple<ManifoldT...> ;
+	};

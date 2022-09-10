@@ -1,0 +1,34 @@
+.. index:: pair: struct; sophus::LieGroupCeresTests::TestLieGroupCostFunctor
+.. _doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_lie_group_cost_functor:
+
+struct sophus::LieGroupCeresTests::TestLieGroupCostFunctor
+==========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <test_impl.h>
+	
+	struct TestLieGroupCostFunctor {
+		// fields
+	
+		:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>` :target:`t_aw<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_lie_group_cost_functor_1ae2a1c98889d315022861ba2d2353be34>`;
+
+		// construction
+	
+		:target:`TestLieGroupCostFunctor<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_lie_group_cost_functor_1a45b7d38a6ecccc2d5ba5d7785696f2b5>`(const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& t_aw);
+
+		// methods
+	
+		template <class TT>
+		bool :target:`operator()<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_lie_group_cost_functor_1acdda812631b6957002ce979f8b2c778e>`(
+			TT const*const s_t_wa,
+			TT* s_residuals
+			) const;
+	};

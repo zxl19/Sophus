@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::jet_helpers::GetValue<ceres::Jet<ScalarT, kN>>
+.. _doxid-structsophus_1_1jet__helpers_1_1_get_value_3_01ceres_1_1_jet_3_01_scalar_t_00_01k_n_01_4_01_4:
+
+template struct sophus::jet_helpers::GetValue<ceres::Jet<ScalarT, kN>>
+======================================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <jet_helpers.h>
+	
+	template <class ScalarT, int kN>
+	struct GetValue<ceres::Jet<ScalarT, kN>> {
+		// methods
+	
+		static ScalarT :target:`impl<doxid-structsophus_1_1jet__helpers_1_1_get_value_3_01ceres_1_1_jet_3_01_scalar_t_00_01k_n_01_4_01_4_1a8ddbcf771969c8d27cd779cd80d60c12>`(const ScalarT& t);
+	};

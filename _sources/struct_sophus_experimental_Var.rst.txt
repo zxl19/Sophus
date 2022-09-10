@@ -1,0 +1,28 @@
+.. index:: pair: struct; sophus::experimental::Var
+.. _doxid-structsophus_1_1experimental_1_1_var:
+
+template struct sophus::experimental::Var
+=========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kTangentDim, class ManifoldT>
+	struct Var {
+		// fields
+	
+		static constexpr ArgType :target:`kArgType<doxid-structsophus_1_1experimental_1_1_var_1ac9a03144ca1080ddf7ba0544ae09c870>` = ArgType::variable;
+		:ref:`ManifoldFamily<doxid-structsophus_1_1experimental_1_1_manifold_family>`<kTangentDim, ManifoldT> const& :target:`family<doxid-structsophus_1_1experimental_1_1_var_1aba9483aa9121239a9b610b11466417e5>`;
+
+		// construction
+	
+		:target:`Var<doxid-structsophus_1_1experimental_1_1_var_1a2b8c1ba3ebade82409671115594b1b17>`(:ref:`ManifoldFamily<doxid-structsophus_1_1experimental_1_1_manifold_family>`<kTangentDim, ManifoldT> const& family);
+	};

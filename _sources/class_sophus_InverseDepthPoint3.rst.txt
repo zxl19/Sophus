@@ -1,0 +1,114 @@
+.. index:: pair: class; sophus::InverseDepthPoint3
+.. _doxid-classsophus_1_1_inverse_depth_point3:
+
+template class sophus::InverseDepthPoint3
+=========================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Inverse depth point representation. :ref:`More...<details-classsophus_1_1_inverse_depth_point3>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <inverse_depth.h>
+	
+	template <class T>
+	class InverseDepthPoint3 {
+	public:
+		// construction
+	
+		:target:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3_1affcfaf06500b62302d06cc13d2cc2c52>`();
+	
+		:target:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3_1a027f21da7a0c27c968caaa5d62bc7919>`(
+			Eigen::Matrix<T, 2, 1> const& proj_in_z1_plane,
+			T const& one_by_z
+			);
+	
+		:target:`InverseDepthPoint3<doxid-classsophus_1_1_inverse_depth_point3_1ae8342a403841f0c40cdbb7e8614a6ede>`(
+			T const& x_by_z,
+			T const& y_by_z,
+			T const& one_by_z
+			);
+
+		// methods
+	
+		Eigen::Matrix<T, 2, 1> :target:`projInZ1Plane<doxid-classsophus_1_1_inverse_depth_point3_1a54182caab8e36bcb8073490b306ea64f>`() const;
+		T const& :ref:`psi<doxid-classsophus_1_1_inverse_depth_point3_1af90a9faa7659cfe2f99d0f366b604b28>`() const;
+		T& :target:`mutPsi<doxid-classsophus_1_1_inverse_depth_point3_1aa1857c8bc4cfff39b80ebfdc7e78a9ea>`();
+		T const* :target:`data<doxid-classsophus_1_1_inverse_depth_point3_1a281d4e231b76af0887441fdaef417b40>`() const;
+		T* :target:`mutData<doxid-classsophus_1_1_inverse_depth_point3_1a2fd8e970a512b20eba28297c94dfe2e4>`();
+		Eigen::Matrix<T, 3, 1> const& :target:`params<doxid-classsophus_1_1_inverse_depth_point3_1a61aa1ee6a941d5cffeb01e07af7efa6c>`() const;
+		Eigen::Matrix<T, 3, 1> :ref:`toEuclideanPoint3<doxid-classsophus_1_1_inverse_depth_point3_1ae6b761cf8aa70fab83cc08445ccd0275>`() const;
+		static InverseDepthPoint3 :target:`fromEuclideanPoint3<doxid-classsophus_1_1_inverse_depth_point3_1a3207aaa46acc74d7c4af3ad57c47e9ba>`(Eigen::Matrix<T, 3, 1> const& p);
+		static InverseDepthPoint3 :target:`fromAbAndPsi<doxid-classsophus_1_1_inverse_depth_point3_1a88e7c43b0aa05785af2f4dae7e5f2a72>`(Eigen::Matrix<T, 3, 1> const& ab_and_psi);
+	};
+.. _details-classsophus_1_1_inverse_depth_point3:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Inverse depth point representation.
+
+(a, b) := (x/z, y/z) and psi := 1/z
+
+following `https://ethaneade.com/thesis_revised.pdf, <https://ethaneade.com/thesis_revised.pdf,>`__ pp. 79
+
+Let us assume we have Euclidean 3d point (x,y,z) in a local reference frame (e.g. camera origin). One can construct an inverse depth point (in the same local reference frame) as follows:
+
+First we project the point (x,y,z) through the origin (0,0,0) onto the z=1 plane. We call the projection (a, b) := (x/z, y/z).
+
+In other words, (a, b) is the intersection of the line through (0, 0, 0) to (x, y, z) and the 2d Euclidean plane z=1.
+
+Now, we can describe almost any 3d point in our local reference frame as a point (a',b') in the Euclidean plane z=1 and the inverse depth psi := 1/z.
+
+For example, the Euclidean point (2, 0, 8) is represented as (a, b) = (2/8, 0/8) = (1/4, 0) and inverse depth psi = 1/8.
+
+The only Euclidean 3d point we cannot describe is the origin (0,0,0) (since there are infinitely many lines through the origin which intersect with the plane z=1).
+
+The advantage of using an inverse depth representation over Euclidean representation is that we can also represent points at infinity. Let (a,b) a 2d Euclidean point on our reference plane z=1; nothing stops us from choosing a psi=0, which corresponds to a "z = 1/0 = infinity".
+
+In summary, using this representation, we can represent
+
+* points at infinity: psi == 1/z == 0
+
+* points close to +infinity: psi == 1/z == +e
+
+* points close to -infinity: psi == 1/z == -e
+
+* points one unit in front: psi == 1/z == +1
+
+* points one unit behind: psi == 1/z == -1
+
+* points close to zero, in front: psi == 1/z == +999999
+
+* points close to zero, behind: psi == 1/z == -999999
+
+Methods
+-------
+
+.. index:: pair: function; psi
+.. _doxid-classsophus_1_1_inverse_depth_point3_1af90a9faa7659cfe2f99d0f366b604b28:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	T const& psi() const
+
+Returns inverse depth psi, hence "1 / z".
+
+.. index:: pair: function; toEuclideanPoint3
+.. _doxid-classsophus_1_1_inverse_depth_point3_1ae6b761cf8aa70fab83cc08445ccd0275:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	Eigen::Matrix<T, 3, 1> toEuclideanPoint3() const
+
+Precondition: psi must not be close to 0, hence z must not be near infinity.
+

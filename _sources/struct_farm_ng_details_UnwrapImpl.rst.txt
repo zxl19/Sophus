@@ -1,0 +1,27 @@
+.. index:: pair: struct; farm_ng::details::UnwrapImpl
+.. _doxid-structfarm__ng_1_1details_1_1_unwrap_impl:
+
+template struct farm_ng::details::UnwrapImpl
+============================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <logger.h>
+	
+	template <class WrapperT>
+	struct UnwrapImpl {
+		// methods
+	
+		static auto :target:`impl<doxid-structfarm__ng_1_1details_1_1_unwrap_impl_1aa4b8688e912beb0ec5fbaa6c2b47ce7c>`(
+			WrapperT& wrapper,
+			const char* wrapper_cstr,
+			:::ref:`farm_ng::ErrorDetail<doxid-structfarm__ng_1_1_error_detail>` detail
+			);
+	};

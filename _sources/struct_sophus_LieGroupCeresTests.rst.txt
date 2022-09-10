@@ -1,0 +1,89 @@
+.. index:: pair: struct; sophus::LieGroupCeresTests
+.. _doxid-structsophus_1_1_lie_group_ceres_tests:
+
+template struct sophus::LieGroupCeresTests
+==========================================
+
+.. toctree::
+	:hidden:
+
+	struct_sophus_LieGroupCeresTests_TestGraphFunctor.rst
+	struct_sophus_LieGroupCeresTests_TestLieGroupCostFunctor.rst
+	struct_sophus_LieGroupCeresTests_TestPointCostFunctor.rst
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <test_impl.h>
+	
+	template <template<typename, int=0> class LieGroupT>
+	struct LieGroupCeresTests {
+		// typedefs
+	
+		using :target:`LieGroup<doxid-structsophus_1_1_lie_group_ceres_tests_1a37b09689df775d281c0a99285c45b9c2>` = LieGroupT<TT> ;
+		using :target:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>` = :ref:`LieGroup<doxid-structsophus_1_1_lie_group_ceres_tests_1a37b09689df775d281c0a99285c45b9c2>`<double> ;
+		using :target:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>` = typename LieGroupF64::Point ;
+		using :target:`Tangentd<doxid-structsophus_1_1_lie_group_ceres_tests_1a07441d1152a8f5c6caa408ad40b68a2f>` = typename LieGroupF64::Tangent ;
+		using :target:`StdVector<doxid-structsophus_1_1_lie_group_ceres_tests_1a59d330876b0f3d7427eff2640aa4d68d>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+
+		// structs
+	
+		struct :ref:`TestGraphFunctor<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_graph_functor>`;
+		struct :ref:`TestLieGroupCostFunctor<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_lie_group_cost_functor>`;
+		struct :ref:`TestPointCostFunctor<doxid-structsophus_1_1_lie_group_ceres_tests_1_1_test_point_cost_functor>`;
+
+		// fields
+	
+		static constexpr int :target:`kMatrixDim<doxid-structsophus_1_1_lie_group_ceres_tests_1a1cee4a884e40c4508c1f8ac05841cd1e>` = LieGroupF64::kMatrixDim;
+		static constexpr int :target:`kNumParameters<doxid-structsophus_1_1_lie_group_ceres_tests_1ac70b413b05fd240994b09966f46b4191>` = LieGroupF64::kNumParameters;
+		static constexpr int :target:`kDoF<doxid-structsophus_1_1_lie_group_ceres_tests_1aa82ea1c835c4769ff67d0e7c6695601c>` = LieGroupF64::kDoF;
+		:ref:`StdVector<doxid-structsophus_1_1_lie_group_ceres_tests_1a59d330876b0f3d7427eff2640aa4d68d>`<:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`> :target:`group_vec<doxid-structsophus_1_1_lie_group_ceres_tests_1ad6c67df705af9135af300fce512b9662>`;
+		:ref:`StdVector<doxid-structsophus_1_1_lie_group_ceres_tests_1a59d330876b0f3d7427eff2640aa4d68d>`<:ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>`> :target:`point_vec<doxid-structsophus_1_1_lie_group_ceres_tests_1a15a2ca7eea3266640129a382bbbaadbc>`;
+
+		// construction
+	
+		:target:`LieGroupCeresTests<doxid-structsophus_1_1_lie_group_ceres_tests_1a1e315c5991a9707c6bc581277ae8dda7>`(
+			const :ref:`StdVector<doxid-structsophus_1_1_lie_group_ceres_tests_1a59d330876b0f3d7427eff2640aa4d68d>`<:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`>& group_vec,
+			const :ref:`StdVector<doxid-structsophus_1_1_lie_group_ceres_tests_1a59d330876b0f3d7427eff2640aa4d68d>`<:ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>`>& point_vec
+			);
+
+		// methods
+	
+		bool :target:`testAll<doxid-structsophus_1_1_lie_group_ceres_tests_1ad94e4ab0f37aeac2bad98c0236ea2653>`();
+	
+		bool :target:`testAveraging<doxid-structsophus_1_1_lie_group_ceres_tests_1a263b881e13d564b57dc2e8623ac78923>`(
+			const size_t num_vertices,
+			const double sigma_init,
+			const double sigma_observation
+			);
+	
+		bool :target:`test<doxid-structsophus_1_1_lie_group_ceres_tests_1a574503c020f3a40a9dbedd508d5fc4bd>`(
+			:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>` const& t_w_targ,
+			:ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>` const& t_w_init,
+			:ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>` const& point_a_init,
+			:ref:`PointF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a447b108c27e036645ae1a6f9bc68fdae>` const& point_b
+			);
+	
+		bool :target:`testManifold<doxid-structsophus_1_1_lie_group_ceres_tests_1a0a775e356a21276294e76b9b2b655c3b>`(
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x,
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& y
+			);
+	
+		bool :target:`xPlusZeroIsXAt<doxid-structsophus_1_1_lie_group_ceres_tests_1a574a47076a080028a0d757871b861ccb>`(const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x);
+		bool :target:`xMinusXIsZeroAt<doxid-structsophus_1_1_lie_group_ceres_tests_1af3e7c45c84072751e2662415ee9064e2>`(const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x);
+	
+		bool :target:`minusPlusIsIdentityAt<doxid-structsophus_1_1_lie_group_ceres_tests_1a0bf5c2e7a239ed9c28d647dea982d39d>`(
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x,
+			const :ref:`Tangentd<doxid-structsophus_1_1_lie_group_ceres_tests_1a07441d1152a8f5c6caa408ad40b68a2f>`& delta
+			);
+	
+		bool :target:`plusMinusIsIdentityAt<doxid-structsophus_1_1_lie_group_ceres_tests_1a53c2b3dbc629d11354fdc809f4df3d49>`(
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x,
+			const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& y
+			);
+	
+		bool :target:`minusPlusJacobianIsIdentityAt<doxid-structsophus_1_1_lie_group_ceres_tests_1a03f3b923603d4ea4759ad261120b8e08>`(const :ref:`LieGroupF64<doxid-structsophus_1_1_lie_group_ceres_tests_1a765907f229bfc07fb4e12e56b6cd0d1d>`& x);
+	};

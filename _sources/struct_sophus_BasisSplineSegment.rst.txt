@@ -1,0 +1,52 @@
+.. index:: pair: struct; sophus::BasisSplineSegment
+.. _doxid-structsophus_1_1_basis_spline_segment:
+
+template struct sophus::BasisSplineSegment
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <spline.h>
+	
+	template <class LieGroupT>
+	struct BasisSplineSegment {
+		// typedefs
+	
+		using :target:`T<doxid-structsophus_1_1_basis_spline_segment_1ad09d9e2e37e13a73b1d6ab8ce91f0612>` = typename LieGroupT::Scalar ;
+		using :target:`Transformation<doxid-structsophus_1_1_basis_spline_segment_1a4a21551a31f0148f9416d9075b468716>` = typename LieGroupT::Transformation ;
+
+		// construction
+	
+		:target:`BasisSplineSegment<doxid-structsophus_1_1_basis_spline_segment_1a7bfc0de4ce122864ea61211c3beb9690>`(
+			:ref:`SegmentCase<doxid-namespacesophus_1afd307b8cdfbe9c85d3a252b5860aefaf>` segment_case,
+			:ref:`T<doxid-structsophus_1_1_basis_spline_segment_1ad09d9e2e37e13a73b1d6ab8ce91f0612>` const*const raw_ptr0,
+			:ref:`T<doxid-structsophus_1_1_basis_spline_segment_1ad09d9e2e37e13a73b1d6ab8ce91f0612>` const*const raw_ptr1,
+			:ref:`T<doxid-structsophus_1_1_basis_spline_segment_1ad09d9e2e37e13a73b1d6ab8ce91f0612>` const*const raw_ptr2,
+			:ref:`T<doxid-structsophus_1_1_basis_spline_segment_1ad09d9e2e37e13a73b1d6ab8ce91f0612>` const*const raw_ptr3
+			);
+
+		// methods
+	
+		Eigen::Map<LieGroupT const> :target:`worldPoseFooPrev<doxid-structsophus_1_1_basis_spline_segment_1ab8a19761536e16770bf24b688dff3833>`() const;
+		Eigen::Map<LieGroupT const> :target:`worldPoseFoo0<doxid-structsophus_1_1_basis_spline_segment_1a457edf3bf19730a104526161149baf3f>`() const;
+		Eigen::Map<LieGroupT const> :target:`worldPoseFoo1<doxid-structsophus_1_1_basis_spline_segment_1a283e728770bc2aeffc0cfde8d091cdcd>`() const;
+		Eigen::Map<LieGroupT const> :target:`worldPoseFoo2<doxid-structsophus_1_1_basis_spline_segment_1a7632d659a8d2ef489b85d3d4deb42ad3>`() const;
+		LieGroupT :target:`parentPoseSpline<doxid-structsophus_1_1_basis_spline_segment_1a9d540594d404a8753f765325de79cd93>`(double u);
+	
+		:ref:`Transformation<doxid-structsophus_1_1_basis_spline_segment_1a4a21551a31f0148f9416d9075b468716>` :target:`dtParentPoseSpline<doxid-structsophus_1_1_basis_spline_segment_1a355c25223f80a6069949d7776c92df2d>`(
+			double u,
+			double delta_t
+			);
+	
+		:ref:`Transformation<doxid-structsophus_1_1_basis_spline_segment_1a4a21551a31f0148f9416d9075b468716>` :target:`dt2ParentPoseSpline<doxid-structsophus_1_1_basis_spline_segment_1aa191ea5daadb3c56bbbe18c04987d0fe>`(
+			double u,
+			double delta_t
+			);
+	};

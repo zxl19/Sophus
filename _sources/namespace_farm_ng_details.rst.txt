@@ -1,0 +1,92 @@
+.. index:: pair: namespace; farm_ng::details
+.. _doxid-namespacefarm__ng_1_1details:
+
+namespace farm_ng::details
+==========================
+
+.. toctree::
+	:hidden:
+
+	struct_farm_ng_details_UnwrapImpl.rst
+	struct_farm_ng_details_UnwrapImpl-2.rst
+	class_farm_ng_details_MaxMetric.rst
+	class_farm_ng_details_MaxMetric-2.rst
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	namespace details {
+
+	// structs
+
+	template <class WrapperT>
+	struct :ref:`UnwrapImpl<doxid-structfarm__ng_1_1details_1_1_unwrap_impl>`;
+
+	template <class TT, class ET>
+	struct :ref:`UnwrapImpl<tl::expected<TT, ET>><doxid-structfarm__ng_1_1details_1_1_unwrap_impl_3_01tl_1_1expected_3_01_t_t_00_01_e_t_01_4_01_4>`;
+
+	// classes
+
+	template <class ScalarT>
+	class :ref:`MaxMetric<doxid-classfarm__ng_1_1details_1_1_max_metric>`;
+
+	template <class Scalar, int M, int N>
+	class :ref:`MaxMetric<Eigen::Matrix<Scalar, M, N>><doxid-classfarm__ng_1_1details_1_1_max_metric_3_01_eigen_1_1_matrix_3_01_scalar_00_01_m_00_01_n_01_4_01_4>`;
+
+	// global functions
+
+	template <class... ArgsT>
+	std::string :target:`runtimeFormatImpl<doxid-namespacefarm__ng_1_1details_1a59c7f67eda0f8f83493e12e162d88416>`(
+		const std::string& file,
+		int line,
+		const std::string& str,
+		ArgsT&&... args
+		);
+
+	template <class ContainerT>
+	auto :target:`checkedAtContiguousContainer<doxid-namespacefarm__ng_1_1details_1af38d2809b5f3b913208f7f1540861e7c>`(
+		ContainerT& container,
+		size_t index,
+		const char* container_cstr,
+		const char* index_cstr,
+		const std::string& file,
+		int line,
+		const std::string& str
+		);
+
+	template <class ContainerT, class KeyT>
+	auto :target:`checkedGetFromAssociativeContainer<doxid-namespacefarm__ng_1_1details_1a517b0c685fa31ef7a84887c48222da3f>`(
+		ContainerT& container,
+		const KeyT& key,
+		const char* container_cstr,
+		const char* key_cstr,
+		const std::string& file,
+		int line,
+		const std::string& str
+		);
+
+	template <class MapLikeT, class KeyT, class ValueT>
+	auto :target:`insertKeyValueInMap<doxid-namespacefarm__ng_1_1details_1a43c9a45a84c27d907b516ebe7f6c25b2>`(
+		MapLikeT& map,
+		const KeyT& key,
+		const ValueT& value,
+		const char* container_cstr,
+		const char* key_cstr,
+		const char* value_cstr,
+		const std::string& file,
+		int line,
+		const std::string& str
+		);
+
+	template <class WrapperT>
+	auto :target:`unwrapImpl<doxid-namespacefarm__ng_1_1details_1a5128aefbe9c13c4c444a4be7f04fa470>`(
+		WrapperT& wrapper,
+		const char* wrapper_cstr,
+		:::ref:`farm_ng::ErrorDetail<doxid-structfarm__ng_1_1_error_detail>` detail
+		);
+
+	} // namespace details

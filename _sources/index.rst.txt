@@ -1,0 +1,22 @@
+.. include:: page_index.rst
+
+.. toctree::
+	:hidden:
+
+	page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.rst
+
+.. rubric:: Related Pages:
+
+|	:doc:`page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README`
+
+
+.. rubric:: Reference and Index:
+
+.. toctree::
+	:hidden:
+
+	global.rst
+
+|	:doc:`global`
+|	:ref:`genindex`
+

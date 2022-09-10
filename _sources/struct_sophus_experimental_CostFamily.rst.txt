@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::experimental::CostFamily
+.. _doxid-structsophus_1_1experimental_1_1_cost_family:
+
+template struct sophus::experimental::CostFamily
+================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kBlockDim, int kNumVarArgs>
+	struct CostFamily {
+		// fields
+	
+		std::vector<:ref:`LeastSquaresCostTerm<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term>`<kBlockDim, kNumVarArgs>> :target:`cost_terms<doxid-structsophus_1_1experimental_1_1_cost_family_1a59afd1cad9868019b1b8c290fe2a1941>`;
+	};

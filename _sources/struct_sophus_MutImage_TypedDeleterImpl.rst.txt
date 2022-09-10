@@ -1,0 +1,30 @@
+.. index:: pair: struct; sophus::MutImage::TypedDeleterImpl
+.. _doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl:
+
+struct sophus::MutImage::TypedDeleterImpl
+=========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image.h>
+	
+	struct TypedDeleterImpl {
+		// fields
+	
+		size_t :target:`num_bytes<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl_1acb38132f0aa7e157529540db0605a7d9>`;
+
+		// construction
+	
+		:target:`TypedDeleterImpl<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl_1affa41146456509304593734d1bb83848>`(size_t num_bytes);
+
+		// methods
+	
+		void :target:`operator()<doxid-structsophus_1_1_mut_image_1_1_typed_deleter_impl_1a76878c44105e49bae7edb41351a71737>`(PixelT* p) const;
+	};

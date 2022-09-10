@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::AnyImagePredicate
+.. _doxid-structsophus_1_1_any_image_predicate:
+
+template struct sophus::AnyImagePredicate
+=========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <runtime_image.h>
+	
+	template <class PixelT>
+	struct AnyImagePredicate {
+		// fields
+	
+		static constexpr bool :target:`kIsTypeValid<doxid-structsophus_1_1_any_image_predicate_1a37fdde094fb78ed409c39fd396ae137e>` = true;
+	};

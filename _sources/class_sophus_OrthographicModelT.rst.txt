@@ -1,0 +1,110 @@
+.. index:: pair: class; sophus::OrthographicModelT
+.. _doxid-classsophus_1_1_orthographic_model_t:
+
+template class sophus::OrthographicModelT
+=========================================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Orthographic camera model class template. :ref:`More...<details-classsophus_1_1_orthographic_model_t>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <camera_model.h>
+	
+	template <class ScalarT>
+	class OrthographicModelT {
+	public:
+		// typedefs
+	
+		using :target:`Proj<doxid-classsophus_1_1_orthographic_model_t_1a8c8b7c91fa7295ce132d4f3b0871a720>` = :ref:`OrthographicProjection<doxid-classsophus_1_1_orthographic_projection>` ;
+		using :target:`PointCamera<doxid-classsophus_1_1_orthographic_model_t_1a93ddb065f504ffe42f1c59b0b14a4edc>` = Eigen::Matrix<ScalarT, 3, 1> ;
+		using :target:`PixelImage<doxid-classsophus_1_1_orthographic_model_t_1a8ec7f44b0ac5070ff779c0d11ab1017f>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`Params<doxid-classsophus_1_1_orthographic_model_t_1a1318daa880ade90cd595db97121ace1d>` = Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_orthographic_model_t_1a18b3760962f3c770f90b82fa22a51680>`, 1> ;
+		using :target:`DistorationParams<doxid-classsophus_1_1_orthographic_model_t_1aeb273f42a442cc96504aea6ab5f834b6>` = Eigen::Matrix<ScalarT, :ref:`kNumDistortionParams<doxid-classsophus_1_1_orthographic_model_t_1a473a10efb63d94ffc0d86b3b8845308a>`, 1> ;
+
+		// fields
+	
+		static constexpr int :target:`kNumDistortionParams<doxid-classsophus_1_1_orthographic_model_t_1a473a10efb63d94ffc0d86b3b8845308a>` = Proj::kNumDistortionParams;
+		static constexpr int :target:`kNumParams<doxid-classsophus_1_1_orthographic_model_t_1a18b3760962f3c770f90b82fa22a51680>` = Proj::kNumParams;
+		static const constexpr std::string_view :target:`kProjectionModel<doxid-classsophus_1_1_orthographic_model_t_1a6c0497c58772d6c89331a164d46ab34a>` =       Proj::kProjectionModel;
+
+		// construction
+	
+		:target:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t_1a0f94e55a5e776d0c6a16164eb5ab4639>`(
+			:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size,
+			const :ref:`Params<doxid-classsophus_1_1_orthographic_model_t_1a1318daa880ade90cd595db97121ace1d>`& params
+			);
+	
+		:target:`OrthographicModelT<doxid-classsophus_1_1_orthographic_model_t_1afa82bc2f806e9f3c29fc34837c0af20a>`(
+			:ref:`ImageSize<doxid-structsophus_1_1_image_size>` image_size,
+			const Eigen::Matrix<ScalarT, 2, 1>& scale,
+			const Eigen::Matrix<ScalarT, 2, 1>& offset
+			);
+
+		// methods
+	
+		ScalarT :target:`scaleX<doxid-classsophus_1_1_orthographic_model_t_1a5abbae0734db552ad5d4d749803effb2>`() const;
+		ScalarT :target:`scaleY<doxid-classsophus_1_1_orthographic_model_t_1aeb86dbda9b0ceaa07336dfcd99a0e229>`() const;
+		ScalarT :target:`offsetX<doxid-classsophus_1_1_orthographic_model_t_1abe5a0e7da3b87a64260a3f044d65e48a>`() const;
+		ScalarT :target:`offsetY<doxid-classsophus_1_1_orthographic_model_t_1a0227601d55ece87876a6e13d13f7ee45>`() const;
+		ScalarT :target:`left<doxid-classsophus_1_1_orthographic_model_t_1abf06b8ac5b17546b2ba65ef611a801ee>`() const;
+		ScalarT :target:`right<doxid-classsophus_1_1_orthographic_model_t_1a62343fac65a2392200732191d1806662>`() const;
+		ScalarT :target:`top<doxid-classsophus_1_1_orthographic_model_t_1a33f8a69da6fb9c2e01ff4e75c3245fc1>`() const;
+		ScalarT :target:`bottom<doxid-classsophus_1_1_orthographic_model_t_1acc384c776ebcfb5af97dc2c6abf9e0d4>`() const;
+		OrthographicModelT :target:`subsampleDown<doxid-classsophus_1_1_orthographic_model_t_1aab1a6773b9092acfbe3b231868051336>`() const;
+		OrthographicModelT :target:`subsampleUp<doxid-classsophus_1_1_orthographic_model_t_1a5cc5e49909d70aa7db57203b8ea83713>`() const;
+		OrthographicModelT :target:`binDown<doxid-classsophus_1_1_orthographic_model_t_1ab95bb896f5b1f8b2531045fd3edd7902>`() const;
+		OrthographicModelT :target:`binUp<doxid-classsophus_1_1_orthographic_model_t_1aea95b4070cf07980b284c48bf828ec78>`() const;
+		:ref:`DistorationParams<doxid-classsophus_1_1_orthographic_model_t_1aeb273f42a442cc96504aea6ab5f834b6>` :target:`distortionParams<doxid-classsophus_1_1_orthographic_model_t_1ac5d001bb5ba50ff0137c8cef4d7072a2>`() const;
+		Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_orthographic_model_t_1a18b3760962f3c770f90b82fa22a51680>`, 1>& :target:`mutParams<doxid-classsophus_1_1_orthographic_model_t_1a426f4a4b1d6d4b035b757e71e7e34a91>`();
+		const Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_orthographic_model_t_1a18b3760962f3c770f90b82fa22a51680>`, 1>& :target:`params<doxid-classsophus_1_1_orthographic_model_t_1af3b6262c9cab5db2b28b46a65a75c5fd>`() const;
+		:ref:`PixelImage<doxid-classsophus_1_1_orthographic_model_t_1a8ec7f44b0ac5070ff779c0d11ab1017f>` :target:`camProj<doxid-classsophus_1_1_orthographic_model_t_1aa14b5d6831f6287dc265f29ea7c8cad1>`(const :ref:`PointCamera<doxid-classsophus_1_1_orthographic_model_t_1a93ddb065f504ffe42f1c59b0b14a4edc>`& point_camera) const;
+	
+		:ref:`PointCamera<doxid-classsophus_1_1_orthographic_model_t_1a93ddb065f504ffe42f1c59b0b14a4edc>` :target:`camUnproj<doxid-classsophus_1_1_orthographic_model_t_1ab259564f8b8ade943560a5ddc2773c46>`(
+			const :ref:`PixelImage<doxid-classsophus_1_1_orthographic_model_t_1a8ec7f44b0ac5070ff779c0d11ab1017f>`& pixel_image,
+			double depth_z
+			) const;
+	
+		ScalarT* :target:`mutData<doxid-classsophus_1_1_orthographic_model_t_1a23ea521fe2b832cc563363e34f5d4aee>`();
+		const :ref:`ImageSize<doxid-structsophus_1_1_image_size>`& :target:`imageSize<doxid-classsophus_1_1_orthographic_model_t_1a19837c92ce604d7e493fc10783ba014c>`() const;
+		bool :ref:`contains<doxid-classsophus_1_1_orthographic_model_t_1a1fa95c4f84176a6978ab03b7fcf83562>`(const Eigen::Vector2i& obs, int border = 0) const;
+		bool :ref:`contains<doxid-classsophus_1_1_orthographic_model_t_1a46e80256556c9ba6222e637a3995a10c>`(const :ref:`PixelImage<doxid-classsophus_1_1_orthographic_model_t_1a8ec7f44b0ac5070ff779c0d11ab1017f>`& obs, ScalarT border = ScalarT(0)) const;
+		static OrthographicModelT :target:`fromData<doxid-classsophus_1_1_orthographic_model_t_1a0cba93c32258a897daa6a2cfcff6c879>`(ScalarT const*const ptr);
+	};
+.. _details-classsophus_1_1_orthographic_model_t:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Orthographic camera model class template.
+
+Methods
+-------
+
+.. index:: pair: function; contains
+.. _doxid-classsophus_1_1_orthographic_model_t_1a1fa95c4f84176a6978ab03b7fcf83562:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool contains(const Eigen::Vector2i& obs, int border = 0) const
+
+Creates default pinhole model from ``image_size``.
+
+.. index:: pair: function; contains
+.. _doxid-classsophus_1_1_orthographic_model_t_1a46e80256556c9ba6222e637a3995a10c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	bool contains(const :ref:`PixelImage<doxid-classsophus_1_1_orthographic_model_t_1a8ec7f44b0ac5070ff779c0d11ab1017f>`& obs, ScalarT border = ScalarT(0)) const
+
+Creates default pinhole model from ``image_size``.
+

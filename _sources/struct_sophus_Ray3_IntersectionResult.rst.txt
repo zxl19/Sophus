@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::Ray3::IntersectionResult
+.. _doxid-structsophus_1_1_ray3_1_1_intersection_result:
+
+struct sophus::Ray3::IntersectionResult
+=======================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <ray.h>
+	
+	struct IntersectionResult {
+		// fields
+	
+		double :target:`lambda<doxid-structsophus_1_1_ray3_1_1_intersection_result_1a91272d8e3a82bfc05c7bd4c8993e7a73>`;
+		Eigen::Matrix<TT, 3, 1> :target:`point<doxid-structsophus_1_1_ray3_1_1_intersection_result_1a2da3ed1b813e036c09e4a8ed065953c2>`;
+	};

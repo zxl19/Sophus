@@ -1,0 +1,1270 @@
+.. _global:
+.. index:: pair: namespace; global
+
+Global Namespace
+================
+
+.. toctree::
+	:hidden:
+
+	namespace_Eigen.rst
+	namespace_ceres.rst
+	namespace_farm_ng.rst
+	namespace_sophus.rst
+	struct_Garage.rst
+	struct_RotationalPart.rst
+	struct_RotationalPart-2.rst
+	struct_RotationalPart-3.rst
+	struct_RotationalPart-4.rst
+	struct_RotationalPart-5.rst
+	struct_RotationalPart-6.rst
+	struct_RotationalPart-7.rst
+	struct_RotationalPart-8.rst
+	struct_RotationalPart-9.rst
+	class_CompileOnlyTernaryCostFunctorExample.rst
+	class_PosePointReprojFunctor.rst
+
+Overview
+~~~~~~~~
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	// namespaces
+
+	namespace :ref:`Eigen<doxid-namespace_eigen>`;
+	namespace :ref:`ceres<doxid-namespaceceres>`;
+	namespace :ref:`farm_ng<doxid-namespacefarm__ng>`;
+		namespace :ref:`farm_ng::details<doxid-namespacefarm__ng_1_1details>`;
+	namespace :ref:`sophus<doxid-namespacesophus>`;
+		namespace :ref:`sophus::experimental<doxid-namespacesophus_1_1experimental>`;
+		namespace :ref:`sophus::jet_helpers<doxid-namespacesophus_1_1jet__helpers>`;
+
+	// typedefs
+
+	using :target:`StdVector<doxid-ceres_2rxso2__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2rxso3__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2se2__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2se3__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2sim2__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2sim3__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2so2__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+	using :target:`StdVector<doxid-ceres_2so3__test_8cpp_1a9ad293cf315c33e96e60a5157b3f0642>` = std::vector<TT, Eigen::aligned_allocator<TT>> ;
+
+	// structs
+
+	struct :ref:`Garage<doxid-struct_garage>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::SE3d><doxid-struct_rotational_part_3_01sophus_1_1_s_e3d_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::Sim2d><doxid-struct_rotational_part_3_01sophus_1_1_sim2d_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::Sim3d><doxid-struct_rotational_part_3_01sophus_1_1_sim3d_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::SO2d><doxid-struct_rotational_part_3_01sophus_1_1_s_o2d_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::Se2F64><doxid-struct_rotational_part_3_01sophus_1_1_se2_f64_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::RxSO2d><doxid-struct_rotational_part_3_01sophus_1_1_rx_s_o2d_01_4>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::RxSO3d><doxid-struct_rotational_part_3_01sophus_1_1_rx_s_o3d_01_4>`;
+
+	template <typename LieGroupT>
+	struct :ref:`RotationalPart<doxid-struct_rotational_part>`;
+
+	template <>
+	struct :ref:`RotationalPart<sophus::SO3d><doxid-struct_rotational_part_3_01sophus_1_1_s_o3d_01_4>`;
+
+	// classes
+
+	class :ref:`CompileOnlyTernaryCostFunctorExample<doxid-class_compile_only_ternary_cost_functor_example>`;
+	class :ref:`PosePointReprojFunctor<doxid-class_pose_point_reproj_functor>`;
+
+	// global variables
+
+	farm_ng_core_logging Console :target:`logging<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2logging_2_c_make_lists_8txt_1ae9d0fe9a759d6b11991107e5eb87a645>`;
+	farm_ng_core_logging Console string format and CHECK macros No :target:`dependency<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2logging_2_c_make_lists_8txt_1ad32cbabe686dda3c44b74bce7d921fc1>`;
+	farm_ng_core_logging Console string format and CHECK macros No but :target:`libfmt<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2logging_2_c_make_lists_8txt_1aae8d03d7da003dfa2883668ae5a8d59f>`;
+	farm_ng_core_misc Header only standard library additions such as :target:`erase<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1abadab92370a8b891a03eb4e0b0027c04>`;
+	farm_ng_core_misc Header only standard library additions such as string :target:`utils<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1a6dc5607b9bbdce30671f084e6c51bfd3>`;
+	farm_ng_core_misc Header only standard library additions such as string file :target:`system<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1a76d9d55ffe809b1729a6b0e2974261ff>`;
+	farm_ng_core_misc Header only standard library additions such as string file threading tools and other general purpose miscellaneous utilities :target:`Note<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1aa428a95978186ac8f8e106d2f7c894aa>`;
+	farm_ng_core_misc Header only standard library additions such as string file threading tools and other general purpose miscellaneous utilities no computer :target:`vision<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1ad9ef9d7c0a5f1e2374f787be2801fcde>`;
+	constexpr double :target:`kEps<doxid-camera__model__test_8cpp_1af76b1cbee6975410245bb3137a44df6a>` = 1e-5;
+
+	// global functions
+
+	sophus_ceres :target:`set<doxid-sophus_2ceres_2_c_make_lists_8txt_1a1b6967426351547a12d25fe268428413>`(sophus_ceres_src_prefixes jet_helpers manifold typetraits);
+	:target:`list<doxid-sophus_2ceres_2_c_make_lists_8txt_1a6e4e945e3eb75a05c270cca2b3f5ebfa>`(APPEND sophus_ceres_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	sophus_core :target:`set<doxid-sophus_2core_2_c_make_lists_8txt_1afae7deaa65bc25dc95f1e764ecad9bb0>`(sophus_core_src_prefixes common types);
+	:target:`list<doxid-sophus_2core_2_c_make_lists_8txt_1a7c275d574d31fda402db2196b998a75c>`(APPEND sophus_core_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	sophus_experimental :target:`set<doxid-sophus_2experimental_2_c_make_lists_8txt_1a2fc11a12da70306d021b1fb64b28ded0>`(sophus_experimental_src_prefixes least_squares);
+	:target:`list<doxid-sophus_2experimental_2_c_make_lists_8txt_1a8410648200c4dacaf188fd39cf2fd944>`(APPEND sophus_experimental_cpp ${x}. cpp);
+	h :target:`endforeach<doxid-sophus_2experimental_2_c_make_lists_8txt_1aee639d91bba9081ec1dac675eb5cf757>`();
+	sophus_geometry :target:`set<doxid-sophus_2geometry_2_c_make_lists_8txt_1add6801cc02627c8492b539fd8d344ab9>`(sophus_geometry_src_prefixes fit_plane inverse_depth plane_conv point_transform projection ray);
+	:target:`list<doxid-sophus_2geometry_2_c_make_lists_8txt_1a50242e876652039a0206205ebabfd3bd>`(APPEND sophus_geometry_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	sophus_image :target:`set<doxid-sophus_2image_2_c_make_lists_8txt_1a563a7f32ece22ae77b6d54d42c649a72>`(sophus_image_src_prefixes image image_size image_types image_view runtime_image);
+	:target:`list<doxid-sophus_2image_2_c_make_lists_8txt_1af11fb813573ad109986ecf98ccb2adaf>`(APPEND sophus_image_cpp ${x}. cpp);
+	h :target:`endforeach<doxid-sophus_2image_2_c_make_lists_8txt_1aa2423789072b14865a474daa0a308aa8>`();
+	sophus_interp :target:`set<doxid-sophus_2interp_2_c_make_lists_8txt_1aff5d1981caca696d419071fbb75070b0>`(sophus_interp_src_prefixes average interpolate spline details/ interpolate_impl);
+	:target:`list<doxid-sophus_2interp_2_c_make_lists_8txt_1acdaea68dfc61fc6fb42c1318d563a985>`(APPEND sophus_interp_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	:target:`add_library<doxid-sophus_2interp_2_c_make_lists_8txt_1a2ded3389667eff5031cad1f6263ef747>`(sophus::sophus_interp ALIAS sophus_interp);
+	sophus_lie :target:`set<doxid-sophus_2lie_2_c_make_lists_8txt_1a1f73ebe7de99fbaaabc5954909a55152>`(sophus_lie_src_prefixes cartesian rxso2 rxso3 se2 se3 sim2 sim3 so2 so3 details/ sim_impl);
+	:target:`list<doxid-sophus_2lie_2_c_make_lists_8txt_1a5888b75baff714bdc840ef924f0dc11c>`(APPEND sophus_lie_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	sophus_math :target:`set<doxid-sophus_2math_2_c_make_lists_8txt_1abf6d918598c601af34923cb1b92d7cf3>`(sophus_math_src_prefixes rotation_matrix);
+	:target:`list<doxid-sophus_2math_2_c_make_lists_8txt_1a77c0274ce128c845869c4493057e522b>`(APPEND sophus_math_h ${CMAKE_CURRENT_SOURCE_DIR}/${x}. h);
+	sophus_sensor :target:`set<doxid-sophus_2sensor_2_c_make_lists_8txt_1ac29f9423e9328054e8622ccedf7572e7>`(sophus_sensor_src_prefixes camera_model clipping_planes imu_model camera_rig);
+	:target:`list<doxid-sophus_2sensor_2_c_make_lists_8txt_1a80bbdb79c3ab98ebd3644f5ba8191b35>`(APPEND sophus_sensor_cpp ${x}. cpp);
+	h :target:`endforeach<doxid-sophus_2sensor_2_c_make_lists_8txt_1aa773617045fa25f680ddb5bf77ea1511>`();
+	farm_ng_core_enum Set of macros for compile time enum introspection autogeneration of auxilary helper functions Depends on farm_ng_core_logging :target:`add_library<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2enum_2_c_make_lists_8txt_1ac1feb8a1b6ee752286208b22cddccf67>`(farm_ng_core_enum INTERFACE enum.h enum_flags.h enum_without_ostream.h enum_flags_without_ostream. h);
+	<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}> :target:`target_sources<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2enum_2_c_make_lists_8txt_1a99dd619bb89a32e9e872ed74206417b0>`(farm_ng_core_enum INTERFACE FILE_SET HEADERS BASE_DIRS ../../.. FILES enum.h enum_flags.h enum_without_ostream.h enum_flags_without_ostream.h impl/enum_details.h impl/enum_flag_details. h);
+	:target:`set<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2enum_2_c_make_lists_8txt_1ae8815960f128bc514857ab03d5f04b30>`(FARM_NG_ENUM_TESTS enum enum_without_ostream enum_flags enum_flags_without_ostream);
+	farm_ng_core_misc Header only standard library additions such as string file threading tools and other general purpose miscellaneous utilities no computer not math Only depends on farm_ng_core_enum and farm_ng_core_logging and should not pull in additional :ref:`dependency<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2logging_2_c_make_lists_8txt_1ad32cbabe686dda3c44b74bce7d921fc1>` in the future :target:`set<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1acb58deb163239cb682b6e8d901a66273>`(base_enum_src_prefixes :ref:`erase<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1abadab92370a8b891a03eb4e0b0027c04>` filesystem stopwatch tokenize);
+	<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}> :target:`target_sources<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1a89c56194dbbcc4c27c5ed603748e7381>`(farm_ng_core_misc INTERFACE FILE_SET HEADERS BASE_DIRS ../../.. FILES erase.h filesystem.h stopwatch.h tokenize.h variant_utils.h void. h);
+	:target:`foreach<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1a27ebc9b3376cb5b8547586e6678807e3>`(test_basename ${base_enum_src_prefixes});
+
+	int :target:`main<doxid-ceres_2rxso2__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2rxso2__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2rxso3__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2rxso3__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2se2__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2se2__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2se3__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2se3__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2sim2__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2sim2__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2sim3__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2sim3__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2so2__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2so2__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	int :target:`main<doxid-ceres_2so3__test_8cpp_1a2c3f6775325c30275d11c6abee2db6a0>`(
+		int,
+		char**
+		);
+
+	int :target:`main<doxid-lie_2so3__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	:target:`TEST<doxid-least__squares__test_8cpp_1aca935732cc124e57ccfbe096873c52cb>`(
+		binary_cost,
+		smoke
+		);
+
+	:target:`TEST<doxid-least__squares__test_8cpp_1a25c94a46ada9c5e97e3c489e8766844f>`(
+		ternary_cost,
+		compile_test
+		);
+
+	:target:`TEST<doxid-fit__plane__test_8cpp_1ac8682f9164703b2e9327dc9a2c3128a9>`(
+		fit_plane,
+		smoke
+		);
+
+	:target:`TEST<doxid-inverse__depth__test_8cpp_1a23a4dfe5f9538a1dce3d489759f957b7>`(
+		inverse_depth,
+		integrations
+		);
+
+	int :target:`main<doxid-plane__conv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+
+	:target:`TEST<doxid-point__transform__test_8cpp_1a23a4dfe5f9538a1dce3d489759f957b7>`(
+		inverse_depth,
+		integrations
+		);
+
+	:target:`TEST<doxid-point__transform__test_8cpp_1aa59b0667c46d8a2cfdb2141a4807cab7>`(
+		point_transform,
+		integrations
+		);
+
+	:target:`TEST<doxid-ray__test_8cpp_1a993733211468cbe9c82712eb64886401>`(
+		ray,
+		smoke
+		);
+
+	:target:`TEST<doxid-image__size__test_8cpp_1af15dff884104c3bc7dca72f9a126e62c>`(
+		image_size,
+		smoke
+		);
+
+	:target:`TEST<doxid-image__test_8cpp_1ac4736237b4d942ed8245443f240bd607>`(
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image>`,
+		empty
+		);
+
+	:target:`TEST<doxid-image__test_8cpp_1a56ba0e1f798d3a82aae84c5be1f773c6>`(
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image>`,
+		create_copy_access
+		);
+
+	:target:`TEST<doxid-image__test_8cpp_1a059be5d4f232be4e2c6a388d8821d736>`(
+		:ref:`MutImage<doxid-classsophus_1_1_mut_image>`,
+		makeFromTransform
+		);
+
+	:target:`TEST<doxid-image__test_8cpp_1a969d85cafd6e70bd9374655f6c1c6ad7>`(
+		:ref:`Image<doxid-classsophus_1_1_image>`,
+		empty_and_non_empty
+		);
+
+	:target:`TEST<doxid-image__test_8cpp_1a053de8b73aacb892c13be2a21779d240>`(
+		:ref:`Image<doxid-classsophus_1_1_image>`,
+		shared_ownership
+		);
+
+	:target:`TEST<doxid-image__types__test_8cpp_1a5fc5000d0c2688b183022ff3c130c5ab>`(
+		:ref:`ImageBool<doxid-namespacesophus_1a84ba571059139ad8de131bb9de2343d3>`,
+		logic
+		);
+
+	:target:`TEST<doxid-image__types__test_8cpp_1ad373914bf44356db1eaad2047a35227b>`(
+		:ref:`FARM_CHECK_IMAGE_EQ<doxid-image__types_8h_1aff8f7576cc2d1a9739a47e510c932e6a>`,
+		death_test
+		);
+
+	:target:`TEST<doxid-image__view__test_8cpp_1ae34b8f692eae9e7a6967c8ed4a347d28>`(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`,
+		empty
+		);
+
+	:target:`TEST<doxid-image__view__test_8cpp_1a01225ed24c59192b4d435b73940a0683>`(
+		:ref:`ImageView<doxid-structsophus_1_1_image_view>`,
+		create_and_access
+		);
+
+	:target:`TEST<doxid-image__view__test_8cpp_1a5016156a4fdf5b7293df6e1c36e5de2e>`(
+		:ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`,
+		empty
+		);
+
+	:target:`TEST<doxid-image__view__test_8cpp_1a0ef2334786a81b11abab4f6a5b692afd>`(
+		:ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`,
+		create_and_access
+		);
+
+	:target:`TEST<doxid-runtime__image__test_8cpp_1ab6cbc08fe602f3b8ed4412f04956fae4>`(
+		:ref:`AnyImage<doxid-namespacesophus_1a78395e5b72761c2d77c1207a7a4af475>`,
+		create_access_and_extract
+		);
+
+	:target:`TEST<doxid-runtime__image__test_8cpp_1adbb2ad9bc8e286b0249c5409527fde7c>`(
+		:ref:`IntensityImage<doxid-namespacesophus_1afebc6bb5384c7773f0ede478ff3ca2f3>`,
+		create_access_and_extract
+		);
+
+	:target:`TEST<doxid-runtime__image__test_8cpp_1af6e3c340d2155eb5cc56741078353b0e>`(
+		:ref:`AnyImage<doxid-namespacesophus_1a78395e5b72761c2d77c1207a7a4af475>`,
+		runtime_type_info
+		);
+
+	float :target:`sum<doxid-runtime__image__test_8cpp_1ae087e9700a3d5f427dede7bd34cb454b>`(:ref:`ImageView<doxid-structsophus_1_1_image_view>`<float> view);
+	void :target:`plusOne<doxid-runtime__image__test_8cpp_1a295ef1281203aad88e5949bd29fb351c>`(:ref:`MutImageView<doxid-classsophus_1_1_mut_image_view>`<float> mut_view);
+
+	:target:`TEST<doxid-runtime__image__test_8cpp_1a0045a4dab7360f9b4f179210438b6124>`(
+		ClassHierarchy,
+		call_function
+		);
+
+	int :target:`main<doxid-cartesian2__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+	int :target:`main<doxid-cartesian3__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+	int :target:`main<doxid-common__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4>`();
+	:ref:`CameraModel<doxid-classsophus_1_1_camera_model>` :target:`openCvCameraModel<doxid-camera__model__test_8cpp_1a337f48efa1feb10176bc6c682350cbb5>`();
+
+	:target:`TEST<doxid-camera__model__test_8cpp_1ae60c2856c31f30e24a04021ae180bb7d>`(
+		camera_model,
+		projection_round_trip
+		);
+
+	:target:`TEST<doxid-camera__model__test_8cpp_1a9a84f07f639f5b064bee88f468e46aeb>`(
+		camera_model,
+		scale_up_down_roundtrip
+		);
+
+	:target:`TEST<doxid-camera__model__test_8cpp_1adbbee1a53cdf100d76d0e6c0d4ae62ad>`(
+		camera_model,
+		ortho_cam
+		);
+
+	:target:`TEST<doxid-camera__rig__test_8cpp_1af3fbe44ebfcae081d4d12b2ebb8c1718>`(
+		camera_rig,
+		smoke
+		);
+
+	:target:`TEST<doxid-imu__model__test_8cpp_1a8d64a46e5c782e5252e2432ad043b2a6>`(
+		imu_model,
+		smoke
+		);
+
+	:target:`FARM_ENUMFLAGS<doxid-enum__flags__test_8cpp_1a31def77948529d5dfff881dbfe50f5f0>`(
+		MyFlags,
+		uint32_t,
+		(foo, bar, daz)
+		);
+
+	:target:`TEST<doxid-enum__flags__test_8cpp_1aead6c367dbd74bbb59dde5d76c0a62be>`(
+		EnumTest,
+		toString
+		);
+
+	:target:`TEST<doxid-enum__flags__test_8cpp_1a29c00c2497757f76cc2a21546e0023b6>`(
+		EnumFlags,
+		StringsAndValues
+		);
+
+	:target:`FARM_ENUMFLAGS_WITHOUT_OSTREAM<doxid-enum__flags__without__ostream__test_8cpp_1aa2ee94fefa3cb4c2e9eb0c57b3a03405>`(
+		MyFlags,
+		uint32_t,
+		(foo, bar, daz)
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1aa397866d9f9a1f7c3d7446710e2ccc93>`(
+		EnumFlags,
+		none
+		);
+
+	:target:`FARM_ENUMFLAGS_WITHOUT_OSTREAM<doxid-enum__flags__without__ostream__test_8cpp_1a790c67e01f016426756f35a31ec29535>`(
+		EightFlags,
+		uint8_t,
+		(bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7)
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1ae2b306c6e10f92e27804352ec7ff8997>`(
+		EnumFlags,
+		bits
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1a32095940e285db4093826c864f713f8c>`(
+		EnumFlags,
+		trySetFlagFromString
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1aefb39abdc669fb0afb15cfeb6d32d1d3>`(
+		EnumFlags,
+		setClearToggle
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1a80390ef14b765ce49c6561d0fec2c0b8>`(
+		EnumFlags,
+		toString
+		);
+
+	:target:`FARM_ENUMFLAGS_WITHOUT_OSTREAM_DEF<doxid-enum__flags__without__ostream__test_8cpp_1a36923dd570b7c1f5fc294a92500078ba>`(
+		Bike,
+		uint8_t,
+		(frontWheel, backWheel)
+		);
+
+	:target:`TEST<doxid-enum__flags__without__ostream__test_8cpp_1a2b0f1c0b2ebf7f6fc660a4a390a6d2a7>`(
+		EnumTest,
+		nestedEnumFlags
+		);
+
+	:target:`FARM_ENUM<doxid-enum__test_8cpp_1a210a0e430089578431ec77971a05e9ca>`(
+		Fruits,
+		size_t,
+		((apple, 2), banana, pear)
+		);
+
+	:target:`TEST<doxid-enum__test_8cpp_1aead6c367dbd74bbb59dde5d76c0a62be>`(
+		EnumTest,
+		toString
+		);
+
+	:target:`FARM_ENUM_DEF<doxid-enum__test_8cpp_1aed861d9838dfb9635dbd4f7426303296>`(
+		Autos,
+		int32_t,
+		(van, truck, sedan)
+		);
+
+	:target:`TEST<doxid-enum__test_8cpp_1a242e29f18b2c953b6edb1ceb913fdd0f>`(
+		EnumTest,
+		trySetFromString
+		);
+
+	:target:`TEST<doxid-enum__test_8cpp_1a63b0cb53815eb0e09e46b6dd4eb097f3>`(
+		EnumTest,
+		StringsAndValues
+		);
+
+	:target:`FARM_ENUM_WITHOUT_OSTREAM<doxid-enum__without__ostream__test_8cpp_1a196dd58d6efb35c63a05e520fc9e97ed>`(
+		Fruits,
+		uint8_t,
+		((apple, 1),(banana, 3), pear)
+		);
+
+	:target:`TEST<doxid-enum__without__ostream__test_8cpp_1a35476fbf470951e3958d871b08aa36b0>`(
+		EnumTest,
+		defaultDeath
+		);
+
+	:target:`TEST<doxid-enum__without__ostream__test_8cpp_1aead6c367dbd74bbb59dde5d76c0a62be>`(
+		EnumTest,
+		toString
+		);
+
+	:target:`TEST<doxid-enum__without__ostream__test_8cpp_1a63b0cb53815eb0e09e46b6dd4eb097f3>`(
+		EnumTest,
+		StringsAndValues
+		);
+
+	:target:`FARM_ENUM_WITHOUT_OSTREAM_DEF<doxid-enum__without__ostream__test_8cpp_1acb45f2fca64af6d946e4c07d325cdc6f>`(
+		Autos,
+		int,
+		(van, truck,(sedan, 4))
+		);
+
+	:target:`TEST<doxid-enum__without__ostream__test_8cpp_1a242e29f18b2c953b6edb1ceb913fdd0f>`(
+		EnumTest,
+		trySetFromString
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1a7bb3fb61b0f37804f2ebf5c3a2ea34dd>`(
+		expected,
+		success
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1a8d9c4872f9b8d48dd3fd68b738df0d11>`(
+		expected,
+		single_error
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1a144d4303f24288f45e5fa5ef9b29b762>`(
+		expected,
+		multi_error
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1a8d8ff5e6b767ee00685398bd8fa1ee84>`(
+		expected,
+		unwrap
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1ad2d396b1239d223d2af386b454d2fced>`(
+		expected,
+		optional
+		);
+
+	:target:`TEST<doxid-expected__test_8cpp_1aa2cd4ddbea3daab487e550dd33d00bcc>`(
+		expected,
+		fancy_error
+		);
+
+	:target:`TEST<doxid-format__test_8cpp_1ac82c141715e3bd1a9eef488d4365d0c9>`(
+		format,
+		functional
+		);
+
+	:target:`TEST<doxid-format__test_8cpp_1acb8fa79eba0abfe44ca75a3a90adea3f>`(
+		runtime_format,
+		functional
+		);
+
+	:target:`TEST<doxid-logger__test_8cpp_1ae4670c1cc36cf6ac2c9e040a3c9b8b57>`(
+		logger,
+		unit
+		);
+
+	:target:`TEST<doxid-erase__test_8cpp_1a04128ca1321d34c60731f293a90c1d9d>`(
+		:ref:`erase<doxid-thirdparty_2farm-ng-core_2farm__ng_2core_2misc_2_c_make_lists_8txt_1abadab92370a8b891a03eb4e0b0027c04>`,
+		smoke
+		);
+
+	:target:`TEST<doxid-filesystem__test_8cpp_1ad613335036f86dd2fbd945210f6df926>`(
+		filesystem,
+		smoke
+		);
+
+	:target:`TEST<doxid-filesystem__test_8cpp_1afa7c1dccded9b655ca228117221492cc>`(
+		filesystem,
+		createUniqueTemporaryDirectory
+		);
+
+	:target:`TEST<doxid-filesystem__test_8cpp_1ab8b6f06332093aa2861048ca2202bf4c>`(
+		filesystem,
+		no_parent_path
+		);
+
+	:target:`TEST<doxid-stopwatch__test_8cpp_1a008a249afd1b205c78173a0ff84acf81>`(
+		stopwatch,
+		integrations
+		);
+
+	:target:`TEST<doxid-tokenize__test_8cpp_1a7cc7111e86cafa41194bc329bdbe366e>`(
+		tokenize,
+		smoke
+		);
+
+	// macros
+
+	#define :ref:`FARM_AT<doxid-logger_8h_1a66ca91954e8bbe36af1f35d9744e87a7>`( \
+		contiguous_container, \
+		index, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK<doxid-logger_8h_1abee69747ee89670079f070ef415947d3>`( \
+		condition, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_EQ<doxid-logger_8h_1aa8c03e4559ec2193f2352b3451b7ec56>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_FOLDER_IS_EMPTY<doxid-logger_8h_1a7143bbb015fa8e14b6ec23df411d89d0>`(path)
+
+	#define :ref:`FARM_CHECK_GE<doxid-logger_8h_1a08762db8f5a3c5dac7dc529680b307cd>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_GT<doxid-logger_8h_1ade6fbda37ab54a2f7e16ee325661b9a0>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_IMAGE_EQ<doxid-image__types_8h_1aff8f7576cc2d1a9739a47e510c932e6a>`( \
+		left_image, \
+		right_image, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_IS_FILE<doxid-logger_8h_1ae7d07e472a5e685275bf88eb41f4660a>`(path)
+	#define :ref:`FARM_CHECK_IS_FOLDER<doxid-logger_8h_1a76749746acfe6361ead8c131c4c34e40>`(path)
+
+	#define :ref:`FARM_CHECK_LE<doxid-logger_8h_1ae07338b60ba5d848e5b5fe0feb536c71>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_LT<doxid-logger_8h_1a6fe8cec8ae7ab6533c3a0bb24d9872f4>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_NE<doxid-logger_8h_1a93d3bd85f4c5572444f92301849ee561>`( \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_NEAR<doxid-logger_8h_1a5fb91e81794e54d181b5e17984823258>`( \
+		lhs, \
+		rhs, \
+		thr, \
+		... \
+		)
+
+	#define :target:`FARM_CHECK_OR_ERROR<doxid-expected_8h_1a54f4fa712d2b0152119112a2f4810551>`( \
+		condition, \
+		... \
+		)
+
+	#define :ref:`FARM_CHECK_PATH_EXIST<doxid-logger_8h_1a63a0d4d4be8423416a2ce94c89591455>`(path)
+
+	#define :target:`FARM_ENUM<doxid-enum_8h_1a5268dfdcfb4a14db714de4e279928ddf>`( \
+		EnumName, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAGS<doxid-enum__flags_8h_1a3119d921bdb6afbabc190e45dc04b9d1>`( \
+		EnumName, \
+		UINT_TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_ALIAS<doxid-enum__flags__without__ostream_8h_1a89bc1563076600ac848949c4d82c8954>`(NAME)
+
+	#define :target:`FARM_ENUMFLAGS_DEF<doxid-enum__flags_8h_1a3cb5b852adcf321cba3f0b90463e195f>`( \
+		EnumName, \
+		UINT_TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_COMMA_SEP_INTS<doxid-enum__flag__details_8h_1a00f63d23477adf9dbee4d1d78090970b>`( \
+		TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_COMMA_SEP_STRINGS<doxid-enum__flag__details_8h_1a0904699d8186720ccb474bb50c4d4c41>`(...)
+	#define :target:`FARM_ENUMFLAGS_DETAILS_CSV_STRING<doxid-enum__flag__details_8h_1a1240265e4a0fc18d9e6850770c69f366>`(...)
+	#define :target:`FARM_ENUMFLAGS_DETAILS_FLAG_DEFINITIONS<doxid-enum__flag__details_8h_1a61931c13d4643fd22da989987cdb94b6>`(...)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_OP_COMMA_INT<doxid-enum__flag__details_8h_1a86a5ef61d20a33a8de798294cb3be192>`( \
+		dummy1, \
+		TYPE, \
+		VAL \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_OP_COMMA_STRING<doxid-enum__flag__details_8h_1ab2edde5b3351873a34aba04ef3c429e9>`( \
+		dummy1, \
+		dummy2, \
+		STRING \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_OP_COMMA_VALUE_STRING<doxid-enum__flag__details_8h_1a29fde553d1b45158b60a2b271bf207cf>`( \
+		dummy1, \
+		dummy2, \
+		STRING \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_DETAILS_OP_INIT_FLAG<doxid-enum__flag__details_8h_1adbb1ba03fb76bdf236c4f6c0f3dd54be>`( \
+		dummy1, \
+		dummy2, \
+		I, \
+		FLAG \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_OSTREAM_OVERLOAD<doxid-enum__flags_8h_1aa062d8b7cbfb75000f4996b9cdb97a93>`(NAME)
+
+	#define :target:`FARM_ENUMFLAGS_WITHOUT_OSTREAM<doxid-enum__flags__without__ostream_8h_1a36400e595d739c65b0019a2cd8f0cbb7>`( \
+		NAME, \
+		UINT_TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAGS_WITHOUT_OSTREAM_DEF<doxid-enum__flags__without__ostream_8h_1ae4f8479816607114ec3e0f3fd1dc78bc>`( \
+		NAME, \
+		UINT_TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUMFLAG_DETAILS_OP_PUSHBACK_STRING<doxid-enum__flag__details_8h_1a3b98dfba449c1228f804c2912fa505de>`( \
+		dummy1, \
+		TYPE, \
+		FLAG \
+		)
+
+	#define :target:`FARM_ENUMFLAG_DETAILS_OP_SET_ENUM_FROM_STRING<doxid-enum__flag__details_8h_1a325397eba618b8d9eeaf2e00f685d727>`( \
+		dummy1, \
+		TYPE, \
+		FLAG \
+		)
+
+	#define :target:`FARM_ENUMFLAG_DETAILS_OP_SINGLE_FLAG_CHECK<doxid-enum__flag__details_8h_1a78ffbae3a50d723ff743bc5cc67f8975>`( \
+		dummy1, \
+		TYPE, \
+		FLAG \
+		)
+
+	#define :target:`FARM_ENUMFLAG_DETAILS_OP_STRING_FOR_FLAG<doxid-enum__flag__details_8h_1a304fd1b286935c068b2aefdd9f27e61a>`( \
+		dummy1, \
+		TYPE, \
+		FLAG \
+		)
+
+	#define :target:`FARM_ENUM_ALIAS<doxid-enum__without__ostream_8h_1ad7c43cb8eb543d72dd24df4845548dc7>`(NAME)
+
+	#define :target:`FARM_ENUM_DEF<doxid-enum_8h_1a7c96c8b54291c96e3a4e1cca16d3ba2b>`( \
+		EnumName, \
+		... \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_COMMA_SEP_INTS<doxid-enum__details_8h_1a72c4136a8a89b39e75f623b2c32da562>`( \
+		TYPE, \
+		INT_TYPE, \
+		... \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_COMMA_SEP_STRINGS<doxid-enum__details_8h_1ad8abe13e9cb5b7894439b02f230361eb>`(...)
+	#define :target:`FARM_ENUM_DETAILS_CSV<doxid-enum__details_8h_1ab685405aaa706a16b81d96aa21f99d70>`(...)
+	#define :target:`FARM_ENUM_DETAILS_CSV_STRING<doxid-enum__details_8h_1a02b4c1facebc86e9e008260e7137fa79>`(...)
+	#define :target:`FARM_ENUM_DETAILS_GET_INT_TYPE<doxid-enum__details_8h_1a2e0cedf163e2ea268ff130a098521258>`(...)
+	#define :target:`FARM_ENUM_DETAILS_GET_VARS<doxid-enum__details_8h_1aef9c2db41b965eb7a8e31c8d39490a5d>`(...)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_COMMA_STRING<doxid-enum__details_8h_1a429a62bcc76437392aca2ed03b9d16f4>`( \
+		dummy1, \
+		dummy2, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_COMMA_VALUE<doxid-enum__details_8h_1acb15496614efdcd53e67822d324549a7>`( \
+		dummy1, \
+		dummy2, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_COMMA_VALUE_STRING<doxid-enum__details_8h_1aedcf7ec175ccb8e59e8a97dfe243497a>`( \
+		dummy1, \
+		dummy2, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_INTS<doxid-enum__details_8h_1ae077a3ae5de7c4a43ada2ed17033ad88>`( \
+		dummy, \
+		TYPES, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_MAKE_TUPLE<doxid-enum__details_8h_1a4a3e7542e9626f11fc06e083557de405>`( \
+		dummy1, \
+		dummy2, \
+		ENUM \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_POSITION_ICASE<doxid-enum__details_8h_1a25dde975baef7059d7a790e1d7f245b2>`( \
+		dummy, \
+		TYPE, \
+		I, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_SET_VALUE_CASES<doxid-enum__details_8h_1a163d471603c4ee1c38b4961c0926c932>`( \
+		dummy1, \
+		TYPE, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_TO_PRETTY_CASE<doxid-enum__details_8h_1a6803a4d582c325495c7606066072ed6f>`( \
+		dummy, \
+		types, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_TO_STRING_CASE<doxid-enum__details_8h_1a074c1f2a7660476b01427de4e506d1a3>`( \
+		dummy1, \
+		TYPE, \
+		PAIR \
+		)
+
+	#define :target:`FARM_ENUM_DETAILS_OP_VALUE_WITH_INIT<doxid-enum__details_8h_1a554f63301fbc0ace0d3fa11b7f48cebf>`(PAIR)
+	#define :target:`FARM_ENUM_DETAILS_TO_SEQ_OF_TUPLES<doxid-enum__details_8h_1aa9463ae5ca65aed351a5ab4e43d45acc>`(...)
+	#define :target:`FARM_ENUM_OSTREAM_OVERLOAD<doxid-enum_8h_1acecaa3d9b8c151d5235d828e6f582c62>`(EnumName)
+
+	#define :target:`FARM_ENUM_WITHOUT_OSTREAM<doxid-enum__without__ostream_8h_1a11e36e8fbafbfe54989067957558c817>`( \
+		NAME, \
+		... \
+		)
+
+	#define :target:`FARM_ENUM_WITHOUT_OSTREAM_DEF<doxid-enum__without__ostream_8h_1ace9a5119f7f49b25e8a51168ea0e27f3>`( \
+		NAME, \
+		... \
+		)
+
+	#define :target:`FARM_ERROR<doxid-expected_8h_1ae162dbf2a7d1c0d357e6a3fa331ed32d>`( \
+		cstr, \
+		... \
+		)
+
+	#define :target:`FARM_ERROR_DETAIL<doxid-expected_8h_1aede3d28ac1463bc5ff8f48122309c89c>`(...)
+
+	#define :ref:`FARM_FATAL<doxid-logger_8h_1ac3874531d92042df89d535df9d40f8ce>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_FORMAT<doxid-format_8h_1a433412d321d236f0533bf9f9011fe0c0>`(...)
+
+	#define :ref:`FARM_GET<doxid-logger_8h_1a29086f21d2fabd04ee66ac9d1601a38d>`( \
+		associative_container, \
+		key, \
+		... \
+		)
+
+	#define :target:`FARM_IMPL_ABORT<doxid-format_8h_1ab1a749dfd7206da5a259a7ff47e6dc78>`()
+
+	#define :target:`FARM_IMPL_CHECK_OP<doxid-logger_8h_1a7f8b7b06112b264fa4df04f1e156632d>`( \
+		symbol, \
+		name_str, \
+		lhs, \
+		rhs, \
+		... \
+		)
+
+	#define :target:`FARM_IMPL_FORMAT_ARGS<doxid-format_8h_1ab422e4a205ad94cd9515445d4b223cbe>`( \
+		cstr, \
+		... \
+		)
+
+	#define :target:`FARM_IMPL_FORMAT_VARG<doxid-format_8h_1abf1113fd7306ff10dc3b206f43bf428e>`( \
+		cstr, \
+		... \
+		)
+
+	#define :target:`FARM_IMPL_LOG_HEADER<doxid-logger_8h_1a037512bed3e9916e82f6ebc5a8a32cc0>`(msg)
+	#define :target:`FARM_IMPL_LOG_PRINTLN<doxid-format_8h_1a052f0ffd9178d17adc569bd21acdde05>`(...)
+
+	#define :target:`FARM_IMPL_LOG_PRINTLN_ARGS<doxid-format_8h_1a2b55f864d234e2588e632c3bd88c8b92>`( \
+		cstr, \
+		... \
+		)
+
+	#define :target:`FARM_IMPL_LOG_PRINTLN_ONE<doxid-format_8h_1a385551b2638bc28277047f7510774faf>`(cstr)
+
+	#define :target:`FARM_IMPL_LOG_PRINTLN_VARG<doxid-format_8h_1af5aff0a60f23d6a7f138e7fd84ed984c>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_LOG_INFO<doxid-logger_8h_1ad4fbebb9257f9600805efc8a6d40d9a0>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_LOG_INFO_EVERY_N<doxid-logger_8h_1a6ddf9667795e471ca352d68db31ab305>`( \
+		N, \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_LOG_WARNING<doxid-logger_8h_1a73b84d06e0f15963e2a5be9b51698fd8>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_MAP_INSERT<doxid-logger_8h_1ac66457eb102bac25373662e288760b90>`( \
+		map, \
+		key, \
+		value, \
+		... \
+		)
+
+	#define :target:`FARM_NG_TEST_IMG_EQ<doxid-runtime__image__test_8cpp_1a0ce6f813694c0e62d4349192eec9ded7>`( \
+		lhs, \
+		rhs \
+		)
+
+	#define :target:`FARM_PRINTLN<doxid-logger_8h_1ae1d4d1e36f20a5f8590d4e9e371449b7>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_RUNTIME_FORMAT<doxid-format_8h_1a6b6fa40a082b51401b8eba074597e93c>`( \
+		str, \
+		... \
+		)
+
+	#define :target:`FARM_STRING<doxid-format_8h_1a910183612218259f530c31674ad42d9b>`(x)
+
+	#define :ref:`FARM_TRY<doxid-expected_8h_1a88b31487567475f37fff049489ea00a4>`( \
+		Type_val, \
+		expected_val \
+		)
+
+	#define :ref:`FARM_UNIMPLEMENTED<doxid-logger_8h_1a13db2d316d133430cf1637566a1aaa9c>`( \
+		cstr, \
+		... \
+		)
+
+	#define :ref:`FARM_UNWRAP<doxid-logger_8h_1aa6263e6115a59c112188a536bf1560e8>`( \
+		wrapper, \
+		... \
+		)
+
+	#define :target:`SOPHUS_FUNC<doxid-common_8h_1a719070c34a48abcdf2f623e4160b4c28>`
+	#define :target:`SOPHUS_FUNCTION<doxid-common_8h_1adc97d3e69cc46d5aff5132e1fa2d9688>`
+	#define :target:`SOPHUS_STRINGIFY<doxid-test__macros_8h_1a9a763d03e0d8daa3c7cb92eb1db5220d>`(x)
+
+	#define :ref:`SOPHUS_TEST<doxid-test__macros_8h_1a094dfcb125cce443541e6614df9ff704>`( \
+		passed, \
+		condition, \
+		descr, \
+		... \
+		)
+
+	#define :ref:`SOPHUS_TEST_APPROX<doxid-test__macros_8h_1adceb75d7f4ac8872a96560097b91f090>`( \
+		passed, \
+		left, \
+		right, \
+		thr, \
+		descr, \
+		... \
+		)
+
+	#define :ref:`SOPHUS_TEST_EQUAL<doxid-test__macros_8h_1afa1fcfecdacca873ea54874272d05e90>`( \
+		passed, \
+		left, \
+		right, \
+		descr, \
+		... \
+		)
+
+	#define :ref:`SOPHUS_TEST_NEQ<doxid-test__macros_8h_1a47cf0311fff8d84d7044a599dc452b6a>`( \
+		passed, \
+		left, \
+		right, \
+		descr, \
+		... \
+		)
+
+	#define :ref:`SOPHUS_TEST_NOT_APPROX<doxid-test__macros_8h_1a2cf21393818b417fb877bd6198d1b140>`( \
+		passed, \
+		left, \
+		right, \
+		thr, \
+		descr, \
+		... \
+		)
+
+.. _details-global:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Macros
+------
+
+.. index:: pair: define; FARM_AT
+.. _doxid-logger_8h_1a66ca91954e8bbe36af1f35d9744e87a7:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_AT(contiguous_container, index, ...)
+
+Returns ``contiguous_container[index]``, but panics if ``index`` is out of bounds.
+
+.. index:: pair: define; FARM_CHECK
+.. _doxid-logger_8h_1abee69747ee89670079f070ef415947d3:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK(condition, ...)
+
+If condition is false, Print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_EQ
+.. _doxid-logger_8h_1aa8c03e4559ec2193f2352b3451b7ec56:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_EQ(lhs, rhs, ...)
+
+If it is false that ``lhs`` == ``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_FOLDER_IS_EMPTY
+.. _doxid-logger_8h_1a7143bbb015fa8e14b6ec23df411d89d0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_FOLDER_IS_EMPTY(path)
+
+Checks whether the given path is an empty folder. Hence it checks whether a) it does exit, b) it is a folder (and not a file), c) it is empty.
+
+.. index:: pair: define; FARM_CHECK_GE
+.. _doxid-logger_8h_1a08762db8f5a3c5dac7dc529680b307cd:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_GE(lhs, rhs, ...)
+
+If it is false that ``lhs``>= ``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_GT
+.. _doxid-logger_8h_1ade6fbda37ab54a2f7e16ee325661b9a0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_GT(lhs, rhs, ...)
+
+If it is false that ``lhs``> ``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_IMAGE_EQ
+.. _doxid-image__types_8h_1aff8f7576cc2d1a9739a47e510c932e6a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_IMAGE_EQ(left_image, right_image, ...)
+
+If it is false that ``left_image`` == ``right_image``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_IS_FILE
+.. _doxid-logger_8h_1ae7d07e472a5e685275bf88eb41f4660a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_IS_FILE(path)
+
+Checks whether the given path is a regular file. Hence it checks whether a) it does exit, b) it is a regular file.
+
+.. index:: pair: define; FARM_CHECK_IS_FOLDER
+.. _doxid-logger_8h_1a76749746acfe6361ead8c131c4c34e40:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_IS_FOLDER(path)
+
+Checks whether the given path is a folder. Hence it checks whether a) it does exit, b) it is a folder (and not a file).
+
+.. index:: pair: define; FARM_CHECK_LE
+.. _doxid-logger_8h_1ae07338b60ba5d848e5b5fe0feb536c71:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_LE(lhs, rhs, ...)
+
+If it is false that ``lhs`` <= ``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_LT
+.. _doxid-logger_8h_1a6fe8cec8ae7ab6533c3a0bb24d9872f4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_LT(lhs, rhs, ...)
+
+If it is false that ``lhs`` <``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_NE
+.. _doxid-logger_8h_1a93d3bd85f4c5572444f92301849ee561:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_NE(lhs, rhs, ...)
+
+If it is false that ``lhs``!= ``rhs``, print formatted error message and then panic.
+
+.. index:: pair: define; FARM_CHECK_NEAR
+.. _doxid-logger_8h_1a5fb91e81794e54d181b5e17984823258:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_NEAR(lhs, rhs, thr, ...)
+
+If it is false that ``lhs`` is near ``rhs`` according to threshold ``thr``, print formatted error message and then panic.
+
+``lhs`` and ``rhs`` are near, if maxMetric(lhs, rhs) < thr.
+
+.. index:: pair: define; FARM_CHECK_PATH_EXIST
+.. _doxid-logger_8h_1a63a0d4d4be8423416a2ce94c89591455:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_CHECK_PATH_EXIST(path)
+
+Checks whether the given path exits.
+
+.. index:: pair: define; FARM_FATAL
+.. _doxid-logger_8h_1ac3874531d92042df89d535df9d40f8ce:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_FATAL(cstr, ...)
+
+Print formatted error message and then panic.
+
+.. index:: pair: define; FARM_FORMAT
+.. _doxid-format_8h_1a433412d321d236f0533bf9f9011fe0c0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_FORMAT(...)
+
+Formats the ``cstr`` using the libfmt library.
+
+See here for details: `https://fmt.dev/latest/syntax.html <https://fmt.dev/latest/syntax.html>`__
+
+Note that compile-time format check is performed, and hence cstr needs to be a string literal. If no compile-time check is required, and/or the string is a variable, call ``:ref:`FARM_RUNTIME_FORMAT(fmt, ...) <doxid-format_8h_1a6b6fa40a082b51401b8eba074597e93c>``` instead.
+
+FARM_COMPILE_TIME_FMT is not defined, the runtime version will be used, to speed up compile times.
+
+.. index:: pair: define; FARM_GET
+.. _doxid-logger_8h_1a29086f21d2fabd04ee66ac9d1601a38d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_GET(associative_container, key, ...)
+
+Returns ``associative_container[key]``, but panics if the container does not contain ``key``.
+
+.. index:: pair: define; FARM_LOG_INFO
+.. _doxid-logger_8h_1ad4fbebb9257f9600805efc8a6d40d9a0:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_LOG_INFO(cstr, ...)
+
+LOG INFO: Log cstr formatted (using variadic arguments) to cerr.
+
+.. index:: pair: define; FARM_LOG_INFO_EVERY_N
+.. _doxid-logger_8h_1a6ddf9667795e471ca352d68db31ab305:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_LOG_INFO_EVERY_N(N, cstr, ...)
+
+LOG INFO: Only log every nth encounter.
+
+.. index:: pair: define; FARM_LOG_WARNING
+.. _doxid-logger_8h_1a73b84d06e0f15963e2a5be9b51698fd8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_LOG_WARNING(cstr, ...)
+
+LOG WARNING: Log cstr formatted (using variadic arguments) to cerr.
+
+.. index:: pair: define; FARM_MAP_INSERT
+.. _doxid-logger_8h_1ac66457eb102bac25373662e288760b90:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_MAP_INSERT(map, key, value, ...)
+
+Insert ``val`` to ``map``, but panics if the container does contain ``key`` already.
+
+.. index:: pair: define; FARM_RUNTIME_FORMAT
+.. _doxid-format_8h_1a6b6fa40a082b51401b8eba074597e93c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_RUNTIME_FORMAT(str, ...)
+
+Formats the ``cstr`` using the libfmt library.
+
+See here for details: `https://fmt.dev/latest/syntax.html <https://fmt.dev/latest/syntax.html>`__
+
+If ``str`` is cstring literal, call FARM_FORMAT instead, and the format will be checked at compile time.
+
+.. index:: pair: define; FARM_TRY
+.. _doxid-expected_8h_1a88b31487567475f37fff049489ea00a4:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_TRY(Type_val, expected_val)
+
+Assigns ``*expected_val`` to ``Type_val``, but returns error if there is one.
+
+.. index:: pair: define; FARM_UNIMPLEMENTED
+.. _doxid-logger_8h_1a13db2d316d133430cf1637566a1aaa9c:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_UNIMPLEMENTED(cstr, ...)
+
+Print formatted error message and then panic.
+
+.. index:: pair: define; FARM_UNWRAP
+.. _doxid-logger_8h_1aa6263e6115a59c112188a536bf1560e8:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define FARM_UNWRAP(wrapper, ...)
+
+Returns ``*wrapper``, but panics if ``wrapper`` is ``nullopt`` or ``null``.
+
+.. index:: pair: define; SOPHUS_TEST
+.. _doxid-test__macros_8h_1a094dfcb125cce443541e6614df9ff704:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define SOPHUS_TEST(passed, condition, descr, ...)
+
+Tests whether condition is true. The in-out parameter passed will be set to false if test fails.
+
+.. index:: pair: define; SOPHUS_TEST_APPROX
+.. _doxid-test__macros_8h_1adceb75d7f4ac8872a96560097b91f090:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define SOPHUS_TEST_APPROX(passed, left, right, thr, descr, ...)
+
+Tests whether left is approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
+
+.. index:: pair: define; SOPHUS_TEST_EQUAL
+.. _doxid-test__macros_8h_1afa1fcfecdacca873ea54874272d05e90:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define SOPHUS_TEST_EQUAL(passed, left, right, descr, ...)
+
+Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
+
+.. index:: pair: define; SOPHUS_TEST_NEQ
+.. _doxid-test__macros_8h_1a47cf0311fff8d84d7044a599dc452b6a:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define SOPHUS_TEST_NEQ(passed, left, right, descr, ...)
+
+Tests whether left is equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
+
+.. index:: pair: define; SOPHUS_TEST_NOT_APPROX
+.. _doxid-test__macros_8h_1a2cf21393818b417fb877bd6198d1b140:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	#define SOPHUS_TEST_NOT_APPROX(passed, left, right, thr, descr, ...)
+
+Tests whether left is NOT approximately equal to right given a threshold. The in-out parameter passed will be set to false if test fails.
+

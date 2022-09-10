@@ -1,0 +1,26 @@
+.. index:: pair: class; sophus::UnitVector3
+.. _doxid-classsophus_1_1_unit_vector3:
+
+template class sophus::UnitVector3
+==================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <ray.h>
+	
+	template <class T>
+	class UnitVector3 {
+	public:
+		// methods
+	
+		static UnitVector3 :target:`fromUnitVector<doxid-classsophus_1_1_unit_vector3_1a1f5ea842598c2d763450b050007e45d5>`(const Eigen::Matrix<T, 3, 1>& v);
+		static UnitVector3 :target:`fromVectorAndNormalize<doxid-classsophus_1_1_unit_vector3_1a3e82d51fdc6f792359297d4c9fa85c60>`(const Eigen::Matrix<T, 3, 1>& v);
+		const Eigen::Matrix<T, 3, 1>& :target:`getVector<doxid-classsophus_1_1_unit_vector3_1a3e797ac7aa1d822ef326f438a5ed0acd>`() const;
+	};

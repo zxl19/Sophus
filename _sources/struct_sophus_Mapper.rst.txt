@@ -1,0 +1,30 @@
+.. index:: pair: struct; sophus::Mapper
+.. _doxid-structsophus_1_1_mapper:
+
+template struct sophus::Mapper
+==============================
+
+.. toctree::
+	:hidden:
+
+Helper for mapping tangent vectors (scalars) over pointers to data.
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <typetraits.h>
+	
+	template <typename TT, typename ET = void>
+	struct Mapper {
+		// typedefs
+	
+		using :target:`Scalar<doxid-structsophus_1_1_mapper_1abef40b4f9c2130112c3fb550803ceeb6>` = TT ;
+		using :target:`Map<doxid-structsophus_1_1_mapper_1a3acb8aef17e612ede3355f473d239fc5>` = :ref:`Scalar<doxid-structsophus_1_1_mapper_1abef40b4f9c2130112c3fb550803ceeb6>`& ;
+		using :target:`ConstMap<doxid-structsophus_1_1_mapper_1ae5b59a063206ebd4bc2b39cc8b804d3d>` = const :ref:`Scalar<doxid-structsophus_1_1_mapper_1abef40b4f9c2130112c3fb550803ceeb6>`& ;
+
+		// methods
+	
+		static :ref:`Map<doxid-structsophus_1_1_mapper_1a3acb8aef17e612ede3355f473d239fc5>` :target:`map<doxid-structsophus_1_1_mapper_1a6326d7b52054db57e7443d54084bda36>`(:ref:`Scalar<doxid-structsophus_1_1_mapper_1abef40b4f9c2130112c3fb550803ceeb6>`* ptr);
+		static :ref:`ConstMap<doxid-structsophus_1_1_mapper_1ae5b59a063206ebd4bc2b39cc8b804d3d>` :target:`map<doxid-structsophus_1_1_mapper_1a2d3e00c4db38e4172503d533a3c75c4a>`(const :ref:`Scalar<doxid-structsophus_1_1_mapper_1abef40b4f9c2130112c3fb550803ceeb6>`* ptr);
+	};

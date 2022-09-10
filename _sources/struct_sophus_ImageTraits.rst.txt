@@ -1,0 +1,28 @@
+.. index:: pair: struct; sophus::ImageTraits
+.. _doxid-structsophus_1_1_image_traits:
+
+template struct sophus::ImageTraits
+===================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <image_types.h>
+	
+	template <class TT>
+	struct ImageTraits {
+		// typedefs
+	
+		using :target:`PixelT<doxid-structsophus_1_1_image_traits_1a33d0f6ada29af64aec72ae06b55234c5>` = TT ;
+		using :target:`ChannelT<doxid-structsophus_1_1_image_traits_1a5d8d08a22ee5aa1f04d2caae4783e606>` = :ref:`PixelT<doxid-structsophus_1_1_image_traits_1a33d0f6ada29af64aec72ae06b55234c5>` ;
+
+		// fields
+	
+		static const int :target:`kNumChannels<doxid-structsophus_1_1_image_traits_1ad01f8fb11c71f658978ba15833694bf2>` = 1;
+	};

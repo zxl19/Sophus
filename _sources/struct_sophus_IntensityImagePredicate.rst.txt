@@ -1,0 +1,29 @@
+.. index:: pair: struct; sophus::IntensityImagePredicate
+.. _doxid-structsophus_1_1_intensity_image_predicate:
+
+template struct sophus::IntensityImagePredicate
+===============================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <runtime_image.h>
+	
+	template <class PixelT>
+	struct IntensityImagePredicate {
+		// typedefs
+	
+		using :target:`ChannelT<doxid-structsophus_1_1_intensity_image_predicate_1a9c8a223fd579db91eb2012467c6a3ac0>` = typename :ref:`ImageTraits<doxid-structsophus_1_1_image_traits>`<PixelT>:::ref:`ChannelT<doxid-structsophus_1_1_intensity_image_predicate_1a9c8a223fd579db91eb2012467c6a3ac0>` ;
+		using :target:`Variant<doxid-structsophus_1_1_intensity_image_predicate_1a0a4939e909c7c23f30f8e77cf8adfda4>` = std::variant<uint8_t, uint16_t, float, :ref:`Pixel3U8<doxid-namespacesophus_1a357f6dbcfeb324e41eedad7a1a139061>`, :ref:`Pixel3U16<doxid-namespacesophus_1a80f7e3b6275b10d7ffd120c25b6aab02>`, :ref:`Pixel3F32<doxid-namespacesophus_1a39e5641390bdcccc7eb95bc2abb1bc3f>`, :ref:`Pixel4U8<doxid-namespacesophus_1a506f4368bab7ab088474682cd67d3a2d>`, :ref:`Pixel4U16<doxid-namespacesophus_1ac4fb1bf2dd78421d797351b97cc1fd97>`, :ref:`Pixel4F32<doxid-namespacesophus_1a9a69b0947f141409726829a02f7f93ac>`> ;
+
+		// fields
+	
+		static const int :target:`kNumChannels<doxid-structsophus_1_1_intensity_image_predicate_1ad8243f29038d0d573dbd53b0a00b3a5f>` = :ref:`ImageTraits<doxid-structsophus_1_1_image_traits>`<PixelT>::kNumChannels;
+		static constexpr bool :target:`kIsTypeValid<doxid-structsophus_1_1_intensity_image_predicate_1aa9087cafc8a44ec61f50398e208cfe33>` =(:ref:`kNumChannels<doxid-structsophus_1_1_intensity_image_predicate_1ad8243f29038d0d573dbd53b0a00b3a5f>` == 1 || :ref:`kNumChannels<doxid-structsophus_1_1_intensity_image_predicate_1ad8243f29038d0d573dbd53b0a00b3a5f>` == 3 || :ref:`kNumChannels<doxid-structsophus_1_1_intensity_image_predicate_1ad8243f29038d0d573dbd53b0a00b3a5f>` == 4)&&(std::is_same_v<:ref:`ChannelT<doxid-structsophus_1_1_intensity_image_predicate_1a9c8a223fd579db91eb2012467c6a3ac0>`, uint8_t> ||        std::is_same_v<:ref:`ChannelT<doxid-structsophus_1_1_intensity_image_predicate_1a9c8a223fd579db91eb2012467c6a3ac0>`, uint16_t> || std::is_same_v<:ref:`ChannelT<doxid-structsophus_1_1_intensity_image_predicate_1a9c8a223fd579db91eb2012467c6a3ac0>`, float>);
+	};

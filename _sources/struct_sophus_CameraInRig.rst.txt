@@ -1,0 +1,60 @@
+.. index:: pair: struct; sophus::CameraInRig
+.. _doxid-structsophus_1_1_camera_in_rig:
+
+struct sophus::CameraInRig
+==========================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Camera as part of a sensor ``rig``. :ref:`More...<details-structsophus_1_1_camera_in_rig>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <camera_rig.h>
+	
+	struct CameraInRig {
+		// fields
+	
+		:ref:`CameraModel<doxid-classsophus_1_1_camera_model>` :ref:`camera_model<doxid-structsophus_1_1_camera_in_rig_1aa9d503c43c1bfd3cb3ac33c5ac00f88d>`;
+		:ref:`sophus::SE3d<doxid-namespacesophus_1a1a4059ccbd31740d03aef8ace01421cf>` :ref:`rig_pose_camera<doxid-structsophus_1_1_camera_in_rig_1af01744b6789180f4e2c9d4da38c5b31e>`;
+
+		// construction
+	
+		:target:`CameraInRig<doxid-structsophus_1_1_camera_in_rig_1a8b2f8ef7f7f39addb3e7643609f18809>`(const :ref:`CameraModel<doxid-classsophus_1_1_camera_model>`& camera_model);
+	};
+.. _details-structsophus_1_1_camera_in_rig:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Camera as part of a sensor ``rig``.
+
+Fields
+------
+
+.. index:: pair: variable; camera_model
+.. _doxid-structsophus_1_1_camera_in_rig_1aa9d503c43c1bfd3cb3ac33c5ac00f88d:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`CameraModel<doxid-classsophus_1_1_camera_model>` camera_model
+
+Camera intrinsics.
+
+.. index:: pair: variable; rig_pose_camera
+.. _doxid-structsophus_1_1_camera_in_rig_1af01744b6789180f4e2c9d4da38c5b31e:
+
+.. ref-code-block:: cpp
+	:class: doxyrest-title-code-block
+
+	:ref:`sophus::SE3d<doxid-namespacesophus_1a1a4059ccbd31740d03aef8ace01421cf>` rig_pose_camera
+
+Camera extrinsics.
+

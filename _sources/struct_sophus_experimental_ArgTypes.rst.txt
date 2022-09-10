@@ -1,0 +1,28 @@
+.. index:: pair: struct; sophus::experimental::ArgTypes
+.. _doxid-structsophus_1_1experimental_1_1_arg_types:
+
+template struct sophus::experimental::ArgTypes
+==============================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <bool kCalcDx, class CostFunctorT, class... CostArgT>
+	struct ArgTypes {
+		// fields
+	
+		static constexpr int :target:`kNumArgs<doxid-structsophus_1_1experimental_1_1_arg_types_1ad116bcdd9a5ac1f7ecc40f1d6e5f3fdc>` = sizeof...(CostArgT);
+		static constexpr std::array<ArgType, :ref:`kNumArgs<doxid-structsophus_1_1experimental_1_1_arg_types_1ad116bcdd9a5ac1f7ecc40f1d6e5f3fdc>`> :target:`kArgTypeArray<doxid-structsophus_1_1experimental_1_1_arg_types_1ac06d4d8290dc776489c8a21fc5cc1d7b>` = {       {CostArgT::kArgType...}};
+		static constexpr std::array<int, :ref:`kNumArgs<doxid-structsophus_1_1experimental_1_1_arg_types_1ad116bcdd9a5ac1f7ecc40f1d6e5f3fdc>`> :target:`kArgsDimArray<doxid-structsophus_1_1experimental_1_1_arg_types_1a02262fd281f240d5b8a861c78d494140>` =       CostFunctorT::kArgsDimArray;
+		static constexpr int :target:`kNumVarArgs<doxid-structsophus_1_1experimental_1_1_arg_types_1a704b8dfd506b0db84f5e83b0cf5e8470>` = [](auto arg_type_array) {     size_t num_vars = 0;     for(ArgType elem : arg_type_array) {       num_vars += elem == ArgType::variable ? 1 : 0;     }     return num_vars;   }(:ref:`kArgTypeArray<doxid-structsophus_1_1experimental_1_1_arg_types_1ac06d4d8290dc776489c8a21fc5cc1d7b>`);
+		static constexpr int :target:`kDetailBlockDim<doxid-structsophus_1_1experimental_1_1_arg_types_1abfca556bbe156d2c995ca6378cd5728e>` = [](auto arg_type_array,                                             auto args_dim_array) {     size_t dim = 0;     for(int i = 0; i<:ref:`kNumArgs<doxid-structsophus_1_1experimental_1_1_arg_types_1ad116bcdd9a5ac1f7ecc40f1d6e5f3fdc>`; ++i) {       dim += arg_type_array[i] == ArgType::variable ? args_dim_array[i] : 0;     }     return dim;   }(:ref:`kArgTypeArray<doxid-structsophus_1_1experimental_1_1_arg_types_1ac06d4d8290dc776489c8a21fc5cc1d7b>`, :ref:`kArgsDimArray<doxid-structsophus_1_1experimental_1_1_arg_types_1a02262fd281f240d5b8a861c78d494140>`);
+		static constexpr int :target:`kBlockDim<doxid-structsophus_1_1experimental_1_1_arg_types_1a48338e029d0f837cf8633e926d9b3ef4>` = kCalcDx ? :ref:`kDetailBlockDim<doxid-structsophus_1_1experimental_1_1_arg_types_1abfca556bbe156d2c995ca6378cd5728e>` : 0;
+	};

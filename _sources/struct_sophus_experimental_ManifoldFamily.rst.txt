@@ -1,0 +1,34 @@
+.. index:: pair: struct; sophus::experimental::ManifoldFamily
+.. _doxid-structsophus_1_1experimental_1_1_manifold_family:
+
+template struct sophus::experimental::ManifoldFamily
+====================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kTangentDim, class ManifoldT = Eigen::Vector<double, kTangentDim>>
+	struct ManifoldFamily {
+		// typedefs
+	
+		using :target:`Manifold<doxid-structsophus_1_1experimental_1_1_manifold_family_1a3d49a4de5cd1922f0a479f61feea46b5>` = ManifoldT ;
+
+		// fields
+	
+		std::vector<:ref:`Manifold<doxid-structsophus_1_1experimental_1_1_manifold_family_1a3d49a4de5cd1922f0a479f61feea46b5>`> :target:`manifolds<doxid-structsophus_1_1experimental_1_1_manifold_family_1adfeb4e536cd73fc4ce41f6977eb0eb24>`;
+
+		// methods
+	
+		:ref:`Manifold<doxid-structsophus_1_1experimental_1_1_manifold_family_1a3d49a4de5cd1922f0a479f61feea46b5>` :target:`oplus<doxid-structsophus_1_1experimental_1_1_manifold_family_1a44d536dca6ba0f255cbb0ebd0fd793b6>`(
+			:ref:`Manifold<doxid-structsophus_1_1experimental_1_1_manifold_family_1a3d49a4de5cd1922f0a479f61feea46b5>` const& g,
+			Eigen::Vector<double, kTangentDim> const& vec_a
+			);
+	};

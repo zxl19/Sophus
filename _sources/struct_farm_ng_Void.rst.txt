@@ -1,0 +1,11 @@
+.. index:: pair: struct; farm_ng::Void
+.. _doxid-structfarm__ng_1_1_void:
+
+struct farm_ng::Void
+====================
+
+.. toctree::
+	:hidden:
+
+Regular void type.
+

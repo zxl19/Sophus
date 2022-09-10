@@ -1,0 +1,25 @@
+.. index:: pair: struct; farm_ng::StopwatchSingleton::Bucket
+.. _doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket:
+
+struct farm_ng::StopwatchSingleton::Bucket
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct Bucket {
+		// fields
+	
+		std::optional<std::chrono::time_point<std::chrono::high_resolution_clock>> :target:`maybe_start<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket_1a117785c96753e191e58e229ba039d2f6>`;
+		size_t :target:`num<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket_1ad8e6d23ae6f9b0345f10137e21cd2fe3>` = 0;
+		double :target:`sum<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket_1a15db9418f7553a13fb0e2d6948b3381a>` = 0.0;
+		double :target:`min<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket_1a532159c2dba09219a200d94989343795>` = std::numeric_limits<double>::max();
+		double :target:`max<doxid-structfarm__ng_1_1_stopwatch_singleton_1_1_bucket_1ab8650557a498770594c653fab1a32360>` = std::numeric_limits<double>::lowest();
+	};

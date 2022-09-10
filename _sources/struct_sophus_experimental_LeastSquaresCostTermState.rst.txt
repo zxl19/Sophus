@@ -1,0 +1,30 @@
+.. index:: pair: struct; sophus::experimental::LeastSquaresCostTermState
+.. _doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state:
+
+template struct sophus::experimental::LeastSquaresCostTermState
+===============================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kBlockDim>
+	struct LeastSquaresCostTermState {
+		// fields
+	
+		Eigen::Matrix<double, kBlockDim, kBlockDim> :target:`hessian_block<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state_1a132d9e83a982f59142360dcbf3cbec43>`;
+		Eigen::Matrix<double, kBlockDim, 1> :target:`gradient_segment<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state_1a4f54beafb4a75f46fec358cd4c1e4b11>`;
+		double :target:`cost<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state_1a42688a1899457ef89501e97eea7343d6>` = 0;
+		int :target:`num_subterms<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state_1a62eae7d3fd3a44918901e9297388cbdc>` = 0;
+
+		// construction
+	
+		:target:`LeastSquaresCostTermState<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state_1afae244aaa572c87e3a259a626dfd5c25>`();
+	};

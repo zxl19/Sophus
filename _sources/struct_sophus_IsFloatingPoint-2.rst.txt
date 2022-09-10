@@ -1,0 +1,23 @@
+.. index:: pair: struct; sophus::IsFloatingPoint<Eigen::Matrix<ScalarT, kM, kMatrixDim>>
+.. _doxid-structsophus_1_1_is_floating_point_3_01_eigen_1_1_matrix_3_01_scalar_t_00_01k_m_00_01k_matrix_dim_01_4_01_4:
+
+template struct sophus::IsFloatingPoint<Eigen::Matrix<ScalarT, kM, kMatrixDim>>
+===============================================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <types.h>
+	
+	template <class ScalarT, int kM, int kMatrixDim>
+	struct IsFloatingPoint<Eigen::Matrix<ScalarT, kM, kMatrixDim>> {
+		// fields
+	
+		static const bool :target:`kValue<doxid-structsophus_1_1_is_floating_point_3_01_eigen_1_1_matrix_3_01_scalar_t_00_01k_m_00_01k_matrix_dim_01_4_01_4_1a92f8ef0af6124abe41c3119e1d9c0799>` = std::is_floating_point<ScalarT>::value;
+	};

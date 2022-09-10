@@ -1,0 +1,52 @@
+.. index:: pair: class; sophus::KannalaBrandtK3Transform
+.. _doxid-classsophus_1_1_kannala_brandt_k3_transform:
+
+class sophus::KannalaBrandtK3Transform
+======================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <kannala_brandt.h>
+	
+	class KannalaBrandtK3Transform {
+	public:
+		// typedefs
+	
+		using :target:`ProjInCameraZ1Plane<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a987fef065047d2bff23e91db416aba48>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`PixelImage<doxid-classsophus_1_1_kannala_brandt_k3_transform_1ada5b8bbd030c5a2de31f5c320f4e6b89>` = Eigen::Matrix<ScalarT, 2, 1> ;
+		using :target:`Params<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a0db8a0e6a6ca1328142629d18c1c4986>` = Eigen::Matrix<ScalarT, :ref:`kNumParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a81da47c046f5d8997f1ec83d157f9b81>`, 1> ;
+		using :target:`DistorationParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1aa51656f5ab296c5e177c06a8362a7e47>` = Eigen::Matrix<ScalarT, :ref:`kNumDistortionParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1aae645566dfee136dcbb89c0cf77706e7>`, 1> ;
+
+		// fields
+	
+		static constexpr int :target:`kNumDistortionParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1aae645566dfee136dcbb89c0cf77706e7>` = 4;
+		static constexpr int :target:`kNumParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a81da47c046f5d8997f1ec83d157f9b81>` = :ref:`kNumDistortionParams<doxid-classsophus_1_1_kannala_brandt_k3_transform_1aae645566dfee136dcbb89c0cf77706e7>` + 4;
+		static const constexpr std::string_view :target:`kProjectionModel<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a5903d87498157626cb33f40f607b868d>` =       "KannalaBrandtK3: fx, fy, cx, cy, kb0, kb1, kb2, kb3";
+
+		// methods
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static :ref:`PixelImage<doxid-classsophus_1_1_kannala_brandt_k3_transform_1ada5b8bbd030c5a2de31f5c320f4e6b89>`<typename PointTypeT::Scalar> :target:`warp<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a527cba628a2e5837295be1b4c41f042a>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& proj_point_in_camera_z1_plane
+			);
+	
+		template <class ScalarT>
+		static :ref:`ProjInCameraZ1Plane<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a987fef065047d2bff23e91db416aba48>`<ScalarT> :target:`unwarp<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a6e71d35e5a8a2f648bae2505bb6b3e79>`(
+			const :ref:`Params<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a0db8a0e6a6ca1328142629d18c1c4986>`<ScalarT>& params,
+			const :ref:`PixelImage<doxid-classsophus_1_1_kannala_brandt_k3_transform_1ada5b8bbd030c5a2de31f5c320f4e6b89>`<ScalarT>& pixel_image
+			);
+	
+		template <class ParamsTypeT, class PointTypeT>
+		static Eigen::Matrix<typename PointTypeT::Scalar, 2, 2> :target:`dxWarp<doxid-classsophus_1_1_kannala_brandt_k3_transform_1a7f2fb8640727c5a9634e48e11f40d058>`(
+			const Eigen::MatrixBase<ParamsTypeT>& params,
+			const Eigen::MatrixBase<PointTypeT>& proj_point_in_camera_z1_plane
+			);
+	};

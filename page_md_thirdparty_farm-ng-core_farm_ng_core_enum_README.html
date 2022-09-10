@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FARM_ENUM &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Global Namespace" href="global.html" />
+    <link rel="prev" title="Sympy API - Symbolic Sophus In Python" href="pysophus.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Sophus
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/strasdat/Sophus">GitHub Page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">C++ Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pysophus.html">Sympy API - Symbolic Sophus In Python</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FARM_ENUM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Namespace</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sophus</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>FARM_ENUM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/page_md_thirdparty_farm-ng-core_farm_ng_core_enum_README.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="farm-enum">
+<span id="doxid-md-thirdparty-farm-ng-core-farm-ng-core-enum-r-e-a-d-m-e"></span><span id="index-0"></span><h1>FARM_ENUM<a class="headerlink" href="#farm-enum" title="Permalink to this headline">¶</a></h1>
+<p>FARM_ENUM is a small c++ macro library to add compile-time introspection to c++ enum classes. This is a fork of <a class="reference external" href="https://github.com/facebookincubator/MY_ENUM">https://github.com/facebookincubator/MY_ENUM</a>.</p>
+<section id="examples">
+<span id="doxid-md-thirdparty-farm-ng-core-farm-ng-core-enum-r-e-a-d-m-e-1autotoc-md1"></span><h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>For example <code class="docutils literal notranslate"><a class="reference internal" href="global.html#doxid-enum-8h-1a5268dfdcfb4a14db714de4e279928ddf"><span class="std std-ref"><span class="pre">FARM_ENUM(FooBar,</span> <span class="pre">int,</span> <span class="pre">(foo,</span> <span class="pre">bar))</span></span></a><span class="pre">;</span></code> defines an enum class</p>
+<pre class="highlight literal-block"><span></span><span class="k">enum</span> <span class="k">class</span> <span class="nl">FooBar</span> <span class="p">:</span> <span class="kt">int</span> <span class="p">{</span>
+  <span class="n">foo</span><span class="p">,</span>
+  <span class="n">bar</span>
+<span class="p">};</span></pre>
+<p>with the following free functions:</p>
+<pre class="highlight literal-block"><span></span><span class="c1">// Returns corresponding string of given value</span>
+<span class="c1">//</span>
+<span class="c1">// Preconditions: value must be a valid enum value, i.e. FooBar::foo, or</span>
+<span class="c1">//                FooBar::bar.</span>
+<span class="c1">//</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">toString</span><span class="p">(</span><span class="n">FooBar</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="c1">// Returns corresponding string view of given value</span>
+<span class="c1">//</span>
+<span class="c1">// Preconditions: value must be a valid enum value, i.e. FooBar::foo, or</span>
+<span class="c1">//                FooBar::bar.</span>
+<span class="c1">//</span>
+<span class="n">string_view</span> <span class="nf">toStringView</span><span class="p">(</span><span class="n">FooBar</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="c1">// Returns pretty string representation of given value</span>
+<span class="c1">//</span>
+<span class="c1">// Preconditions: value must be a valid enum value, i.e. FooBar::foo, or</span>
+<span class="c1">//                FooBar::bar.</span>
+<span class="c1">//</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">toPretty</span><span class="p">(</span><span class="n">FooBar</span> <span class="n">value</span><span class="p">);</span>
+
+<span class="c1">// Sets enum given corresponding string, if string is valid (i.e. &quot;foo&quot; or</span>
+<span class="c1">// &quot;bar&quot;). Returns false otherwise.</span>
+<span class="c1">//</span>
+<span class="kt">bool</span> <span class="nf">trySetFromString</span><span class="p">(</span><span class="n">FooBar</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span><span class="p">);</span>
+
+<span class="c1">// Return count of enum type. First argument is needed for ADL only.</span>
+<span class="c1">//</span>
+<span class="k">constexpr</span> <span class="kt">size_t</span> <span class="nf">getCount</span><span class="p">(</span><span class="n">FooBar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Return string views of enum type. First argument is needed for ADL only.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">string_view</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">getStrings</span><span class="p">(</span><span class="n">FooBar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="s">&quot;bar&quot;</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// Return string of enum names. First argument is needed for ADL only.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">string_view</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">getStrings</span><span class="p">(</span><span class="n">FooBar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s">&quot;foo, bar&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Return values of enum type. First argument is needed for ADL only.</span>
+<span class="k">constexpr</span> <span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">getValues</span><span class="p">(</span><span class="n">FooBar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="c1">// Returns the position of enum value in the enum class. This is the inverse</span>
+<span class="c1">// of `getValues(FooBar)[i]`.</span>
+<span class="k">constexpr</span> <span class="kt">size_t</span> <span class="n">getPosition</span><span class="p">(</span><span class="n">FooBar</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">switch</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">FooBar</span><span class="o">::</span><span class="nl">foo</span><span class="p">:</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">case</span> <span class="n">FooBar</span><span class="o">::</span><span class="nl">bar</span><span class="p">:</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Return string representation of type name. First argument is needed for</span>
+<span class="c1">// ADL only.</span>
+<span class="n">string_view</span> <span class="n">getTypeName</span><span class="p">(</span><span class="n">FooBar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s">&quot;FooBar&quot;</span><span class="p">;</span>
+<span class="p">}</span></pre>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pysophus.html" class="btn btn-neutral float-left" title="Sympy API - Symbolic Sophus In Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="global.html" class="btn btn-neutral float-right" title="Global Namespace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2019, Hauke Strasdat.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

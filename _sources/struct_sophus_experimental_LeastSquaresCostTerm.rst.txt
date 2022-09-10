@@ -1,0 +1,24 @@
+.. index:: pair: struct; sophus::experimental::LeastSquaresCostTerm
+.. _doxid-structsophus_1_1experimental_1_1_least_squares_cost_term:
+
+template struct sophus::experimental::LeastSquaresCostTerm
+==========================================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <least_squares.h>
+	
+	template <int kBlockDim, int kNumVarArgs>
+	struct LeastSquaresCostTerm {
+		// fields
+	
+		std::array<int, kNumVarArgs> :target:`manifold_ids<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_1a5020012dd13c2563fbb454f81f1363b6>`;
+		:ref:`LeastSquaresCostTermState<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state>`<kBlockDim> :target:`state<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_1af59b1807ccf4afa52347c52ce966d45a>`;
+	};

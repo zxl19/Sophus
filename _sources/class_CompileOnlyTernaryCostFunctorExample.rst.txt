@@ -1,0 +1,40 @@
+.. index:: pair: class; CompileOnlyTernaryCostFunctorExample
+.. _doxid-class_compile_only_ternary_cost_functor_example:
+
+class CompileOnlyTernaryCostFunctorExample
+==========================================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	class CompileOnlyTernaryCostFunctorExample {
+	public:
+		// typedefs
+	
+		using :target:`ConstantType<doxid-class_compile_only_ternary_cost_functor_example_1ab2920b3829dd9da89c55765cbde2b9dd>` = :ref:`farm_ng::Void<doxid-structfarm__ng_1_1_void>` ;
+
+		// fields
+	
+		static constexpr std::array<int, 3> :target:`kArgsDimArray<doxid-class_compile_only_ternary_cost_functor_example_1a5c0852a28216dc3ff96dd68ccb32fc28>` = {{4, 6, 3}};
+
+		// construction
+	
+		:target:`CompileOnlyTernaryCostFunctorExample<doxid-class_compile_only_ternary_cost_functor_example_1abb42e296ec64ca4108125586e6a0c9ba>`();
+
+		// methods
+	
+		template <class ArgTypesT>
+		std::optional<:ref:`LeastSquaresCostTermState<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state>`<ArgTypesT::kBlockDim>> :target:`evalCostTerm<doxid-class_compile_only_ternary_cost_functor_example_1a5180cec23a5678746aab1915f6d2d5a0>`(
+			Eigen::Vector<double, :ref:`kArgsDimArray<doxid-class_compile_only_ternary_cost_functor_example_1a5c0852a28216dc3ff96dd68ccb32fc28>`[0]> const&,
+			:ref:`sophus::Se3F64<doxid-namespacesophus_1a10c2ccdea99376188f7ca55b6faa9df6>` const&,
+			Eigen::Vector<double, :ref:`kArgsDimArray<doxid-class_compile_only_ternary_cost_functor_example_1a5c0852a28216dc3ff96dd68ccb32fc28>`[2]> const&,
+			:ref:`ConstantType<doxid-class_compile_only_ternary_cost_functor_example_1ab2920b3829dd9da89c55765cbde2b9dd>`
+			) const;
+	};

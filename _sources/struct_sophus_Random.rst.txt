@@ -1,0 +1,24 @@
+.. index:: pair: struct; sophus::Random
+.. _doxid-structsophus_1_1_random:
+
+template struct sophus::Random
+==============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <test_impl.h>
+	
+	template <typename TT>
+	struct Random {
+		// methods
+	
+		template <typename RT>
+		static TT :target:`sample<doxid-structsophus_1_1_random_1a692b403fffba59c2d7148d83f7ce43b5>`(RT& rng);
+	};

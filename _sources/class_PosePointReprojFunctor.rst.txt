@@ -1,0 +1,58 @@
+.. index:: pair: class; PosePointReprojFunctor
+.. _doxid-class_pose_point_reproj_functor:
+
+class PosePointReprojFunctor
+============================
+
+.. toctree::
+	:hidden:
+
+Overview
+~~~~~~~~
+
+Example of a binary cost function. :ref:`More...<details-class_pose_point_reproj_functor>`
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	class PosePointReprojFunctor {
+	public:
+		// typedefs
+	
+		using :target:`ConstantType<doxid-class_pose_point_reproj_functor_1ac10c15f0e0e8916c65de49c85c4269d2>` = Eigen::Vector2d ;
+
+		// fields
+	
+		static constexpr std::array<int, 2> :target:`kArgsDimArray<doxid-class_pose_point_reproj_functor_1ab7198592448c5d61834200c32cfdfc32>` = {{6, 3}};
+		:ref:`CameraModel<doxid-classsophus_1_1_camera_model>` :target:`camera<doxid-class_pose_point_reproj_functor_1a3d22b4d39dcd6f530cf2b0abe49f2cbd>`;
+
+		// construction
+	
+		:target:`PosePointReprojFunctor<doxid-class_pose_point_reproj_functor_1a60762c9ed098b0a851e2e1aefeece44c>`(:ref:`PinholeModel<doxid-namespacesophus_1a5e460c52a7269e5f6e0de9f366c2ecd1>` camera);
+
+		// methods
+	
+		template <class ArgTypesT>
+		std::optional<:ref:`LeastSquaresCostTermState<doxid-structsophus_1_1experimental_1_1_least_squares_cost_term_state>`<ArgTypesT::kBlockDim>> :target:`evalCostTerm<doxid-class_pose_point_reproj_functor_1a59b27a68292e6ef76c937919457ef68b>`(
+			:ref:`sophus::Se3F64<doxid-namespacesophus_1a10c2ccdea99376188f7ca55b6faa9df6>` const& camera_pose_world,
+			Eigen::Vector<double, :ref:`kArgsDimArray<doxid-class_pose_point_reproj_functor_1ab7198592448c5d61834200c32cfdfc32>`[1]> point_in_world,
+			:ref:`ConstantType<doxid-class_pose_point_reproj_functor_1ac10c15f0e0e8916c65de49c85c4269d2>` const& obs
+			) const;
+	};
+.. _details-class_pose_point_reproj_functor:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+Example of a binary cost function.
+
+Reprojection error:
+
+* Arg 0: SE(3) pose, tangent dim 6
+
+* Arg 1: 3-point, tangent dim 3
+
+Residual: pixel reprojection 2-vector
+
