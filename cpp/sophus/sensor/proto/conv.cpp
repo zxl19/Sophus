@@ -22,9 +22,9 @@ farm_ng::Expected<CameraModel> fromProto(proto::CameraModel const& proto) {
     return params;
   };
 
-  CameraTransformType model = CameraTransformType::pinhole;
-  if (trySetFromString(model, proto.transformType())) {
-    FARM_ERROR("transform type not supported: {}", proto.transformType());
+  CameraDistortionType model = CameraDistortionType::pinhole;
+  if (trySetFromString(model, proto.distortionType())) {
+    FARM_ERROR("transform type not supported: {}", proto.distortionType());
   }
 
   return CameraModel(fromProto(proto.imageSize()), model, get_params());
@@ -33,7 +33,7 @@ farm_ng::Expected<CameraModel> fromProto(proto::CameraModel const& proto) {
 proto::CameraModel toProto(CameraModel const& camera_model) {
   proto::CameraModel proto;
   *proto.mutableImageSize() = toProto(camera_model.imageSize());
-  proto.setTransformType(toString(camera_model.transformType()));
+  proto.setTransformType(toString(camera_model.distortionType()));
   Eigen::VectorXd params = camera_model.params();
   for (int i = 0; i < params.rows(); ++i) {
     proto.addParams(params[i]);
