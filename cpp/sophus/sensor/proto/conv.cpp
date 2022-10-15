@@ -24,7 +24,7 @@ farm_ng::Expected<CameraModel> fromProto(proto::CameraModel const& proto) {
 
   CameraDistortionType model = CameraDistortionType::pinhole;
   if (trySetFromString(model, proto.distortion_type())) {
-    FARM_ERROR("distortion type not supported: {}", proto.distortion_type());
+    return FARM_ERROR("distortion type not supported: {}", proto.distortion_type());
   }
 
   return CameraModel(fromProto(proto.image_size()), model, get_params());

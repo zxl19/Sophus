@@ -31,7 +31,7 @@ farm_ng::Expected<So3F64> fromProto(proto::So3F64 const& proto) {
   Eigen::Quaterniond quat = fromProto(proto.unit_quaternion());
   static double constexpr kEps = 1e-6;
   if (std::abs(quat.squaredNorm() - 1.0) > kEps) {
-    FARM_ERROR(
+    return FARM_ERROR(
         "quaternion norm ({}) is not close to 1:\n{}",
         quat.squaredNorm(),
         quat.coeffs().transpose());
