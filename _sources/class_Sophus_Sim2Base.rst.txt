@@ -476,7 +476,7 @@ Note: This function as a significant computational cost, since it has to call th
 
 	void setScaledRotationMatrix(:ref:`Matrix2<doxid-namespace_sophus_1adeb4fc1f876e4a4106cbe6320444c635>`<:ref:`Scalar<doxid-class_sophus_1_1_sim2_base_1a85fdcee9dd13727759c23f85d442b9bf>`> const& sR)
 
-Setter of complexnumber using scaled rotation matrix ``sR``.
+Setter of complex number using scaled rotation matrix ``sR``.
 
 Precondition: The 2x2 matrix must be "scaled orthogonal" and have a positive determinant.
 

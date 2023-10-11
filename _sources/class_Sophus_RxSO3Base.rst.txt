@@ -349,7 +349,7 @@ Group action on homogeneous 3-points. See above for more details.
 
 Group action on lines.
 
-This function rotates a parametrized line ``l(t) = o + t * d`` by the :ref:`SO3 <doxid-class_sophus_1_1_s_o3>` element ans scales it by the scale factor:
+This function rotates a parametrized line ``l(t) = o + t * d`` by the :ref:`SO3 <doxid-class_sophus_1_1_s_o3>` element and scales it by the scale factor:
 
 Origin ``o`` is rotated and scaled Direction ``d`` is rotated (preserving it's norm)
 

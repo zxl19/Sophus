@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>template class Sophus::Sim2Base &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
@@ -29,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Sophus
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Sophus
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -114,10 +118,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="global.html">Global Namespace</a> &raquo;</li>
-          <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template class Sophus::Sim2Base</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Sophus.html">namespace Sophus</a></li>
+      <li class="breadcrumb-item active">template class Sophus::Sim2Base</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/class_Sophus_Sim2Base.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -331,7 +335,7 @@
 <p>Sets scale and leaves rotation as is.</p>
 <p>Note: This function as a significant computational cost, since it has to call the square root twice.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-sim2-base-1a63d8412ad205cd251214bb398360e2c8"><span id="index-30"></span><span></span><span class="kt">void</span> <span class="n">setScaledRotationMatrix</span><span class="p">(</span><a class="reference internal" href="namespace_Sophus.html#doxid-namespace-sophus-1adeb4fc1f876e4a4106cbe6320444c635"><span class="std std-ref">Matrix2</span></a><span></span><span class="o">&lt;</span><a class="reference internal" href="#doxid-class-sophus-1-1-sim2-base-1a85fdcee9dd13727759c23f85d442b9bf"><span class="std std-ref">Scalar</span></a><span></span><span class="o">&gt;</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">sR</span><span class="p">)</span></pre>
-<p>Setter of complexnumber using scaled rotation matrix <code class="docutils literal notranslate"><span class="pre">sR</span></code>.</p>
+<p>Setter of complex number using scaled rotation matrix <code class="docutils literal notranslate"><span class="pre">sR</span></code>.</p>
 <p>Precondition: The 2x2 matrix must be “scaled orthogonal” and have a positive determinant.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-sim2-base-1a5657e8d73c89999a7cc1953fb5083c71"><span id="index-31"></span><a class="reference internal" href="#doxid-class-sophus-1-1-sim2-base-1ab8d89afe8f7ed692f786185aa0ba739d"><span class="std std-ref">TranslationType</span></a><span></span><span class="o">&amp;</span> <span class="n">translation</span><span class="p">()</span></pre>
 <p>Mutator of translation vector.</p>

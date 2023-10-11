@@ -279,7 +279,7 @@ Group exponential.
 
 This functions takes in an element of tangent space (= rotation 3-vector plus logarithm of scale) and returns the corresponding element of the group :ref:`RxSO3 <doxid-class_sophus_1_1_rx_s_o3>`.
 
-To be more specific, thixs function computes ``expmat(hat(omega))`` with ``expmat(.)`` being the matrix exponential and ``hat(.)`` being the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o3_1ab79f419758d755bd08a447ffefff46ee>` -operator of RSO3.
+To be more specific, this function computes ``expmat(hat(omega))`` with ``expmat(.)`` being the matrix exponential and ``hat(.)`` being the :ref:`hat() <doxid-class_sophus_1_1_rx_s_o3_1ab79f419758d755bd08a447ffefff46ee>` -operator of RSO3.
 
 .. index:: pair: function; expAndTheta
 .. _doxid-class_sophus_1_1_rx_s_o3_1aae175a03cb69225c84e72cb987516fe2:

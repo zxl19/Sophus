@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>template class Sophus::RxSO3Base &mdash; Sophus  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
@@ -29,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Sophus
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Sophus
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -115,10 +119,10 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="global.html">Global Namespace</a> &raquo;</li>
-          <li><a href="namespace_Sophus.html">namespace Sophus</a> &raquo;</li>
-      <li>template class Sophus::RxSO3Base</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="global.html">Global Namespace</a></li>
+          <li class="breadcrumb-item"><a href="namespace_Sophus.html">namespace Sophus</a></li>
+      <li class="breadcrumb-item active">template class Sophus::RxSO3Base</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/class_Sophus_RxSO3Base.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -304,7 +308,7 @@
 <p>Group action on homogeneous 3-points. See above for more details.</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-rx-s-o3-base-1ac8efcb15144128fe68994d8675dc4b51"><span id="index-18"></span><a class="reference internal" href="#doxid-class-sophus-1-1-rx-s-o3-base-1a4d02a657ad41e5296705fc2ca66aee67"><span class="std std-ref">Line</span></a><span></span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><a class="reference internal" href="#doxid-class-sophus-1-1-rx-s-o3-base-1a4d02a657ad41e5296705fc2ca66aee67"><span class="std std-ref">Line</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">l</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Group action on lines.</p>
-<p>This function rotates a parametrized line <code class="docutils literal notranslate"><span class="pre">l(t)</span> <span class="pre">=</span> <span class="pre">o</span> <span class="pre">+</span> <span class="pre">t</span> <span class="pre">*</span> <span class="pre">d</span></code> by the <a class="reference internal" href="class_Sophus_SO3.html#doxid-class-sophus-1-1-s-o3"><span class="std std-ref">SO3</span></a> element ans scales it by the scale factor:</p>
+<p>This function rotates a parametrized line <code class="docutils literal notranslate"><span class="pre">l(t)</span> <span class="pre">=</span> <span class="pre">o</span> <span class="pre">+</span> <span class="pre">t</span> <span class="pre">*</span> <span class="pre">d</span></code> by the <a class="reference internal" href="class_Sophus_SO3.html#doxid-class-sophus-1-1-s-o3"><span class="std std-ref">SO3</span></a> element and scales it by the scale factor:</p>
 <p>Origin <code class="docutils literal notranslate"><span class="pre">o</span></code> is rotated and scaled Direction <code class="docutils literal notranslate"><span class="pre">d</span></code> is rotated (preserving it’s norm)</p>
 <pre class="highlight doxyrest-title-code-block literal-block" id="doxid-class-sophus-1-1-rx-s-o3-base-1a60a6a330c1a937ab0415bb420f0a9609"><span id="index-19"></span><a class="reference internal" href="#doxid-class-sophus-1-1-rx-s-o3-base-1a84928f92b75b311483dce0b45d97754e"><span class="std std-ref">Hyperplane</span></a><span></span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><a class="reference internal" href="#doxid-class-sophus-1-1-rx-s-o3-base-1a84928f92b75b311483dce0b45d97754e"><span class="std std-ref">Hyperplane</span></a><span></span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">)</span> <span class="k">const</span></pre>
 <p>Group action on planes.</p>
